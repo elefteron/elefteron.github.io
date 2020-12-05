@@ -236,10 +236,10 @@ TkSuQmCC";
             ,{src:"../pics/"+'ea-2012-sm.jpg',w: 99,h:120,note:'2012,linked.' }
             ],p=0 /** <- 0|1|2 **/
   var dev='file:///F:/elefter.dev/'
-   , site='http://www.?.com/'
+   , site='http://elefteron.github.io/'
    ,  gsm='content://com.alphainventor.filemanager.fileprovider/root/storage/emulated/0/elefter.dev/'
-   ,  rel='../../'// dev
-   root=rel;  trg='_work'
+   ,  rel='' // '../../'// dev
+   root=site;  trg='_work'
 // www.tagindex.net/html/frame/a_target.html
   function lnk(nam,pth){// <a target="_blank|_self|_parent|_top|framename">
     return ' <a'+' href="'+(root+pth)+'" title="(apl)" target="'+trg+'">'+nam+'</a>'
@@ -383,7 +383,7 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
   var id=getid("template_icard")//,trg=' target="_blank"'
   out(id,tic[0]); // alert(tic[0])
   var wrk_=getid("_work"); //document.getElementById('_work')
-  if(wrk_==null) alert('"_work" id undef.')
+  if(wrk_==null) alert('"_work" id=null')
 
 /* */ //-- icard bind: icard.___._id:'%___' with id='%___'
   var id=getid("icard")
@@ -422,6 +422,7 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
 // Hide('%info.resume')
 
 // Adjust iframe h,w onload
+   if(wrk_!=null)
    wrk_.addEventListener("load", function(e){
        alert(this.contentWindow.document.body.scrollHeight+','+this.contentWindow.document.body.scrollWidth)
        this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
