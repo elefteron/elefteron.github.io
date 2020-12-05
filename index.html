@@ -284,10 +284,11 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
         ,{id:'mobile'  ,show:'0898/438-496'    ,href:"mobile:++359 0898 438 496"}
         ,{id:'e-mail'  ,show:'elefter@abv.bg'  ,href:"mailto:elefter@abv.bg"}
         ,{id:'fb'      ,show:'elefter.arnaudov',href:"http://www.facebook.com/elefter.arnaudov"}
-        ,{id:'skype'   ,show:'elefter1959'     ,href:"skype:elefter1959"}
+      //,{id:'skype'   ,show:'elefter1959'     ,href:"skype:elefter1959"}
       //,{id:'ICQ'     ,show:'169 811 339'     ,href:"ICQ:169811339"}
         ,{id:'blog'    ,show:'elefter.blogspot',href:"http://elefter.blogspot.com/"}
-        ,{id:'web'     ,show:'elefteron.github.io',href:"https://elefteron.github.io"} // not exist anymore
+        ,{id:'icard'   ,show:'on github',href:"elefteron.github.io"} 
+        ,{id:'dev'     ,show:'on github',href:"github.com/elefteron"} 
       //,{id:'www'     ,show:'elefter.hit.bg'  ,href:"http://www.elefter.hit.bg"} // not exist anymore
         ]
   ,info:{_id:'%info.resume',wrk:[
@@ -318,7 +319,7 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
       <span id="template_icard" name="_icard" width="85mm" height="52mm"></span>
       <!-- icard template: -- bind "js data" with "html template" ?spacing:1mm; !-->
   </td><td>
-    <!-- -- >
+    <!-- -->
     <iframe src="../../x14/run/x-widget.htm" id="_work" name="_work" allowtransparency="false"
     scrolling="auto" height="720px" width="820px"
     frameborder="1"  marginwidth="10" marginheight="10"></iframe>
@@ -382,6 +383,7 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
   var id=getid("template_icard")//,trg=' target="_blank"'
   out(id,tic[0]); // alert(tic[0])
   var wrk_=getid("_work"); //document.getElementById('_work')
+  if(wrk_==null) alert('"_work" id undef.')
 
 /* */ //-- icard bind: icard.___._id:'%___' with id='%___'
   var id=getid("icard")
