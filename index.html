@@ -424,7 +424,7 @@ var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20
 // Adjust iframe h,w onload
    if(wrk_!=null)
    wrk_.addEventListener("load", function(e){
-       alert(this.contentWindow.document.body.scrollHeight+','+this.contentWindow.document.body.scrollWidth)
+    // alert(this.contentWindow.document.body.scrollHeight+',' +this.contentWindow.document.body.scrollWidth)
        this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
        this.style.width  = this.contentWindow.document.body.scrollWidth  + 'px';
    })
