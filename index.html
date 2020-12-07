@@ -42,10 +42,20 @@
       }
       </script>
   </head>
-  <body>
+  <body marginheight="5mm" marginwidth="5mm" leftmargin="5mm" topmargin="5mm">
     <title>elefteron</title>
+
     <a href='https://github.com/elefteron'>elefteron on GitHub</a></br>
-    <span id="mnu" name="mnu"></span>
+    <table border="0" cellspacing="5">
+    <tr><td valign="top">
+      <span id="mnu" name="mnu"></span>
+    </td><td>
+      <iframe
+      scrolling="auto" height="800px" width="820px" id="_work" name="work" allowtransparency="false"
+      frameborder="1"  marginwidth="10" marginheight="10"></iframe>
+    </td></tr>
+    </table>
+
     <script>
        var id_=getid("mnu");
        var prj=[{nam:'icard'   ,pth:'icard/icard2-ea+.htm'}
@@ -64,8 +74,9 @@
        out(id_,'<ul>')
        for(i=0;i<prj.length;i++){
          out(id_,'<li><a class="subhd" href="'+rot.web+prj[i].pth+'"'
-                                   +' title="'+rot.web+prj[i].pth+'">'
-            +prj[i].nam+'</a><br></li>')
+                                   +' title="'+rot.web+prj[i].pth+'"'
+                                   +' target="work"'
+            +'>'+prj[i].nam+'</a><br></li>')
        }
        out(id_,'</ul>')
     </script>
