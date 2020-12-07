@@ -1,445 +1,73 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html lang="bg">
-<head> <title>icard elefteron on GitHub</title>
-  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
-  <meta name="description" content="icard" />
-  <meta name="author"      content="mailto:elefter@abv.bg" />
-  <meta name="updates"     content="2020-12-04" />
-<style>
-  HTML, body{margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;
-             padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll
-            }
-  body      {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
-             font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
-		     text-align:left;font-style:normal; vertical-align:top;
-            }
-  ul        {list-style-type: circle; margin-left:15px; padding: 0;}
-  body      {background-color:#5c5145; color:#ffeedd;}
-  .subhd    {                          color:#ffd24c;}
-  .txt      {                          color:#ffd24c;}
- a:visited  {                          color:#ff8040; text-decoration:none;}
- a:active   {                          color:#ffd24c; text-decoration:none;}
- a:link     {                          color:#ffd24c; text-decoration:none;}
- a:hover    {background-color:#ffd24c; color:#000000; text-decoration:none; border-radius:2px; }
-  .rnd      {border-radius: 8px;}
-  .rndleft  {border-radius:0 0 8px 8px; /* top right bottom left */ /* clip:oval(8, 8, 8, 0); /* ? */ }
-/* -webkit-* -moz-* -ms-* -o-*  */
-</style>
-<script> // icard utils:
-  function   sys(s) {document.write(s)}
-  function isdef(s) {return typeof s!='undefined'}
-  function undef(v) {return (typeof(v)==='undefined') }
-  function Hide    (id){document.getElementById(id).style.display = "none" ; }
-  function Show    (id){document.getElementById(id).style.display = "block"; }
-  function ShowHide(id){var p_=document.getElementById(id)
-    if(p_.style.display!= "none") p_.style.display="none";
-    else                          p_.style.display="block";
-  }
-  function out(){// out(plc_,p1,...)
-    var s='',plc_=arguments[0]; // Variadic function use arguments[] special variable!
-    var clear=(arguments[1]==null) // flag for begin with null to clear box
-    for (var i=1; i<arguments.length; ++i)
-      if(arguments[i]!=null && arguments[i]!='') s+= arguments[i]; // skip empty's
-    if(undef(plc_) || plc_==null || plc_=='') sys('»'+s); // document.write(s)
-    else try             {if(clear) plc_.innerHTML=''; plc_.innerHTML+=s}
-         catch(Exception){sys('»»'+s)}
-  }
-  function h1(tag,tbd,stl){ return '<'+tag+' '+tbd+' style="'+stl+'">\n'; }
-  function h2(a){ // _h2({tag:'',tbd:'',stl:'',cls:[cls,...],bdy"''}) evt:[{evt:act},...]
-    var tag='',tbd='',stl='',cls='',evt='',bdy='' ,i,j
-  //var a=arguments // Variadic function use arguments[] special variable!
-    function evt2htm(e){ var htm='',i
-      for(i in e) htm=' '+i+':'+'"'+a.e[i]+'"'
-      return htm
+<!DOCTYPE HTML>
+<html>
+  <head
+    <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <META name="description" content="elefteron on GitHub" />
+    <META name="author"      content="mailto:elefter@abv.bg" />
+    <style>
+      HTML, body{margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;
+               padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll
+              }
+      body      {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
+                 font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
+  		           text-align:left;font-style:normal; vertical-align:top;
+                }
+      body      {background-color:#5c5145; color:#ffeedd;}
+      ul,li     {list-style-type: circle; margin-left:15px; padding: 0;}
+      .subhd    {                          color:#ffd24c;}
+    </style>
+      <script type="text/javascript">
+         rot= {loc:'file:///F:/elefter.dev/',web:'http://elefteron.github.io/',git:'https://github.com/elefteron'}
+      // <meta http-equiv="refresh" content="0; url=https://github.com/elefteron">
+      // window.location.href = rot.dev
+
+      function undef(v) {return (typeof(v)==='undefined') }
+      function getid(id){
+        if(undef(id)  || id=='')  { sys('no/empty id');return}
+        var id_=document.getElementById(id)
+        if(undef(id_) || id_=='') { sys('miss id'); return}
+        return id_
       }
-    for (i in a){
-      if(i=='tag') { tag=    a.tag; }
-      if(i=='tbd') { tbd=' '+a.tbd; }
-      if(i=='stl') { stl=' style="'+a.stl+'"'; }
-      if(i=='cls') { for(j in a.cls) {cls+=' class="'+a.cls[j]+'"';} } // console.log(j,a.cls[j],cls)} }
-      if(i=='evt') { for(j in a.evt) {evt+=' '+evt2htm(a.evt[j]);  } } // console.log(j,a.evt[j],evt)} }  // ?
-      if(i=='bdy') { bdy=    a.bdy; }
-    };
-    return '<'+tag+tbd+cls+stl+'>' +bdy+'</'+tag+'>\n';
-  }
-  function getid(id){
-    if(undef(id)  || id=='')  { sys('no/empty id');return}
-    var id_=document.getElementById(id)
-    if(undef(id_) || id_=='') { sys('miss id'); return}
-    return id_
-  }
-</script>
-<script> // imgsrc embeded
-// src="../pics/ea-2012-sm.js" // ->imgsrc="data:image/jpeg;base64,"+
-// ok:firefox,seamonkey,opera,chrome,safary,konqueror,qtweb,x-qupzilla;
-// no-pic:ie8,slimbrowser, err:k-meleon,ghostzilla;
-var imgsrc="data:image/png;base64,"+
-  "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\
-TkSuQmCC";
-</script>
-<script> // icard. data:
-  var pics =[{src:imgsrc                     ,w: 99,h:120,note:'2012,embeded.'}
-         // ,{src:"http://www.elefter.hit.bg/pics/" // site, w:110,h:148
-         //                 +'EA-2006-sm.jpg',w: 99,h:136,note:'2006,linked.' }
-            ,{src:"../pics/"+'ea-2012-sm.jpg',w: 99,h:120,note:'2012,linked.' }
-            ],p=0 /** <- 0|1|2 **/
-  var dev='file:///F:/elefter.dev/'
-   , site='http://elefteron.github.io/'
-   ,  gsm='content://com.alphainventor.filemanager.fileprovider/root/storage/emulated/0/elefter.dev/'
-   ,  rel='' // '../../'// dev
-   root=site;  trg='_work'
-// www.tagindex.net/html/frame/a_target.html
-  function lnk(nam,pth){// <a target="_blank|_self|_parent|_top|framename">
-    return ' <a'+' href="'+(root+pth)+'" title="(apl)" target="'+trg+'">'+nam+'</a>'
-  }
-  var Xwdg=['<table><tr><td>'
-       ,'<iFRAME id="clk"  SRC="x14/clk/clock-24.htm"       marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="56"  width="150"></iFRAME>'
-       ,'</td></tr><tr><td>'
-       ,'<iFRAME id="cal"  SRC="x14/cal/calendar.htm#1,3,1" marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="132" width="150"></iFRAME>'
-       ,'</td></tr><tr><td>'
-       ,'<iFRAME id="drv"  SRC="x14/drv/drv-info.htm#"      marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="160" width="310"></iFRAME>'
-    // ,'</td></tr><tr><td>'
-    // ,'<iFRAME id="xmnu" SRC="x14/run/x-mnu.htm"          marginwidth="0" marginheight="0" sc1rollingrolling="auto" border="0" height="260" width="150"></iFRAME>'
-       ,'</td></tr></table>']
 
-var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20white%20!%20important;%20color:%20black%20!important%20}%20:link,%20:link%20*%20{%20color:%20#0000EE%20!important%20}%20:visited,%20:visited%20*%20{%20color:%20#551A8B%20!important%20}';%20if(document.createStyleSheet)%20{%20document.createStyleSheet(%22javascript:'%22+styles+%22'%22);%20}%20else%20{%20newSS=document.createElement('link');%20newSS.rel='stylesheet';%20newSS.href='data:text/css,'+escape(styles);%20document.getElementsByTagName(%22head%22)[0].appendChild(newSS);%20}%20})();"
-// out(link_('',zapclr,'zap clr','ч/б'))
+      function   sys(s) {document.write(s)}
 
-  var prj= [{nam:'icard'   ,pth:'x14/icard/icard2-ea.htm'} // back 2 from elefter.dev/x14/icard
-           ,{nam:'cv'      ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-           ,{nam:'Xclock'  ,pth:'x-acek/clock-24+.htm'}
-           ,{nam:'CharMap'  ,pth:'Charmap/CharMap-table2.htm'}
-           ,{nam:'Xclk'    ,pth:'x14/clk/clock-24.htm'}
-           ,{nam:'Xkal'    ,pth:'x14/cal/calendar.htm'}
-           ,{nam:'Xdrv'    ,pth:'x14/drv/drv-info.htm'} // ?
-        // ,{nam:'Xwdg'    ,pth:''}
-           ,{nam:'SVC'     ,pth:'SVC-8/SVC-8.htm'}
-           ,{nam:'Bible_bg',pth:'Bible-bg/Bible-bg.2013/index.Bible-bg.2013.htm'}
-           ,{nam:'proj'    ,pth:'proj/proj.htm'}        // ?
-           ,{nam:'FontOrg' ,pth:'fontorg.js/fontorg-makecat.htm'}
-           ,{nam:'boot_log',pth:'boot-log/boot-log.htm'}
-           ] // relative paths
-// www.facebook.com/download/827623421309311/icard2-ea.htm
-// www.facebook.com/groups/2560127374203872/permalink/2682505305299411/
-  var proj=[],i; for(i=0;i<prj.length;i++) proj[i]=lnk(prj[i].nam,prj[i].pth);
-  function li(hd,bd)        {return '<li><b class="subhd">'+hd+'</b><br>'+bd+'</li>'}
-  var icard={
-  // bind "js data" <-> "html template": icard.___._id:'%___'<->id='%___'
-   name :{_id:'%name',id:['Elefter Arnaudov','Елефтер Арнаудов']}
-  ,img  :{_id:'%img.src',src:pics[p].src ,w:pics[p].w ,h:pics[p].h ,note:pics[p].note}
-  // %img.box
-  ,adr :[{_id:"%adr",_id1:'%adr.id.'   ,_id2:'%adr.link.'} // + #
-        ,{id:'mobile'  ,show:'0898/438-496'    ,href:"mobile:++359 0898 438 496"}
-        ,{id:'e-mail'  ,show:'elefter@abv.bg'  ,href:"mailto:elefter@abv.bg"}
-        ,{id:'fb'      ,show:'elefter.arnaudov',href:"http://www.facebook.com/elefter.arnaudov"}
-      //,{id:'skype'   ,show:'elefter1959'     ,href:"skype:elefter1959"}
-      //,{id:'ICQ'     ,show:'169 811 339'     ,href:"ICQ:169811339"}
-        ,{id:'blog'    ,show:'elefter.blogspot',href:"http://elefter.blogspot.com/"}
-        ,{id:'icard'   ,show:'on github.io'    ,href:"http://elefteron.github.io"} 
-        ,{id:'dev'     ,show:'on github.com'   ,href:"http://github.com/elefteron"} 
-      //,{id:'www'     ,show:'elefter.hit.bg'  ,href:"http://www.elefter.hit.bg"} // not exist anymore
-        ]
-  ,info:{_id:'%info.resume',wrk:[
-        ['<ul>'// [0] 'en'
-          ,li('os:','DOS, Windows 95-98-XP-7, MacOs, Linux Ubuntu, pcBSD')
-          ,li('Prepress software:','Indesign /Quark; Acrobat; Photoshop; Illustrator /CorelDraw; Scribus, Inkscape, GSview; OpenOffice, ms-Office Excel /Word')
-          ,li('Prepress production:','manuals, books, magazines, newspapers, advertising materials, leaflets, bildboards, pictures/illustrations scan and treatment')
-          ,li('Prepress automation:','indesign merge for cards, barcodes & sequencer')
-          ,li('fonts:','create, edit/ cyrillization, check, rtf/html font catalogue')
-          ,li('Web-layouts/ development:','dhtml, hta, css, javascript,dos&win-batch, fortran IV, PL/1, pascal-5')
-          ,li('projects:',proj.join(','))
-		,'</ul>'],['<ul>'// [1] 'bg'
-          ,li('os:',' DOS, Windows 95-98-XP-7, MacOs, Linux Ubuntu, pcBSD')
-          ,li('Предпечатни програми:','Indesign /Quark; Acrobat; Photoshop; Illustrator /CorelDraw; Scribus, Inkscape, GSview; OpenOffice, ms-Office Excel /Word')
-          ,li('Предпечатна продукция:','учебници, книги, списания, вестници, рекламни материали, брошури, билбордове, обработка на снимки и илюстрации.')
-          ,li('Предпечатна автоматизация:','indesign merge за визитки, баркодове и генератор на серии')
-          ,li('шрифтове:','създаване,редактиране/ кирилизация, проверка, rtf/html шрифтов каталог')
-          ,li('Уеб-оформление/ програмиране:','dhtml, hta, css, javascript,dos&win-batch, fortran IV, PL/1, pascal-5')
-          ,li('проекти:',proj.join(','))
-		,'</ul>']
-	    ]}
-	} // icard
-</script>
-</head>
-<body marginheight="5mm" marginwidth="5mm" leftmargin="5mm" topmargin="5mm">
-  <table border="0" cellspacing="5">
-  <tr><td valign="top">
-      <span id="template_icard" name="_icard" width="85mm" height="52mm"></span>
-      <!-- icard template: -- bind "js data" with "html template" ?spacing:1mm; !-->
-  </td><td>
-    <!-- -- >
-    <iframe src="../../x14/run/x-widget.htm" 
-    <!-- -->
-    <iframe 
-    scrolling="auto" height="800px" width="820px" id="_work" name="_work" allowtransparency="false"
-    frameborder="1"  marginwidth="10" marginheight="10"></iframe>
-  </td></tr>
-  </table>
-<script>
-  var w=85,w2=w-4,h=52,tic=[] // .mm » height="720" width="820"
-{ tic[0]=
-    h2({tag:'div', tbd:' id="icard"', cls:['rnd']
-       ,stl:'width:'+w+'mm; height:'+h+'mm; border-spacing:0;border:1px outset #ff5c26;border-radius:8px;'
-          +'vertical-align:top;text-align:left; margin:0mm;padding:1mm; background-color:#300000; '
-       ,bdy: h2({tag:'div', stl:'text-align:center;clear:both;'
-               ,bdy:'<br/>\n'
-               +h2({tag:'span',tbd:'id="%name"',stl:'font-size:14pt; line-height:11pt;text-align:center;'
-                  ,bdy:'<b>{{name}}</b>'}) // {{name}}
-               +h1('hr','','height:2px;width:'+w2+'mm;border-radius:2px;background-color:#d93600; border:0px;')
-              })
-            +h2({tag:'div', stl:'vertical-align:bottom; '// float:none;clear:both;
-                ,bdy:h2({tag:'div',tbd:'id="%img.box"',stl:'width:100px;height:110px; padding:0mm 4mm 2mm 2mm; float:left;'
-                     ,bdy:'<a><img id="%img.src" src="" style="border:1px; border-radius:4px;"'
-                     +' onClick="lang_toggle();" '
-                     +'></a>'
-                    })// src="" {{img.src}}
-//                adr(id,href,show) template:
-                 +h2({tag:'div',tbd:'id="%adr"', cls:['rnd']
-                     ,stl:'text-align:left; margin:1mm; border-spacing:0; padding:1mm; font-size:11.6pt;'
-                     ,bdy:h2({tag:'span', tbd:'id="%adr.id.#"'  ,bdy:' ',stl:'display:inline-block;width:20%;'})// {{id}}
-                         +h2({tag:'span', tbd:'id="%adr.link.#"',bdy:'<a href="href" target="_blank"> </a>'}) // {{link}}
-                         +'<br/>'
-                    })
-                })
-            +h2({tag:'div', stl:'clear:both; padding:0.1mm;' // float:none;
-               ,bdy:h2({tag:'div', cls:['rnd']
-                      ,stl:'vertical-align:top;text-align:left; margin:4mm 1mm 2mm 1mm;'
-                          +'border-spacing:0;background-color:#300000;'
-                      ,bdy:'<a title="info">'
-                           +'  <hr size="7px" align="center"'
-                           +'    style="height:8px;width:'+w2+'mm;border-radius:2px;background-color:#d93600; border:0px;" '
-                           +'    onClick="ShowHide(\'%info.resume\')" '
-                           +'    onmouseover="this.style.color=\'#ff5c26\'; document.body.style.cursor=\'pointer\'" '
-                           +'     onmouseout="this.style.color=\'#d93600\'; document.body.style.cursor=\'default\'"/>'
-                           +'</a>'
-                           +'<div id="%info" name="info" class="rnd">'
-                           +'  <span id="%info.resume" name="%info.resume" '
-                           +'    style="vertical-align:bottom;text-align:left; display:none; border-radius:4px;'
-                           +'    margin: 0mm 2mm 0mm 2mm; padding: 0mm 2mm 1mm 2mm;'
-                           +'    border-spacing:0; border:1px outset #d93600; background-color:#160000;">{{show}}'
-                           +'  </span>'// {{resume}}
-                           +'</div>'
-                      })
-               })
-          })
-}
-// todo:
-// h2( evt:? )
-// empty line - id,link
-// inject mini template in master
-
-  document.body.style.cursor = 'wait';
-  var id=getid("template_icard")//,trg=' target="_blank"'
-  out(id,tic[0]); // alert(tic[0])
-  var wrk_=getid("_work"); //document.getElementById('_work')
-  if(wrk_==null) alert('"_work" id=null')
-
-/* */ //-- icard bind: icard.___._id:'%___' with id='%___'
-  var id=getid("icard")
-  getid("%img.src").src=imgsrc; // embeded
-  var lang=0; // [0='en',1='bg']
-  if(id==null){ sys('icard ID not found!')
-  }else with(icard) { // icard w=330px line w=322px
-    out(getid(name._id),null,'<b>'+name.id[lang]+'</b>')
-    id=getid(adr[0]._id)
-    //  var subtemplate=id.innerHTML// get subtemplate from html
-    //  how to change id='%adr.name.#' to '%adr.name.1'
-    //  out(id,null)// clear template from html
-    for(var i=1; i<adr.length; i++){
-      var id1=(adr[0]._id1+i) // '%adr.id.#'
-      var id2=(adr[0]._id2+i) // '%adr.link.#'
-      out(id,'<span id="'+id1+'"'+' style="display:inline-block;width:20%;">id</span>')
-      out(id,'<span id="'+id2+'">'+'<a href="link" target="_blank">show</a></span><br/>')
-      out(getid(id1),null,adr[i].id+':')
-      out(getid(id2),null,'<a href="'+adr[i].href+'"'+' target="'+trg+'"'
-      +' title="'+adr[i].href+'"' +'>'+adr[i].show+'</a>')
-    }
-
-    getid(img._id).src   =img.src  // attrib: src,w=100,h=120
-    getid(img._id).width =img.w
-    getid(img._id).height=img.h
-//  getid(img._id).title =img.note +'\n end/bg'
-//  if(dbg && !iex) console.log(' icard:',icard) // 'lang:'+lang,
-//  console.log('info.wrk[lang]:',info.wrk[lang].join('\n'))
-    out(getid(info._id),null,info.wrk[lang].join('\n') ) // getid(info._id).innerHTML=
-    window.document.title='icard - '+name.id[lang]+' '
-    // + tunung onmouseover -> hand cursor
-    // - tunung attributes: width,margin,spacing,font, border, color:bg/fg
-  }
-  /* */
-  document.body.style.cursor = 'default';
-// Hide('%info.resume')
-
-// Adjust iframe h,w onload
-   if(wrk_!=null)
-   wrk_.addEventListener("load", function(e){
-    // alert(this.contentWindow.document.body.scrollHeight+',' +this.contentWindow.document.body.scrollWidth)
-       this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
-       this.style.width  = this.contentWindow.document.body.scrollWidth  + 'px';
-   })
-// tutorialrepublic.com/faq/automatically-adjust-iframe-height-according-to-its-contents-using-javascript.php
-// stackoverflow.com/questions/29233928/iframe-onload-javascript-event
-// wrk_.onload = function(e){
-
-  function lang_toggle(){ if(lang==0) lang=1; else lang=0; // [0='en',1='bg']
-    with(icard) {
-    //window.document.title='icard - '+name.id[lang]+' '
-      out(getid(name._id),null,'<b>'+name.id[lang]+'</b>')
-      out(getid(info._id),null,info.wrk[lang].join('\n') )
-    }
-  }
-</script>
-</body>
+      function out(){// out(id_,p1,...)
+        var s='',id_=arguments[0]; // Variadic function use arguments[] special variable!
+        var clear=(arguments[1]==null) // flag for begin with null to clear box
+        for (var i=1; i<arguments.length; ++i)
+          if(arguments[i]!=null && arguments[i]!='') s+= arguments[i]; // skip empty's
+        if(undef(id_) || id_==null || id_=='') sys('»'+s); // document.write(s)
+        else try             {if(clear) id_.innerHTML=''; id_.innerHTML+=s}
+             catch(Exception){sys('»»'+s)}
+      }
+      </script>
+  </head>
+  <body>
+    <title>elefteron</title>
+    <a href='https://github.com/elefteron'>elefteron on GitHub</a></br>
+    <span id="mnu" name="mnu"></span>
+    <script>
+       var id_=getid("mnu");
+       var prj=[{nam:'icard'   ,pth:'icard/icard2-ea+.htm'}
+               ,{nam:'cv'      ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
+               ,{nam:'Xclock'  ,pth:'x-acek/clock-24+.htm'}
+               ,{nam:'CharMap' ,pth:'Charmap/CharMap-table2.htm'}
+               ,{nam:'Xclk'    ,pth:'x14/clk/clock-24.htm'}
+               ,{nam:'Xkal'    ,pth:'x14/cal/calendar.htm'}
+               ,{nam:'Xdrv'    ,pth:'x14/drv/drv-info.htm'}
+               ,{nam:'SVC'     ,pth:'SVC-8/SVC-8.htm'}
+               ,{nam:'Bible_bg',pth:'Bible-bg/Bible-bg.2013/index.Bible-bg.2013.htm'}
+               ,{nam:'proj'    ,pth:'proj/proj.htm'}
+               ,{nam:'FontOrg' ,pth:'fontorg.js/fontorg-makecat.htm'}
+               ,{nam:'boot_log',pth:'boot-log/boot-log.htm'}
+               ] // relative paths
+       out(id_,'<ul>')
+       for(i=0;i<prj.length;i++){
+         out(id_,'<li><a class="subhd" href="'+rot.web+prj[i].pth+'"'
+                                   +' title="'+rot.web+prj[i].pth+'">'
+            +prj[i].nam+'</a><br></li>')
+       }
+       out(id_,'</ul>')
+    </script>
+  <body>
 </html>

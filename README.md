@@ -1,2 +1,2 @@
 # elefteron.github.io
-icard - a personal info card
+my projects: icard, 
