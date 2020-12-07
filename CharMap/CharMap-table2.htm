@@ -2,19 +2,19 @@
 
 <html>
 <head>
-  <meta http-equiv="Content-Type"content="text/html; charset=windows-1251">
+  <meta http-equiv="Content-Type"content="text/html; charset=utf-8">
   <title>CharMap table</title>
   <base href="E:\Tedy\!myDoc's\Soft work\~Java script\" target="map">
   <script language="javascript">
 /* CharMap table 
 ABCDEFGHIJKLMNOPRSTUVWXYZ abcdefghijklmnoprstuvwxyz 
-АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ абвгдежзийклмнопрстуфхцчшщъьюя 
-Aa????Oo ?????????????? €§«»°©®№ ЁёЫыЭэ 0123456789:;.,-+=()[]<>{}«» 
-$??€??#%‰&'"???????.,:;‘’“”‚„!???«»‹›+=±??<>¬–—??…·•@©®™()[]{}|¦/\?*†‡§¶?°???µ^~?`???????????
+РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР¬Р®РЇ Р°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉСЊСЋСЏ 
+Aa????Oo ?????????????? в‚¬В§В«В»В°В©В®в„– РЃС‘Р«С‹Р­СЌ 0123456789:;.,-+=()[]<>{}В«В» 
+$??в‚¬??#%вЂ°&'"???????.,:;вЂвЂ™вЂњвЂќвЂљвЂћ!???В«В»вЂ№вЂє+=В±??<>В¬вЂ“вЂ”??вЂ¦В·вЂў@В©В®в„ў()[]{}|В¦/\?*вЂ вЂЎВ§В¶?В°???Вµ^~?`???????????
 */
 // problems:
 // get active font names ?
-// table not eq to orig charmap.exe and "<pre>..." for codes >127 (incl kir.,№=185, ...) !?
+// table not eq to orig charmap.exe and "<pre>..." for codes >127 (incl kir.,в„–=185, ...) !?
 // add: change font par's by form
 // -------------------------------------------------------
 function Char32(m_,bg,clr1,clr2,name,fromN,flag,str,fsz,bold,face){
@@ -42,8 +42,8 @@ function CharMap(fsz,bold,face,chars){
         font1='<font face="'+face+'" color="red" size="'+fsz+'">' // fsz,bold not work here!?
         font2='</font>',
         tab2='</table>', heol='<br/>', clr1='white', clr2='black', clr3='cyan',clr4='gray',clr5='yellow',clr6='red',
-        capKir = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ', // string
-        smaKir = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+        capKir = 'РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ', // string
+        smaKir = 'Р°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ'
 		//        12345678901234567890123456789012
   var buf=(font1+tab1);
       buf+=Char32('',clr4,clr3,clr3, 'code+',0,'num','',fsz,bold,face)
@@ -51,7 +51,7 @@ function CharMap(fsz,bold,face,chars){
        title=m*32+'+'; code='cod'; str=''; clr=clr1; 
        if  (m==6) {clr=clr5; code='chr'; str=capKir} // 192+
        if  (m==7) {clr=clr5; code='chr'; str=smaKir} // 224+
-       if( (m>=8   && m<=22 ) || (m>=31  && m<=41 ) || (m>=144 && m<=159)  // №
+       if( (m>=8   && m<=22 ) || (m>=31  && m<=41 ) || (m>=144 && m<=159)  // в„–
 	    || (m>=240 && m<=255) || (m==264)
 		|| (m>=352 && m<=355) || (m>=364 && m<=366) )
  	               clr=clr6;       // red
