@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type"content="text/html; charset=windows-1251">
+  <title>CharMap table</title>
+  <base href="E:\Tedy\!myDoc's\Soft work\~Java script\" target="map">
+  <script language="javascript">
+/* CharMap table 
+ABCDEFGHIJKLMNOPRSTUVWXYZ abcdefghijklmnoprstuvwxyz 
+АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ абвгдежзийклмнопрстуфхцчшщъьюя 
+Aa????Oo ?????????????? €§«»°©®№ ЁёЫыЭэ 0123456789:;.,-+=()[]<>{}«» 
+$??€??#%‰&'"???????.,:;‘’“”‚„!???«»‹›+=±??<>¬–—??…·•@©®™()[]{}|¦/\?*†‡§¶?°???µ^~?`???????????
+*/
+// problems:
+// get active font names ?
+// table not eq to orig charmap.exe and "<pre>..." for codes >127 (incl kir.,№=185, ...) !?
+// add: change font par's by form
+// -------------------------------------------------------
+function Char32(m_,bg,clr1,clr2,name,fromN,flag,str,fsz,bold,face){
+  var s='', td2='</td>', i=0, eol='\r'
+         td1=eol+'<td bgcolor="'+bg+'">'// bordercolordark="#FFFFFF" bordercolorlight="#000000">';
+  for (n=fromN; n<=fromN+31; n++){
+    s+=td1+'<font color="'+clr2+'"  title="'+n+'">'; //  face="'+face+'" size="'+fsz+'"
+    if (bold) s=s+'<b>'
+    if               (flag=='cod')                  {s=s+'&#'+n} 
+    else {       if  (flag=='num') {if (n<=9) {s=s+'0'+n} else {s=s+n} } 
+             else if (flag=='chr') {s=s+str.charAt(i)}
+            };
+    if (bold) s+='</b>'
+    s+='</font>'+td2; i++
+  } // end loop
+  radix=10// : 2..36
+  return(eol+'<tr><td bgcolor="gray">'+m_.toString(radix)+td2
+    +td1+'<font color="'+clr1+'">' //  face="'+face+'"  size="'+fsz+'"
+    +'<font color="'+clr1+'">'+name+'</font>'+s+td2 
+    +'</tr>'); 
+} //end func
+
+function CharMap(fsz,bold,face,chars){
+  var tab1='<table >', 
+        font1='<font face="'+face+'" color="red" size="'+fsz+'">' // fsz,bold not work here!?
+        font2='</font>',
+        tab2='</table>', heol='<br/>', clr1='white', clr2='black', clr3='cyan',clr4='gray',clr5='yellow',clr6='red',
+        capKir = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ', // string
+        smaKir = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+		//        12345678901234567890123456789012
+  var buf=(font1+tab1);
+      buf+=Char32('',clr4,clr3,clr3, 'code+',0,'num','',fsz,bold,face)
+     for (var m=0; m<=chars/32; m++){ // 66752/32=2086 fffc=65532 /32= 2047,399 --- ? ? ? ? ? ? ? ?? ?? ? ?	?	?	? 
+       title=m*32+'+'; code='cod'; str=''; clr=clr1; 
+       if  (m==6) {clr=clr5; code='chr'; str=capKir} // 192+
+       if  (m==7) {clr=clr5; code='chr'; str=smaKir} // 224+
+       if( (m>=8   && m<=22 ) || (m>=31  && m<=41 ) || (m>=144 && m<=159)  // №
+	    || (m>=240 && m<=255) || (m==264)
+		|| (m>=352 && m<=355) || (m>=364 && m<=366) )
+ 	               clr=clr6;       // red
+       if (m>0) buf+=Char32(m,clr2,clr3,clr ,title,m*32,code,str ,fsz,bold,face)           
+     } // end for
+  buf+=(tab2+font2);
+  return buf
+} // end func  
+  function out(s) { if(out_!=undefined) out_.innerHTML+=s; else document.write(s)} // .innerHTML | .innerText - dbg
+// -->
+  </script>
+<style>
+  body { background-color:#777777; color:#cccccc; 
+	font-family:Arial;font-size:12pt; margin:3px 3px 3px 3px;
+  }
+  * {box-sizing: border-box;}
+  table, th, td {  border: 1px solid #444444; background-color:#111111; border-collapse: collapse; }
+  
+  u {color:#ffff99;}
+  e {color:#d90000;}
+  b {font-size:12pt;color:#ffff99;}
+  
+  fieldset { color: #eeeeee; background-color:#111111; width:800px; display: inline-block; 
+             padding: 3px;  margin:1px 1px 1px 1px; border:1px solid #090909; border-radius:6px;}
+  .legend  { color: #eeeeee; background-color:#000000; display: inline-block;
+             border:1px solid #eeeeee;  cursor:pointer;border-radius:3px;padding:2px;}
+  .data    { background-color:#202020;padding:2px; width:790px; 
+	         vertical-align:top; text-align:left; margin:2; border-spacing:2; }
+  .info    { width:790px; height:600px; background-color:#202020;padding: 2px;
+	    vertical-align:top; text-align:left; margin:2; border-spacing:2; 
+        font-family:Arial;font-size:11pt; word-wrap:break-word; overflow: auto; }
+  
+  .v {color: #d9a300; }
+  .e {color: #ffff99; background-color:#000000; border: 1px solid #d9a300; cursor:pointer; padding:1px;}
+
+  .bSer    { background-color:#400000;color:#eeeeee; cursor:pointer; border-radius:3px; padding:2px;}
+  .bRun    { background-color:#202020;color:#ffff99; cursor:pointer; border-radius:3px; padding:2px;
+             border:1px solid #eeeeee;}
+  .bRun:hover    { color: #d96c00;}
+  .bRun:active   { color: #d96c00;}
+  .legend:hover  { color: #d96c00;}
+
+  .id       { color: #d9a300; font-family:Anastasia; font-size:38pt; line-height:30pt;}
+  a:link    { color: #d9a300; background-color: transparent; text-decoration: none;}
+  a:visited { color: #d9a300; background-color: transparent; text-decoration: none;}
+  a:hover   { color: #ffff99; background-color: transparent; text-decoration: underline;}
+  a:active  { color: #d96c00; background-color: transparent; text-decoration: underline;}   
+</style>
+</head>
+
+<body bgcolor="black" text=3><span id="chars" style='font-face:"Lucida Console"; font-size:12pt;'>.</span>
+<script language="javascript">  
+  out_=document.getElementById("chars");  out_.innerHTML=''; // .innerHTML | .innerText - dbg
+  bold=false; size='12pt'; face='Licida Console'; face='Arial'; 
+  out(CharMap(size,bold,face,264*32)); 
+// "Arial Cyr" "Tahoma" "Bodino" "Timok "
+</script>
+</body>
+</html>
