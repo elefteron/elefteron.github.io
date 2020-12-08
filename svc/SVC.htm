@@ -19,7 +19,7 @@
 	   for (i=0; i<=mn; i++) { if(modules[i].state=='ok') ok++;
          buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'+eol+br;
        }
-       return(' ... loads ['+(mn+1)+']: ok='+ok+eol+br+buf) //  [#]. {module:state} 
+       return(' ... loads todo='+(mn+1)+' loads ok='+ok+eol+br+buf) //  [#]. {module:state} 
 	}; 
     
     function msg(s) { 
@@ -266,7 +266,7 @@
 </div> 
 <script> load_end(); </script>
 <script> load_new('svc.htm#script2');
-dbg=!true;
+dbg=true;
 {  bg=0; en=1; tolang=bg; dict=[];// [0='bg',1='en']
    dict[  0]=['език:'         ,'lang:'     ] 
    dict[  1]=['работен път:'  ,'work path:']
@@ -304,8 +304,13 @@ dbg=!true;
    dict[ 29]=['изчисти','clear']
 // dict[  #]=['','']
 }// ---
+   
    // todo: info-> outhlp(help_tech,tolang)
-   alert(load_lst());
+   
+   var ok=0; for (var i=0; i<=mn; i++) { if(modules[i].state=='ok') ok++;}
+   if((mn+1)<10 || ok<9) alert('*** some scripts not loaded ***'+eol+load_lst());
+   else if(dbg) alert('*** scripts loaded ok ***')
+   
    gui_init(); fs_init();
    xusr_.innerHTML=user   
    xpth_.innerHTML=workpath; // alert(wp)
