@@ -30,7 +30,7 @@
       } else if(typeof(msg_)===undefined){ alert('»msg_:'+s); return}
       
       if (msg_===null) msg_.innerHTML =''; // clear old  content
-      else             msg_.innerHTML+=s+crlf+'<br>'; // append
+      else             msg_.innerHTML+=s+eol+'<br>'; // append
     
     }
     load_end();
@@ -432,7 +432,7 @@ dbg=!true;
     load_end();
 </script>
 <script>
-    msg_=document.getElementById("_msg"); 
+//  msg_=document.getElementById("msg"); 
     window.onload = load_lst();
 //  window.onload = (event) => {
 //    console.log('page is fully loaded'); onload.load_lst();
