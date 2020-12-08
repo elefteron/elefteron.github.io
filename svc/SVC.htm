@@ -393,22 +393,26 @@ dbg=true;
 // dict[  #]=['','']
 }// ---
 
-   // todo: info-> outhlp(help_tech,tolang)
+// #pers-init.bat must be runed before htm on XP 
+// if(isFunc(typeof(window.ActiveXObject))) run_pers_init() // pers_init_bat=
+// todo: info-> outhlp(help_tech,tolang)
    
+   msg_=document.getElementById("msg");
+   if(msg_===undefined || msg_===null) {
+      document.write('<div ID="msg" class="info" style="height:400px; display:none">»» msg  </div>')
+      msg_=document.getElementById("msg"); alert(' msg_ forced!')
+   }
    var ok=0; for (var i=0; i<=mn; i++) { if(modules[i].state=='ok') ok++;}
    if((mn+1)<10 || ok<9) alert('*** some scripts not loaded ***');
    else if(dbg) alert('*** scripts loaded ok ***')
    
-   gui_init(); fs_init();
-   
+   gui_init();
+   fs_init();
    xusr_.innerHTML=user   
    xpth_.innerHTML=workpath; // alert(wp)
     xos_.innerHTML=os   
    xcmp_.innerHTML=comp   
    set_val("xpth"     , 'htm', workpath     ) 
-
-// #pers-init.bat must be runed before htm on XP 
-// if(isFunc(typeof(window.ActiveXObject))) run_pers_init() // pers_init_bat=
 
    {_min=0, _mid=1, _max=2 // _win.hdr.st=_min; h=_win.hdr.h[_min] 
      _win=[ // id,st:0/1/2, h[st]
@@ -428,10 +432,6 @@ dbg=true;
 	  for(var i=0; i<=_win.length-1; i++) {_minH+=_win[i].h[_min]; _maxH+=Number(_win[i].h[_max]); }
 	}
 
-    if(msg_===undefined || msg_===null) {
-      document.write('<div ID="msg" class="info" style="height:400px; display:none">»» msg  </div>')
-      msg_=document.getElementById("msg"); alert(' msg_ forced!')
-    }
 	msg('... _minH:'+_minH+' _maxH:'+_maxH) 
 	_minH+=60; if(_maxH>900) _maxH=900; 
 //  window.resizeTo(_minW,_minH);/* w:840,h:260..1000 */ //  window.moveTo(62,20); /* x:130,y:70 */
