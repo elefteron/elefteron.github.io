@@ -11,9 +11,11 @@
   <!-- 
     https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy 
     https://w3c.github.io/webappsec-trusted-types/dist/spec/#trusted-html
-    meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; media-src *;  img-src 'self'; child-src 'none';"
+    https://content-security-policy.com/
+    https://content-security-policy.com/#source_list
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
   -->
-  <meta http-equiv="Content-Security-Policy" content="*">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self';">
   
   <script> eol='\n'; br='<br/>';    
 	modules=[]; mn=-1;  
