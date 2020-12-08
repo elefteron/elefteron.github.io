@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>X14</title> <!-- ../run/x-widget.htm v.2017 -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  <link href ="../ico/D.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <link href ="../ico/D.ico" type="image/x-icon" rel ="icon"          />
+
+  <meta name="description"   content="x-widget"> 
+  <meta name="keywords"      content="x-widget">
+  <meta name="Author"        content="elefter@abg.bg">
+  
+  <script src="x-cfg.js"></script>
+  <script>
+    if(test) with(xcfg.pos) 
+      alert(' bp:'+bp+' sz:'+bar.sz         +'\n'//    w   56  ; h 67
+	       +' bw:'+bw+' bh:'+bh             +'\n'//   56    0  ; 0 67
+	       +' sw:'+max.x+' sh:'+max.y       +'\n'// 1280 1024  ; 1280 1024
+	       +' aw:'+aw+' ah:'+ah             +'\n'// 1224 1024  ; 1280  957
+	       +' x:'+win.x+' y:'+win.y         +'\n'// 1144  702
+	       +' w:'+win.w+' h:'+win.h         +'\n'//  136  322
+	       +' sw:'+scroll.w+' sh:'+scroll.h +'\n'//   20   20		   
+	  )
+//if(winresize) with(xcfg.pos) { resizeTo(win.w,win.h); moveTo(win.x,win.y)}
+  </script>
+  <style>
+    *     { padding:0; margin:0;  }
+  body    { background-color:#000; color:yellow; text-ALIGN:left;
+            font-size:11pt; line-height:11.2pt; font-weight:bold; 
+			width:150px; 
+  font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
+          }
+  </style>  
+</head>  
+<body BGCOLOR="gray" text="white" textsize="3" scrolling="auto" border="0"
+style='margin-top:0;margin-left:0;margin-right:0;margin-bottom:0;'> <xmp id="me"></xmp>
+  <noscript>
+	<h3>This 'x-widget' can't work without JavaScript!</h3>
+    To enable JavaScript see: 
+	<a href="http://enable-javascript.com/" target="_blank">instructions</a>.	
+    <br> tested with browsers: Mozilla,Firefox,K-meleon,Netscape, msIE, Opera, Safari
+  </noscript>
+  <table>
+   <tr><td><iFRAME id="clk"  SRC="../clk/clock-24.htm"       marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="56"  width="150"></iFRAME></td></tr>
+   <tr><td><iFRAME id="cal"  SRC="../cal/calendar.htm#1,3,1" marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="132" width="150"></iFRAME></td></tr>
+   <tr><td><iFRAME id="drv"  SRC="../drv/drv-info.htm#"      marginwidth="0" marginheight="0" scrolling="auto"         border="0" height="160" width="310"></iFRAME></td></tr>
+   <tr><td><iFRAME id="xmnu" SRC="../run/x-mnu.htm"          marginwidth="0" marginheight="0" sc1rollingrolling="auto" border="0" height="260" width="150"></iFRAME></td></tr>
+  </table>
+</body>
+</html>

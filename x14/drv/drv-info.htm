@@ -1,0 +1,79 @@
+<html lang="bg">
+<head><title>DrvInfo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <meta name="description"        content="Drv-Info win-hta 2010-10..2013-04" />
+  <meta name="author"             content="mailto:elefter@abv.bg" />  
+  <link  href=   "scr/drv-info-1.css" rel="stylesheet" type="text/css" />
+  <script src="../lib/loader.js"></script>
+  <script> var dbg=0,dir_scr='scr/', dir_lib='../lib/', ext_js='.js', ext_css='.css';
+  { var drvScripts=
+       [{path:dir_lib,file:'loader'     ,ext:ext_js } 
+       ,{path:dir_lib,file:'fs'         ,ext:ext_js } 
+       ,{path:dir_scr,file:'drv-info'   ,ext:ext_js } 
+       ,{path:dir_lib,file:'windows'    ,ext:ext_js }
+       ,{path:dir_lib,file:'date'       ,ext:ext_js }
+       ,{path:dir_lib,file:'math'       ,ext:ext_js }
+       ,{path:dir_scr,file:'makeTbl'    ,ext:ext_js } // makeTbl(),usr_info(eb) 
+       ,{path:dir_scr,file:'addDrv'     ,ext:ext_js } // addDrv()  -> DriveList[Drives][1..8][]
+       ,{path:dir_scr,file:'fs'         ,ext:ext_js } // GetDriveList() -> addDrv() ->DriveList[]
+       ,{path:dir_scr,file:'fs-data'    ,ext:ext_js } //                -> addDrv() ->DriveList[]                           
+       ,{path:dir_scr,file:'drv-info-1' ,ext:ext_css} 
+       ]
+    with (drvScripts[9]) {var _fd=path+file+ext} //='fs-data.js';
+  }
+  _load._do(drvScripts) 
+  </script>
+  <style>
+    *     { padding:0; margin:0;  }
+  body    { background-color:#000; color:yellow; text-ALIGN:left;
+            font-size:11pt; line-height:11.2pt; font-weight:bold; 
+			width:150px; 
+  font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
+          }
+  </style>  
+</head>
+<body BGCOLOR="black" text="white" textsize="3">
+<h3 id="jsFailure" style="color:red;">Javascript failed/must be turned on!</h3>
+<span id="layout.drv-info"></span>
+<script> dbg=0
+  document.getElementById('jsFailure').innerHTML = 'Javascript Failure!';
+  /*  *-/ window.onerror=_load._err; /* not show some syntax errors */
+  { var       lay_=null, layID='layout.drv-info' 
+       ,wrk=0,wrk_=null, wrkID='wrk.drv-info'
+       ,log=1,log_=null, logID='log_', b='<br/>'; if(_iex) b=''
+    var stl='margin:0px;padding:0px;border:none;overflow:auto;'// border:1px orange inset;
+    var w=whr=400,wlog=600; if(!_iex) whr=100
+    var box=make_box(
+    [{no:wrk,id:wrkID,t:'row' ,w: 0         ,u:'px',bg:'#222',st:stl}  
+    ,{no:log,id:logID,t:'row' ,w: wlog,h:300,u:'px',bg:'#333',st:stl   
+     ,sh:shell_line(logID,whr,9,'#444','#88f')+b}
+    ],layID)
+    lay_=            document.getElementById(layID)
+    wrk_=box[wrk].p_=document.getElementById(wrkID);  
+    log_=box[log].p_=document.getElementById(logID); 
+    var islayok=true  
+    if(undef(lay_) || lay_==null){ islayok=false; err+='"lay_" missing'+eol}
+    if(undef(log_) || log_==null){ islayok=false; err+='"log_" missing'+eol}
+    if(undef(wrk_) || wrk_==null){ islayok=false; err+='"wrk_" missing'+eol}
+  }
+  if(!islayok) alert(err); else{
+    Hide(logID)
+  //lay_.setAttribute('style', 'font-size:12px;');
+  //lay_.style.fontSize='12px';  //fontSize
+  //lay_.style.lineHeight='14px';
+  dbg=1
+    if(undef(fs.ax)) alert('miss: fs.ax')
+    if(undef(fs.ax._activexON) || fs.ax._activexON=='' || fs.ax._activexON==null) 
+      fs.ax._activexON=fs.ax._activexInit()
+    if(dbg>0 || _load._has_err()) out(log_,_load._list())
+    if(dbg>0){ fs.ax.test();
+      out(log_,'DrvInfo: _activexON='+fs.ax._activexON +br)
+    }
+//  --- 
+    drv_load() // -> wrk_.innerHTML 
+//  window.onload=drv_load | body onLoad="drv_load()" 
+  } // ---------------------------------- 
+  document.getElementById('jsFailure').style.display = 'none';
+</script>
+</body>
+</html>

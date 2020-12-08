@@ -1,0 +1,87 @@
+<html>
+<head>
+  <HTA:APPLICATION ID="Xhta" applicationName="X14"   icon="../ico/D.ico"
+    singleInstance= "no"  showInTaskBar ="yes"  application   ="yes"
+    contextMenu   ="yes"  selection     ="yes"
+	scrollFlat    ="no"   scroll        ="yes"  caption       ="yes"
+    maximizeButton="yes"  minimizeButton="yes"  sysMenu       ="yes"  
+    windowState="normal"  navigable     ="yes" 	innerBorder   ="no"
+    borderStyle="raised"  
+  />
+  <title>X14 hta</title> <!-- x-widget.run.hta v.2014-->
+  <link href ="../ico/D.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <link href ="../ico/D.ico" type="image/x-icon" rel ="icon"          />
+  <meta http-equiv="x-ua-compatible" content="ie=9">
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <!--META HTTP-EQUIV="refresh" CONTENT="0; URL=x-widget.htm"-->
+</head>
+<body>
+  <!-- PRE ID='prop'></PRE -->
+  <script src="x-cfg.js"></script>
+  <SCRIPT> dbg=false //false true
+    function ClearProp() { prop.innerText= '';	}
+    function ShowHTAProp(_HTA)  { prop.innerText=
+         "border           = " + _HTA.border          + "\n" +
+      /// border           : none, thin - cant resize, dialog, thick - to resize
+         "borderStyle      = " + _HTA.borderStyle     + "\n" + 
+      /// borderStyle      : complex, static, sunken, raised, normal
+         "windowState      = " + _HTA.windowState     + "\n" +  	
+      /// windowState      : minimize, maximize, normal
+         "caption          = " + _HTA.caption         + "\n" +
+         "contextMenu      = " + _HTA.contextMenu     + "\n" +
+         "scroll           = " + _HTA.scroll          + "\n" +
+         "maximizeButton   = " + _HTA.maximizeButton  + "\n" +
+         "minimizeButton   = " + _HTA.minimizeButton  + "\n" + 
+         "singleInstance   = " + _HTA.singleInstance  + "\n" +  
+         "sysMenu          = " + _HTA.sysMenu         + "\n" + 
+         "innerBorder      = " + _HTA.innerBorder     + "\n" + 
+         "scrollFlat       = " + _HTA.scrollFlat      + "\n" + 
+         "selection        = " + _HTA.selection       + "\n" + 
+		 
+         "applicationName  = " + _HTA.applicationName + "\n" + 
+         "version          = " + _HTA.version         + "\n" +
+         "icon             = " + _HTA.icon            + "\n" +
+    //   "ID               = " + _HTA                 + "\n" + // [obj] ?
+         "application      = " + _HTA.application     + "\n" + // undef!?
+         "showInTaskBar    = " + _HTA.showInTaskbar   + "\n" + // undef!?
+         "navigable        = " + _HTA.navigable       + "\n" + // undef!?
+	  
+         "commandLine      = " + _HTA.commandLine     + "\n" 
+    /* This function also retrieves the value of the commandLine property,
+          which cannot be set as an attribute.  */ 
+	// http://www.htmlgoodies.com/beyond/reference/article.php/3472841
+    }
+    function getLnk(l_){ var p=l_
+	  i=p.lastIndexOf('.lnk'); 
+	  if(i>=0){// http://lpetr.org/blog/archives/creating-start-menu-shortcuts-with-javascript
+	    fsh = new ActiveXObject("WScript.Shell");
+	    lnk = fsh.CreateShortcut(p)
+	    p=lnk.TargetPath; 
+		if(p.charAt(0)=='\\' && p.charAt(1)=='\\') { // \\192.168.1.222\d$\Me...
+		  alert('unmaped net adr .lnk:'+p)
+		} else if(p.charAt(1)!=':') { 
+		  alert('curious .lnk:'+p)
+		}
+		if(dbg) alert('.lnk->p:'+p)
+	  }	
+	  return p
+	}
+	function gohtm(PROG,cmd){ var i,p;
+	  p=cmd;  // if(dbg)alert('cmd:'+p) 
+      i=p.indexOf(PROG.substring(0,PROG.length-1)+'.hta ')+PROG.length+5;
+      if(i>=0) p=p.substring(i,p.length);  
+	  p=p.split(';'); p=p[0]; 
+	  
+	  if(p.charAt(0)=='"'){p=p.split('"'); p=p[1];} // !? "W:\D\a b"
+	  p=getLnk(p);
+	  if(dbg) alert('try p:'+p)
+   // main.innerHTML.src=PROG+"#"+p;                               
+   // document.getElementById('main').innerHTML  = PROG+".htm#"+p  //
+   // document.getElementById('main').src ='<iframe src="dirlist.htm"></iframe>'
+      document.location.href = PROG+".htm#"+p;  // replace content 
+	}
+	//ShowHTAProp(Xhta); alert();
+	gohtm('x-widget',Xhta.commandLine)
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿    *     { padding:0; margin:0; overflow:hidden; text-ALIGN:center;}
+  body    { background-color:#202020; color:#b5bcba; 
+            font-size:12pt; line-height:13pt; 
+            font-family:'Impact';
+          }
+  .cal    { background-color:#000000; color:#558888; text-ALIGN:left;
+            font-size:13pt;  line-height:15pt;
+          }        
+  .hdr    { background-color:#000000; color:#558888; 
+            font-size: 9pt; line-height:11pt;       
+          }
+  .data   { background-color:#404040; color:#aaaaaa; text-ALIGN:RIGHT; 
+            font-size:20pt;  line-height:21pt;         padding:2; 
+          }

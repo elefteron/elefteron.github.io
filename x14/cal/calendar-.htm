@@ -1,0 +1,93 @@
+<HTML><head><title>kalendar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <link type="text/css" rel="stylesheet" href="scr/cal-style-1.css"/>
+  <script language="JavaScript">
+  load='head'
+    colorset=2 // 1:no frames  ,2:frames 
+    winset  =2 // 1:crnt month line, 2:year months line, 3:crnt month std, 4:year months std  
+    winresize=false// 0
+	yrofs=0 // y1=y2=crnt year in "kalendar cfg.js"
+// function out(s){document.write(s)} 
+// function outx(s){document.write('<xmp>'+s+'</xmp>')} 
+   
+   var call=document.location.href
+   var i=call.indexOf('#')+1;
+ if(i>0){   
+   var buf=call.substring(i,call.length)
+   call=buf.split(',')
+   if(typeof(call[0])!='undefined') colorset =call[0];
+   if(typeof(call[1])!='undefined') winset   =call[1];
+   if(typeof(call[2])!='undefined') winresize=call[2];
+   if(typeof(call[3])!='undefined') yrofs    =call[3];
+ }
+// alert(' colorset='+colorset+' winset='+winset+' yrofs='+yrofs)
+   load+='.'
+   // 1361510317 = 22/02/2013 07:18:37 -> 20130222.071837
+   
+  var refreshms=60*1000
+  function calendar_load(){ cal_htm=''
+//  winresize=false
+    seeclock='-' // 'L'eft/'R'ight/'T'op/'B'ottom/'-' 
+//  ---------------------------------  if (winresize) {resizeTo(w,h); moveTo(x,y)}
+//   ? refresh on new day - clock & kalendar
+    
+    if (seeclock!='-') window.onload=showTime5; 
+//  cal_htm+='<font face="Tahoma, Verdana, Arial, Helvetica, Sans Serif">'// mz
+    
+    if       (seeclock=='L') {
+      cal_htm+='<table><tr><td valign="'+cvalign+'">'+liveclock+'</td><td>'
+    }else if (seeclock=='T') cal_htm+=liveclock
+    if(yrofs=='?'){ 
+      yrfr=prompt("from:", y1); yrto=prompt("to:", y2);
+	  // if(yrfr==NaN) yrfr=y1;   
+    }else{
+      var yrfr=y1/1+yrofs/1, yrto=y2/1+yrofs/1;
+      //alert('crnt yr='+y1+' yrofs='+yrofs+' yrfr='+yrfr+' yrto='+yrto)
+    }
+    for (yr=yrfr; yr<=yrto; yr++){ // init year: setydays(y,1,1) - days.js
+      setydays(yr,0,0)
+      cal_htm+=showyear(yr,m1,m2);
+    }out('</td>')
+    
+    if       (seeclock=='R') {
+      cal_htm+='</td><td valign="'+cvalign+'">'+liveclock+'</td></tr></table>'
+    }else if (seeclock=='B') {out(liveclock)}
+    out_.innerHTML=cal_htm; 
+    setTimeout("calendar_load()", refreshms); // ----- #3 self call 
+  }
+  </script>
+  <script src="scr/calendar-hdr.js"></script>
+  <script src="scr/calendar-cfg.js"></script>
+  <script src="scr/calendar-show.js"></script>
+</head>
+
+<body onLoad="calendar_load()" 
+  vLink="cyan" hlink="lime" link="#87CEEB" 
+  bgColor="#000000" text="cyan" textsize="3"
+  marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
+<span name="calendar" id="calendar"></span>
+<script>load+='body'; 
+/** @snippet=out&app **/ eol='\r\n' 
+  out_=document.getElementById('calendar')
+  out=function(s){out_.innerHTML+=s+eol;}
+//out_()
+/** **/  
+/*  
+  var a=new Date(); b="Good" + ((a.getHours() > 17) ? " evening." : " day.")
+  if(confirm('show location')) 
+    out(parent.location
+    +'<br>"'+(location.search ? "y" : "n")+'"'
+    +'<br>'+b)
+  // location.search ? location.search.substring(1) + "y.html" : "n.html"
+  // parent.frames[0].location=
+  
+  // document.location
+  // location
+  // parent.location
+
+// alert('screen:av.w='+screen.availWidth+' av.h='+screen.availHeight)
+*/
+load+='.'
+if(load!='head.hdr.cfg.show.body.')out('\n load?:'+load); 
+</script>
+</body></html>

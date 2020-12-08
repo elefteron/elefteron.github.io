@@ -1,0 +1,28 @@
+    *     { padding:0; margin:0;  overflow:hidden; }
+  body    { background-color:#202020; color:yellow; text-ALIGN:left;
+            font-size:11pt; line-height:11.2pt; font-weight:bold;
+  font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
+          }
+
+  .cal    { background-color:#000000; color:#DAA520; text-ALIGN:left;
+            font-size:10pt;  line-height:11pt; font-weight:bold;
+          }        
+  .hdr    { background-color:#505050; color:#ffffff; 
+            font-size: 7pt; line-height:8pt;       
+          }
+  .data   { background-color:#151520; color:#00AAFF; text-ALIGN:RIGHT; 
+            font-size:8pt;  line-height:9pt;         padding:2; 
+          }
+          /* color:#151520 #303035 #00AAFF #a0a0a0 #202020 #505050 #DAA520 */
+          
+a:link   {color:#00FFAA;text-decoration:none;}
+a:visited{color:#66CCFF;text-decoration:none;} /* 00FFFF 66CCFF */
+a:hover  {color:black;background-color:gold;} 
+a:active {color:#00AAFF;}
+
+BODY /*ie*/
+  {scrollbar-arrow-color    :#FFFFFF; scrollbar-3dlight-color   :#a0a0a0;
+   scrollbar-highlight-color:#000000; scrollbar-face-color      :#000000;
+   scrollbar-shadow-color   :#a0a0a0; scrollbar-darkshadow-color:#000000;
+   scrollbar-track-color    :#1d1d1d; 
+   }
