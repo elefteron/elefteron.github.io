@@ -19,7 +19,7 @@
 	   for (i=0; i<=mn; i++) { if(modules[i].state=='ok') ok++;
          buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'+eol+br;
        }
-       msg(' ... loads ['+(mn+1)+']: ok='+ok+eol+br+buf) //  [#]. {module:state} 
+       return(' ... loads ['+(mn+1)+']: ok='+ok+eol+br+buf) //  [#]. {module:state} 
 	}; 
     
     function msg(s) { 
@@ -434,8 +434,9 @@ dbg=!true;
     load_end();
 </script>
 <script>
+    alert(load_lst());
     if(msg_===null || msg_===undefined) {msg_=document.getElementById("msg"); msg(' msg_ forced!');}
-    window.onload = load_lst();
+    window.onload = msg(load_lst()); 
 //  window.onload = (event) => {
 //    console.log('page is fully loaded'); onload.load_lst();
 //  };
