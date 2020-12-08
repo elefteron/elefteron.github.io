@@ -1,0 +1,338 @@
+%!AdobeFontSet 2.0
+
+%!BeginSet +CONSOLE
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:++console:
+PS=Consolas,TYPE=TT,WNAM=Consolas,WFIL=consola.ttf
+PS=Consolas-Italic,TYPE=TT,STYL=ITALIC,WNAM=Consolas,,Italic,WFIL=consolai.ttf
+PS=Consolas-Bold,TYPE=TT,STYL=BOLD,WNAM=Consolas,,Bold,WFIL=consolab.ttf
+PS=Consolas-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Consolas,,Bold Italic,WFIL=consolaz.ttf
+PS=LetterGothicStd,TYPE=OT,WNAM=Letter Gothic Std,WFIL=LetterGothicStd.otf
+PS=LetterGothicStd-Slanted,TYPE=OT,STYL=ITALIC,WNAM=Letter Gothic Std,, Italic,WFIL=LetterGothicStd-Slanted.otf
+PS=LetterGothicStd-Bold,TYPE=OT,STYL=BOLD,WNAM=Letter Gothic Std,, Bold,WFIL=LetterGothicStd-Bold.otf
+PS=LetterGothicStd-BoldSlanted,TYPE=OT,STYL=BOLDITALIC,WNAM=Letter Gothic Std,, Bold Italic,WFIL=LetterGothicStd-BoldSlanted.otf
+PS=LucidaConsole,TYPE=TT,WNAM=Lucida Console,WFIL=lucon.ttf
+%!EndSet 
+
+%!BeginSet +COURIER
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+courier:
+PS=CourierNewPSMT,TYPE=TT,WNAM=Courier New,WFIL=cour.ttf
+PS=CourierNewPS-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Courier New,,Italic,WFIL=couri.ttf
+PS=CourierNewPS-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Courier New,,Bold,WFIL=courbd.ttf
+PS=CourierNewPS-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Courier New,,Bold Italic,WFIL=courbi.ttf
+PS=CourierStd,TYPE=OT,WNAM=Courier Std,WFIL=CourierStd.otf
+PS=CourierStd-Oblique,TYPE=OT,STYL=ITALIC,WNAM=Courier Std,, Italic,WFIL=CourierStd-Oblique.otf
+PS=CourierStd-Bold,TYPE=OT,STYL=BOLD,WNAM=Courier Std,, Bold,WFIL=CourierStd-Bold.otf
+PS=CourierStd-BoldOblique,TYPE=OT,STYL=BOLDITALIC,WNAM=Courier Std,, Bold Italic,WFIL=CourierStd-BoldOblique.otf
+PS=DilleniaUPC,TYPE=TT,WNAM=DilleniaUPC,WFIL=UPCDL.TTF
+PS=DilleniaUPCItalic,TYPE=TT,STYL=ITALIC,WNAM=DilleniaUPC,,Italic,WFIL=UPCDI.TTF
+PS=DilleniaUPCBold,TYPE=TT,STYL=BOLD,WNAM=DilleniaUPC,,Bold,WFIL=UPCDB.TTF
+PS=DilleniaUPCBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=DilleniaUPC,,Bold Italic,WFIL=UPCDBI.TTF
+%!EndSet 
+
+%!BeginSet +DECOR-MIN
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+decor-min:
+PS=CaflischScriptPro-Regular,TYPE=OT,WNAM=Caflisch Script Pro Regular,WFIL=CaflischScriptPro-Regular.otf
+PS=ComicSansMS,TYPE=TT,WNAM=Comic Sans MS,WFIL=comic.ttf
+PS=ComicSansMS-Bold,TYPE=TT,STYL=BOLD,WNAM=Comic Sans MS,,Bold,WFIL=comicbd.ttf
+PS=Digitaldream,TYPE=TT,WNAM=Digital dream,WFIL=DIGITALDREAM.TTF
+PS=DigitaldreamSkewNarrow,TYPE=TT,WNAM=Digital dream Skew Narrow,WFIL=DIGITALD.ttf
+PS=DigitalReadout,TYPE=TT,WNAM=Digital Readout,WFIL=DIGIR___.ttf
+PS=DigitalReadoutCondensed,TYPE=TT,WNAM=Digital Readout Condensed,WFIL=Digirc__.ttf
+PS=DigitalReadoutCondUpright,TYPE=TT,WNAM=Digital Readout CondUpright,WFIL=Digircu_.ttf
+PS=DigitalReadoutExpanded,TYPE=TT,WNAM=Digital Readout Expanded,WFIL=Digire__.ttf
+PS=DigitalReadoutExpUpright,TYPE=TT,WNAM=Digital Readout ExpUpright,WFIL=DIGIREU_.ttf
+PS=DigitalReadoutThick,TYPE=TT,WNAM=Digital Readout Thick,WFIL=DIGIRT__.TTF
+PS=DigitalReadoutThickUpright,TYPE=TT,WNAM=Digital Readout Thick Upright,WFIL=Digirtu_.ttf
+PS=DigitalReadoutUpright,TYPE=TT,WNAM=Digital Readout Upright,WFIL=DIGIRU__.TTF
+PS=DigitalSF,TYPE=TT,WNAM=Digital SF,WFIL=DIGITAL.TTF
+PS=Digital2-Medium,TYPE=TT,WNAM=Digital2,,Medium,WFIL=Digital2 Medium.ttf
+PS=DotMatrix Regular,TYPE=TT,WNAM=DotMatrix,WFIL=DOTMATRX.ttf
+PS=LithosPro-ExtraLight,TYPE=OT,WNAM=Lithos Pro Extra Light,WFIL=LithosPro-ExtraLight.otf
+PS=LithosPro-Light,TYPE=OT,WNAM=Lithos Pro Light,WFIL=LithosPro-Light.otf
+PS=LithosPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Lithos Pro Light,, Bold,WFIL=LithosPro-Bold.otf
+PS=LithosPro-Regular,TYPE=OT,WNAM=Lithos Pro Regular,WFIL=LithosPro-Regular.otf
+PS=LithosPro-Black,TYPE=OT,STYL=BOLD,WNAM=Lithos Pro Regular,, Bold,WFIL=LithosPro-Black.otf
+PS=Sea-Dog,TYPE=TT,WNAM=Sea-Dog,WFIL=SEA7.ttf
+PS=SegoePrint,TYPE=TT,WNAM=Segoe Print,WFIL=segoepr.ttf
+PS=SegoePrint-Bold,TYPE=TT,STYL=BOLD,WNAM=Segoe Print,,Bold,WFIL=segoeprb.ttf
+PS=SegoeScript,TYPE=TT,WNAM=Segoe Script,WFIL=segoesc.ttf
+PS=SegoeScript-Bold,TYPE=TT,STYL=BOLD,WNAM=Segoe Script,,Bold,WFIL=segoescb.ttf
+%!EndSet 
+
+%!BeginSet +DECOR-MORE
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+decor-more:
+PS=MarsPolice,TYPE=TT,WNAM=Mars Police,WFIL=MARSPOLI.ttf
+%!EndSet 
+
+%!BeginSet +HIDDEN-SERIF
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+hidenserif:
+PS=IrisUPC,TYPE=TT,WNAM=IrisUPC,WFIL=UPCIL.TTF
+PS=IrisUPCItalic,TYPE=TT,STYL=ITALIC,WNAM=IrisUPC,,Italic,WFIL=UPCII.TTF
+PS=IrisUPCBold,TYPE=TT,STYL=BOLD,WNAM=IrisUPC,,Bold,WFIL=UPCIB.TTF
+PS=IrisUPCBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=IrisUPC,,Bold Italic,WFIL=UPCIBI.TTF
+%!EndSet 
+
+%!BeginSet +NO-SERIF
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+nonserif:
+PS=AJensonPro-Regular,TYPE=OT,WNAM=Adobe Jenson Pro,WFIL=AJensonPro-Regular.otf
+PS=AJensonPro-It,TYPE=OT,STYL=ITALIC,WNAM=Adobe Jenson Pro,, Italic,WFIL=AJensonPro-It.otf
+PS=AJensonPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Adobe Jenson Pro,, Bold,WFIL=AJensonPro-Bold.otf
+PS=AJensonPro-BoldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Adobe Jenson Pro,, Bold Italic,WFIL=AJensonPro-BoldIt.otf
+PS=AJensonPro-Lt,TYPE=OT,WNAM=Adobe Jenson Pro Lt,WFIL=AJensonPro-Lt.otf
+PS=AJensonPro-LtIt,TYPE=OT,STYL=ITALIC,WNAM=Adobe Jenson Pro Lt,, Italic,WFIL=AJensonPro-LtIt.otf
+PS=AJensonPro-Semibold,TYPE=OT,STYL=BOLD,WNAM=Adobe Jenson Pro Lt,, Bold,WFIL=AJensonPro-Semibold.otf
+PS=AJensonPro-SemiboldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Adobe Jenson Pro Lt,, Bold Italic,WFIL=AJensonPro-SemiboldIt.otf
+PS=AdobePiStd,TYPE=OT,WNAM=Adobe Pi Std,WFIL=AdobePiStd.otf
+PS=AharoniBold,TYPE=TT,STYL=BOLD,WNAM=Aharoni,,Bold,WFIL=ahronbd.ttf
+PS=ArialMT,TYPE=TT,WNAM=Arial,WFIL=arial.ttf
+PS=Arial-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Arial,,Italic,WFIL=ariali.ttf
+PS=Arial-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Arial,,Bold,WFIL=arialbd.ttf
+PS=Arial-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Arial,,Bold Italic,WFIL=arialbi.ttf
+PS=ArialAlternative,TYPE=TT,WNAM=Arial Alternative,WFIL=ARIALALT.TTF
+PS=Arial-Black,TYPE=TT,WNAM=Arial Black,,Black,WFIL=ariblk.ttf
+PS=ArialNarrow,TYPE=TT,WNAM=Arial Narrow,WFIL=ARIALN.TTF
+PS=ArialNarrow-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Arial Narrow,,Bold Italic,WFIL=ARIALNBI.TTF
+PS=BellGothicStd-Black,TYPE=OT,WNAM=Bell Gothic Std Black,WFIL=BellGothicStd-Black.otf
+PS=BellGothicStd-Light,TYPE=OT,WNAM=Bell Gothic Std Light,WFIL=BellGothicStd-Light.otf
+PS=BellGothicStd-Bold,TYPE=OT,STYL=BOLD,WNAM=Bell Gothic Std Light,, Bold,WFIL=BellGothicStd-Bold.otf
+PS=BrowalliaNew,TYPE=TT,WNAM=Browallia New,WFIL=BROWA.TTF
+PS=BrowalliaNew-Italic,TYPE=TT,STYL=ITALIC,WNAM=Browallia New,,Italic,WFIL=BROWAI.TTF
+PS=BrowalliaNew-Bold,TYPE=TT,STYL=BOLD,WNAM=Browallia New,,Bold,WFIL=BROWAB.TTF
+PS=BrowalliaNew-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Browallia New,,Bold Italic,WFIL=BROWAZ.TTF
+PS=BrowalliaUPC,TYPE=TT,WNAM=BrowalliaUPC,WFIL=BROWAU.TTF
+PS=BrowalliaUPC-Italic,TYPE=TT,STYL=ITALIC,WNAM=BrowalliaUPC,,Italic,WFIL=BROWAUI.TTF
+PS=BrowalliaUPC-Bold,TYPE=TT,STYL=BOLD,WNAM=BrowalliaUPC,,Bold,WFIL=BROWAUB.TTF
+PS=BrowalliaUPC-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=BrowalliaUPC,,Bold Italic,WFIL=BROWAUZ.TTF
+PS=Calibri,TYPE=TT,WNAM=Calibri,WFIL=calibri.ttf
+PS=Calibri-Italic,TYPE=TT,STYL=ITALIC,WNAM=Calibri,,Italic,WFIL=calibrii.ttf
+PS=Calibri-Bold,TYPE=TT,STYL=BOLD,WNAM=Calibri,,Bold,WFIL=calibrib.ttf
+PS=Calibri-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Calibri,,Bold Italic,WFIL=calibriz.ttf
+PS=CordiaNew,TYPE=TT,WNAM=Cordia New,WFIL=CORDIA.TTF
+PS=CordiaNew-Italic,TYPE=TT,STYL=ITALIC,WNAM=Cordia New,,Italic,WFIL=CORDIAI.TTF
+PS=CordiaNew-Bold,TYPE=TT,STYL=BOLD,WNAM=Cordia New,,Bold,WFIL=CORDIAB.TTF
+PS=CordiaNew-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Cordia New,,Bold Italic,WFIL=CORDIAZ.TTF
+PS=CordiaUPC,TYPE=TT,WNAM=CordiaUPC,WFIL=CORDIAU.TTF
+PS=CordiaUPC-Italic,TYPE=TT,STYL=ITALIC,WNAM=CordiaUPC,,Italic,WFIL=CORDIAUI.TTF
+PS=CordiaUPC-Bold,TYPE=TT,STYL=BOLD,WNAM=CordiaUPC,,Bold,WFIL=CORDIAUB.TTF
+PS=CordiaUPC-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=CordiaUPC,,Bold Italic,WFIL=CORDIAUZ.TTF
+PS=EpsySans,TYPE=TT,WNAM=Epsy Sans,WFIL=EPSYSRG_.ttf
+PS=EstrangeloEdessa,TYPE=TT,WNAM=Estrangelo Edessa,WFIL=estre.ttf
+PS=FixedMiriamTransparent,TYPE=TT,WNAM=Fixed Miriam Transparent,WFIL=mriamfx.ttf
+PS=FranklinGothic-Medium,TYPE=TT,WNAM=Franklin Gothic Medium,WFIL=framd.ttf
+PS=FranklinGothic-MediumItalic,TYPE=TT,STYL=ITALIC,WNAM=Franklin Gothic Medium,,Italic,WFIL=framdit.ttf
+PS=FreesiaUPC,TYPE=TT,WNAM=FreesiaUPC,WFIL=UPCFL.TTF
+PS=FreesiaUPCItalic,TYPE=TT,STYL=ITALIC,WNAM=FreesiaUPC,,Italic,WFIL=UPCFI.TTF
+PS=FreesiaUPCBold,TYPE=TT,STYL=BOLD,WNAM=FreesiaUPC,,Bold,WFIL=UPCFB.TTF
+PS=FreesiaUPCBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=FreesiaUPC,,Bold Italic,WFIL=UPCFBI.TTF
+PS=GillSansMT-Condensed,TYPE=TT,WNAM=Gill Sans MT Condensed,WFIL=GILC____.TTF
+PS=HSGrotesk,TYPE=T1,WNAM=HS Grotesk,WFIL=HSGRON__.pfm
+PS=HSGrotesk-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Grotesk,,  Bold,WFIL=HSGROB__.pfm
+PS=Impact,TYPE=TT,WNAM=Impact,WFIL=impact.ttf
+PS=Iskar-Bold,TYPE=TT,STYL=BOLD,WNAM=Iskar,,Bold,WFIL=ISKB.TTF
+PS=LevenimMT,TYPE=TT,WNAM=Levenim MT,WFIL=lvnm.ttf
+PS=LevenimMTBold,TYPE=TT,STYL=BOLD,WNAM=Levenim MT,,Bold,WFIL=lvnmbd.ttf
+PS=LilyUPC,TYPE=TT,WNAM=LilyUPC,WFIL=UPCLL.TTF
+PS=LilyUPCItalic,TYPE=TT,STYL=ITALIC,WNAM=LilyUPC,,Italic,WFIL=UPCLI.TTF
+PS=LilyUPCBold,TYPE=TT,STYL=BOLD,WNAM=LilyUPC,,Bold,WFIL=UPCLB.TTF
+PS=LilyUPCBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=LilyUPC,,Bold Italic,WFIL=UPCLBI.TTF
+PS=LucidaSans,TYPE=TT,WNAM=Lucida Sans,WFIL=lsans.ttf
+PS=LucidaSans-Italic,TYPE=TT,STYL=ITALIC,WNAM=Lucida Sans,,Italic,WFIL=lsansi.ttf
+PS=LucidaSans-Demi,TYPE=TT,STYL=BOLD,WNAM=Lucida Sans,,Demibold Roman,WFIL=lsansd.ttf
+PS=LucidaSans-DemiItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Lucida Sans,,Demibold Italic,WFIL=lsansdi.ttf
+PS=LucidaSansUnicode,TYPE=TT,WNAM=Lucida Sans Unicode,WFIL=l_10646.ttf
+PS=MicrosoftSansSerif,TYPE=TT,WNAM=Microsoft Sans Serif,WFIL=Microsoft Sans Serif.ttf
+PS=Miriam,TYPE=TT,WNAM=Miriam,WFIL=mriam.ttf
+PS=MiriamFixed,TYPE=TT,WNAM=Miriam Fixed,WFIL=mriamc.ttf
+PS=MiriamTransparent,TYPE=TT,WNAM=Miriam Transparent,WFIL=mriamtr.ttf
+PS=MyriadPro-Regular,TYPE=OT,WNAM=Myriad Pro,WFIL=MyriadPro-Regular.otf
+PS=MyriadPro-It,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro,, Italic,WFIL=MyriadPro-It.otf
+PS=MyriadPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro,, Bold,WFIL=MyriadPro-Bold.otf
+PS=MyriadPro-BoldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro,, Bold Italic,WFIL=MyriadPro-BoldIt.otf
+PS=MyriadPro-Black,TYPE=OT,WNAM=Myriad Pro Black,WFIL=MyriadPro-Black.otf
+PS=MyriadPro-BlackIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro Black,, Italic,WFIL=MyriadPro-BlackIt.otf
+PS=MyriadPro-BlackCond,TYPE=OT,WNAM=Myriad Pro Black Cond,WFIL=MyriadPro-BlackCond.otf
+PS=MyriadPro-BlackCondIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro Black Cond,, Italic,WFIL=MyriadPro-BlackCondIt.otf
+PS=MyriadPro-Cond,TYPE=OT,WNAM=Myriad Pro Cond,WFIL=MyriadPro-Cond.otf
+PS=MyriadPro-CondIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro Cond,, Italic,WFIL=MyriadPro-CondIt.otf
+PS=MyriadPro-BoldCond,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro Cond,, Bold,WFIL=MyriadPro-BoldCond.otf
+PS=MyriadPro-BoldCondIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro Cond,, Bold Italic,WFIL=MyriadPro-BoldCondIt.otf
+PS=MyriadPro-Light,TYPE=OT,WNAM=Myriad Pro Light,WFIL=MyriadPro-Light.otf
+PS=MyriadPro-LightIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro Light,, Italic,WFIL=MyriadPro-LightIt.otf
+PS=MyriadPro-Semibold,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro Light,, Bold,WFIL=MyriadPro-Semibold.otf
+PS=MyriadPro-SemiboldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro Light,, Bold Italic,WFIL=MyriadPro-SemiboldIt.otf
+PS=MyriadPro-LightCond,TYPE=OT,WNAM=Myriad Pro Light Cond,WFIL=MyriadPro-LightCond.otf
+PS=MyriadPro-LightCondIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro Light Cond,, Italic,WFIL=MyriadPro-LightCondIt.otf
+PS=MyriadPro-SemiboldCond,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro Light Cond,, Bold,WFIL=MyriadPro-SemiboldCond.otf
+PS=MyriadPro-SemiboldCondIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro Light Cond,, Bold Italic,WFIL=MyriadPro-SemiboldCondIt.otf
+PS=NuWorld,TYPE=TT,WNAM=Nu World,WFIL=NUWORLD4.ttf
+PS=PoplarStd,TYPE=OT,WNAM=Poplar Std,WFIL=PoplarStd.otf
+PS=SAMT,TYPE=TT,WNAM=SAfon,WFIL=SAFon.ttf
+PS=SAFon-BoldMT,TYPE=TT,STYL=BOLD,WNAM=SAFon,,Bold,WFIL=SAFonB.ttf
+PS=SegoeUI,TYPE=TT,WNAM=Segoe UI,WFIL=segoeui.ttf
+PS=SegoeUI-Italic,TYPE=TT,STYL=ITALIC,WNAM=Segoe UI,,Italic,WFIL=segoeuii.ttf
+PS=SegoeUI-Bold,TYPE=TT,STYL=BOLD,WNAM=Segoe UI,,Bold,WFIL=segoeuib.ttf
+PS=SegoeUI-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Segoe UI,,Bold Italic,WFIL=segoeuiz.ttf
+PS=Tahoma,TYPE=TT,WNAM=Tahoma,WFIL=tahoma.ttf
+PS=Tahoma-Bold,TYPE=TT,STYL=BOLD,WNAM=Tahoma,,Bold,WFIL=Tahoma Bold.ttf
+PS=TrebuchetMS,TYPE=TT,WNAM=Trebuchet MS,WFIL=trebuc.ttf
+PS=TrebuchetMS-Italic,TYPE=TT,STYL=ITALIC,WNAM=Trebuchet MS,,Italic,WFIL=Trebuchet MS Italic.ttf
+PS=TrebuchetMS-Bold,TYPE=TT,STYL=BOLD,WNAM=Trebuchet MS,,Bold,WFIL=trebucbd.ttf
+PS=Trebuchet-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Trebuchet MS,,Bold Italic,WFIL=trebucbi.ttf
+PS=Verdana,TYPE=TT,WNAM=Verdana,WFIL=verdana.ttf
+PS=Verdana-Italic,TYPE=TT,STYL=ITALIC,WNAM=Verdana,,Italic,WFIL=verdanai.ttf
+PS=Verdana-Bold,TYPE=TT,STYL=BOLD,WNAM=Verdana,,Bold,WFIL=verdanab.ttf
+PS=Verdana-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Verdana,,Bold Italic,WFIL=verdanaz.ttf
+%!EndSet 
+
+%!BeginSet +SERIF
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+serif:
+PS=ACaslonPro-Regular,TYPE=OT,WNAM=Adobe Caslon Pro,WFIL=ACaslonPro-Regular.otf
+PS=ACaslonPro-Italic,TYPE=OT,STYL=ITALIC,WNAM=Adobe Caslon Pro,, Italic,WFIL=ACaslonPro-Italic.otf
+PS=ACaslonPro-Semibold,TYPE=OT,STYL=BOLD,WNAM=Adobe Caslon Pro,, Bold,WFIL=ACaslonPro-Semibold.otf
+PS=ACaslonPro-SemiboldItalic,TYPE=OT,STYL=BOLDITALIC,WNAM=Adobe Caslon Pro,, Bold Italic,WFIL=ACaslonPro-SemiboldItalic.otf
+PS=ACaslonPro-Bold,TYPE=OT,WNAM=Adobe Caslon Pro Bold,WFIL=ACaslonPro-Bold.otf
+PS=ACaslonPro-BoldItalic,TYPE=OT,STYL=ITALIC,WNAM=Adobe Caslon Pro Bold,, Italic,WFIL=ACaslonPro-BoldItalic.otf
+PS=AGaramondPro-Regular,TYPE=OT,WNAM=Adobe Garamond Pro,WFIL=AGaramondPro-Regular.otf
+PS=AGaramondPro-Italic,TYPE=OT,STYL=ITALIC,WNAM=Adobe Garamond Pro,, Italic,WFIL=AGaramondPro-Italic.otf
+PS=AGaramondPro-Semibold,TYPE=OT,STYL=BOLD,WNAM=Adobe Garamond Pro,, Bold,WFIL=AGaramondPro-Semibold.otf
+PS=AGaramondPro-SemiboldItalic,TYPE=OT,STYL=BOLDITALIC,WNAM=Adobe Garamond Pro,, Bold Italic,WFIL=AGaramondPro-SemiboldItalic.otf
+PS=Andalus,TYPE=TT,WNAM=Andalus,WFIL=andlso.ttf
+PS=AngsanaNew,TYPE=TT,WNAM=Angsana New,WFIL=ANGSA.TTF
+PS=AngsanaNew-Italic,TYPE=TT,STYL=ITALIC,WNAM=Angsana New,,Italic,WFIL=ANGSAI.TTF
+PS=AngsanaNew-Bold,TYPE=TT,STYL=BOLD,WNAM=Angsana New,,Bold,WFIL=ANGSAB.TTF
+PS=AngsanaNew-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Angsana New,,Bold Italic,WFIL=ANGSAZ.TTF
+PS=AngsanaUPC,TYPE=TT,WNAM=AngsanaUPC,WFIL=ANGSAU.TTF
+PS=AngsanaUPC-Italic,TYPE=TT,STYL=ITALIC,WNAM=AngsanaUPC,,Italic,WFIL=ANGSAUI.TTF
+PS=AngsanaUPC-Bold,TYPE=TT,STYL=BOLD,WNAM=AngsanaUPC,,Bold,WFIL=ANGSAUB.TTF
+PS=AngsanaUPC-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=AngsanaUPC,,Bold Italic,WFIL=ANGSAUZ.TTF
+PS=Cmmi10,TYPE=TT,WNAM=cmmi10,WFIL=cmmi10.ttf
+PS=Cmr10,TYPE=TT,WNAM=cmr10,WFIL=cmr10.ttf
+PS=EucrosiaUPC,TYPE=TT,WNAM=EucrosiaUPC,WFIL=UPCEL.TTF
+PS=EucrosiaUPCItalic,TYPE=TT,STYL=ITALIC,WNAM=EucrosiaUPC,,Italic,WFIL=UPCEI.TTF
+PS=EucrosiaUPCBold,TYPE=TT,STYL=BOLD,WNAM=EucrosiaUPC,,Bold,WFIL=UPCEB.TTF
+PS=EucrosiaUPCBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=EucrosiaUPC,,Bold Italic,WFIL=UPCEBI.TTF
+PS=EzraSIL,TYPE=TT,WNAM=Ezra SIL,WFIL=SILEOT.ttf
+PS=EzraSILSR,TYPE=TT,WNAM=Ezra SIL SR,WFIL=SILEOTSR.ttf
+PS=FrankRuehl,TYPE=TT,WNAM=FrankRuehl,WFIL=frank.ttf
+PS=Georgia,TYPE=TT,WNAM=Georgia,WFIL=georgia.ttf
+PS=Georgia-Italic,TYPE=TT,STYL=ITALIC,WNAM=Georgia,,Italic,WFIL=georgiai.ttf
+PS=Georgia-Bold,TYPE=TT,STYL=BOLD,WNAM=Georgia,,Bold,WFIL=georgiab.ttf
+PS=Georgia-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Georgia,,Bold Italic,WFIL=georgiaz.ttf
+PS=JasmineUPC,TYPE=TT,WNAM=JasmineUPC,WFIL=UPCJL.TTF
+PS=JasmineUPC-Italic,TYPE=TT,STYL=ITALIC,WNAM=JasmineUPC,,Italic,WFIL=UPCJI.TTF
+PS=JasmineUPC-Bold,TYPE=TT,STYL=BOLD,WNAM=JasmineUPC,,Bold,WFIL=UPCJB.TTF
+PS=JasmineUPC-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=JasmineUPC,,Bold Italic,WFIL=UPCJBI.TTF
+PS=KodchiangUPC,TYPE=TT,WNAM=KodchiangUPC,WFIL=UPCKL.TTF
+PS=KodchiangUPC-Italic,TYPE=TT,STYL=ITALIC,WNAM=KodchiangUPC,,Italic,WFIL=UPCKI.TTF
+PS=KodchiangUPC-Bold,TYPE=TT,STYL=BOLD,WNAM=KodchiangUPC,,Bold,WFIL=UPCKB.TTF
+PS=KodchiangUPC-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=KodchiangUPC,,Bold Italic,WFIL=UPCKBI.TTF
+PS=MinionPro-Regular,TYPE=OT,WNAM=Minion Pro,WFIL=MinionPro-Regular.otf
+PS=MinionPro-It,TYPE=OT,STYL=ITALIC,WNAM=Minion Pro,, Italic,WFIL=MinionPro-It.otf
+PS=MinionPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Minion Pro,, Bold,WFIL=MinionPro-Bold.otf
+PS=MinionPro-BoldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Minion Pro,, Bold Italic,WFIL=MinionPro-BoldIt.otf
+PS=MinionPro-Semibold,TYPE=OT,WNAM=Minion Pro SmBd,WFIL=MinionPro-Semibold.otf
+PS=MinionPro-SemiboldIt,TYPE=OT,STYL=ITALIC,WNAM=Minion Pro SmBd,, Italic,WFIL=MinionPro-SemiboldIt.otf
+PS=Narkisim,TYPE=TT,WNAM=Narkisim,WFIL=nrkis.ttf
+PS=PalatinoLinotype-Roman,TYPE=TT,WNAM=Palatino Linotype,WFIL=pala.ttf
+PS=PalatinoLinotype-Italic,TYPE=TT,STYL=ITALIC,WNAM=Palatino Linotype,,Italic,WFIL=palai.ttf
+PS=PalatinoLinotype-Bold,TYPE=TT,STYL=BOLD,WNAM=Palatino Linotype,,Bold,WFIL=palab.ttf
+PS=PalatinoLinotype-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Palatino Linotype,,Bold Italic,WFIL=palabi.ttf
+PS=Sylfaen,TYPE=TT,WNAM=Sylfaen,WFIL=sylfaen.ttf
+PS=TimesNewRomanPSMT,TYPE=TT,WNAM=Times New Roman,WFIL=times.ttf
+PS=TimesNewRomanPS-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Times New Roman,,Italic,WFIL=timesi.ttf
+PS=TimesNewRomanPS-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Times New Roman,,Bold,WFIL=timesbd.ttf
+PS=TimesNewRomanPS-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Times New Roman,,Bold Italic,WFIL=timesbi.ttf
+PS=TrajanPro-Regular,TYPE=OT,WNAM=Trajan Pro,WFIL=TrajanPro-Regular.otf
+PS=TrajanPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Trajan Pro,, Bold,WFIL=TrajanPro-Bold.otf
+%!EndSet 
+
+%!BeginSet +SYMBOL
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+symbol:
+PS=ArialAlternativeSymbol,TYPE=TT,WNAM=Arial Alternative Symbol,WFIL=ARIALALS.TTF
+PS=Cmex10,TYPE=TT,WNAM=cmex10,WFIL=cmex10.ttf
+PS=Cmsy10,TYPE=TT,WNAM=cmsy10,WFIL=cmsy10.ttf
+%!UsePath :fnt:+symbol:Math-euclid:
+PS=Euclid,TYPE=TT,WNAM=Euclid,WFIL=euclid.ttf
+PS=Euclid-Italic,TYPE=TT,STYL=ITALIC,WNAM=Euclid,,Italic,WFIL=euclidi.ttf
+PS=Euclid-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid,,Bold,WFIL=euclidb.ttf
+PS=Euclid-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Euclid,,Bold Italic,WFIL=euclidbi.ttf
+PS=EuclidExtra,TYPE=TT,WNAM=Euclid Extra,WFIL=euextra.ttf
+PS=EuclidExtra-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid Extra,,Bold,WFIL=euextrab.ttf
+PS=EuclidFraktur,TYPE=TT,WNAM=Euclid Fraktur,WFIL=eufrak.ttf
+PS=EuclidFraktur-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid Fraktur,,Bold,WFIL=eufrakb.ttf
+PS=EuclidMathOne,TYPE=TT,WNAM=Euclid Math One,WFIL=eumat1.ttf
+PS=EuclidMathOne-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid Math One,,Bold,WFIL=eumat1b.ttf
+PS=EuclidMathTwo,TYPE=TT,WNAM=Euclid Math Two,WFIL=eumat2.ttf
+PS=EuclidMathTwo-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid Math Two,,Bold,WFIL=eumat2b.ttf
+PS=EuclidSymbol,TYPE=TT,WNAM=Euclid Symbol,WFIL=eucsym.ttf
+PS=EuclidSymbol-Italic,TYPE=TT,STYL=ITALIC,WNAM=Euclid Symbol,,Italic,WFIL=eucsymi.ttf
+PS=EuclidSymbol-Bold,TYPE=TT,STYL=BOLD,WNAM=Euclid Symbol,,Bold,WFIL=eucsymb.ttf
+PS=EuclidSymbol-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Euclid Symbol,,Bold Italic,WFIL=eucsymbi.ttf
+%!UsePath :fnt:+symbol:
+PS=EuroSig,TYPE=TT,WNAM=Euro Sign,WFIL=eurosign.ttf
+%!UsePath :fnt:+symbol:Math-euclid:
+PS=Fences Plain,TYPE=TT,WNAM=Fences,,Plain,WFIL=fences.ttf
+%!UsePath :fnt:+symbol:
+PS=Marlett,TYPE=TT,WNAM=Marlett,WFIL=MARLETT.TTF
+%!UsePath :fnt:+symbol:math:
+PS=Mathematica1,TYPE=TT,WNAM=Mathematica1,WFIL=Mathematica1.ttf
+PS=Mathematica1-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica1,,Bold,WFIL=Mathematica1b.ttf
+PS=Mathematica1Mono,TYPE=TT,WNAM=Mathematica1Mono,WFIL=Mathematica1m.ttf
+PS=Mathematica1Mono-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica1Mono,,Bold,WFIL=Mathematica1mb.ttf
+PS=Mathematica2,TYPE=TT,WNAM=Mathematica2,WFIL=Mathematica2.ttf
+PS=Mathematica2-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica2,,Bold,WFIL=Mathematica2b.ttf
+PS=Mathematica2Mono,TYPE=TT,WNAM=Mathematica2Mono,WFIL=Mathematica2m.ttf
+PS=Mathematica2Mono-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica2Mono,,Bold,WFIL=Mathematica2mb.ttf
+PS=Mathematica3,TYPE=TT,WNAM=Mathematica3,WFIL=Mathematica3.ttf
+PS=Mathematica3-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica3,,Bold,WFIL=Mathematica3b.ttf
+PS=Mathematica3Mono,TYPE=TT,WNAM=Mathematica3Mono,WFIL=Mathematica3m.ttf
+PS=Mathematica3Mono-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica3Mono,,Bold,WFIL=Mathematica3mb.ttf
+PS=Mathematica4,TYPE=TT,WNAM=Mathematica4,WFIL=Mathematica4.ttf
+PS=Mathematica4-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica4,,Bold,WFIL=Mathematica4b.ttf
+PS=Mathematica4Mono,TYPE=TT,WNAM=Mathematica4Mono,WFIL=Mathematica4m.ttf
+PS=Mathematica4Mono-Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica4Mono,,Bold,WFIL=Mathematica4mb.ttf
+PS=Mathematica5,TYPE=TT,WNAM=Mathematica5,WFIL=Mathematica5.ttf
+PS=Mathematica5Bold,TYPE=TT,STYL=BOLD,WNAM=Mathematica5,,Bold,WFIL=Mathematica5b.ttf
+PS=Mathematica5Mono,TYPE=TT,WNAM=Mathematica5Mono,WFIL=Mathematica5m.ttf
+PS=Mathematica5MonoBold,TYPE=TT,STYL=BOLD,WNAM=Mathematica5Mono,,Bold,WFIL=Mathematica5mb.ttf
+PS=Mathematica6,TYPE=TT,WNAM=Mathematica6,WFIL=Mathematica6.ttf
+PS=Mathematica6Mono,TYPE=TT,WNAM=Mathematica6Mono,WFIL=Mathematica6m.ttf
+PS=Mathematica7,TYPE=TT,WNAM=Mathematica7,WFIL=Mathematica7.ttf
+PS=Mathematica7Mono,TYPE=TT,WNAM=Mathematica7Mono,WFIL=Mathematica7m.ttf
+%!UsePath :fnt:+symbol:Math-euclid:
+PS=MT-Extra,TYPE=TT,WNAM=MT Extra,WFIL=mtextra.ttf
+%!UsePath :fnt:+symbol:
+PS=,TYPE=TT,WNAM=Pie charts for maps,WFIL=PIE4MAP.ttf
+PS=SLGreek,TYPE=TT,WNAM=SLGreek,WFIL=SLGreek.ttf
+PS=SymbolMT,TYPE=TT,WNAM=Symbol,WFIL=symbol.ttf
+%!EndSet 
+
+%!BeginSet +SYS-xp
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :fnt:+sys-XP:
+PS=Webdings,TYPE=TT,WNAM=Webdings,WFIL=webdings.ttf
+PS=Wingdings-Regular,TYPE=TT,WNAM=Wingdings,WFIL=wingding.ttf
+%!EndSet 
+
+%!BeginSet PRAKTIS
+%!PathSeparator :
+%!UseVolume C:
+%!EndSet 
+

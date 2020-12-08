@@ -1,0 +1,1176 @@
+%!AdobeFontSet 2.0
+
+%!BeginSet [system]
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-arial:
+PS=ArialMT,TYPE=TT,WNAM=Arial,WFIL=arial.ttf
+PS=Arial-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Arial,,Italic,WFIL=ariali.ttf
+PS=Arial-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Arial,,Bold,WFIL=arialbd.ttf
+PS=Arial-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Arial,,Bold Italic,WFIL=arialbi.ttf
+%!UsePath :Fonts:[system]:
+PS=LucidaConsole,TYPE=TT,WNAM=Lucida Console,WFIL=lucon.ttf
+PS=MicrosoftSansSerif,TYPE=TT,WNAM=Microsoft Sans Serif,WFIL=micross.ttf
+%!UsePath :Fonts:symbols-decor:
+PS=MSOutlook,TYPE=TT,WNAM=MS Outlook,WFIL=OUTLOOK.TTF
+%!UsePath :Fonts:[system]:
+PS=MT-Extra,TYPE=TT,WNAM=MT Extra,WFIL=Mtextra.ttf
+%!UsePath :Fonts:symbols-decor:
+PS=Symbol,TYPE=T1,WNAM=Symbol,WFIL=SY______.PFM
+%!UsePath :Fonts:cyr-text:
+PS=Tahoma,TYPE=TT,WNAM=Tahoma,WFIL=tahoma.ttf
+PS=Tahoma-Bold,TYPE=TT,STYL=BOLD,WNAM=Tahoma,,Bold,WFIL=tahomabd.ttf
+%!UsePath :Fonts:[system]:
+PS=Verdana,TYPE=TT,WNAM=Verdana,WFIL=verdana.ttf
+PS=Verdana-Italic,TYPE=TT,STYL=ITALIC,WNAM=Verdana,,Italic,WFIL=verdanai.ttf
+PS=Verdana-Bold,TYPE=TT,STYL=BOLD,WNAM=Verdana,,Bold,WFIL=verdanab.ttf
+PS=Verdana-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Verdana,,Bold Italic,WFIL=verdanaz.ttf
+%!EndSet 
+
+%!BeginSet cyr-arial
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-arial:
+PS=ArialMT,TYPE=TT,WNAM=Arial,WFIL=arial.ttf
+PS=Arial-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Arial,,Italic,WFIL=ariali.ttf
+PS=Arial-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Arial,,Bold,WFIL=arialbd.ttf
+PS=Arial-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Arial,,Bold Italic,WFIL=arialbi.ttf
+PS=Arial-Black,TYPE=TT,WNAM=Arial Black,WFIL=ariblk.ttf
+PS=ArialNarrow,TYPE=TT,WNAM=Arial Narrow,WFIL=ARIALN.TTF
+PS=ArialNarrow-Italic,TYPE=TT,STYL=ITALIC,WNAM=Arial Narrow,,Italic,WFIL=ARIALNI.TTF
+PS=ArialNarrow-Bold,TYPE=TT,STYL=BOLD,WNAM=Arial Narrow,,Bold,WFIL=ARIALNB.TTF
+PS=ArialNarrow-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Arial Narrow,,Bold Italic,WFIL=ARIALNBI.TTF
+PS=ArialUnicodeMS,TYPE=TT,WNAM=Arial Unicode MS,WFIL=ARIALUNI.TTF
+%!EndSet 
+
+%!BeginSet cyr-decor
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-decor:
+PS=Chronicle-Normal,TYPE=TT,WNAM=Chronicle,,Normal,WFIL=CHR.TTF
+PS=GothicCyr-Normal,TYPE=TT,WNAM=GothicCyr,WFIL=gotn.TTF
+PS=GothicRusMedium,TYPE=TT,WNAM=GothicRus,,Medium,WFIL=GOTHIRUS.TTF
+PS=Izhitsa,TYPE=TT,WNAM=Izhitsa,,Normal,WFIL=izhitsa.ttf
+PS=JakobCTT-Regular,TYPE=TT,WNAM=JakobCTT,WFIL=JKB35__C.TTF
+PS=KK3045Bg-Regular,TYPE=T1,WNAM=KK3045 Bg,WFIL=HS08940.pfm
+PS=KK3045Bg-Bold,TYPE=T1,STYL=BOLD,WNAM=KK3045 Bg,,  Bold,WFIL=HS08970.pfm
+PS=KK3045Bg-Light,TYPE=T1,WNAM=KK3045 Bg Light,WFIL=HS08930.pfm
+PS=Shtempel,TYPE=TT,WNAM=Shtempel,WFIL=STEMP.TTF
+%!EndSet 
+
+%!BeginSet cyr-decor-script
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-decor-script:
+PS=ChanceCyrillic,TYPE=TT,WNAM=Chance,,Cyrillic,WFIL=Chance Cyrillic.ttf
+PS=Mistral,TYPE=TT,WNAM=Mistral,WFIL=MISTRAL.TTF
+PS=PopularScript,TYPE=TT,WNAM=PopularScript,,Normal,WFIL=PPLS.TTF
+PS=SchoolBg-Regular,TYPE=T1,WNAM=School Bg,WFIL=HS10940.pfm
+PS=SchoolBg2-Regular,TYPE=T1,WNAM=School Bg2,WFIL=HS10942.pfm
+PS=ScriptMTBold,TYPE=TT,WNAM=Script MT Bold,WFIL=SCRIPTBL.TTF
+PS=ScrCyr-Bold,TYPE=TT,WNAM=ScriptCyr,WFIL=sccn.TTF
+%!EndSet 
+
+%!BeginSet cyr-garamond
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-garamond:
+PS=HSGaramondBg-Regular,TYPE=T1,WNAM=HS Garamond Bg,WFIL=HS07940.pfm
+PS=HSGaramondBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=HS Garamond Bg,,  Italic,WFIL=HS07941.pfm
+PS=HSGaramondBg-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Garamond Bg,,  Bold,WFIL=HS07970.pfm
+PS=HSGaramondBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Garamond Bg,,  Bold Italic,WFIL=HS07971.pfm
+PS=HSGaramondBg-Black,TYPE=T1,WNAM=HS Garamond Bg Black,WFIL=HS07990.pfm
+PS=HSGaramondBgExp-Regular,TYPE=T1,WNAM=HS Garamond Bg Exp,WFIL=HS07840.pfm
+PS=HSGaramondBgExp-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Garamond Bg Exp,,  Bold,WFIL=HS07870.pfm
+PS=HSGaramondBgExp-Black,TYPE=T1,WNAM=HS Garamond Bg Exp Black,WFIL=HS07890.pfm
+PS=GaramondCyrHS,TYPE=TT,WNAM=HS Garamond Cyr,WFIL=hsecyrn_.ttf
+PS=HSGaramondCyrHS-Italic,TYPE=TT,STYL=ITALIC,WNAM=HS Garamond Cyr,,Italic,WFIL=hsecyri_.ttf
+PS=GaramondCyrHS-Bold,TYPE=TT,STYL=BOLD,WNAM=HS Garamond Cyr,,Bold,WFIL=hsecyrb_.ttf
+PS=GaramondCyrHS-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HS Garamond Cyr,,Bold Italic,WFIL=hsecyrbi.ttf
+%!EndSet 
+
+%!BeginSet cyr-GillSans
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-GillSans:
+PS=GillSansCyrMT,TYPE=T1,WNAM=Gill Sans Cyr MT,WFIL=GCY_____.PFM
+PS=GillSansCyrMT-Inclined,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans Cyr MT,,  Italic,WFIL=GCYI____.PFM
+PS=GillSansCyrMT-Bold,TYPE=T1,STYL=BOLD,WNAM=Gill Sans Cyr MT,,  Bold,WFIL=GCYB____.PFM
+PS=GillSansCyrMT-BoldInclined,TYPE=T1,STYL=BOLDITALIC,WNAM=Gill Sans Cyr MT,,  Bold Italic,WFIL=GCYBI___.PFM
+PS=GillSansCyrMT-Light,TYPE=T1,WNAM=Gill Sans Cyr MT Light,WFIL=GCYL____.PFM
+PS=GillSansCyrMT-LightIncl,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans Cyr MT Light,,  Italic,WFIL=GCYLI___.PFM
+%!EndSet 
+
+%!BeginSet cyr-Grotesk
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-Grotesk:
+PS=HSGroteskBg-Regular,TYPE=T1,WNAM=HS Grotesk Bg,WFIL=hs06940.pfm
+PS=HSGroteskBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=HS Grotesk Bg,,  Italic,WFIL=hs06941.pfm
+PS=HSGroteskBg-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Grotesk Bg,,  Bold,WFIL=hs06970.pfm
+PS=HSGroteskBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Grotesk Bg,,  Bold Italic,WFIL=hs06971.pfm
+PS=HSGroteskBg-Cond,TYPE=T1,WNAM=HS Grotesk Bg Condensed,WFIL=hs06945.pfm
+PS=HSGroteskBg-CondIta,TYPE=T1,STYL=ITALIC,WNAM=HS Grotesk Bg Condensed,,  Italic,WFIL=hs06946.pfm
+PS=HSGroteskBg-BoldCond,TYPE=T1,STYL=BOLD,WNAM=HS Grotesk Bg Condensed,,  Bold,WFIL=hs06975.pfm
+PS=HSGroteskBg-BoldCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Grotesk Bg Condensed,,  Bold Italic,WFIL=hs06976.pfm
+PS=HSGroteskBg-Light,TYPE=T1,WNAM=HS Grotesk Bg Light,WFIL=hs06930.pfm
+PS=HSGroteskBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=HS Grotesk Bg Light,,  Italic,WFIL=hs06931.pfm
+PS=HSGroteskBg-Black,TYPE=T1,STYL=BOLD,WNAM=HS Grotesk Bg Light,,  Bold,WFIL=hs06990.pfm
+PS=HSGroteskBg-BlackItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Grotesk Bg Light,,  Bold Italic,WFIL=hs06991.pfm
+PS=HSGroteskBg-LightCond,TYPE=T1,WNAM=HS Grotesk Bg Light Condensed,WFIL=hs06935.pfm
+PS=HSGroteskBg-LightCondIta,TYPE=T1,STYL=ITALIC,WNAM=HS Grotesk Bg Light Condensed,,  Italic,WFIL=hs06936.pfm
+PS=HSGroteskBg-BlackCond,TYPE=T1,STYL=BOLD,WNAM=HS Grotesk Bg Light Condensed,,  Bold,WFIL=hs06995.pfm
+PS=HSGroteskBg-BlackCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Grotesk Bg Light Condensed,,  Bold Italic,WFIL=hs06996.pfm
+PS=GroteskHSCyr,TYPE=TT,WNAM=HS Grotesk Cyr,WFIL=hsfcyn__.ttf
+PS=GroteskHSCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=HS Grotesk Cyr,,Italic,WFIL=hsfcyi__.ttf
+PS=GroteskHSCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=HS Grotesk Cyr,,Bold,WFIL=hsfcyb__.ttf
+PS=GroteskHSCyr-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HS Grotesk Cyr,,Bold Italic,WFIL=hsfcybi_.ttf
+PS=GroteskHSCyr-Condensed,TYPE=TT,WNAM=HS Grotesk Cyr Condensed,WFIL=hsfcyrcn.ttf
+PS=GroteskHSCyr-ItalicCondensed,TYPE=TT,STYL=ITALIC,WNAM=HS Grotesk Cyr Condensed,,Italic,WFIL=hsfcyrci.ttf
+PS=GroteskHSCyr-CondensedBold,TYPE=TT,STYL=BOLD,WNAM=HS Grotesk Cyr Condensed,,Bold,WFIL=hsfcyrcb.ttf
+PS=GroteskHSCyr-CondensedBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HS Grotesk Cyr Condensed,,Bold Italic,WFIL=hsfcyrcbi.ttf
+PS=GroteskHSCyr-Light,TYPE=TT,WNAM=HS Grotesk Cyr Light,WFIL=hsfcyrl_.ttf
+PS=GroteskHSCyr-LightItalic,TYPE=TT,STYL=ITALIC,WNAM=HS Grotesk Cyr Light,,Italic,WFIL=hsfcyrli.ttf
+PS=GroteskHSCyr-LightBold,TYPE=TT,STYL=BOLD,WNAM=HS Grotesk Cyr Light,,Bold,WFIL=hsfcyrlb.ttf
+PS=GroteskHSCyr-LightBlackItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HS Grotesk Cyr Light,,Bold Italic,WFIL=hsfcyrlbi.ttf
+PS=GroteskHSCyr-LightCondensed,TYPE=TT,WNAM=HS Grotesk Cyr Light Condensed,WFIL=hsfcyrcl_.ttf
+PS=GroteskHSCyr-LightCondensedItalic,TYPE=TT,STYL=ITALIC,WNAM=HS Grotesk Cyr Light Condensed,,Italic,WFIL=hsfcyrcli.ttf
+PS=GroteskHSCyr-LightCondensedBlack,TYPE=TT,STYL=BOLD,WNAM=HS Grotesk Cyr Light Condensed,,Bold,WFIL=hsfcyrclb.ttf
+PS=GroteskHSCyr-LightCondensedBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HS Grotesk Cyr Light Condensed,,BoldItalic,WFIL=hsfcyrclbi.ttf
+%!EndSet 
+
+%!BeginSet cyr-hebar
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-hebar:
+PS=Hebar,TYPE=TT,WNAM=Hebar,WFIL=HEN.TTF
+PS=HebarItalic,TYPE=TT,STYL=ITALIC,WNAM=Hebar,,Italic,WFIL=HBRI.TTF
+PS=HebarBold,TYPE=TT,STYL=BOLD,WNAM=Hebar,,Bold,WFIL=HBRB.TTF
+PS=HebarBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Hebar,,Bold Italic,WFIL=HBRBI.TTF
+PS=HebarBNormal,TYPE=TT,WNAM=HebarB,,Normal,WFIL=HBRNB.TTF
+PS=HebarBItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarB,,Italic,WFIL=HBRIB.TTF
+PS=HebarBBold,TYPE=TT,STYL=BOLD,WNAM=HebarB,,Bold,WFIL=HBRBB.TTF
+PS=HebarBBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HebarB,,Bold Italic,WFIL=HBRBIB.TTF
+PS=HebarBlackNormal,TYPE=TT,WNAM=HebarBlack,,Normal,WFIL=HBBLN.TTF
+PS=HebarBlackItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarBlack,,Italic,WFIL=HBBLI.TTF
+PS=HebarCondNormal,TYPE=TT,WNAM=HebarCond,,Normal,WFIL=HBCN.TTF
+PS=HebarCondItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarCond,,Italic,WFIL=HBCI.TTF
+PS=HebarCondBold,TYPE=TT,STYL=BOLD,WNAM=HebarCond,,Bold,WFIL=HBCB.TTF
+PS=HebarCondBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HebarCond,,Bold Italic,WFIL=HBCBI.TTF
+PS=HebarCondBlackNormal,TYPE=TT,WNAM=HebarCondBlack,,Normal,WFIL=HBCBLN.TTF
+PS=HebarCondBlackItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarCondBlack,,Italic,WFIL=HBCBLI.TTF
+PS=HebarCondLightNormal,TYPE=TT,WNAM=HebarCondLight,,Normal,WFIL=HBCDLIN.TTF
+PS=HebarCondLightItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarCondLight,,Italic,WFIL=HBCDLII.TTF
+PS=HebarDoubleCondNormal,TYPE=TT,WNAM=HebarDoubleCond,,Normal,WFIL=HBDBCDN.TTF
+PS=HebarDoubleCondBold,TYPE=TT,STYL=BOLD,WNAM=HebarDoubleCond,,Bold,WFIL=HBDBCDB.TTF
+PS=HebarExtendedNormal,TYPE=TT,WNAM=HebarExtended,,Normal,WFIL=HBEDN.TTF
+PS=HebarExtendedItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarExtended,,Italic,WFIL=HBEDI.TTF
+PS=HebarExtraBlack,TYPE=TT,WNAM=HebarExtraBlack,WFIL=HBEBL.TTF
+PS=HebarExtraLightNormal,TYPE=TT,WNAM=HebarExtraLight,,Normal,WFIL=HBELN.TTF
+PS=HebarExtraLightItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarExtraLight,,Italic,WFIL=HBELI.TTF
+PS=HebarLeftOblNormal,TYPE=TT,WNAM=HebarLeftObl,,Normal,WFIL=HBLON.TTF
+PS=HebarLightNormal,TYPE=TT,WNAM=HebarLight,,Normal,WFIL=HBLN.TTF
+PS=HebarLightItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarLight,,Italic,WFIL=HBLI.TTF
+PS=HebarOutlineNormal,TYPE=TT,WNAM=HebarOutline,,Normal,WFIL=HBOUTL.TTF
+PS=HebarReliefNormal,TYPE=TT,WNAM=HebarRelief,,Normal,WFIL=HBREL.TTF
+PS=HebarRoundedNormal,TYPE=TT,WNAM=HebarRounded,,Normal,WFIL=HBROUN.TTF
+PS=HebarU,TYPE=TT,WNAM=HebarU,WFIL=HBRU.TTF
+PS=HebarUItalic,TYPE=TT,STYL=ITALIC,WNAM=HebarU,,Italic,WFIL=HBRUI.TTF
+PS=HebarUBold,TYPE=TT,STYL=BOLD,WNAM=HebarU,,Bold,WFIL=HBRUB.TTF
+PS=HebarUBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=HebarU,,BoldItalic,WFIL=HBRUBI.TTF
+%!EndSet 
+
+%!BeginSet cyr-helen
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-helen:
+PS=HelenBg-Regular,TYPE=T1,WNAM=Helen Bg,WFIL=hs05940.pfm
+PS=HelenBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Helen Bg,,  Italic,WFIL=hs05941.pfm
+PS=HelenBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Helen Bg,,  Bold,WFIL=hs05970.pfm
+PS=HelenBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Helen Bg,,  Bold Italic,WFIL=hs05971.pfm
+PS=HelenBg-Condensed,TYPE=T1,WNAM=Helen Bg Condensed,WFIL=hs05945.pfm
+PS=HelenBg-CondIta,TYPE=T1,STYL=ITALIC,WNAM=Helen Bg Condensed,,  Italic,WFIL=hs05946.pfm
+PS=HelenBg-BoldCond,TYPE=T1,STYL=BOLD,WNAM=Helen Bg Condensed,,  Bold,WFIL=hs05975.pfm
+PS=HelenBg-BoldCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Helen Bg Condensed,,  Bold Italic,WFIL=hs05976.pfm
+PS=HelenBg-Light,TYPE=T1,WNAM=Helen Bg Light,WFIL=hs05930.pfm
+PS=HelenBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Helen Bg Light,,  Italic,WFIL=hs05931.pfm
+PS=HelenBg-Black,TYPE=T1,STYL=BOLD,WNAM=Helen Bg Light,,  Bold,WFIL=hs05990.pfm
+PS=HelenBg-BlackItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Helen Bg Light,,  Bold Italic,WFIL=hs05991.pfm
+PS=HelenBg-LightCond,TYPE=T1,WNAM=Helen Bg Light Condensed,WFIL=hs05935.pfm
+PS=HelenBg-LightCondIta,TYPE=T1,STYL=ITALIC,WNAM=Helen Bg Light Condensed,,  Italic,WFIL=hs05936.pfm
+PS=HelenBg-BlackCond,TYPE=T1,STYL=BOLD,WNAM=Helen Bg Light Condensed,,  Bold,WFIL=hs05995.pfm
+PS=HelenBg-BlackCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Helen Bg Light Condensed,,  Bold Italic,WFIL=hs05996.pfm
+PS=HelenBg-Thin,TYPE=T1,WNAM=Helen Bg Thin,WFIL=hs05910.pfm
+PS=HelenBg-ThinItalic,TYPE=T1,STYL=ITALIC,WNAM=Helen Bg Thin,,  Italic,WFIL=hs05911.pfm
+PS=HelenCyr-Normal,TYPE=TT,WNAM=Helen Cyr,,Normal,WFIL=hsdcyrn_.ttf
+PS=HelenCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=Helen Cyr,,Italic,WFIL=hsdcyri_.ttf
+PS=HelenCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Helen Cyr,,Bold,WFIL=hsdcyrb_.ttf
+PS=HelenCyr-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Helen Cyr,,Bold Italic,WFIL=hsdcyrbi.ttf
+PS=HelenHSCyr-CondensedNormal,TYPE=TT,WNAM=Helen Cyr Condensed,,Normal,WFIL=hsdcyrcn.ttf
+PS=HelenHSCyr-CondensedItalic,TYPE=TT,STYL=ITALIC,WNAM=Helen Cyr Condensed,,Italic,WFIL=hsdcyrci.ttf
+PS=HelenHSCyr-CondensedBold,TYPE=TT,STYL=BOLD,WNAM=Helen Cyr Condensed,,Bold,WFIL=hsdcyrcb.ttf
+PS=HelenHSCyr-CondensedBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Helen Cyr Condensed,,Bold Italic,WFIL=hsdcyrcc.ttf
+PS=HelenHSCyr-Light,TYPE=TT,WNAM=Helen Cyr Light,WFIL=hsdcyrl.ttf
+PS=HelenHSCyr-LightItalic,TYPE=TT,STYL=ITALIC,WNAM=Helen Cyr Light,,Italic,WFIL=hsdcyrli.ttf
+PS=HelenHSCyr-LightBold,TYPE=TT,STYL=BOLD,WNAM=Helen Cyr Light,,Bold,WFIL=hsdcyrlbl.ttf
+PS=HelenHSCyr-LightBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Helen Cyr Light,,Bold Italic,WFIL=hsdcyrlbli.ttf
+PS=HelenHSCyr-LightCondensed,TYPE=TT,WNAM=Helen Cyr Light Condensed,WFIL=hsdcyrcl.ttf
+PS=HelenHSCyr-LightCondensedItalic,TYPE=TT,STYL=ITALIC,WNAM=Helen Cyr Light Condensed,,Italic,WFIL=hsdcyrcli.ttf
+PS=HelenHSCyr-LightCondensedBold,TYPE=TT,STYL=BOLD,WNAM=Helen Cyr Light Condensed,,Bold,WFIL=hsdcyrcbl.ttf
+PS=HelenHSCyr-LightCondensedBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Helen Cyr Light Condensed,,Bold Italic,WFIL=hsdcyrcbx.ttf
+PS=HelenHSCyr-Thin,TYPE=TT,WNAM=Helen Cyr Thin,WFIL=hsdcyrt.ttf
+PS=HelenHSCyr-ThinItalic,TYPE=TT,STYL=ITALIC,WNAM=Helen Cyr Thin,,Italic,WFIL=hsdcyrti.ttf
+%!EndSet 
+
+%!BeginSet cyr-miryad-Pro
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-miryad-Pro:
+PS=MyriadPro-Regular,TYPE=OT,WNAM=Myriad Pro,WFIL=MyriadPro-Regular.otf
+PS=MyriadPro-It,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro,, Italic,WFIL=MyriadPro-It.otf
+PS=MyriadPro-Bold,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro,, Bold,WFIL=MyriadPro-Bold.otf
+PS=MyriadPro-BoldIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro,, Bold Italic,WFIL=MyriadPro-BoldIt.otf
+PS=MyriadPro-BoldCond,TYPE=OT,STYL=BOLD,WNAM=Myriad Pro Cond,, Bold,WFIL=MyriadPro-BoldCond.otf
+PS=MyriadPro-BoldCondIt,TYPE=OT,STYL=BOLDITALIC,WNAM=Myriad Pro Cond,, Bold Italic,WFIL=MyriadPro-BoldCondIt.otf
+PS=MyriadPro-SemiCn,TYPE=OT,WNAM=Myriad Pro SemiCond,WFIL=MyriadPro-SemiCn.otf
+PS=MyriadPro-SemiCnIt,TYPE=OT,STYL=ITALIC,WNAM=Myriad Pro SemiCond,, Italic,WFIL=MyriadPro-SemiCnIt.otf
+%!EndSet 
+
+%!BeginSet cyr-monospaced
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-monospaced:
+PS=Monotypecom,TYPE=TT,WNAM=Monotype.com,WFIL=monotype.ttf
+%!EndSet 
+
+%!BeginSet cyr-text
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-text:
+PS=AAvanteIntBook,TYPE=TT,WNAM=a_AvanteInt,,Book,WFIL=avanteint book.TTF
+PS=AAvanteIntBold,TYPE=TT,STYL=BOLD,WNAM=a_AvanteInt,,Bold,WFIL=avanteint bold.TTF
+PS=AAvanteIntBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=a_AvanteInt,,BoldItalic,WFIL=avanteint bolditalic.TTF
+PS=AmbassadoreType,TYPE=TT,WNAM=AmbassadoreType,WFIL=AMBASSAD.TTF
+PS=AmbassadoreType-Italic,TYPE=TT,STYL=ITALIC,WNAM=AmbassadoreType,,Italic,WFIL=AMBASSA1.TTF
+PS=Antiqua,TYPE=TT,WNAM=Antiqua,WFIL=ANTIQUA.TTF
+PS=Antiqua-Italic,TYPE=TT,STYL=ITALIC,WNAM=Antiqua,,Italic,WFIL=ANTIQUA1.TTF
+PS=Antiqua-Bold,TYPE=TT,STYL=BOLD,WNAM=Antiqua,,Bold,WFIL=ANTIQUA0.TTF
+PS=Antiqua-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Antiqua,,Bold Italic,WFIL=ANTIQUA2.TTF
+PS=APFutureLightCyr-Normal,TYPE=TT,WNAM=AP FutureLightCyr,WFIL=AFLCN.TTF
+PS=APFutureMediumCyr-Normal,TYPE=TT,WNAM=AP FutureMediumCyr,WFIL=AFMCN.TTF
+PS=AvantiNormal,TYPE=TT,WNAM=Avanti,,Normal,WFIL=AVAN.TTF
+PS=AvantiItalic,TYPE=TT,STYL=ITALIC,WNAM=Avanti,,Italic,WFIL=AVAI.TTF
+PS=AvantiBold,TYPE=TT,STYL=BOLD,WNAM=Avanti,,Bold,WFIL=AVAB.TTF
+PS=AvantiBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Avanti,,Bold Italic,WFIL=AVABI.TTF
+PS=AvantiBNormal,TYPE=TT,WNAM=AvantiB,,Normal,WFIL=AVANB.TTF
+PS=AvantiBItalic,TYPE=TT,STYL=ITALIC,WNAM=AvantiB,,Italic,WFIL=AVAIB.TTF
+PS=AvantiBBold,TYPE=TT,STYL=BOLD,WNAM=AvantiB,,Bold,WFIL=AVABB.TTF
+PS=AvantiBBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=AvantiB,,Bold Italic,WFIL=AVABIB.TTF
+PS=BellHouseBg-Regular,TYPE=T1,WNAM=BellHouse Bg,WFIL=HS01940.pfm
+PS=BellHouseBg-Bold,TYPE=T1,STYL=BOLD,WNAM=BellHouse Bg,,  Bold,WFIL=HS01970.pfm
+PS=BellHouseBg-Light,TYPE=T1,WNAM=BellHouse Bg Light,WFIL=HS01930.pfm
+PS=BellHouseBg-Black,TYPE=T1,STYL=BOLD,WNAM=BellHouse Bg Light,,  Bold,WFIL=HS01990.pfm
+PS=BellHouseBg-Medium,TYPE=T1,WNAM=BellHouse Bg Medium,WFIL=HS01960.pfm
+PS=BellHouseHSCyr-Normal,TYPE=TT,WNAM=BellHouse Cyr,,Normal,WFIL=hsacyr__.ttf
+PS=BellHouseHSCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=BellHouse Cyr,,Bold,WFIL=hsacyrb_.ttf
+PS=BellHouseHSCyrLight-Normal,TYPE=TT,WNAM=BellHouse Cyr Light,,Normal,WFIL=hsacyrl_.ttf
+PS=BellHouseHSCyrLight-Bold,TYPE=TT,STYL=BOLD,WNAM=BellHouse Cyr Light,,Bold,WFIL=hsacyrbl.ttf
+PS=BellHouseHSCyrMedium-Normal,TYPE=TT,WNAM=BellHouse Cyr Medium,,Normal,WFIL=hsacyrm_.ttf
+PS=Bodoni,TYPE=TT,WNAM=Bodoni,WFIL=BODONI.TTF
+PS=Bodoni-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni,,Italic,WFIL=BODONI-I.TTF
+PS=Bodoni-Bold,TYPE=TT,STYL=BOLD,WNAM=Bodoni,,Bold,WFIL=BODONI-B.TTF
+PS=Bodoni-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Bodoni,,Bold Italic,WFIL=BODONI-T.TTF
+PS=BookAntiqua,TYPE=TT,WNAM=Book Antiqua,WFIL=BKANT.TTF
+PS=BookAntiqua-Italic,TYPE=TT,STYL=ITALIC,WNAM=Book Antiqua,,Italic,WFIL=ANTQUAI.TTF
+PS=BookAntiqua-Bold,TYPE=TT,STYL=BOLD,WNAM=Book Antiqua,,Bold,WFIL=ANTQUAB.TTF
+PS=BookAntiqua-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Book Antiqua,,Bold Italic,WFIL=ANTQUABI.TTF
+PS=BookmanOldStyle,TYPE=TT,WNAM=Bookman Old Style,WFIL=BOOKOS.TTF
+PS=BookmanOldStyle-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bookman Old Style,,Italic,WFIL=BOOKOSI.TTF
+PS=BookmanOldStyle-Bold,TYPE=TT,STYL=BOLD,WNAM=Bookman Old Style,,Bold,WFIL=BOOKOSB.TTF
+PS=BookmanOldStyle-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Bookman Old Style,,Bold Italic,WFIL=BOOKOSBI.TTF
+PS=BrilliantBg-Regular,TYPE=T1,WNAM=Brilliant Bg,WFIL=HS02940.pfm
+PS=BrilliantBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Brilliant Bg,,  Italic,WFIL=HS02941.pfm
+PS=BrilliantBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Brilliant Bg,,  Bold,WFIL=HS02970.pfm
+PS=BrilliantBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Brilliant Bg,,  Bold Italic,WFIL=HS02971.pfm
+PS=BrilliantBg-Light,TYPE=T1,WNAM=Brilliant Bg Light,WFIL=HS02930.pfm
+PS=BrilliantBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Brilliant Bg Light,,  Italic,WFIL=HS02931.pfm
+PS=BrilliantBg-Medium,TYPE=T1,STYL=BOLD,WNAM=Brilliant Bg Light,,  Bold,WFIL=HS02960.pfm
+PS=BrilliantBg-MediumItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Brilliant Bg Light,,  Bold Italic,WFIL=HS02961.pfm
+PS=BrushType-Bold,TYPE=TT,STYL=BOLD,WNAM=BrushType,,Bold,WFIL=BRUSHTYP.TTF
+PS=BrushType-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=BrushType,,Bold Italic,WFIL=BRUSHTY1.TTF
+PS=Palatia Regular,TYPE=TT,WNAM=Bulgarian Palatia,WFIL=bupalat-.TTF
+PS=CabelCyr-Normal,TYPE=TT,WNAM=CabelCyr,WFIL=cabn.TTF
+PS=CabelCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=CabelCyr,,Italic,WFIL=cabo.TTF
+PS=CenturyGothic,TYPE=TT,WNAM=Century Gothic,WFIL=GOTHIC.TTF
+PS=CenturyGothic-Italic,TYPE=TT,STYL=ITALIC,WNAM=Century Gothic,,Italic,WFIL=GOTHICI.TTF
+PS=CenturyGothic-Bold,TYPE=TT,STYL=BOLD,WNAM=Century Gothic,,Bold,WFIL=Gothicb.ttf
+PS=CenturyGothic-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Century Gothic,,Bold Italic,WFIL=Gothicbi.ttf
+PS=CenturySchoolbook,TYPE=TT,WNAM=Century Schoolbook,WFIL=CENSCBK.TTF
+PS=CenturySchoolbook-Italic,TYPE=TT,STYL=ITALIC,WNAM=Century Schoolbook,,Italic,WFIL=SCHLBKI.TTF
+PS=CenturySchoolbook-Bold,TYPE=TT,STYL=BOLD,WNAM=Century Schoolbook,,Bold,WFIL=SCHLBKB.TTF
+PS=CenturySchoolbook-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Century Schoolbook,,Bold Italic,WFIL=SCHLBKBI.TTF
+PS=ComicSansMS,TYPE=TT,WNAM=Comic Sans MS,WFIL=comic.ttf
+PS=ComicSansMS-Bold,TYPE=TT,STYL=BOLD,WNAM=Comic Sans MS,,Bold,WFIL=comicbd.ttf
+PS=Compact,TYPE=TT,WNAM=Compact,WFIL=COMPACT.TTF
+PS=Compact-Italic,TYPE=TT,STYL=ITALIC,WNAM=Compact,,Italic,WFIL=COMPACT2.TTF
+PS=Compact-Bold,TYPE=TT,STYL=BOLD,WNAM=Compact,,Bold,WFIL=COMPACT0.TTF
+PS=Compact-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Compact,,Bold Italic,WFIL=COMPACT1.TTF
+PS=Courier,TYPE=T1,WNAM=Courier,WFIL=com_____.pfm
+PS=Courier-Oblique,TYPE=T1,STYL=ITALIC,WNAM=Courier,,  Italic,WFIL=coo_____.pfm
+PS=Courier-Bold,TYPE=T1,STYL=BOLD,WNAM=Courier,,  Bold,WFIL=cob_____.pfm
+PS=Courier-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=Courier,,  Bold Italic,WFIL=cobo____.pfm
+PS=CourierNewPSMT,TYPE=TT,WNAM=Courier New,WFIL=cour.ttf
+PS=CourierNewPS-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Courier New,,Italic,WFIL=couri.ttf
+PS=CourierNewPS-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Courier New,,Bold,WFIL=courbd.ttf
+PS=CourierNewPS-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Courier New,,Bold Italic,WFIL=courbi.ttf
+PS=Derby,TYPE=TT,WNAM=Derby,WFIL=DERBN.TTF
+PS=DutchNormal,TYPE=TT,WNAM=Dutch,WFIL=DUN_C.TTF
+PS=DutchItalic,TYPE=TT,STYL=ITALIC,WNAM=Dutch,,Italic,WFIL=DUI_C.TTF
+PS=DutchBold,TYPE=TT,STYL=BOLD,WNAM=Dutch,,Bold,WFIL=DUB_C.TTF
+PS=DutchBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Dutch,,Bold Italic,WFIL=DUBI_C.TTF
+PS=EgyptianBg-Regular,TYPE=T1,WNAM=Egyptian Bg,WFIL=HS13940.pfm
+PS=EgyptianBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Egyptian Bg,,  Bold,WFIL=HS13970.pfm
+PS=EgyptianBg-Light,TYPE=T1,WNAM=Egyptian Bg Light,WFIL=HS13930.pfm
+PS=EgyptianBg-ExtraBold,TYPE=T1,STYL=BOLD,WNAM=Egyptian Bg Light,,  Bold,WFIL=HS13980.pfm
+PS=EgyptianBg-Medium,TYPE=T1,WNAM=Egyptian Bg Medium,WFIL=HS13960.pfm
+PS=EgyptianBg-Black,TYPE=T1,STYL=BOLD,WNAM=Egyptian Bg Medium,,  Bold,WFIL=HS13990.pfm
+PS=ErikaBg-Regular,TYPE=T1,WNAM=Erika Bg,WFIL=HS03940.pfm
+PS=ErikaBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Erika Bg,,  Bold,WFIL=HS03970.pfm
+PS=ErikaBg-Light,TYPE=T1,WNAM=Erika Bg Light,WFIL=HS03930.pfm
+PS=ErikaBg-Black,TYPE=T1,STYL=BOLD,WNAM=Erika Bg Light,,  Bold,WFIL=HS03990.pfm
+PS=ErikaBg-Thin,TYPE=T1,WNAM=Erika Bg Thin,WFIL=HS03910.pfm
+PS=ErikaBg-Demi,TYPE=T1,STYL=BOLD,WNAM=Erika Bg Thin,,  Bold,WFIL=HS03950.pfm
+PS=ErikaHSCyr-Normal,TYPE=TT,STYL=ITALIC,WNAM=Erika Cyr,,Regular,WFIL=hsbcyr__.ttf
+PS=ErikaHSCyr-Bold,TYPE=TT,STYL=BOLDITALIC,WNAM=Erika Cyr,,Bold,WFIL=hsbcyrb_.ttf
+PS=ErikaHSCyr-Light,TYPE=TT,STYL=ITALIC,WNAM=Erika Cyr Light,,Regular,WFIL=hsbcyrl_.ttf
+PS=ErikaCyr-Black,TYPE=TT,STYL=BOLDITALIC,WNAM=Erika Cyr Light,,Bold,WFIL=hsbcyrbl.ttf
+PS=ErikaHSCyr-Thin,TYPE=TT,STYL=ITALIC,WNAM=Erika Cyr Thin,,Regular,WFIL=hsbcyrt_.ttf
+PS=EuropeBold,TYPE=TT,WNAM=Europe,,Bold,WFIL=EURO-B.TTF
+PS=EuropeBoldItalic,TYPE=TT,STYL=ITALIC,WNAM=Europe,,Bold Italic,WFIL=EURO-BI.TTF
+PS=EuropeDemiNormal,TYPE=TT,WNAM=EuropeDemi,,Normal,WFIL=EURO-DN.TTF
+PS=EuropeDemiItalic,TYPE=TT,STYL=ITALIC,WNAM=EuropeDemi,,Italic,WFIL=EURO-DI.TTF
+PS=EuropeExtBold,TYPE=TT,WNAM=EuropeExt,,Bold,WFIL=EURO-XB.TTF
+PS=FormataCondCyr-Normal,TYPE=TT,WNAM=FormataCond Cyr,,Normal,WFIL=FormataCond Cyr Normal.ttf
+PS=FormataCondCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=FormataCond Cyr,,Bold,WFIL=FormataCond Cyr Bold.ttf
+PS=FormataCondUni-Bold,TYPE=TT,STYL=BOLD,WNAM=FormataCond Uni,,Bold,WFIL=FormataCond Uni Bold.ttf
+PS=FormataCondUniNormal,TYPE=TT,WNAM=FormataCondUniNormal,WFIL=FORMCUN_.TTF
+PS=FranklinGothic-Book,TYPE=TT,WNAM=Franklin Gothic Book,WFIL=FRABK.TTF
+PS=FranklinGothic-BookItalic,TYPE=TT,STYL=ITALIC,WNAM=Franklin Gothic Book,,Italic,WFIL=FRABKIT.TTF
+PS=FranklinGothic-Demi,TYPE=TT,WNAM=Franklin Gothic Demi,WFIL=FRADM.TTF
+PS=FranklinGothic-DemiItalic,TYPE=TT,STYL=ITALIC,WNAM=Franklin Gothic Demi,,Italic,WFIL=FRADMIT.TTF
+PS=FranklinGothic-DemiCond,TYPE=TT,WNAM=Franklin Gothic Demi Cond,WFIL=FRADMCN.TTF
+PS=FranklinGothic-Heavy,TYPE=TT,WNAM=Franklin Gothic Heavy,WFIL=FRAHV.TTF
+PS=FranklinGothic-HeavyItalic,TYPE=TT,STYL=ITALIC,WNAM=Franklin Gothic Heavy,,Italic,WFIL=FRAHVIT.TTF
+PS=FranklinGothic-Medium,TYPE=TT,WNAM=Franklin Gothic Medium,WFIL=framd.ttf
+PS=FranklinGothic-MediumItalic,TYPE=TT,STYL=ITALIC,WNAM=Franklin Gothic Medium,,Italic,WFIL=framdit.ttf
+PS=FranklinGothic-MediumCond,TYPE=TT,WNAM=Franklin Gothic Medium Cond,WFIL=FRAMDCN.TTF
+PS=FrescoBg-Regular,TYPE=T1,WNAM=Fresco Bg,WFIL=HS04940.pfm
+PS=FrescoBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Fresco Bg,,  Italic,WFIL=HS04941.pfm
+PS=FrescoBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Fresco Bg,,  Bold,WFIL=HS04970.pfm
+PS=FrescoBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Fresco Bg,,  Bold Italic,WFIL=HS04971.pfm
+PS=FrescoCyr-Normal,TYPE=TT,WNAM=Fresco Cyr,,Normal,WFIL=hsccyr__.ttf
+PS=FrescoCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Fresco Cyr,,Bold,WFIL=hsccyrb_.ttf
+PS=Futuris,TYPE=TT,WNAM=Futuris,WFIL=FUTURIS.TTF
+PS=Futuris-Italic,TYPE=TT,STYL=ITALIC,WNAM=Futuris,,Italic,WFIL=FUTURIS1.TTF
+PS=Futuris-Bold,TYPE=TT,STYL=BOLD,WNAM=Futuris,,Bold,WFIL=FUTURIS0.TTF
+PS=Futuris-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Futuris,,Bold Italic,WFIL=FUTURIS2.TTF
+PS=Georgia,TYPE=TT,WNAM=Georgia,WFIL=georgia.ttf
+PS=Georgia-Italic,TYPE=TT,STYL=ITALIC,WNAM=Georgia,,Italic,WFIL=georgiai.ttf
+PS=Georgia-Bold,TYPE=TT,STYL=BOLD,WNAM=Georgia,,Bold,WFIL=georgiab.ttf
+PS=Georgia-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Georgia,,Bold Italic,WFIL=georgiaz.ttf
+PS=German-Normal,TYPE=TT,WNAM=German,WFIL=gern.TTF
+PS=German-Italic,TYPE=TT,STYL=ITALIC,WNAM=German,,Italic,WFIL=gero.TTF
+PS=German-Bold,TYPE=TT,STYL=BOLD,WNAM=German,,Bold,WFIL=gerb.TTF
+PS=German-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=German,,Bold Italic,WFIL=gert.TTF
+PS=GermanCondensed-Normal,TYPE=TT,WNAM=GermanCondensed,WFIL=gecn.TTF
+PS=GermanCondensed-Italic,TYPE=TT,STYL=ITALIC,WNAM=GermanCondensed,,Italic,WFIL=geco.TTF
+PS=GermanCondensed-Bold,TYPE=TT,STYL=BOLD,WNAM=GermanCondensed,,Bold,WFIL=gecb.TTF
+PS=GermanCondensed-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=GermanCondensed,,Bold Italic,WFIL=gect.TTF
+PS=GermanCondensedX-Bold,TYPE=TT,STYL=BOLD,WNAM=GermanCondensedX,,Bold,WFIL=gexb.TTF
+PS=GermanCondensedX-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=GermanCondensedX,,Bold Italic,WFIL=gext.TTF
+PS=GoudyOld,TYPE=TT,WNAM=GoudyOld,WFIL=GOUDYOLD.TTF
+PS=Haettenschweiler,TYPE=TT,WNAM=Haettenschweiler,WFIL=HATTEN.TTF
+PS=HSRenaultBg-Regular,TYPE=T1,WNAM=HS Renault Bg,WFIL=HS09940.pfm
+PS=HSRenaultBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=HS Renault Bg,,  Italic,WFIL=HS09941.pfm
+PS=HSRenaultBg-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Renault Bg,,  Bold,WFIL=HS09970.pfm
+PS=HSRenaultBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Renault Bg,,  Bold Italic,WFIL=HS09971.pfm
+PS=HSRenaultBg-Light,TYPE=T1,WNAM=HS Renault Bg Light,WFIL=HS09930.pfm
+PS=HSRenaultBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=HS Renault Bg Light,,  Italic,WFIL=HS09931.pfm
+PS=Impact,TYPE=TT,WNAM=Impact,WFIL=impact.ttf
+PS=Iskar-Bold,TYPE=TT,STYL=BOLD,WNAM=Iskar,,Bold,WFIL=iskb.TTF
+PS=Iskar-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Iskar,,Bold Italic,WFIL=iskt.TTF
+PS=KarinaNormal,TYPE=TT,WNAM=Karina,,Normal,WFIL=KRNN.TTF
+PS=KarinaItalic,TYPE=TT,STYL=ITALIC,WNAM=Karina,,Italic,WFIL=KRNI.TTF
+PS=KarinaBold,TYPE=TT,STYL=BOLD,WNAM=Karina,,Bold,WFIL=KRNB.TTF
+PS=KarinaBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Karina,,Bold Italic,WFIL=KRNBI.TTF
+PS=KarinaBlackNormal,TYPE=TT,WNAM=KarinaBlack,,Normal,WFIL=KRNBLN.TTF
+PS=KarinaBlackItalic,TYPE=TT,STYL=ITALIC,WNAM=KarinaBlack,,Italic,WFIL=KRNBLI.TTF
+%!UsePath :Fonts:[system]:
+PS=LucidaConsole,TYPE=TT,WNAM=Lucida Console,WFIL=lucon.ttf
+%!UsePath :Fonts:cyr-text:
+PS=LucidaSans-Demi,TYPE=TT,STYL=BOLD,WNAM=Lucida Sans,,Demibold Roman,WFIL=lsansd.ttf
+PS=LucidaSansUnicode,TYPE=TT,WNAM=Lucida Sans Unicode,WFIL=l_10646.ttf
+PS=Micra,TYPE=TT,WNAM=Micra,,Normal,WFIL=MIC_____.TTF
+PS=Micra-Bold,TYPE=TT,STYL=BOLD,WNAM=Micra,,Bold,WFIL=MICB____.TTF
+PS=MonotypeCorsiva,TYPE=TT,STYL=ITALIC,WNAM=Monotype Corsiva,,Regular,WFIL=MTCORSVA.TTF
+PS=OpalNormal,TYPE=TT,WNAM=Opal,,Normal,WFIL=OPAN.TTF
+PS=OpalItalic,TYPE=TT,STYL=ITALIC,WNAM=Opal,,Italic,WFIL=OPAI.TTF
+PS=OpalBold,TYPE=TT,STYL=BOLD,WNAM=Opal,,Bold,WFIL=OPAB.TTF
+PS=OpalBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Opal,,Bold Italic,WFIL=OPABI.TTF
+PS=OpalBNormal,TYPE=TT,WNAM=OpalB,,Normal,WFIL=OPANB.TTF
+PS=OpalBItalic,TYPE=TT,STYL=ITALIC,WNAM=OpalB,,Italic,WFIL=OPAIB.TTF
+PS=OpalBBold,TYPE=TT,STYL=BOLD,WNAM=OpalB,,Bold,WFIL=OPABB.TTF
+PS=OpalBBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=OpalB,,Bold Italic,WFIL=OPABIB.TTF
+PS=PalatinoLinotype-Roman,TYPE=TT,WNAM=Palatino Linotype,WFIL=pala.ttf
+PS=PalatinoLinotype-Italic,TYPE=TT,STYL=ITALIC,WNAM=Palatino Linotype,,Italic,WFIL=palai.ttf
+PS=PalatinoLinotype-Bold,TYPE=TT,STYL=BOLD,WNAM=Palatino Linotype,,Bold,WFIL=palab.ttf
+PS=PalatinoLinotype-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Palatino Linotype,,Bold Italic,WFIL=palabi.ttf
+PS=PlatinumBg-Regular,TYPE=T1,WNAM=Platinum Bg,WFIL=HS12940.pfm
+PS=PlatinumBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Platinum Bg,,  Italic,WFIL=HS12941.pfm
+PS=PlatinumBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Platinum Bg,,  Bold,WFIL=HS12970.pfm
+PS=PlatinumBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Platinum Bg,,  Bold Italic,WFIL=HS12971.pfm
+PS=PlatinumHSCyr,TYPE=TT,WNAM=Platinum Cyr,WFIL=hsgcyrn_.ttf
+PS=PlatinumHSCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=Platinum Cyr,,Italic,WFIL=hsgcyri_.ttf
+PS=PlatinumHSCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Platinum Cyr,,Bold,WFIL=hsgcyrb_.ttf
+PS=PlatinumHSCyr-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Platinum Cyr,,Bold Italic,WFIL=hsgcyrbi.ttf
+PS=RenaultHSCyr,TYPE=TT,WNAM=Renault Cyr,WFIL=hsicyrn_.ttf
+PS=RenaultHSCyr-Oblique,TYPE=TT,STYL=ITALIC,WNAM=Renault Cyr,,Oblique,WFIL=hsicyri_.ttf
+PS=RenaultHSCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Renault Cyr,,Bold,WFIL=hsicyrb_.ttf
+PS=RenaultHSCyr-BoldOblique,TYPE=TT,STYL=BOLDITALIC,WNAM=Renault Cyr,,Bold Oblique,WFIL=hsicyrbi.ttf
+PS=RenaultHSCyr-Light,TYPE=TT,WNAM=Renault Cyr Light,WFIL=hsicyrl_.ttf
+PS=RenaultHSCyr-LightOblique,TYPE=TT,STYL=ITALIC,WNAM=Renault Cyr Light,,Oblique,WFIL=hsicyrli.ttf
+PS=Tahoma,TYPE=TT,WNAM=Tahoma,WFIL=tahoma.ttf
+PS=Tahoma-Bold,TYPE=TT,STYL=BOLD,WNAM=Tahoma,,Bold,WFIL=tahomabd.ttf
+PS=TemporaBg-Regular,TYPE=T1,WNAM=Tempora Bg,WFIL=HS11940.pfm
+PS=TemporaBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Tempora Bg,,  Italic,WFIL=HS11941.pfm
+PS=TemporaBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Tempora Bg,,  Bold,WFIL=HS11970.pfm
+PS=TemporaBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Tempora Bg,,  Bold Italic,WFIL=HS11971.pfm
+PS=TemporaCyr-Normal,TYPE=TT,WNAM=Tempora Cyr,,Normal,WFIL=hsjcyrn_.ttf
+PS=TemporaCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=Tempora Cyr,,Italic,WFIL=hsjcyri_.ttf
+PS=TemporaCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Tempora Cyr,,Bold,WFIL=hsjcyrb_.ttf
+PS=TemporaCyr-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Tempora Cyr,,BoldItalic,WFIL=hsjcyrbi.ttf
+PS=TrebuchetMS,TYPE=TT,WNAM=Trebuchet MS,WFIL=trebuc.ttf
+PS=TrebuchetMS-Italic,TYPE=TT,STYL=ITALIC,WNAM=Trebuchet MS,,Italic,WFIL=trebucit.ttf
+PS=TrebuchetMS-Bold,TYPE=TT,STYL=BOLD,WNAM=Trebuchet MS,,Bold,WFIL=trebucbd.ttf
+PS=Trebuchet-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Trebuchet MS,,Bold Italic,WFIL=trebucbi.ttf
+%!UsePath :Fonts:[system]:
+PS=Verdana,TYPE=TT,WNAM=Verdana,WFIL=verdana.ttf
+PS=Verdana-Italic,TYPE=TT,STYL=ITALIC,WNAM=Verdana,,Italic,WFIL=verdanai.ttf
+PS=Verdana-Bold,TYPE=TT,STYL=BOLD,WNAM=Verdana,,Bold,WFIL=verdanab.ttf
+PS=Verdana-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Verdana,,Bold Italic,WFIL=verdanaz.ttf
+%!UsePath :Fonts:cyr-text:
+PS=VetrenNormal,TYPE=TT,WNAM=Vetren,,Normal,WFIL=VETRN.TTF
+PS=VetrenLightNormal,TYPE=TT,WNAM=VetrenLight,,Normal,WFIL=VETLTN.TTF
+%!EndSet 
+
+%!BeginSet cyr-Times
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-Times:
+PS=Time-Roman,TYPE=TT,WNAM=Time Roman,,Normal,WFIL=TYR.TTF
+PS=Time-RomanItalic,TYPE=TT,STYL=ITALIC,WNAM=Time Roman,,Italic,WFIL=TYRI.TTF
+PS=Time-RomanBold,TYPE=TT,STYL=BOLD,WNAM=Time Roman,,Bold,WFIL=TYRB.TTF
+PS=Time-RomanBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Time Roman,,Bold Italic,WFIL=TYRBI.TTF
+PS=Times-Roman,TYPE=T1,WNAM=Times,WFIL=TIR_____.PFM
+PS=Times-Italic,TYPE=T1,STYL=ITALIC,WNAM=Times,,  Italic,WFIL=TII_____.PFM
+PS=Times-Bold,TYPE=T1,STYL=BOLD,WNAM=Times,,  Bold,WFIL=TIB_____.PFM
+PS=Times-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Times,,  Bold Italic,WFIL=TIBI____.PFM
+PS=TimesNewRomanPSMT,TYPE=TT,WNAM=Times New Roman,WFIL=times.ttf
+PS=TimesNewRomanPS-ItalicMT,TYPE=TT,STYL=ITALIC,WNAM=Times New Roman,,Italic,WFIL=timesi.ttf
+PS=TimesNewRomanPS-BoldMT,TYPE=TT,STYL=BOLD,WNAM=Times New Roman,,Bold,WFIL=timesbd.ttf
+PS=TimesNewRomanPS-BoldItalicMT,TYPE=TT,STYL=BOLDITALIC,WNAM=Times New Roman,,Bold Italic,WFIL=timesbi.ttf
+PS=TimesNRCyrMT-Inclined,TYPE=TT,STYL=ITALIC,WNAM=Times New Roman Cyr,,Italic,WFIL=TIMCYRI.TTF
+PS=TimesNRCyrMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Times New Roman Cyr,,Bold,WFIL=TIMCYRB.TTF
+PS=TimesNRCyrMT-BoldInclined,TYPE=TT,STYL=BOLDITALIC,WNAM=Times New Roman Cyr,,Bold Italic,WFIL=TIMCYRBI.TTF
+PS=TimesET,TYPE=TT,WNAM=TimesET,WFIL=TIMESET.TTF
+PS=TimesET-Italic,TYPE=TT,STYL=ITALIC,WNAM=TimesET,,Italic,WFIL=TIMESET2.TTF
+PS=TimesET-Bold,TYPE=TT,STYL=BOLD,WNAM=TimesET,,Bold,WFIL=TIMESET0.TTF
+PS=TimesET-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=TimesET,,Bold Italic,WFIL=TIMESET1.TTF
+PS=TimokPlain,TYPE=OT,WNAM=Timok,WFIL=TIMN.otf
+PS=TimokItalic,TYPE=OT,STYL=ITALIC,WNAM=Timok,, Italic,WFIL=TIMBI.otf
+PS=TimokBold,TYPE=OT,STYL=BOLD,WNAM=Timok,, Bold,WFIL=TIMB.otf
+PS=TimokBoldItalic,TYPE=OT,STYL=BOLDITALIC,WNAM=Timok,, Bold Italic,WFIL=TIMI.otf
+PS=TimokBPlain,TYPE=OT,WNAM=TimokB,WFIL=TIMNB.otf
+PS=TimokBItalic,TYPE=OT,STYL=ITALIC,WNAM=TimokB,, Italic,WFIL=TIMIB.otf
+PS=TimokBBold,TYPE=OT,STYL=BOLD,WNAM=TimokB,, Bold,WFIL=TIMBB.otf
+PS=TimokBBoldItalic,TYPE=OT,STYL=BOLDITALIC,WNAM=TimokB,, Bold Italic,WFIL=TIMBIB.otf
+PS=TimokU,TYPE=TT,WNAM=TimokU,WFIL=TMKU.TTF
+PS=TimokUItalic,TYPE=TT,STYL=ITALIC,WNAM=TimokU,,Italic,WFIL=TMKUI.TTF
+PS=TimokUBold,TYPE=TT,STYL=BOLD,WNAM=TimokU,,Bold,WFIL=TMKUB.TTF
+PS=TimokUBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=TimokU,,BoldItalic,WFIL=TMKUBI.TTF
+%!EndSet 
+
+%!BeginSet cyr-Universe
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:cyr-Universe:
+PS=UniversumBg-Regular,TYPE=T1,WNAM=Universum Bg,WFIL=HS14940.pfm
+PS=UniversumBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg,,  Italic,WFIL=HS14941.pfm
+PS=UniversumBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Universum Bg,,  Bold,WFIL=HS14970.pfm
+PS=UniversumBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg,,  Bold Italic,WFIL=HS14971.pfm
+PS=UniversumBg-Cond,TYPE=T1,WNAM=Universum Bg Condensed,WFIL=HS14945.pfm
+PS=UniversumBg-CondIta,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Condensed,,  Italic,WFIL=HS14946.pfm
+PS=UniversumBg-BoldCond,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Condensed,,  Bold,WFIL=HS14975.pfm
+PS=UniversumBg-BoldCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Condensed,,  Bold Italic,WFIL=HS14976.pfm
+PS=UniversumBg-Light,TYPE=T1,WNAM=Universum Bg Light,WFIL=HS14930.pfm
+PS=UniversumBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Light,,  Italic,WFIL=HS14931.pfm
+PS=UniversumBg-Black,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Light,,  Bold,WFIL=HS14990.pfm
+PS=UniversumBg-BlackItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Light,,  Bold Italic,WFIL=HS14991.pfm
+PS=UniversumBg-LightCond,TYPE=T1,WNAM=Universum Bg Light Condensed,WFIL=HS14935.pfm
+PS=UniversumBg-LightCondIta,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Light Condensed,,  Italic,WFIL=HS14936.pfm
+PS=UniversumBg-BlackCond,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Light Condensed,,  Bold,WFIL=HS14995.pfm
+PS=UniversumBg-BlackCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Light Condensed,,  Bold Italic,WFIL=HS14996.pfm
+PS=UniversumHSCyr,TYPE=TT,WNAM=Universum Cyr,WFIL=hskcyr__.ttf
+PS=UniversumHSCyr-Italic,TYPE=TT,STYL=ITALIC,WNAM=Universum Cyr,,Italic,WFIL=hskcyri_.ttf
+PS=UniversumHSCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=Universum Cyr,,Bold,WFIL=hskcyrb_.ttf
+PS=UniversumHSCyr-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Universum Cyr,,Bold Italic,WFIL=hskcyrbi.ttf
+PS=UniversumHSCyr-Condensed,TYPE=TT,WNAM=Universum Cyr Condensed,WFIL=hskcyrc_.ttf
+PS=UniversumHSCyr-CondensedItalic,TYPE=TT,STYL=ITALIC,WNAM=Universum Cyr Condensed,,Italic,WFIL=hskcyrci.ttf
+PS=UniversumHSCyr-CondensedBold,TYPE=TT,STYL=BOLD,WNAM=Universum Cyr Condensed,,Bold,WFIL=hskcyrcb.ttf
+PS=UniversumHSCyr-CondensedBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Universum Cyr Condensed,,Bold Italic,WFIL=hskcyrcc.ttf
+PS=UniversumHSCyr-Light,TYPE=TT,WNAM=Universum Cyr Light,WFIL=hskcyrl.ttf
+PS=UniversumHSCyr-LightItalic,TYPE=TT,STYL=ITALIC,WNAM=Universum Cyr Light,,Italic,WFIL=hskcyrli.ttf
+PS=UniversumHSCyr-LightBoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Universum Cyr Light,,Bold Italic,WFIL=hskcyrbli.ttf
+PS=UniversumHSCyr-LightCondensed,TYPE=TT,WNAM=Universum Cyr Light Condensed,WFIL=hskcyrlc.ttf
+PS=UniversumHSCyr-LightCondensedItalic,TYPE=TT,STYL=ITALIC,WNAM=Universum Cyr Light Condensed,,Italic,WFIL=hskcyrlci.ttf
+PS=UniversumHSCyr-BlackCondensed,TYPE=TT,STYL=BOLD,WNAM=Universum Cyr Light Condensed,,Bold,WFIL=hskcyrlbx.ttf
+PS=UniversumHSCyr-BlackCondensedItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Universum Cyr Light Condensed,,Bold Italic,WFIL=hskcyrlbi.ttf
+%!EndSet 
+
+%!BeginSet lat-arial
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-arial:
+PS=Arial-BlackItalic,TYPE=TT,STYL=ITALIC,WNAM=Arial Black,,Italic,WFIL=ARBLI___.TTF
+PS=ArialRoundedMTBold,TYPE=TT,WNAM=Arial Rounded MT Bold,WFIL=ARLRDBD.TTF
+%!EndSet 
+
+%!BeginSet lat-decor
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-decor:
+PS=BubbledotICG-CoarseNeg,TYPE=T1,WNAM=Bubbledot ICG Coarse Neg,WFIL=BCN_____.PFM
+PS=BubbledotICG-CoarsePos,TYPE=T1,WNAM=Bubbledot ICG Coarse Pos,WFIL=BCP_____.PFM
+PS=BubbledotICG-FineNeg,TYPE=T1,WNAM=Bubbledot ICG Fine Neg,WFIL=BFN_____.PFM
+PS=BubbledotICG-FinePos,TYPE=T1,WNAM=Bubbledot ICG Fine Pos,WFIL=BFP_____.PFM
+PS=BurweedICG,TYPE=T1,WNAM=Burweed ICG,WFIL=BUR_____.PFM
+PS=BurweedICG-Thorny,TYPE=T1,WNAM=Burweed ICG Thorny,WFIL=BURT____.PFM
+PS=ChiladaICG-Cuatro,TYPE=T1,WNAM=Chilada ICG Cuatro,WFIL=CHILC___.PFM
+PS=ChiladaICG-Dos,TYPE=T1,WNAM=Chilada ICG Dos,WFIL=CHILD___.PFM
+PS=ChiladaICG-Tres,TYPE=T1,WNAM=Chilada ICG Tres,WFIL=CHILT___.PFM
+PS=ChiladaICG-Uno,TYPE=T1,WNAM=Chilada ICG Uno,WFIL=CHILU___.PFM
+PS=Cutout,TYPE=T1,WNAM=Cutout,WFIL=wu______.pfm
+PS=DigitalICG,TYPE=T1,WNAM=Digital,WFIL=DIGIT___.PFM
+PS=EastBlocICG-Closed,TYPE=T1,WNAM=East Bloc ICG Closed,WFIL=EBC_____.PFM
+PS=EastBlocICG-ClosedAlt,TYPE=T1,WNAM=East Bloc ICG Closed Alt,WFIL=EBCA____.PFM
+PS=EastBlocICG-Open,TYPE=T1,WNAM=East Bloc ICG Open,WFIL=EBO_____.PFM
+PS=EastBlocICG-OpenAlt,TYPE=T1,WNAM=East Bloc ICG Open Alt,WFIL=EBOA____.PFM
+PS=FarfelICG-FeltTip,TYPE=T1,WNAM=Farfel ICG Felt Tip,WFIL=FARFF___.PFM
+PS=FarfelICG-Pencil,TYPE=T1,WNAM=Farfel ICG Pencil,WFIL=FARFP___.PFM
+PS=FarrierICG,TYPE=T1,WNAM=Farrier ICG,WFIL=FAR_____.PFM
+PS=FarrierICG-Bold,TYPE=T1,STYL=BOLD,WNAM=Farrier ICG,,  Bold,WFIL=FARB____.PFM
+PS=FarrierICG-Black,TYPE=T1,WNAM=Farrier ICG Black,WFIL=FARK____.PFM
+PS=Frosty,TYPE=TT,WNAM=Frosty,WFIL=FROSTY__.TTF
+PS=GalleriaPlain,TYPE=TT,WNAM=Galleria,WFIL=galerian.TTF
+PS=Gigi-Regular,TYPE=TT,WNAM=Gigi,WFIL=GIGI.TTF
+PS=GoudyTextMT,TYPE=T1,WNAM=Goudy Text MT,WFIL=GX______.PFM
+PS=GreymantleMVB,TYPE=T1,WNAM=Greymantle MVB,WFIL=qg______.pfm
+PS=Happy-HappyJoyJoy,TYPE=TT,WNAM=Happy,WFIL=Happy.ttf
+PS=HarlowSolid,TYPE=TT,STYL=ITALIC,WNAM=Harlow Solid Italic,,Italic,WFIL=HARLOWSI.TTF
+PS=Harrington,TYPE=TT,WNAM=Harrington,WFIL=HARNGTON.TTF
+PS=IceAgeD,TYPE=TT,WNAM=IceAgeD,WFIL=ICEAGEN.TTF
+PS=InformalRoman-Regular,TYPE=TT,WNAM=Informal Roman,WFIL=INFROMAN.TTF
+PS=Inkburrow,TYPE=TT,WNAM=Inkburrow,WFIL=Inkburro.ttf
+PS=Jokerman-Regular,TYPE=TT,WNAM=Jokerman,WFIL=JOKERMAN.TTF
+PS=JuiceITC-Regular,TYPE=TT,WNAM=Juice ITC,WFIL=JUICE___.TTF
+PS=KellyAnnGothic,TYPE=TT,WNAM=KellyAnnGothic,WFIL=Kellyag_.ttf
+PS=KristenITC-Regular,TYPE=TT,WNAM=Kristen ITC,WFIL=ITCKRIST.TTF
+PS=LemonadeICG,TYPE=T1,WNAM=Lemonade ICG,WFIL=LEM_____.PFM
+PS=LemonadeICG-Bold,TYPE=T1,STYL=BOLD,WNAM=Lemonade ICG,,  Bold,WFIL=LEMB____.PFM
+PS=LibertyD,TYPE=TT,WNAM=LibertyD,WFIL=libertdn.TTF
+PS=LincolnPSMT,TYPE=TT,WNAM=Lincoln,WFIL=LINCOLNN.TTF
+PS=MatisseITC-Regular,TYPE=TT,WNAM=Matisse ITC,WFIL=MATISSE_.TTF
+PS=Mojo,TYPE=T1,WNAM=Mojo,WFIL=fbrg____.pfm
+PS=NarrowbandPrimeICG,TYPE=T1,WNAM=Narrowband Prime ICG,WFIL=NARP____.PFM
+PS=NarrowbandPrimeICG-Bold,TYPE=T1,STYL=BOLD,WNAM=Narrowband Prime ICG,,  Bold,WFIL=NARPB___.PFM
+PS=NewtronICG,TYPE=T1,WNAM=Newtron ICG,WFIL=NEWT____.PFM
+PS=NewtronICG-Alt,TYPE=T1,WNAM=Newtron ICG Alt,WFIL=NEWTA___.PFM
+PS=NewtronICG-Open,TYPE=T1,WNAM=Newtron ICG Open,WFIL=NEWTO___.PFM
+PS=Nyx,TYPE=T1,WNAM=Nyx,WFIL=nxrg____.pfm
+PS=OldEnglishTextMT,TYPE=TT,WNAM=Old English Text MT,WFIL=OLDENGL.TTF
+PS=OldCyr-Bold,TYPE=TT,STYL=BOLD,WNAM=OldCyr,,Bold,WFIL=oldc.TTF
+PS=Ouch,TYPE=T1,WNAM=Ouch,WFIL=oq______.pfm
+PS=PaladinPCRusMedium,TYPE=TT,WNAM=PaladinPCRus,,Medium,WFIL=Paladin.TTF
+PS=Papyrus-Regular,TYPE=TT,WNAM=Papyrus,WFIL=PAPYRUS.TTF
+PS=Parchment-Regular,TYPE=TT,WNAM=Parchment,WFIL=PARCHM.TTF
+PS=ParisFlashICG,TYPE=T1,WNAM=Paris Flash ICG,WFIL=PARIF___.PFM
+PS=PepitaMT,TYPE=T1,STYL=ITALIC,WNAM=Pepita MT,,  Italic,WFIL=EPSCR___.PFM
+PS=Playbill,TYPE=TT,WNAM=Playbill,WFIL=PLAYBILL.TTF
+PS=PlazaD-Regu,TYPE=TT,WNAM=PlazaDReg,WFIL=plazan.TTF
+PS=Pompeia-Inline,TYPE=T1,WNAM=Pompeia Inline,WFIL=vpin____.pfm
+PS=Ponderosa,TYPE=T1,WNAM=Ponderosa,WFIL=P_______.PFM
+PS=QuicksansAccurateICG,TYPE=T1,WNAM=Quicksans Accurate ICG,WFIL=QSA_____.PFM
+PS=QuicksansAccurateICG-Fill,TYPE=T1,WNAM=Quicksans Accurate ICG Fill,WFIL=QSAF____.PFM
+PS=QuicksansAccurateICG-Guides,TYPE=T1,WNAM=Quicksans Accurate ICG Guides,WFIL=QSAG____.PFM
+PS=QuicksansAccurateICG-Out,TYPE=T1,WNAM=Quicksans Accurate ICG Out,WFIL=QSAO____.PFM
+PS=QuicksansAccurateICG-Solid,TYPE=T1,WNAM=Quicksans Accurate ICG Solid,WFIL=QSAS____.PFM
+PS=Ravie,TYPE=TT,WNAM=Ravie,WFIL=RAVIE.TTF
+PS=RepublikSansICG-01,TYPE=T1,WNAM=Republik Sans ICG 01,WFIL=RPS1____.PFM
+PS=RepublikSansICG-02,TYPE=T1,WNAM=Republik Sans ICG 02,WFIL=RPS2____.PFM
+PS=RepublikSansICG-03,TYPE=T1,WNAM=Republik Sans ICG 03,WFIL=RPS3____.PFM
+PS=RepublikSansICG-03Alt,TYPE=T1,WNAM=Republik Sans ICG 03 Alt,WFIL=RPS3A___.PFM
+PS=RepublikSerifICG-01,TYPE=T1,WNAM=Republik Serif ICG 01,WFIL=RPF1____.PFM
+PS=RepublikSerifICG-02,TYPE=T1,WNAM=Republik Serif ICG 02,WFIL=RPF2____.PFM
+PS=RepublikSerifICG-03,TYPE=T1,WNAM=Republik Serif ICG 03,WFIL=RPF3____.PFM
+PS=RepublikSerifICG-03Alt,TYPE=T1,WNAM=Republik Serif ICG 03 Alt,WFIL=RPF3A___.PFM
+PS=Rosewood-Regular,TYPE=T1,WNAM=Rosewood Regular,WFIL=UXRG____.PFM
+PS=RubinoSansICG,TYPE=T1,WNAM=Rubino Sans ICG,WFIL=RUBS____.PFM
+PS=RubinoSansICG-Fill,TYPE=T1,WNAM=Rubino Sans ICG Fill,WFIL=RUBSF___.PFM
+PS=RubinoSansICG-Guides,TYPE=T1,WNAM=Rubino Sans ICG Guides,WFIL=RUBSG___.PFM
+PS=RubinoSansICG-Out,TYPE=T1,WNAM=Rubino Sans ICG Out,WFIL=RUBSO___.PFM
+PS=RubinoSansICG-Solid,TYPE=T1,WNAM=Rubino Sans ICG Solid,WFIL=RUBSS___.PFM
+PS=ShowcardGothic-Reg,TYPE=TT,WNAM=Showcard Gothic,WFIL=SHOWG.TTF
+PS=Shuriken-Boy,TYPE=T1,WNAM=Shuriken Boy,WFIL=s_boy___.pfm
+PS=Smartie,TYPE=TT,WNAM=Smartie,WFIL=SMARTIE_.TTF
+PS=SnapITC-Regular,TYPE=TT,WNAM=Snap ITC,WFIL=SNAP____.TTF
+PS=SprocketDeluxeBT-Regular,TYPE=TT,WNAM=SprocketDeluxe BT,WFIL=sproketf.TTF
+PS=SpumoniLP,TYPE=T1,WNAM=Spumoni LP,WFIL=uu______.pfm
+PS=Staccato222BT-Regular,TYPE=TT,WNAM=Staccato222 BT,WFIL=Stacc222.ttf
+PS=Stencil,TYPE=T1,WNAM=Stencil,WFIL=ST______.PFM
+PS=StoneAgeBT-Regular,TYPE=TT,WNAM=StoneAge BT,WFIL=stoneagn.TTF
+PS=StopD,TYPE=TT,WNAM=StopD,WFIL=stopn.TTF
+PS=LatinWide,TYPE=TT,WNAM=Wide Latin,WFIL=LATINWD.TTF
+PS=Willow,TYPE=T1,WNAM=Willow,WFIL=WI______.PFM
+PS=WontonICG,TYPE=T1,WNAM=Wonton ICG,WFIL=WONT____.PFM
+%!EndSet 
+
+%!BeginSet lat-decor-script
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-decor-script:
+PS=BrushScriptMT,TYPE=TT,STYL=ITALIC,WNAM=Brush Script MT,,Italic,WFIL=BRUSHSCI.TTF
+PS=Brush445BT-Regular,TYPE=TT,WNAM=Brush455 BT,WFIL=BRUS445N.TTF
+PS=DorchesterScriptMT,TYPE=T1,STYL=ITALIC,WNAM=Dorchester Script MT,,  Italic,WFIL=DSSCR___.PFM
+PS=FreestyleScript-Regular,TYPE=TT,WNAM=Freestyle Script,WFIL=FREESCPT.TTF
+PS=FrenchScriptMT,TYPE=TT,WNAM=French Script MT,WFIL=FRSCRIPT.TTF
+PS=Giddyup,TYPE=T1,WNAM=Giddyup,WFIL=wg______.pfm
+PS=Isadora-Regular,TYPE=T1,WNAM=Isadora Regular,WFIL=IRRG____.PFM
+PS=Isadora-Bold,TYPE=T1,STYL=BOLD,WNAM=Isadora Regular,,  Bold,WFIL=IRB_____.PFM
+PS=KunstlerScript,TYPE=TT,WNAM=Kunstler Script,WFIL=KUNSTLER.TTF
+PS=LibertyBT-Regular,TYPE=TT,WNAM=Liberty BT,WFIL=libertyn.TTF
+PS=LinusPSMT,TYPE=TT,WNAM=Linus,WFIL=LINUSN.TTF
+PS=Magneto-Bold,TYPE=TT,STYL=BOLD,WNAM=Magneto,,Bold,WFIL=MAGNETOB.TTF
+PS=MaturaMTScriptCapitals,TYPE=TT,WNAM=Matura MT Script Capitals,WFIL=MATURASC.TTF
+PS=MysticalPSMT,TYPE=TT,WNAM=Mystical,WFIL=MYSTCALN.TTF
+PS=NuptialScript,TYPE=T1,STYL=ITALIC,WNAM=NuptialScript,,  Italic,WFIL=NU______.PFM
+PS=PabloLetPlain,TYPE=TT,WNAM=Pablo LET,,Plain,WFIL=pablon.TTF
+PS=PalaceScriptMT,TYPE=TT,STYL=ITALIC,WNAM=Palace Script MT,,Regular,WFIL=PALSCRI.TTF
+PS=Pristina-Regular,TYPE=TT,WNAM=Pristina,WFIL=PRISTINA.TTF
+PS=RageItalic,TYPE=TT,WNAM=Rage Italic,WFIL=RAGE.TTF
+PS=RageItalicLetPlain,TYPE=TT,WNAM=Rage Italic LET,,Plain,WFIL=rageit.TTF
+PS=Shelley-VolanteScriptA,TYPE=TT,WNAM=Shelley-VolanteScript,,A,WFIL=_EW_26.TTF
+PS=ShelleyAllegroBT-Regular,TYPE=TT,WNAM=ShelleyAllegro BT,WFIL=shlyalln.TTF
+PS=ShelleyVolanteBT-Regular,TYPE=TT,WNAM=ShelleyVolante BT,WFIL=shlyvoln.TTF
+PS=Signature,TYPE=T1,WNAM=Signature,WFIL=SIG_____.PFM
+PS=SignatureLight,TYPE=T1,WNAM=Signature Light,WFIL=SIGL____.PFM
+PS=TypoUprightBT-Regular,TYPE=TT,WNAM=TypoUpright BT,WFIL=TypoUpri.ttf
+PS=VinerHandITC,TYPE=TT,WNAM=Viner Hand ITC,WFIL=VINERITC.TTF
+PS=Vivaldii,TYPE=TT,STYL=ITALIC,WNAM=Vivaldi,,Italic,WFIL=VIVALDII.TTF
+PS=VivaldiD,TYPE=TT,WNAM=VivaldiD,WFIL=vivaldin.ttf
+PS=VladimirScript,TYPE=TT,WNAM=Vladimir Script,WFIL=VLADIMIR.TTF
+PS=ZapfChancery-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=ZapfChancery,,  Italic,WFIL=ZCMI____.PFM
+%!EndSet 
+
+%!BeginSet lat-garamond
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-garamond:
+PS=Garamond-Light,TYPE=T1,WNAM=Garamond,WFIL=GAL_____.PFM
+PS=Garamond-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond,,  Italic,WFIL=GALI____.PFM
+PS=Garamond-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Garamond,,  Bold Italic,WFIL=GABI____.PFM
+PS=Garamond-Book,TYPE=T1,WNAM=Garamond Book,WFIL=GAW_____.PFM
+PS=Garamond-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond Book,,  Italic,WFIL=GAWI____.PFM
+PS=Garamond-BookCondensed,TYPE=T1,WNAM=Garamond BookCondensed,WFIL=GAWC____.PFM
+PS=Garamond-BookCondensedItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond BookCondensed,,  Italic,WFIL=GAWCI___.PFM
+PS=Garamond-BoldCondensed,TYPE=T1,STYL=BOLD,WNAM=Garamond BookCondensed,,  Bold,WFIL=GABC____.PFM
+PS=Garamond-BoldCondensedItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Garamond BookCondensed,,  Bold Italic,WFIL=GABCI___.PFM
+PS=Garamond-LightCondensed,TYPE=T1,WNAM=Garamond LightCondensed,WFIL=GALC____.PFM
+PS=Garamond-LightCondensedItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond LightCondensed,,  Italic,WFIL=GALCI___.PFM
+PS=Garamond-Ultra,TYPE=T1,WNAM=Garamond Ultra,WFIL=GAU_____.PFM
+PS=Garamond-UltraItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond Ultra,,  Italic,WFIL=GAUI____.PFM
+PS=Garamond-UltraCondensed,TYPE=T1,WNAM=Garamond UltraCondensed,WFIL=GAUC____.PFM
+PS=Garamond-UltraCondensedItalic,TYPE=T1,STYL=ITALIC,WNAM=Garamond UltraCondensed,,  Italic,WFIL=GAUCI___.PFM
+%!EndSet 
+
+%!BeginSet lat-GillSans
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-GillSans:
+PS=GillSansCE,TYPE=T1,WNAM=Gill Sans CE,WFIL=gsc_____.pfm
+PS=GillSansCE-Italic,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans CE,,  Italic,WFIL=gsci____.pfm
+PS=GillSansCE-Bold,TYPE=T1,STYL=BOLD,WNAM=Gill Sans CE,,  Bold,WFIL=gscb____.pfm
+PS=GillSansCE-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Gill Sans CE,,  Bold Italic,WFIL=gscbi___.pfm
+PS=GillSansCE-Light,TYPE=T1,WNAM=Gill Sans CE Light,WFIL=gscl____.pfm
+PS=GillSansCE-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans CE Light,,  Italic,WFIL=gscli___.pfm
+PS=GillSansMT,TYPE=TT,WNAM=Gill Sans MT,WFIL=GIL_____.TTF
+PS=GillSansMT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Gill Sans MT,,Italic,WFIL=GILI____.TTF
+PS=GillSansMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Gill Sans MT,,Bold,WFIL=GILB____.TTF
+PS=GillSansMT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Gill Sans MT,,Bold Italic,WFIL=GILBI___.TTF
+PS=GillSansMT-Condensed,TYPE=TT,WNAM=Gill Sans MT Condensed,WFIL=GILC____.TTF
+PS=GillSansMT-ExtraCondensedBold,TYPE=TT,WNAM=Gill Sans MT Ext Condensed Bold,WFIL=GLSNECB.TTF
+PS=GillSansTur,TYPE=T1,WNAM=Gill Sans Tur,WFIL=gst_____.pfm
+PS=GillSansTur-Italic,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans Tur,,  Italic,WFIL=gsti____.pfm
+PS=GillSansTur-Bold,TYPE=T1,STYL=BOLD,WNAM=Gill Sans Tur,,  Bold,WFIL=gstb____.pfm
+PS=GillSansTur-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Gill Sans Tur,,  Bold Italic,WFIL=gstbi___.pfm
+PS=GillSansTur-Light,TYPE=T1,WNAM=Gill Sans Tur Light,WFIL=gstl____.pfm
+PS=GillSansTur-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Gill Sans Tur Light,,  Italic,WFIL=gstli___.pfm
+PS=GillSans-UltraBold,TYPE=TT,WNAM=Gill Sans Ultra Bold,WFIL=GILSANUB.TTF
+PS=GillSans-UltraBoldCondensed,TYPE=TT,WNAM=Gill Sans Ultra Bold Condensed,WFIL=GILLUBCD.TTF
+PS=GillSans,TYPE=T1,WNAM=GillSans,WFIL=GN______.PFM
+PS=GillSans-Italic,TYPE=T1,STYL=ITALIC,WNAM=GillSans,,  Italic,WFIL=GNI_____.PFM
+PS=GillSans-Bold,TYPE=T1,STYL=BOLD,WNAM=GillSans,,  Bold,WFIL=GNB_____.PFM
+PS=GillSans-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=GillSans,,  Bold Italic,WFIL=GNBI____.PFM
+PS=GillSans-ExtraBold,TYPE=T1,WNAM=GillSans ExtraBold,WFIL=GNEB____.PFM
+PS=GillSans-Light,TYPE=T1,WNAM=GillSans Light,WFIL=GNL_____.PFM
+PS=GillSans-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=GillSans Light,,  Italic,WFIL=GNLI____.PFM
+%!EndSet 
+
+%!BeginSet lat-monospaced
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-monospaced:
+PS=LetterGothicMT,TYPE=TT,WNAM=Letter Gothic MT,WFIL=Lc______.ttf
+PS=LetterGothicMT-Oblique,TYPE=TT,STYL=ITALIC,WNAM=Letter Gothic MT,,Oblique,WFIL=Lci_____.ttf
+PS=LetterGothicMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Letter Gothic MT,,Bold,WFIL=Lcb_____.ttf
+PS=LetterGothicMT-BoldOblique,TYPE=TT,STYL=BOLDITALIC,WNAM=Letter Gothic MT,,Bold Oblique,WFIL=Lcbi____.ttf
+PS=OCRAExtended,TYPE=TT,WNAM=OCR A Extended,WFIL=OCRAEXT.TTF
+PS=OCRAbyBT-Regular,TYPE=TT,WNAM=OCR-A BT,WFIL=OCR-a___.ttf
+PS=OCRB10PitchBT-Regular,TYPE=TT,WNAM=OCR-B 10 BT,WFIL=OCR-b___.ttf
+PS=OCRA-Alternate,TYPE=T1,WNAM=OCRA Alternate,WFIL=oaalt___.pfm
+%!EndSet 
+
+%!BeginSet lat-text
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-text:
+PS=AGOldFace-Outline,TYPE=T1,WNAM=AG Old Face Outline,WFIL=QWOU____.PFM
+PS=AGOldFace-BoldOutline,TYPE=T1,STYL=BOLD,WNAM=AG Old Face Outline,,  Bold,WFIL=QWBOU___.PFM
+PS=AmericanTypewriter-Cond,TYPE=T1,WNAM=AmericanTypewriter Cn,WFIL=ATC_____.PFM
+PS=AmericanTypewriter-BoldCond,TYPE=T1,STYL=BOLD,WNAM=AmericanTypewriter Cn,,  Bold,WFIL=ATBC____.PFM
+PS=AmericanTypewriter-CondA,TYPE=T1,WNAM=AmericanTypewriter CnA,WFIL=ATCA____.PFM
+PS=AmericanTypewriter-BoldCondA,TYPE=T1,STYL=BOLD,WNAM=AmericanTypewriter CnA,,  Bold,WFIL=ATBCA___.PFM
+PS=AmericanTypewriter-Light,TYPE=T1,WNAM=AmericanTypewriter Light,WFIL=ATL_____.PFM
+PS=AmericanTypewriter-LightA,TYPE=T1,WNAM=AmericanTypewriter LightA,WFIL=ATLA____.PFM
+PS=AmericanTypewriter-LightCond,TYPE=T1,WNAM=AmericanTypewriter LightCn,WFIL=ATLC____.PFM
+PS=AmericanTypewriter-LightCondA,TYPE=T1,WNAM=AmericanTypewriter LightCnA,WFIL=ATLCA___.PFM
+PS=AmericanTypewriter-Medium,TYPE=T1,WNAM=AmericanTypewriter Medium,WFIL=ATM_____.PFM
+PS=AmericanTypewriter-Bold,TYPE=T1,STYL=BOLD,WNAM=AmericanTypewriter Medium,,  Bold,WFIL=ATB_____.PFM
+PS=AmericanTypewriter-MediumA,TYPE=T1,WNAM=AmericanTypewriter MediumA,WFIL=ATMA____.PFM
+PS=AmericanTypewriter-BoldA,TYPE=T1,STYL=BOLD,WNAM=AmericanTypewriter MediumA,,  Bold,WFIL=ATBA____.PFM
+PS=Arquitectura,TYPE=T1,WNAM=Arquitectura,WFIL=ARQUI___.PFM
+PS=AvantGarde-Book,TYPE=T1,WNAM=AvantGarde,WFIL=AGW_____.PFM
+PS=AvantGarde-BookOblique,TYPE=T1,STYL=ITALIC,WNAM=AvantGarde,,  Italic,WFIL=AGWO____.PFM
+PS=AvantGarde-Demi,TYPE=T1,STYL=BOLD,WNAM=AvantGarde,,  Bold,WFIL=AGD_____.PFM
+PS=AvantGarde-DemiOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=AvantGarde,,  Bold Italic,WFIL=AGDO____.PFM
+PS=BadlocICG,TYPE=T1,WNAM=Badloc ICG,WFIL=BAD_____.PFM
+PS=BadlocICG-Bevel,TYPE=T1,WNAM=Badloc ICG Bevel,WFIL=BADB____.PFM
+PS=BadlocICG-Compression,TYPE=T1,WNAM=Badloc ICG Compression,WFIL=BADC____.PFM
+PS=Bauhaus-Heavy,TYPE=T1,WNAM=Bauhaus Heavy,WFIL=BHH_____.PFM
+PS=Bauhaus-Light,TYPE=T1,WNAM=Bauhaus Light,WFIL=BHL_____.PFM
+PS=Bauhaus-Demi,TYPE=T1,STYL=BOLD,WNAM=Bauhaus Light,,  Bold,WFIL=BHD_____.PFM
+PS=Bauhaus-Medium,TYPE=T1,WNAM=Bauhaus Medium,WFIL=BHM_____.PFM
+PS=Bauhaus-Bold,TYPE=T1,STYL=BOLD,WNAM=Bauhaus Medium,,  Bold,WFIL=BHB_____.PFM
+PS=Bellevue,TYPE=T1,STYL=ITALIC,WNAM=Bellevue,,  Italic,WFIL=QSRG____.PFM
+PS=Benguiat-Book,TYPE=T1,WNAM=Benguiat,WFIL=BGW_____.PFM
+PS=Benguiat-Bold,TYPE=T1,STYL=BOLD,WNAM=Benguiat,,  Bold,WFIL=BGB_____.PFM
+PS=BenguiatGothic-Book,TYPE=T1,WNAM=Benguiat Gothic Book,WFIL=BEW_____.PFM
+PS=BenguiatGothic-BookOblique,TYPE=T1,STYL=ITALIC,WNAM=Benguiat Gothic Book,,  Italic,WFIL=BEWO____.PFM
+PS=BenguiatGothic-Heavy,TYPE=T1,WNAM=Benguiat Gothic Heavy,WFIL=BEH_____.PFM
+PS=BenguiatGothic-HeavyOblique,TYPE=T1,STYL=ITALIC,WNAM=Benguiat Gothic Heavy,,  Italic,WFIL=BEHO____.PFM
+PS=BenguiatGothic-Medium,TYPE=T1,WNAM=Benguiat Gothic Medium,WFIL=BEM_____.PFM
+PS=BenguiatGothic-MediumOblique,TYPE=T1,STYL=ITALIC,WNAM=Benguiat Gothic Medium,,  Italic,WFIL=BEMO____.PFM
+PS=BenguiatGothic-Bold,TYPE=T1,STYL=BOLD,WNAM=Benguiat Gothic Medium,,  Bold,WFIL=BEB_____.PFM
+PS=BenguiatGothic-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=Benguiat Gothic Medium,,  Bold Italic,WFIL=BEBO____.PFM
+PS=BermudaLP-Squiggle,TYPE=T1,WNAM=Bermuda LP Squiggle,WFIL=uddc2___.pfm
+PS=BodoniBT-Bold,TYPE=TT,WNAM=Bodoni Bd BT,,Bold,WFIL=bodonib.TTF
+PS=BodoniBT-BoldItalic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni Bd BT,,Bold Italic,WFIL=bodonibi.TTF
+PS=BodoniBT-BoldCondensed,TYPE=TT,WNAM=Bodoni BdCn BT,,Bold,WFIL=bodonibc.TTF
+PS=BodoniBT-Book,TYPE=TT,WNAM=Bodoni Bk BT,,Book,WFIL=bodonin.TTF
+PS=BodoniBT-BookItalic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni Bk BT,,Book Italic,WFIL=bodonini.TTF
+PS=BodoniBT-Roman,TYPE=TT,WNAM=Bodoni BT,,Roman,WFIL=bodoni_0.TTF
+PS=BodoniBT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni BT,,Italic,WFIL=bodonii.TTF
+PS=BodoniHighlightICG,TYPE=T1,WNAM=Bodoni Highlight ICG,WFIL=BODHL___.PFM
+PS=BodoniMT,TYPE=TT,WNAM=Bodoni MT,WFIL=BOD_R.TTF
+PS=BodoniMT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni MT,,Italic,WFIL=BOD_I.TTF
+PS=BodoniMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Bodoni MT,,Bold,WFIL=BOD_B.TTF
+PS=BodoniMT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Bodoni MT,,Bold Italic,WFIL=BOD_BI.TTF
+PS=BodoniMTBlack,TYPE=TT,WNAM=Bodoni MT Black,WFIL=BOD_BLAR.TTF
+PS=BodoniMTBlack-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni MT Black,,Italic,WFIL=BOD_BLAI.TTF
+PS=BodoniMTCondensed,TYPE=TT,WNAM=Bodoni MT Condensed,WFIL=BOD_CR.TTF
+PS=BodoniMTCondensed-Italic,TYPE=TT,STYL=ITALIC,WNAM=Bodoni MT Condensed,,Italic,WFIL=BOD_CI.TTF
+PS=BodoniMTCondensed-Bold,TYPE=TT,STYL=BOLD,WNAM=Bodoni MT Condensed,,Bold,WFIL=BOD_CB.TTF
+PS=BodoniMTCondensed-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Bodoni MT Condensed,,Bold Italic,WFIL=BOD_CBI.TTF
+PS=BodoniMTPosterCompressed,TYPE=TT,WNAM=Bodoni MT Poster Compressed,WFIL=BOD_PSTC.TTF
+PS=Bookman-Light,TYPE=T1,WNAM=Bookman,WFIL=BKL_____.PFM
+PS=Bookman-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Bookman,,  Italic,WFIL=BKLI____.PFM
+PS=Bookman-Demi,TYPE=T1,STYL=BOLD,WNAM=Bookman,,  Bold,WFIL=BKD_____.PFM
+PS=Bookman-DemiItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Bookman,,  Bold Italic,WFIL=BKDI____.PFM
+PS=Bookman-Medium,TYPE=T1,WNAM=Bookman Medium,WFIL=BKM_____.PFM
+PS=Bookman-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Bookman Medium,,  Italic,WFIL=BKMI____.PFM
+PS=Bookman-Bold,TYPE=T1,STYL=BOLD,WNAM=Bookman Medium,,  Bold,WFIL=BKB_____.PFM
+PS=Bookman-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Bookman Medium,,  Bold Italic,WFIL=BKBI____.PFM
+PS=BroadbandICG,TYPE=T1,WNAM=Broadband ICG,WFIL=BBAND___.PFM
+PS=CaslonTwoTwentyFour-Black,TYPE=T1,WNAM=Caslon 224 Black,WFIL=C2BL____.PFM
+PS=CaslonTwoTwentyFour-BlackIt,TYPE=T1,STYL=ITALIC,WNAM=Caslon 224 Black,,  Italic,WFIL=C2BLI___.PFM
+PS=CaslonTwoTwentyFour-Book,TYPE=T1,WNAM=Caslon 224 Book,WFIL=C2W_____.PFM
+PS=CaslonTwoTwentyFour-BookIt,TYPE=T1,STYL=ITALIC,WNAM=Caslon 224 Book,,  Italic,WFIL=C2WI____.PFM
+PS=CaslonTwoTwentyFour-Medium,TYPE=T1,WNAM=Caslon 224 Medium,WFIL=C2M_____.PFM
+PS=CaslonTwoTwentyFour-MediumIt,TYPE=T1,STYL=ITALIC,WNAM=Caslon 224 Medium,,  Italic,WFIL=C2MI____.PFM
+PS=CaslonTwoTwentyFour-Bold,TYPE=T1,STYL=BOLD,WNAM=Caslon 224 Medium,,  Bold,WFIL=C2B_____.PFM
+PS=CaslonTwoTwentyFour-BoldIt,TYPE=T1,STYL=BOLDITALIC,WNAM=Caslon 224 Medium,,  Bold Italic,WFIL=C2BI____.PFM
+PS=CastellarMT,TYPE=T1,WNAM=Castellar MT,WFIL=EL______.PFM
+PS=Chaparral-Display,TYPE=T1,WNAM=Chaparral Display,WFIL=xtdr____.pfm
+PS=Cheltenham-Book,TYPE=T1,WNAM=Cheltenham,WFIL=CHW_____.PFM
+PS=Cheltenham-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Cheltenham,,  Italic,WFIL=CHWI____.PFM
+PS=Cheltenham-Bold,TYPE=T1,STYL=BOLD,WNAM=Cheltenham,,  Bold,WFIL=CHB_____.PFM
+PS=Cheltenham-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Cheltenham,,  Bold Italic,WFIL=CHBI____.PFM
+PS=Cheltenham-Light,TYPE=T1,WNAM=Cheltenham Light,WFIL=CHL_____.PFM
+PS=Cheltenham-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Cheltenham Light,,  Italic,WFIL=CHLI____.PFM
+PS=Cheltenham-Ultra,TYPE=T1,WNAM=Cheltenham Ultra,WFIL=CHU_____.PFM
+PS=Cheltenham-UltraItalic,TYPE=T1,STYL=ITALIC,WNAM=Cheltenham Ultra,,  Italic,WFIL=CHUI____.PFM
+PS=City-Medium,TYPE=T1,WNAM=City Medium,WFIL=TZM_____.PFM
+PS=City-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=City Medium,,  Italic,WFIL=TZMI____.PFM
+PS=City-Bold,TYPE=T1,STYL=BOLD,WNAM=City Medium,,  Bold,WFIL=TZB_____.PFM
+PS=City-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=City Medium,,  Bold Italic,WFIL=TZBI____.PFM
+PS=CooperBlack,TYPE=TT,WNAM=Cooper Black,WFIL=COOPBL.TTF
+PS=CopperplateGothic-Bold,TYPE=TT,WNAM=Copperplate Gothic Bold,WFIL=COPRGTB.TTF
+PS=CopperplateGothic-Light,TYPE=TT,WNAM=Copperplate Gothic Light,WFIL=COPRGTL.TTF
+PS=CopperplateGothicBT-Bold,TYPE=TT,WNAM=CopprplGoth Bd BT,,Bold,WFIL=CopGotBd.ttf
+PS=Cushing-Book,TYPE=T1,WNAM=Cushing Book,WFIL=IUW_____.PFM
+PS=Cushing-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Cushing Book,,  Italic,WFIL=IUWI____.PFM
+PS=Cushing-Bold,TYPE=T1,STYL=BOLD,WNAM=Cushing Book,,  Bold,WFIL=IUB_____.PFM
+PS=Cushing-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Cushing Book,,  Bold Italic,WFIL=IUBI____.PFM
+PS=Cushing-Medium,TYPE=T1,WNAM=Cushing Medium,WFIL=IUM_____.PFM
+PS=Cushing-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Cushing Medium,,  Italic,WFIL=IUMI____.PFM
+PS=Cushing-Heavy,TYPE=T1,STYL=BOLD,WNAM=Cushing Medium,,  Bold,WFIL=IUH_____.PFM
+PS=Cushing-HeavyItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Cushing Medium,,  Bold Italic,WFIL=IUHI____.PFM
+PS=ErasITC-Bold,TYPE=TT,WNAM=Eras Bold ITC,WFIL=ERASBD.TTF
+PS=ItcEras-Book,TYPE=T1,STYL=ITALIC,WNAM=Eras Book,,  Italic,WFIL=ERBK____.PFM
+PS=ItcEras-Demi,TYPE=T1,STYL=ITALIC,WNAM=Eras Demi,,  Italic,WFIL=ERD_____.PFM
+PS=ErasITC-Demi,TYPE=TT,WNAM=Eras Demi ITC,WFIL=ERASDEMI.TTF
+PS=ItcEras-Light,TYPE=T1,STYL=ITALIC,WNAM=Eras Light,,  Italic,WFIL=ERL_____.PFM
+PS=ErasITC-Light,TYPE=TT,WNAM=Eras Light ITC,WFIL=ERASLGHT.TTF
+PS=ItcEras-Medium,TYPE=T1,STYL=ITALIC,WNAM=Eras Medium,,  Italic,WFIL=ERM_____.PFM
+PS=ItcEras-Bold,TYPE=T1,STYL=BOLDITALIC,WNAM=Eras Medium,,  Bold Italic,WFIL=ERB_____.PFM
+PS=ErasITC-Medium,TYPE=TT,WNAM=Eras Medium ITC,WFIL=ERASMD.TTF
+PS=ItcEras-Ultra,TYPE=T1,STYL=ITALIC,WNAM=Eras Ultra,,  Italic,WFIL=ERU_____.PFM
+PS=Esprit-Black,TYPE=T1,WNAM=Esprit Black,WFIL=ESZ_____.PFM
+PS=Esprit-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Esprit Black,,  Italic,WFIL=ESBLI___.PFM
+PS=Esprit-Book,TYPE=T1,WNAM=Esprit Book,WFIL=ESW_____.PFM
+PS=Esprit-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Esprit Book,,  Italic,WFIL=ESWI____.PFM
+PS=Esprit-Bold,TYPE=T1,STYL=BOLD,WNAM=Esprit Book,,  Bold,WFIL=ESB_____.PFM
+PS=Esprit-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Esprit Book,,  Bold Italic,WFIL=ESBI____.PFM
+PS=Esprit-Medium,TYPE=T1,WNAM=Esprit Medium,WFIL=ESM_____.PFM
+PS=Esprit-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Esprit Medium,,  Italic,WFIL=ESMI____.PFM
+PS=FootlightMTLight,TYPE=TT,WNAM=Footlight MT Light,WFIL=FTLTLT.TTF
+PS=FrizQuadrata,TYPE=T1,WNAM=Friz Quadrata,WFIL=FQ______.PFM
+PS=FrizQuadrata-Bold,TYPE=T1,STYL=BOLD,WNAM=Friz Quadrata,,  Bold,WFIL=FQB_____.PFM
+PS=FuturaBT-Book,TYPE=TT,WNAM=Futura Bk BT,,Book,WFIL=futuran.ttf
+PS=FuturaBT-BookItalic,TYPE=TT,STYL=ITALIC,WNAM=Futura Bk BT,,Book Italic,WFIL=futurani.ttf
+PS=FuturaBT-Light,TYPE=TT,WNAM=Futura Lt BT,,Light,WFIL=FutuLt__.ttf
+PS=FuturaBT-LightItalic,TYPE=TT,STYL=ITALIC,WNAM=Futura Lt BT,,Light Italic,WFIL=FutuLtIt.ttf
+PS=FuturaBT-Bold,TYPE=TT,STYL=BOLD,WNAM=Futura Md BT,,Bold,WFIL=FutuBd__.ttf
+PS=FuturaBT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Futura Md BT,,Bold Italic,WFIL=FutuBdIt.ttf
+PS=FuturaBT-ExtraBlack,TYPE=TT,WNAM=Futura XBlk BT,,Extra Black,WFIL=Futuraxk.ttf
+PS=FuturaBlackBT-Regular,TYPE=TT,WNAM=FuturaBlack BT,WFIL=Futurak.ttf
+PS=Galliard-Roman,TYPE=T1,WNAM=Galliard,WFIL=GLR_____.PFM
+PS=Galliard-Italic,TYPE=T1,STYL=ITALIC,WNAM=Galliard,,  Italic,WFIL=GLI_____.PFM
+PS=Galliard-Bold,TYPE=T1,STYL=BOLD,WNAM=Galliard,,  Bold,WFIL=GLB_____.PFM
+PS=Galliard-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Galliard,,  Bold Italic,WFIL=GLBI____.PFM
+PS=Galliard-Black,TYPE=T1,WNAM=Galliard Black,WFIL=GLBL____.PFM
+PS=Galliard-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Galliard Black,,  Italic,WFIL=GLBLI___.PFM
+PS=Galliard-Ultra,TYPE=T1,WNAM=Galliard Ultra,WFIL=GLU_____.PFM
+PS=Galliard-UltraItalic,TYPE=T1,STYL=ITALIC,WNAM=Galliard Ultra,,  Italic,WFIL=GLUI____.PFM
+PS=Giovanni-Black,TYPE=T1,WNAM=Giovanni Black,WFIL=GVBL____.PFM
+PS=Giovanni-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Giovanni Black,,  Italic,WFIL=GVBLI___.PFM
+PS=Giovanni-Book,TYPE=T1,WNAM=Giovanni Book,WFIL=GVW_____.PFM
+PS=Giovanni-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Giovanni Book,,  Italic,WFIL=GVWI____.PFM
+PS=Giovanni-Bold,TYPE=T1,STYL=BOLD,WNAM=Giovanni Book,,  Bold,WFIL=GVB_____.PFM
+PS=Giovanni-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Giovanni Book,,  Bold Italic,WFIL=GVBI____.PFM
+PS=GloucesterMT-ExtraCondensed,TYPE=TT,WNAM=Gloucester MT Extra Condensed,WFIL=GLECB.TTF
+PS=GoudyOldStyleT-Regular,TYPE=TT,WNAM=Goudy Old Style,WFIL=GOUDOS.TTF
+PS=GoudyOldStyleT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Goudy Old Style,,Italic,WFIL=GOUDOSI.TTF
+PS=GoudyOldStyleT-Bold,TYPE=TT,STYL=BOLD,WNAM=Goudy Old Style,,Bold,WFIL=GOUDOSB.TTF
+PS=GoudyStout,TYPE=TT,WNAM=Goudy Stout,WFIL=GOUDYSTO.TTF
+PS=GoudyHandtooledBT-Regular,TYPE=TT,WNAM=GoudyHandtooled BT,WFIL=GOUDHNDN.TTF
+PS=GoudyOldStyleBT-Roman,TYPE=TT,WNAM=GoudyOlSt BT,,Roman,WFIL=GOUDYOSN.TTF
+PS=GoudyOldStyleBT-Italic,TYPE=TT,STYL=ITALIC,WNAM=GoudyOlSt BT,,Italic,WFIL=GOUDYOSI.TTF
+PS=GoudyOldStyleBT-Bold,TYPE=TT,STYL=BOLD,WNAM=GoudyOlSt BT,,Bold,WFIL=GOUDYOSB.TTF
+PS=GoudyOldStyleBT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=GoudyOlSt BT,,Bold Italic,WFIL=GOUDOSBI.TTF
+PS=Helvetica,TYPE=T1,WNAM=Helvetica,WFIL=HV______.PFM
+PS=Helvetica-Oblique,TYPE=T1,STYL=ITALIC,WNAM=Helvetica,,  Italic,WFIL=HVO_____.PFM
+PS=Helvetica-Bold,TYPE=T1,STYL=BOLD,WNAM=Helvetica,,  Bold,WFIL=HVB_____.PFM
+PS=Helvetica-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=Helvetica,,  Bold Italic,WFIL=HVBO____.PFM
+PS=HighTowerText-Reg,TYPE=TT,WNAM=High Tower Text,WFIL=HTOWERT.TTF
+PS=HighTowerText-Italic,TYPE=TT,STYL=ITALIC,WNAM=High Tower Text,,Italic,WFIL=HTOWERTI.TTF
+PS=Humanist521BT-Roman,TYPE=TT,WNAM=Humanst521 BT,,Roman,WFIL=Hum521n.ttf
+PS=Humanist521BT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Humanst521 BT,,Italic,WFIL=Hum521i.ttf
+PS=Humanist521BT-Bold,TYPE=TT,STYL=BOLD,WNAM=Humanst521 BT,,Bold,WFIL=Hum521b.ttf
+PS=Humanist521BT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Humanst521 BT,,Bold Italic,WFIL=Hum521bi.ttf
+PS=ImprintMT-Shadow,TYPE=TT,WNAM=Imprint MT Shadow,WFIL=IMPRISHA.TTF
+PS=InterstateBoldCondensed,TYPE=TT,WNAM=Interstate,,BoldCondensed,WFIL=INTEBC__.TTF
+PS=ItcKabel-Book,TYPE=T1,WNAM=ITC Kabel Book,WFIL=KBW_____.PFM
+PS=ItcKabel-Demi,TYPE=T1,STYL=BOLD,WNAM=ITC Kabel Book,,  Bold,WFIL=KBD_____.PFM
+PS=ItcKabel-Medium,TYPE=T1,WNAM=ITC Kabel Medium,WFIL=KBM_____.PFM
+PS=ItcKabel-Bold,TYPE=T1,STYL=BOLD,WNAM=ITC Kabel Medium,,  Bold,WFIL=KBB_____.PFM
+PS=ItcKabel-Ultra,TYPE=T1,WNAM=ITC Kabel Ultra,WFIL=KBU_____.PFM
+PS=OfficinaSans-Book,TYPE=T1,WNAM=ITC Officina Sans Book,WFIL=OWBK____.PFM
+PS=OfficinaSans-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=ITC Officina Sans Book,,  Italic,WFIL=OWWI____.PFM
+PS=OfficinaSans-Bold,TYPE=T1,STYL=BOLD,WNAM=ITC Officina Sans Book,,  Bold,WFIL=OWB_____.PFM
+PS=OfficinaSans-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=ITC Officina Sans Book,,  Bold Italic,WFIL=OWBI____.PFM
+PS=OfficinaSerif-Book,TYPE=T1,WNAM=ITC Officina Serif Book,WFIL=OVBK____.PFM
+PS=OfficinaSerif-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=ITC Officina Serif Book,,  Italic,WFIL=OVWI____.PFM
+PS=OfficinaSerif-Bold,TYPE=T1,STYL=BOLD,WNAM=ITC Officina Serif Book,,  Bold,WFIL=OVB_____.PFM
+PS=OfficinaSerif-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=ITC Officina Serif Book,,  Bold Italic,WFIL=OVBI____.PFM
+PS=Fenice-Light,TYPE=T1,WNAM=ITCFenice Light,WFIL=FEL_____.PFM
+PS=Fenice-LightOblique,TYPE=T1,STYL=ITALIC,WNAM=ITCFenice Light,,  Italic,WFIL=FELO____.PFM
+PS=Fenice-Regular,TYPE=T1,WNAM=ITCFenice Regular,WFIL=FERG____.PFM
+PS=Fenice-RegularOblique,TYPE=T1,STYL=ITALIC,WNAM=ITCFenice Regular,,  Italic,WFIL=FERGO___.PFM
+PS=Fenice-Bold,TYPE=T1,STYL=BOLD,WNAM=ITCFenice Regular,,  Bold,WFIL=FEB_____.PFM
+PS=Fenice-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=ITCFenice Regular,,  Bold Italic,WFIL=FEBO____.PFM
+PS=Fenice-Ultra,TYPE=T1,WNAM=ITCFenice Ultra,WFIL=FEU_____.PFM
+PS=Fenice-UltraOblique,TYPE=T1,STYL=ITALIC,WNAM=ITCFenice Ultra,,  Italic,WFIL=FEUO____.PFM
+PS=KabelITCbyBT-Book,TYPE=TT,WNAM=Kabel Bk BT,,Book,WFIL=Kabeln.ttf
+PS=KabelITCbyBT-Ultra,TYPE=TT,WNAM=Kabel Ult BT,,Ultra,WFIL=Kabelu.ttf
+PS=Kartika,TYPE=TT,WNAM=Kartika,WFIL=kartika.ttf
+PS=Korinna-Regular,TYPE=T1,WNAM=Korinna,WFIL=KRRG____.PFM
+PS=Korinna-KursivRegular,TYPE=T1,STYL=ITALIC,WNAM=Korinna,,  Italic,WFIL=KRKX____.PFM
+PS=Korinna-Bold,TYPE=T1,STYL=BOLD,WNAM=Korinna,,  Bold,WFIL=KRB_____.PFM
+PS=Korinna-KursivBold,TYPE=T1,STYL=BOLDITALIC,WNAM=Korinna,,  Bold Italic,WFIL=KRKB____.PFM
+PS=Lapidary333BT-Black,TYPE=TT,WNAM=Lapidary333 Blk BT,,Black,WFIL=LAP333K.TTF
+PS=Lapidary333BT-Roman,TYPE=TT,WNAM=Lapidary333 BT,,Roman,WFIL=LAP333N.TTF
+PS=Lapidary333BT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Lapidary333 BT,,Italic,WFIL=LAP333I.TTF
+PS=Lapidary333BT-Bold,TYPE=TT,STYL=BOLD,WNAM=Lapidary333 BT,,Bold,WFIL=LAP333B.TTF
+PS=Lapidary333BT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Lapidary333 BT,,Bold Italic,WFIL=LAP333BI.TTF
+PS=Leawood-Black,TYPE=T1,WNAM=Leawood Black,WFIL=LWBL____.PFM
+PS=Leawood-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Leawood Black,,  Italic,WFIL=LWBLI___.PFM
+PS=Leawood-Book,TYPE=T1,WNAM=Leawood Book,WFIL=LWW_____.PFM
+PS=Leawood-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Leawood Book,,  Italic,WFIL=LWWI____.PFM
+PS=Leawood-Medium,TYPE=T1,WNAM=Leawood Medium,WFIL=LWM_____.PFM
+PS=Leawood-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Leawood Medium,,  Italic,WFIL=LWMI____.PFM
+PS=Leawood-Bold,TYPE=T1,STYL=BOLD,WNAM=Leawood Medium,,  Bold,WFIL=LWB_____.PFM
+PS=Leawood-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Leawood Medium,,  Bold Italic,WFIL=LWBI____.PFM
+PS=Lithograph-Bold,TYPE=TT,STYL=BOLD,WNAM=Lithograph,,Bold,WFIL=Lithogrb.ttf
+PS=LithographLight,TYPE=TT,WNAM=LithographLight,WFIL=Lithogrl.ttf
+PS=LucidaBlackletter,TYPE=TT,WNAM=Lucida Blackletter,WFIL=LBLACK.TTF
+PS=LucidaBright,TYPE=TT,WNAM=Lucida Bright,WFIL=LBRITE.TTF
+PS=LucidaBright-Italic,TYPE=TT,STYL=ITALIC,WNAM=Lucida Bright,,Italic,WFIL=LBRITEI.TTF
+PS=LucidaBright-Demi,TYPE=TT,STYL=BOLD,WNAM=Lucida Bright,,Demibold,WFIL=LBRITED.TTF
+PS=LucidaBright-DemiItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Lucida Bright,,Demibold Italic,WFIL=LBRITEDI.TTF
+PS=LucidaCalligraphy-Italic,TYPE=TT,WNAM=Lucida Calligraphy,,Italic,WFIL=LCALLIG.TTF
+PS=LucidaFax,TYPE=TT,WNAM=Lucida Fax,WFIL=LFAX.TTF
+PS=LucidaFax-Italic,TYPE=TT,STYL=ITALIC,WNAM=Lucida Fax,,Italic,WFIL=LFAXI.TTF
+PS=LucidaFax-Demi,TYPE=TT,STYL=BOLD,WNAM=Lucida Fax,,Demibold,WFIL=LFAXD.TTF
+PS=LucidaFax-DemiItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Lucida Fax,,Demibold Italic,WFIL=LFAXDI.TTF
+PS=LucidaHandwriting-Italic,TYPE=TT,WNAM=Lucida Handwriting,,Italic,WFIL=LHANDW.TTF
+PS=LucidaSans,TYPE=TT,WNAM=Lucida Sans,WFIL=lsans.ttf
+PS=LucidaSans-Italic,TYPE=TT,STYL=ITALIC,WNAM=Lucida Sans,,Italic,WFIL=lsansi.ttf
+PS=LucidaSans-DemiItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Lucida Sans,,Demibold Italic,WFIL=lsansdi.ttf
+PS=LucidaSans-Typewriter,TYPE=TT,WNAM=Lucida Sans Typewriter,WFIL=LTYPE.TTF
+PS=LucidaSans-TypewriterOblique,TYPE=TT,STYL=ITALIC,WNAM=Lucida Sans Typewriter,,Oblique,WFIL=LTYPEO.TTF
+PS=LucidaSans-TypewriterBold,TYPE=TT,STYL=BOLD,WNAM=Lucida Sans Typewriter,,Bold,WFIL=LTYPEB.TTF
+PS=LucidaSans-TypewriterBoldOblique,TYPE=TT,STYL=BOLDITALIC,WNAM=Lucida Sans Typewriter,,Bold Oblique,WFIL=LTYPEBO.TTF
+PS=Machine,TYPE=T1,WNAM=Machine,WFIL=MA______.PFM
+PS=Machine-Bold,TYPE=T1,STYL=BOLD,WNAM=Machine,,  Bold,WFIL=MAB_____.PFM
+PS=Madrone,TYPE=T1,WNAM=Madrone,WFIL=MQ______.PFM
+PS=MaiandraGD-Regular,TYPE=TT,WNAM=Maiandra GD,WFIL=MAIAN.TTF
+PS=MetropolisICG,TYPE=T1,WNAM=Metropolis ICG,WFIL=METRO___.PFM
+PS=Minion-Regular,TYPE=T1,WNAM=Minion,WFIL=MORG____.PFM
+PS=Minion-Italic,TYPE=T1,STYL=ITALIC,WNAM=Minion,,  Italic,WFIL=MOI_____.PFM
+PS=Minion-Bold,TYPE=T1,WNAM=Minion Bold,WFIL=MOB_____.PFM
+PS=Minion-BoldItalic,TYPE=T1,STYL=ITALIC,WNAM=Minion Bold,,  Italic,WFIL=MOBI____.PFM
+PS=Modern-Regular,TYPE=TT,WNAM=Modern No. 20,WFIL=MOD20.TTF
+PS=Myriad-Roman,TYPE=T1,WNAM=Myriad Roman,WFIL=wmr_____.pfm
+PS=Myriad-Italic,TYPE=T1,STYL=ITALIC,WNAM=Myriad Roman,,  Italic,WFIL=wmi_____.pfm
+PS=Myriad-Bold,TYPE=T1,STYL=BOLD,WNAM=Myriad Roman,,  Bold,WFIL=wmb_____.pfm
+PS=Myriad-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Myriad Roman,,  Bold Italic,WFIL=wmbi____.pfm
+PS=Myriad-Tilt,TYPE=T1,WNAM=Myriad Tilt,WFIL=wmtil___.pfm
+PS=NewBaskerville-Roman,TYPE=T1,WNAM=New Baskerville,WFIL=NBR_____.PFM
+PS=NewBaskerville-Italic,TYPE=T1,STYL=ITALIC,WNAM=New Baskerville,,  Italic,WFIL=NBI_____.PFM
+PS=NewBaskerville-Bold,TYPE=T1,STYL=BOLD,WNAM=New Baskerville,,  Bold,WFIL=NBB_____.PFM
+PS=NewBaskerville-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=New Baskerville,,  Bold Italic,WFIL=NBBI____.PFM
+PS=NiagaraEngraved-Reg,TYPE=TT,WNAM=Niagara Engraved,WFIL=NIAGENG.TTF
+PS=NiagaraSolid-Reg,TYPE=TT,WNAM=Niagara Solid,WFIL=NIAGSOL.TTF
+PS=OmniBook,TYPE=T1,WNAM=Omni,WFIL=OM______.PFM
+PS=OmniBookItalic,TYPE=T1,STYL=ITALIC,WNAM=Omni,,  Italic,WFIL=OMI_____.PFM
+PS=OmniBold,TYPE=T1,STYL=BOLD,WNAM=Omni,,  Bold,WFIL=OMB_____.PFM
+PS=OmniBoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Omni,,  Bold Italic,WFIL=OMBI____.PFM
+PS=OmniBlack,TYPE=T1,WNAM=Omni Black,WFIL=OMK_____.PFM
+PS=OmniBlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Omni Black,,  Italic,WFIL=OMKI____.PFM
+PS=Onyx,TYPE=TT,WNAM=Onyx,WFIL=ONYX.TTF
+PS=OzHandicraftBT-Roman,TYPE=TT,WNAM=OzHandicraft BT,,Roman,WFIL=OzHandRm.ttf
+PS=Perpetua,TYPE=TT,WNAM=Perpetua,WFIL=PER_____.TTF
+PS=Perpetua-Italic,TYPE=TT,STYL=ITALIC,WNAM=Perpetua,,Italic,WFIL=PERI____.TTF
+PS=Perpetua-Bold,TYPE=TT,STYL=BOLD,WNAM=Perpetua,,Bold,WFIL=PERB____.TTF
+PS=Perpetua-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Perpetua,,Bold Italic,WFIL=PERBI___.TTF
+PS=PerpetuaTitlingMT-Light,TYPE=TT,WNAM=Perpetua Titling MT,,Light,WFIL=PERTILI.TTF
+PS=PerpetuaTitlingMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Perpetua Titling MT,,Bold,WFIL=PERTIBD.TTF
+PS=PoorRichard-Regular,TYPE=TT,WNAM=Poor Richard,WFIL=POORICH.TTF
+PS=Poplar,TYPE=T1,WNAM=Poplar,WFIL=PP______.PFM
+PS=PosterBodoniBT-Roman,TYPE=TT,WNAM=PosterBodoni BT,,Roman,WFIL=PosterB_.ttf
+PS=Postino-Italic,TYPE=T1,WNAM=Postino Italic,WFIL=xzi_____.pfm
+PS=Rockwell,TYPE=TT,WNAM=Rockwell,WFIL=ROCK.TTF
+PS=Rockwell-Italic,TYPE=TT,STYL=ITALIC,WNAM=Rockwell,,Italic,WFIL=ROCKI.TTF
+PS=Rockwell-Bold,TYPE=TT,STYL=BOLD,WNAM=Rockwell,,Bold,WFIL=ROCKB.TTF
+PS=Rockwell-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Rockwell,,Bold Italic,WFIL=ROCKBI.TTF
+PS=Rockwell-Condensed,TYPE=TT,WNAM=Rockwell Condensed,WFIL=ROCC____.TTF
+PS=Rockwell-CondensedBold,TYPE=TT,STYL=BOLD,WNAM=Rockwell Condensed,,Bold,WFIL=ROCCB___.TTF
+PS=Rockwell-ExtraBold,TYPE=TT,WNAM=Rockwell Extra Bold,WFIL=ROCKEB.TTF
+PS=Rosewood-Fill,TYPE=T1,WNAM=Rosewood Fill,WFIL=UXFI____.PFM
+PS=RussellSquare,TYPE=T1,WNAM=RussellSquare,WFIL=RU______.PFM
+PS=RussellSquare-Oblique,TYPE=T1,STYL=ITALIC,WNAM=RussellSquare,,  Italic,WFIL=RUO_____.PFM
+PS=SerifaBT-Roman,TYPE=TT,WNAM=Serifa BT,,Roman,WFIL=SerifRm_.ttf
+PS=SerifaBT-Italic,TYPE=TT,STYL=ITALIC,WNAM=Serifa BT,,Italic,WFIL=SerifIt_.ttf
+PS=SerifaBT-Bold,TYPE=TT,STYL=BOLD,WNAM=Serifa BT,,Bold,WFIL=SerifBd_.ttf
+PS=SerifaBT-Thin,TYPE=TT,WNAM=Serifa Th BT,,Thin,WFIL=SerifTh_.ttf
+PS=SerpentineSansICG,TYPE=T1,WNAM=Serpentine Sans ICG,WFIL=SRSM____.PFM
+PS=SerpentineSansICG-Oblique,TYPE=T1,STYL=ITALIC,WNAM=Serpentine Sans ICG,,  Italic,WFIL=SRSMO___.PFM
+PS=SerpentineSansICG-Bold,TYPE=T1,STYL=BOLD,WNAM=Serpentine Sans ICG,,  Bold,WFIL=SRSB____.PFM
+PS=SerpentineSansICG-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=Serpentine Sans ICG,,  Bold Italic,WFIL=SRSBO___.PFM
+PS=SerpentineSansICG-Light,TYPE=T1,WNAM=Serpentine Sans ICG Light,WFIL=SRSL____.PFM
+PS=SerpentineSansICG-LightOblique,TYPE=T1,STYL=ITALIC,WNAM=Serpentine Sans ICG Light,,  Italic,WFIL=SRSLO___.PFM
+PS=Slimbach-Book,TYPE=T1,WNAM=Slimbach,WFIL=SPW_____.PFM
+PS=Slimbach-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Slimbach,,  Italic,WFIL=SPWI____.PFM
+PS=Slimbach-Bold,TYPE=T1,STYL=BOLD,WNAM=Slimbach,,  Bold,WFIL=SPB_____.PFM
+PS=Slimbach-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Slimbach,,  Bold Italic,WFIL=SPBI____.PFM
+PS=Slimbach-Black,TYPE=T1,WNAM=Slimbach Black,WFIL=SPBL____.PFM
+PS=Slimbach-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Slimbach Black,,  Italic,WFIL=SPBLI___.PFM
+PS=Slimbach-Medium,TYPE=T1,WNAM=Slimbach Medium,WFIL=SPM_____.PFM
+PS=Slimbach-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Slimbach Medium,,  Italic,WFIL=SPMI____.PFM
+PS=Souvenir-Light,TYPE=T1,WNAM=Souvenir,WFIL=SUL_____.PFM
+PS=Souvenir-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Souvenir,,  Italic,WFIL=SULI____.PFM
+PS=Souvenir-Demi,TYPE=T1,STYL=BOLD,WNAM=Souvenir,,  Bold,WFIL=SUD_____.PFM
+PS=Souvenir-DemiItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Souvenir,,  Bold Italic,WFIL=SUDI____.PFM
+PS=SouvenirITCbyBT-Light,TYPE=TT,WNAM=Souvenir Lt BT,,Light,WFIL=Souvnrl.ttf
+PS=SouvenirITCbyBT-LightItalic,TYPE=TT,STYL=ITALIC,WNAM=Souvenir Lt BT,,Light Italic,WFIL=Souvnrli.ttf
+PS=SouvenirITCbyBT-DemiItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Souvenir Lt BT,,Demi Italic,WFIL=Souvnrdi.ttf
+PS=SprocketBT-Regular,TYPE=TT,WNAM=Sprocket BT,WFIL=sproketn.TTF
+PS=Swiss721BT-BlackOutline,TYPE=TT,WNAM=Swis721 BlkOul BT,,Black,WFIL=swz721ko.ttf
+PS=Swiss911BT-ExtraCompressed,TYPE=TT,WNAM=Swiss911 XCm BT,WFIL=Swz911xc.ttf
+PS=TempusSansITC,TYPE=TT,WNAM=Tempus Sans ITC,WFIL=TEMPSITC.TTF
+PS=Tiepolo-Black,TYPE=T1,WNAM=Tiepolo Black,WFIL=TPBL____.PFM
+PS=Tiepolo-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Tiepolo Black,,  Italic,WFIL=TPBLI___.PFM
+PS=Tiepolo-Book,TYPE=T1,WNAM=Tiepolo Book,WFIL=TPW_____.PFM
+PS=Tiepolo-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Tiepolo Book,,  Italic,WFIL=TPWI____.PFM
+PS=Tiepolo-Bold,TYPE=T1,STYL=BOLD,WNAM=Tiepolo Book,,  Bold,WFIL=TPB_____.PFM
+PS=Tiepolo-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Tiepolo Book,,  Bold Italic,WFIL=TPBI____.PFM
+PS=TwCenMT-Medium,TYPE=TT,WNAM=Tw Cen MT,WFIL=TCM_____.TTF
+PS=TwCenMT-MediumItalic,TYPE=TT,STYL=ITALIC,WNAM=Tw Cen MT,,Italic,WFIL=TCMI____.TTF
+PS=TwCenMT-Bold,TYPE=TT,STYL=BOLD,WNAM=Tw Cen MT,,Bold,WFIL=TCB_____.TTF
+PS=TwCenMT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=Tw Cen MT,,Bold Italic,WFIL=TCBI____.TTF
+PS=TwCenMT-CondensedMedium,TYPE=TT,WNAM=Tw Cen MT Condensed,WFIL=TCCM____.TTF
+PS=TwCenMT-CondensedBold,TYPE=TT,STYL=BOLD,WNAM=Tw Cen MT Condensed,,Bold,WFIL=TCCB____.TTF
+PS=TwCenMT-CondensedExtraBold,TYPE=TT,WNAM=Tw Cen MT Condensed Extra Bold,WFIL=TCCEB.TTF
+PS=Usherwood-Black,TYPE=T1,WNAM=Usherwood Black,WFIL=USBL____.PFM
+PS=Usherwood-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Usherwood Black,,  Italic,WFIL=USBLI___.PFM
+PS=Usherwood-Book,TYPE=T1,WNAM=Usherwood Book,WFIL=USW_____.PFM
+PS=Usherwood-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Usherwood Book,,  Italic,WFIL=USWI____.PFM
+PS=Usherwood-Bold,TYPE=T1,STYL=BOLD,WNAM=Usherwood Book,,  Bold,WFIL=USB_____.PFM
+PS=Usherwood-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Usherwood Book,,  Bold Italic,WFIL=USBI____.PFM
+PS=Usherwood-Medium,TYPE=T1,WNAM=Usherwood Medium,WFIL=USM_____.PFM
+PS=Usherwood-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Usherwood Medium,,  Italic,WFIL=USMI____.PFM
+PS=ZapfElliptical711BT-Roman,TYPE=TT,WNAM=ZapfEllipt BT,,Roman,WFIL=ZapE711R.ttf
+PS=ZapfElliptical711BT-Italic,TYPE=TT,STYL=ITALIC,WNAM=ZapfEllipt BT,,Italic,WFIL=ZapE711I.ttf
+PS=ZapfElliptical711BT-Bold,TYPE=TT,STYL=BOLD,WNAM=ZapfEllipt BT,,Bold,WFIL=ZapE711B.ttf
+PS=ZapfElliptical711BT-BoldItalic,TYPE=TT,STYL=BOLDITALIC,WNAM=ZapfEllipt BT,,Bold Italic,WFIL=ZapE711t.ttf
+PS=ZurichBT-RomanExtended,TYPE=TT,WNAM=Zurich Ex BT,WFIL=Zurche.ttf
+%!EndSet 
+
+%!BeginSet lat-Times
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-Times:
+PS=TimesNewRomanMT-ExtraBold,TYPE=TT,WNAM=Times New Roman MT Extra Bold,WFIL=Timnreb.ttf
+%!EndSet 
+
+%!BeginSet lat-veljovic
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:lat-veljovic:
+PS=Veljovic-Book,TYPE=T1,WNAM=Veljovic,WFIL=VLW_____.PFM
+PS=Veljovic-BookItalic,TYPE=T1,STYL=ITALIC,WNAM=Veljovic,,  Italic,WFIL=VLWI____.PFM
+PS=Veljovic-Bold,TYPE=T1,STYL=BOLD,WNAM=Veljovic,,  Bold,WFIL=VLB_____.PFM
+PS=Veljovic-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Veljovic,,  Bold Italic,WFIL=VLBI____.PFM
+PS=Veljovic-Black,TYPE=T1,WNAM=Veljovic Black,WFIL=VLBL____.PFM
+PS=Veljovic-BlackItalic,TYPE=T1,STYL=ITALIC,WNAM=Veljovic Black,,  Italic,WFIL=VLBLI___.PFM
+PS=Veljovic-Medium,TYPE=T1,WNAM=Veljovic Medium,WFIL=VLM_____.PFM
+PS=Veljovic-MediumItalic,TYPE=T1,STYL=ITALIC,WNAM=Veljovic Medium,,  Italic,WFIL=VLMI____.PFM
+%!EndSet 
+
+%!BeginSet symbols-decor
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:symbols-decor:
+PS=barcodefont,TYPE=TT,WNAM=barcode font,WFIL=BarcodeFont.ttf
+PS=BookshelfSymbolSeven,TYPE=TT,WNAM=Bookshelf Symbol 7,WFIL=BSSYM7.TTF
+PS=Carta,TYPE=T1,WNAM=Carta,WFIL=CR______.PFM
+PS=DFCalligraphicOrnamentsLET,TYPE=TT,WNAM=DF Calligraphic Ornaments LET,WFIL=caligorn.TTF
+PS=DFDiversionsLET,TYPE=TT,WNAM=DF Diversions LET,WFIL=diversn.TTF
+PS=DFDiversitiesLET,TYPE=TT,WNAM=DF Diversities LET,WFIL=diverst.TTF
+PS=MiniPics-ASL,TYPE=T1,WNAM=Mini Pics ASL,WFIL=MPASL___.PFM
+PS=MiniPics-LilCreatures,TYPE=T1,WNAM=Mini Pics Lil Creatures,WFIL=MPLCT___.PFM
+PS=MiniPics-LilDinos,TYPE=T1,WNAM=Mini Pics Lil Dinos,WFIL=MPLD____.PFM
+PS=MiniPics-LilFeatures,TYPE=T1,WNAM=Mini Pics Lil Features,WFIL=MPLFT___.PFM
+PS=MiniPics-LilFishies,TYPE=T1,WNAM=Mini Pics Lil Fishies,WFIL=MPLFH___.PFM
+PS=MiniPics-LilFolks,TYPE=T1,WNAM=Mini Pics Lil Folks,WFIL=MPLFK___.PFM
+PS=MiniPics-NakedCityDay,TYPE=T1,WNAM=Mini Pics Naked City Day,WFIL=MPNCD___.PFM
+PS=MiniPics-NakedCityNight,TYPE=T1,WNAM=Mini Pics Naked City Night,WFIL=MPNCN___.PFM
+PS=MiniPics-UprootedLeaf,TYPE=T1,WNAM=Mini Pics Uprooted Leaf,WFIL=MPURL___.PFM
+PS=MiniPics-UprootedTwig,TYPE=T1,WNAM=Mini Pics Uprooted Twig,WFIL=MPURT___.PFM
+PS=MSOutlook,TYPE=TT,WNAM=MS Outlook,WFIL=OUTLOOK.TTF
+PS=MSReferenceSpecialty,TYPE=TT,WNAM=MS Reference Specialty,WFIL=REFSPCL.TTF
+%!UsePath :Fonts:[system]:
+PS=MT-Extra,TYPE=TT,WNAM=MT Extra,WFIL=Mtextra.ttf
+%!UsePath :Fonts:symbols-decor:
+PS=N0RPICONS1,TYPE=TT,WNAM=N0RPICONS1,WFIL=n0rpicons1.ttf
+PS=PackingS-Normal,TYPE=TT,WNAM=PackingS,,Normal,WFIL=PAKING.TTF
+PS=Qwerty-Mac,TYPE=T1,WNAM=Qwerty Mac,WFIL=QWERM___.PFM
+PS=Qwerty-PC,TYPE=T1,WNAM=Qwerty PC,WFIL=QWERP___.PFM
+PS=Symbol,TYPE=T1,WNAM=Symbol,WFIL=SY______.PFM
+PS=Webdings,TYPE=TT,WNAM=Webdings,WFIL=webdings.ttf
+PS=Wingdings-Regular,TYPE=TT,WNAM=Wingdings,WFIL=wingding.ttf
+PS=Wingdings2,TYPE=TT,WNAM=Wingdings 2,WFIL=WINGDNG2.TTF
+PS=Wingdings3,TYPE=TT,WNAM=Wingdings 3,WFIL=WINGDNG3.TTF
+PS=WoodtypeOrnaments-Two,TYPE=T1,WNAM=Woodtype Ornaments 2,WFIL=WOOR2___.PFM
+PS=ZapfDingbats,TYPE=T1,WNAM=ZapfDingbats,WFIL=ZD______.PFM
+PS=ZapfDingbatsITCbyBT-Regular,TYPE=TT,WNAM=ZapfDingbats BT,WFIL=zafdingn.TTF
+%!EndSet 
+
+%!BeginSet symbols-WP_special
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fonts:symbols-WP_special:
+PS=WP-BoxDrawing,TYPE=TT,WNAM=WP BoxDrawing,,Normal,WFIL=Wpco03n_.ttf
+PS=WP-CyrillicA,TYPE=TT,WNAM=WP CyrillicA,,Normal,WFIL=Wpro10na.ttf
+PS=WP-CyrillicB,TYPE=TT,WNAM=WP CyrillicB,,Normal,WFIL=Wpro10nb.ttf
+PS=WP-GreekCentury,TYPE=TT,WNAM=WP Greek Century,,Normal,WFIL=Wpce08n_.ttf
+PS=WP-GreekCourier,TYPE=TT,WNAM=WP Greek Courier,,Normal,WFIL=Wpco08n_.ttf
+PS=WP-GreekHelve,TYPE=TT,WNAM=WP Greek Helve,,Normal,WFIL=Wphv08n_.ttf
+PS=WP-HebrewDavid,TYPE=TT,WNAM=WP Hebrew David,,Normal,WFIL=Wpdv09n_.ttf
+PS=WP-IconicSymbolsA,TYPE=TT,WNAM=WP IconicSymbolsA,,Normal,WFIL=Wphv05na.ttf
+PS=WP-IconicSymbolsB,TYPE=TT,WNAM=WP IconicSymbolsB,,Normal,WFIL=Wphv05nb.ttf
+PS=WP-Japanese,TYPE=TT,WNAM=WP Japanese,,Normal,WFIL=Wphv11n_.ttf
+PS=WP-MathA,TYPE=TT,WNAM=WP MathA,,Normal,WFIL=Wphv06na.ttf
+PS=WP-MathB,TYPE=TT,WNAM=WP MathB,,Normal,WFIL=Wphv06nb.ttf
+PS=WP-MathExtendedA,TYPE=TT,WNAM=WP MathExtendedA,,Normal,WFIL=Wphv07na.ttf
+PS=WP-MathExtendedB,TYPE=TT,WNAM=WP MathExtendedB,,Normal,WFIL=Wphv07nb.ttf
+PS=WP-MultinationalCourier,TYPE=TT,WNAM=WP MultinationalA Courier,,Normal,WFIL=Wpco01na.ttf
+PS=WP-MultinationalAHelve,TYPE=TT,WNAM=WP MultinationalA Helve,,Normal,WFIL=wphv01na.ttf
+PS=WP-MultinationalARoman,TYPE=TT,WNAM=WP MultinationalA Roman,,Normal,WFIL=wpro01na.ttf
+PS=WP-MultinationalBCourier,TYPE=TT,WNAM=WP MultinationalB Courier,,Normal,WFIL=wpco01nb.ttf
+PS=WP-MultinationalBHelve,TYPE=TT,WNAM=WP MultinationalB Helve,,Normal,WFIL=Wphv01nb.ttf
+PS=WP-MultinationalBRoman,TYPE=TT,WNAM=WP MultinationalB Roman,,Normal,WFIL=wpro01nb.ttf
+PS=WP-Phonetic,TYPE=TT,WNAM=WP Phonetic,,Normal,WFIL=Wphv02n_.ttf
+PS=WPTypographicSymbols,TYPE=TT,WNAM=WP TypographicSymbols,WFIL=Wphv04n_.ttf
+%!EndSet 
+

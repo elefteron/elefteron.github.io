@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+  <title>fontorg view catalog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+  <META NAME="author" CONTENT="elefter@abv.bg">
+  <script> 
+	modules=[]; mn=-1; 
+	function load_new(module,loadstatus){ modules[++mn]={'name':module,'state':'start'} }
+	function load_end(){modules[mn].state='ok'}
+	function load_st(l){ var i,buf=''
+	  for (i=0; i<=mn; i++) buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'	
+      log(' ... expected loads='+l+' '+buf) //  [#]. {module:state} 
+	}
+    
+    log_=null
+    function out(s) {document.write(s)} 
+    function log(s) {if(log_!=undefined ) log_.innerHTML+=s; else out(s)} 
+  </script>
+</HEAD>
+
+<BODY FACE="Arial" size=3 COLOR="black" BGcolor="gray" VALIGN="top">
+  <HR/><div id="log_" name="log_"></div><HR/>
+  <script> log_=document.getElementById("log_");
+    if(log_===null) err='null'; else if(log_===undefined) err='undef'; else err='ok';
+    if(err!='ok') out('log_'+' is '+err+eol+br);
+  </script>
+
+  <script src="scr/fontorg-def.js"></script>
+  <script src="fonts-data/2010.12 ea.js"></script>
+
+  <script>ShowFontCatalog(); load_lst(2); </script> 
+</BODY></HTML>

@@ -1,0 +1,131 @@
+%!AdobeFontSet 2.0
+
+%!BeginSet InDesign20CE
+%!PathSeparator :
+%!UseVolume C:
+%!UsePath :Fnt:InDesign20CE:ET:
+PS=HebarNormal,TYPE=T1,WNAM=Hebar,WFIL=HBRN____.PFM
+PS=HebarItalic,TYPE=T1,STYL=ITALIC,WNAM=Hebar,,  Italic,WFIL=HBRI____.PFM
+PS=HebarBold,TYPE=T1,STYL=BOLD,WNAM=Hebar,,  Bold,WFIL=HBRB____.PFM
+PS=HebarBoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Hebar,,  Bold Italic,WFIL=HBRBI___.PFM
+PS=HebarBlackNormal,TYPE=T1,WNAM=HebarBlack,WFIL=HBBLN___.PFM
+PS=HebarBlackItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarBlack,,  Italic,WFIL=HBBLI___.PFM
+PS=HebarCondNormal,TYPE=T1,WNAM=HebarCond,WFIL=HBCN____.PFM
+PS=HebarCondItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarCond,,  Italic,WFIL=HBCI____.PFM
+PS=HebarCondBold,TYPE=T1,STYL=BOLD,WNAM=HebarCond,,  Bold,WFIL=HBCB____.PFM
+PS=HebarCondBoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HebarCond,,  Bold Italic,WFIL=HBCBI___.PFM
+PS=HebarCondBlackNormal,TYPE=T1,WNAM=HebarCondBlack,WFIL=HBCBLN__.PFM
+PS=HebarCondBlackItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarCondBlack,,  Italic,WFIL=HBCBLI__.PFM
+PS=HebarCondLightNormal,TYPE=T1,WNAM=HebarCondLight,WFIL=HBCLN___.PFM
+PS=HebarCondLightItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarCondLight,,  Italic,WFIL=HBCLI___.PFM
+PS=HebarDbCondNormal,TYPE=T1,WNAM=HebarDbCond,WFIL=HBDBCDN_.PFM
+PS=HebarDbCondItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarDbCond,,  Italic,WFIL=HBDBCDI_.PFM
+PS=HebarExtendedNormal,TYPE=T1,WNAM=HebarExtended,WFIL=HEEN____.PFM
+PS=HebarExtendedItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarExtended,,  Italic,WFIL=HEEI____.PFM
+PS=HebarExtraBlackNormal,TYPE=T1,WNAM=HebarExtraBlack,WFIL=HBEBLN__.PFM
+PS=HebarExtraLightNormal,TYPE=T1,WNAM=HebarExtraLight,WFIL=HEELN___.PFM
+PS=HebarExtraLightItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarExtraLight,,  Italic,WFIL=HEELI___.PFM
+PS=HebarLeftOblique,TYPE=T1,STYL=ITALIC,WNAM=HebarLeftOblique,,  Italic,WFIL=HELO____.PFM
+PS=HebarLightNormal,TYPE=T1,WNAM=HebarLight,WFIL=HBLN____.PFM
+PS=HebarLightItalic,TYPE=T1,STYL=ITALIC,WNAM=HebarLight,,  Italic,WFIL=HBLI____.PFM
+PS=HebarOutline,TYPE=T1,WNAM=HebarOutline,WFIL=HEO_____.PFM
+PS=HebarRelief,TYPE=T1,WNAM=HebarRelief,WFIL=HER_____.PFM
+%!UsePath :Fnt:InDesign20CE:HS:
+PS=HSGaramondBg-Regular,TYPE=T1,WNAM=HS Garamond Bg,WFIL=HS07940.pfm
+PS=HSGaramondBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=HS Garamond Bg,,  Italic,WFIL=HS07941.pfm
+PS=HSGaramondBg-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Garamond Bg,,  Bold,WFIL=HS07970.pfm
+PS=HSGaramondBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=HS Garamond Bg,,  Bold Italic,WFIL=HS07971.pfm
+PS=HSGaramondBg-Black,TYPE=T1,WNAM=HS Garamond Bg Black,WFIL=HS07990.pfm
+PS=HSGaramondBgExp-Regular,TYPE=T1,WNAM=HS Garamond Bg Exp,WFIL=HS07840.pfm
+PS=HSGaramondBgExp-Bold,TYPE=T1,STYL=BOLD,WNAM=HS Garamond Bg Exp,,  Bold,WFIL=HS07870.pfm
+PS=HSGaramondBgExp-Black,TYPE=T1,WNAM=HS Garamond Bg Exp Black,WFIL=HS07890.pfm
+%!UsePath :Fnt:InDesign20CE:Sentry:
+PS=Sentry-Normal,TYPE=T1,WNAM=Sentry,WFIL=SENTN___.PFM
+PS=Sentry-Italic,TYPE=T1,STYL=ITALIC,WNAM=Sentry,,  Italic,WFIL=SENTI___.PFM
+PS=Sentry-Bold,TYPE=T1,STYL=BOLD,WNAM=Sentry,,  Bold,WFIL=SENTB___.PFM
+PS=SentryBoldItalic-Normal,TYPE=T1,WNAM=SentryBoldItalic,WFIL=SENTBIN_.PFM
+%!UsePath :Fnt:InDesign20CE:SP:
+PS=SPHelicon,TYPE=T1,WNAM=SP_Helicon,WFIL=HC______.pfm
+PS=SPHelicon-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon,,  Italic,WFIL=HCO_____.pfm
+PS=SPHelicon-Bold,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon,,  Bold,WFIL=HCB_____.pfm
+PS=SPHelicon-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Helicon,,  Bold Italic,WFIL=HCBO____.pfm
+PS=SPHeliconCompressed,TYPE=T1,WNAM=SP_Helicon_Compressed,WFIL=HCCM____.pfm
+PS=SPHeliconCompressed-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Compressed,,  Italic,WFIL=HCCMO___.pfm
+PS=SPHelicon-Heavy,TYPE=T1,WNAM=SP_Helicon_Heavy,WFIL=HCH_____.pfm
+PS=SPHelicon-HeavyOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Heavy,,  Italic,WFIL=HCHO____.pfm
+PS=SPHelicon-Black,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon_Heavy,,  Bold,WFIL=HCK_____.pfm
+PS=SPHelicon-BlackOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Helicon_Heavy,,  Bold Italic,WFIL=HCKO____.pfm
+PS=SPHeliconInserat,TYPE=T1,WNAM=SP_Helicon_Inserat,WFIL=HCIN____.pfm
+PS=SPHeliconInserat-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Inserat,,  Italic,WFIL=HCINO___.pfm
+PS=SPHeliconInseratLight,TYPE=T1,WNAM=SP_Helicon_InseratLight,WFIL=HCIL____.pfm
+PS=SPHeliconInseratLight-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_InseratLight,,  Italic,WFIL=HCILO___.pfm
+PS=SPHelicon-Medium,TYPE=T1,WNAM=SP_Helicon_Medium,WFIL=HCM_____.pfm
+PS=SPHelicon-MediumOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Medium,,  Italic,WFIL=HCMO____.pfm
+PS=SPHeliconNarrow,TYPE=T1,WNAM=SP_Helicon_Narrow,WFIL=HCN_____.pfm
+PS=SPHeliconNarrow-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Narrow,,  Italic,WFIL=HCNO____.pfm
+PS=SPHeliconNarrow-Bold,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon_Narrow,,  Bold,WFIL=HCNB____.pfm
+PS=SPHeliconNarrow-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Helicon_Narrow,,  Bold Italic,WFIL=HCNBO___.pfm
+PS=SPHeliconNarrow-Heavy,TYPE=T1,WNAM=SP_Helicon_Narrow_Heavy,WFIL=HCNH____.pfm
+PS=SPHeliconNarrow-HeavyOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Narrow_Heavy,,  Italic,WFIL=HCNHO___.pfm
+PS=SPHeliconNarrow-Black,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon_Narrow_Heavy,,  Bold,WFIL=HCNK____.pfm
+PS=SPHeliconNarrow-BlackOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Helicon_Narrow_Heavy,,  Bold Italic,WFIL=HCNKO___.pfm
+PS=SPHeliconNarrow-Medium,TYPE=T1,WNAM=SP_Helicon_Narrow_Medium,WFIL=HCNM____.pfm
+PS=SPHeliconNarrow-MediumOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Narrow_Medium,,  Italic,WFIL=HCNMO___.pfm
+PS=SPHeliconNarrow-Thin,TYPE=T1,WNAM=SP_Helicon_Narrow_Thin,WFIL=HCNT____.pfm
+PS=SPHeliconNarrow-ThinOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_Narrow_Thin,,  Italic,WFIL=HCNTO___.pfm
+PS=SPHeliconNarrow-Light,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon_Narrow_Thin,,  Bold,WFIL=HCNL____.pfm
+PS=SPHeliconNarrow-LightOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Helicon_Narrow_Thin,,  Bold Italic,WFIL=HCNLO___.pfm
+PS=SPHeliconOutline-Bold,TYPE=T1,WNAM=SP_Helicon_Outline,WFIL=HCBU____.pfm
+PS=SPHeliconOutline-Black,TYPE=T1,STYL=BOLD,WNAM=SP_Helicon_Outline,,  Bold,WFIL=HCKU____.pfm
+PS=SPHeliconUltraCond-Heavy,TYPE=T1,WNAM=SP_Helicon_UltraCond,WFIL=HCUC____.pfm
+PS=SPHeliconUltraCond-HeavyOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Helicon_UltraCond,,  Italic,WFIL=HCUCO___.pfm
+PS=SPTime-Roman,TYPE=T1,WNAM=SP_Time,WFIL=TC______.pfm
+PS=SPTime-Italic,TYPE=T1,STYL=ITALIC,WNAM=SP_Time,,  Italic,WFIL=TCI_____.pfm
+PS=SPTime-Bold,TYPE=T1,STYL=BOLD,WNAM=SP_Time,,  Bold,WFIL=TCB_____.pfm
+PS=SPTime-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Time,,  Bold Italic,WFIL=TCBI____.pfm
+PS=SPTime-SemiBold,TYPE=T1,WNAM=SP_Time_SemiBold,WFIL=TCSB____.pfm
+PS=SPTime-SemiBoldItalic,TYPE=T1,STYL=ITALIC,WNAM=SP_Time_SemiBold,,  Italic,WFIL=TCSBI___.pfm
+PS=SPTime-ExtraBold,TYPE=T1,STYL=BOLD,WNAM=SP_Time_SemiBold,,  Bold,WFIL=TCEB____.pfm
+PS=SPTime-ExtraBoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Time_SemiBold,,  Bold Italic,WFIL=TCEBI___.pfm
+PS=SPUniversal,TYPE=T1,WNAM=SP_Universal,WFIL=UVLM____.pfm
+PS=SPUniversal-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal,,  Italic,WFIL=UVLMO___.pfm
+PS=SPUniversal-Bold,TYPE=T1,STYL=BOLD,WNAM=SP_Universal,,  Bold,WFIL=UVLB____.pfm
+PS=SPUniversal-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Universal,,  Bold Italic,WFIL=UVLBO___.pfm
+PS=SPUniversal-Black,TYPE=T1,WNAM=SP_Universal_Black,WFIL=UVLK____.pfm
+PS=SPUniversal-BlackOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_Black,,  Italic,WFIL=UVLKO___.pfm
+PS=SPUniversalCond,TYPE=T1,WNAM=SP_Universal_Cond,WFIL=UVCM____.pfm
+PS=SPUniversalCond-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_Cond,,  Italic,WFIL=UVCMO___.pfm
+PS=SPUniversalCond-Bold,TYPE=T1,STYL=BOLD,WNAM=SP_Universal_Cond,,  Bold,WFIL=UVCB____.pfm
+PS=SPUniversalCond-BoldOblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Universal_Cond,,  Bold Italic,WFIL=UVCBO___.pfm
+PS=SPUniversalCond-Light,TYPE=T1,WNAM=SP_Universal_Cond_Light,WFIL=UVCL____.pfm
+PS=SPUniversalCond-LightOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_Cond_Light,,  Italic,WFIL=UVCLO___.pfm
+PS=SPUniversalExtended,TYPE=T1,WNAM=SP_Universal_Extended,WFIL=UVXR____.pfm
+PS=SPUniversalExtended-Oblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_Extended,,  Italic,WFIL=UVXRO___.pfm
+PS=SPUniversal-Light,TYPE=T1,WNAM=SP_Universal_Light,WFIL=UVLL____.pfm
+PS=SPUniversal-LightOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_Light,,  Italic,WFIL=UVLLO___.pfm
+PS=SPUniversalUltraCond-Light,TYPE=T1,WNAM=SP_Universal_UltraCond_Light,WFIL=UVUL____.pfm
+PS=SPUniversalUltraCond-LightOblique,TYPE=T1,STYL=ITALIC,WNAM=SP_Universal_UltraCond_Light,,  Italic,WFIL=UVULO___.pfm
+PS=SPUniversalUltraCond,TYPE=T1,STYL=BOLD,WNAM=SP_Universal_UltraCond_Light,,  Bold,WFIL=UVUC____.pfm
+PS=SPUniversalUltraCond-Oblique,TYPE=T1,STYL=BOLDITALIC,WNAM=SP_Universal_UltraCond_Light,,  Bold Italic,WFIL=UVUCO___.pfm
+%!UsePath :Fnt:InDesign20CE:TypeWriter:
+PS=TypeWriter-Normal,TYPE=T1,WNAM=TypeWriter,WFIL=TYPEWN__.PFM
+PS=TypeWriter-Bold,TYPE=T1,STYL=BOLD,WNAM=TypeWriter,,  Bold,WFIL=TYPEWB__.PFM
+%!UsePath :Fnt:InDesign20CE:HS:
+PS=UniversumBg-Regular,TYPE=T1,WNAM=Universum Bg,WFIL=HS14940.pfm
+PS=UniversumBg-Italic,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg,,  Italic,WFIL=HS14941.pfm
+PS=UniversumBg-Bold,TYPE=T1,STYL=BOLD,WNAM=Universum Bg,,  Bold,WFIL=HS14970.pfm
+PS=UniversumBg-BoldItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg,,  Bold Italic,WFIL=HS14971.pfm
+PS=UniversumBg-Cond,TYPE=T1,WNAM=Universum Bg Condensed,WFIL=HS14945.pfm
+PS=UniversumBg-CondIta,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Condensed,,  Italic,WFIL=HS14946.pfm
+PS=UniversumBg-BoldCond,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Condensed,,  Bold,WFIL=HS14975.pfm
+PS=UniversumBg-BoldCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Condensed,,  Bold Italic,WFIL=HS14976.pfm
+PS=UniversumBg-Light,TYPE=T1,WNAM=Universum Bg Light,WFIL=HS14930.pfm
+PS=UniversumBg-LightItalic,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Light,,  Italic,WFIL=HS14931.pfm
+PS=UniversumBg-Black,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Light,,  Bold,WFIL=HS14990.pfm
+PS=UniversumBg-BlackItalic,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Light,,  Bold Italic,WFIL=HS14991.pfm
+PS=UniversumBg-LightCond,TYPE=T1,WNAM=Universum Bg Light Condensed,WFIL=HS14935.pfm
+PS=UniversumBg-LightCondIta,TYPE=T1,STYL=ITALIC,WNAM=Universum Bg Light Condensed,,  Italic,WFIL=HS14936.pfm
+PS=UniversumBg-BlackCond,TYPE=T1,STYL=BOLD,WNAM=Universum Bg Light Condensed,,  Bold,WFIL=HS14995.pfm
+PS=UniversumBg-BlackCondIta,TYPE=T1,STYL=BOLDITALIC,WNAM=Universum Bg Light Condensed,,  Bold Italic,WFIL=HS14996.pfm
+%!EndSet 
+
