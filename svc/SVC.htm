@@ -24,14 +24,14 @@
     // ---
     function msg(s) { 
       if (typeof(s)===undefined) return;
-      if (msg_===undefined || msg==null) {
+      if (msg_===undefined || msg_===null) {
         try{               document.write('»msg:'+s+eol+br); 
         }catch(Exception){ alert('»»msg:'+s);}
         return
       }
       
-      if (msg_===null) msg_.innerHTML =''; // clear old  content
-      else             msg_.innerHTML+=s+eol+'<br>'; // append
+      if (s==null) msg_.innerHTML =''; // clear old  content
+      else         msg_.innerHTML+=s+eol+'<br>'; // append
     
     }; msg_=null;
     // ---
@@ -428,7 +428,10 @@ dbg=true;
 	  for(var i=0; i<=_win.length-1; i++) {_minH+=_win[i].h[_min]; _maxH+=Number(_win[i].h[_max]); }
 	}
 
-    if(msg_===null || msg_===undefined) {msg_=document.getElementById("msg"); alert(' msg_ forced!')}
+    if(msg_===undefined || msg_===null) {
+      document.write('<div ID="msg" class="info" style="height:400px; display:none">»» msg  </div>')
+      msg_=document.getElementById("msg"); alert(' msg_ forced!')
+    }
 	msg('... _minH:'+_minH+' _maxH:'+_maxH) 
 	_minH+=60; if(_maxH>900) _maxH=900; 
 //  window.resizeTo(_minW,_minH);/* w:840,h:260..1000 */ //  window.moveTo(62,20); /* x:130,y:70 */
@@ -439,8 +442,7 @@ dbg=true;
     
    _dict(tolang) // replace html for each <span data-lang="#">...</span> with dict[#][lang]
     load_end();
-</script>
-<script>
+
     msg(load_lst());
 //  window.onload = msg(load_lst()); 
 //  window.onload = (event) => {
