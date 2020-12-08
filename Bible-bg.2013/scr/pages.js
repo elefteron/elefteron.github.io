@@ -57,8 +57,8 @@ var va=' valign="top"'
   with(box[_mnu]) var w=par('width',sz.w+sz.un)
   var html=htm_(['table',mnu_hdr+w , ''
     +row_(va,[
-       ['',show_htm_onclick('idx_','html_buf.pg_idx'   ,'меню'   )]
-      ,['',show_htm_onclick('idx_','html_buf.pg_find'  ,'търси'  )] 
+       ['',show_htm_onclick('idx_','html_buf.pg_idx'   ,'РјРµРЅСЋ'   )]
+      ,['',show_htm_onclick('idx_','html_buf.pg_find'  ,'С‚СЉСЂСЃРё'  )] 
       ]) 
     ])
   return '<center>'+html+'</center>'
@@ -67,53 +67,53 @@ var va=' valign="top"'
   var editableOFF="javascript:document.body.contentEditable=false;"
   var designModeON="javascript:document.designMode='on';"
   var designModeOFF="javascript:document.designMode='off';"
-function pg_idx(){        //+ use ' not "      !?hide: pg_sel_ot,pg_sel_ot,сервизни
+function pg_idx(){        //+ use ' not "      !?hide: pg_sel_ot,pg_sel_ot,СЃРµСЂРІРёР·РЅРё
   with(box[_idx]) var w=par('width',sz.w+sz.un)
   var html=
   htm_(['table',idx_hdr+w,'' // show_url_onclick(boxNM ,href,txt ,wait) 
 /* */    
-    +row_(idx_bg,[ ['',selgen(Zavet.ot.name,'† Стар',oh,'OTopen')] ])
-    +row_(idx_bg,[ ['',selgen(Zavet.nt.name,'† Нов' ,nh,'NTopen')] ])
+    +row_(idx_bg,[ ['',selgen(Zavet.ot.name,'вЂ  РЎС‚Р°СЂ',oh,'OTopen')] ])
+    +row_(idx_bg,[ ['',selgen(Zavet.nt.name,'вЂ  РќРѕРІ' ,nh,'NTopen')] ])
 /* */    
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_10GodCom'   ,'† Десетте Божи заповеди'  )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_FaithSym'   ,'† Символът на вярата'     )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_beatitudes' ,'† Блаженствата'           )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_prayers'    ,'† Молитви'                )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_album_icons','† Икони'                  )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_theme_list' ,'  Тематични списъци'      )] ])
-//  +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_bib_list'   ,'  Библейски списък'       )] ]) 
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','show_biblist()'         ,'  Библейски списък'       )] ]) 
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_10GodCom'   ,'вЂ  Р”РµСЃРµС‚С‚Рµ Р‘РѕР¶Рё Р·Р°РїРѕРІРµРґРё'  )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_FaithSym'   ,'вЂ  РЎРёРјРІРѕР»СЉС‚ РЅР° РІСЏСЂР°С‚Р°'     )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_beatitudes' ,'вЂ  Р‘Р»Р°Р¶РµРЅСЃС‚РІР°С‚Р°'           )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_prayers'    ,'вЂ  РњРѕР»РёС‚РІРё'                )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_album_icons','вЂ  РРєРѕРЅРё'                  )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_theme_list' ,'  РўРµРјР°С‚РёС‡РЅРё СЃРїРёСЃСЉС†Рё'      )] ])
+//  +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_bib_list'   ,'  Р‘РёР±Р»РµР№СЃРєРё СЃРїРёСЃСЉРє'       )] ]) 
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','show_biblist()'         ,'  Р‘РёР±Р»РµР№СЃРєРё СЃРїРёСЃСЉРє'       )] ]) 
 //  +row_(idx_bg,[ ['',show_biblist() ]])
     
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_bib_urls'   ,'  Православни връзки'     )] ])
-//  +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_history'    ,'  Хронология на събитията')] ]) //
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_holydays'   ,'  Християнски празници'   )] ]) //
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_kalendar'   ,'  Календар'               )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_welcome'    ,'  начало'                 )] ])
-    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_about_this' ,'  за Bible-bg'            )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_bib_urls'   ,'  РџСЂР°РІРѕСЃР»Р°РІРЅРё РІСЂСЉР·РєРё'     )] ])
+//  +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_history'    ,'  РҐСЂРѕРЅРѕР»РѕРіРёСЏ РЅР° СЃСЉР±РёС‚РёСЏС‚Р°')] ]) //
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_holydays'   ,'  РҐСЂРёСЃС‚РёСЏРЅСЃРєРё РїСЂР°Р·РЅРёС†Рё'   )] ]) //
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_kalendar'   ,'  РљР°Р»РµРЅРґР°СЂ'               )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_welcome'    ,'  РЅР°С‡Р°Р»Рѕ'                 )] ])
+    +row_(idx_bg,[ ['',show_htm_onclick('txt_','html_buf.pg_about_this' ,'  Р·Р° Bible-bg'            )] ])
 /* */    
-//  +row_(idx_bg,[ ['',show_htm_onclick('idx_','html_buf.pg_ext'        ,'  сервизни'               )] ])
+//  +row_(idx_bg,[ ['',show_htm_onclick('idx_','html_buf.pg_ext'        ,'  СЃРµСЂРІРёР·РЅРё'               )] ])
     +row_(idx_bg,[ ['',
-       '<a href="javascript:ShowHide(\'service\');">сервизни</a>'
+       '<a href="javascript:ShowHide(\'service\');">СЃРµСЂРІРёР·РЅРё</a>'
       +'<span id="service" style="display:none" '// block none
         +par('onclick','ShowHide(\'service\')')+'>'
-        +htm_(['a',par('onclick',"htmCont('txt_',ar2obj('NT'))"                ),'Ген.масиви->об. NT' ])+br
-        +htm_(['a',par('onclick',"htmCont('txt_',ar2obj('OT'))"                ),'Ген.масиви->об. OT' ])+br
-        +htm_(['a',par('onclick',"test_obj_fmt()"                              ),'Тест об. '          ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',ar2obj('NT'))"                ),'Р“РµРЅ.РјР°СЃРёРІРё->РѕР±. NT' ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',ar2obj('OT'))"                ),'Р“РµРЅ.РјР°СЃРёРІРё->РѕР±. OT' ])+br
+        +htm_(['a',par('onclick',"test_obj_fmt()"                              ),'РўРµСЃС‚ РѕР±. '          ])+br
         +htm_(['a',par('onclick',"htmCont('txt_',dump_some())"                 ),'DOM some:'          ])+br
         +htm_(['a',par('onclick',"htmCont('txt_',dump_elem('box'))"            ),'DOM all:'           ])+br
-        +htm_(['a',par('onclick',"htmCont('txt_',gen_arrdef())"                ),'Ген. масиви NT/OT:' ])+br
-        +htm_(['a',par('onclick',"htmCont('txt_',gen_ar('OT','js'))"           ),'Ген. OT-##.bg.js:'  ])+br // file | js
-        +htm_(['a',par('onclick',"htmCont('txt_',gen_ar('NT','js'))"           ),'Ген. NT-##.bg.js:'  ])+br // file | js
-        +htm_(['a',par('onclick',"htmCont('txt_',countwords('OT',1,50,1,'js'))"),'!речник OT 1..50:'  ])+br // (zNm,bkFr,bkTo,3|1, js|htm)
-        +htm_(['a',par('onclick',"htmCont('txt_',countwords('NT',1,27,1,'js'))"),'!речник NT 1..27:'  ])+br // 1:ask range; 3:no ask range
-        +htm_(['a',par('onclick',"htmCont('txt_',checkBCV_hdr('NT',nt,nh))"    ),'Загл. книги в NT'   ])+br
-        +htm_(['a',par('onclick',"htmCont('txt_',checkBCV_hdr('OT',ot,oh))"    ),'Загл. книги в OT'   ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',gen_arrdef())"                ),'Р“РµРЅ. РјР°СЃРёРІРё NT/OT:' ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',gen_ar('OT','js'))"           ),'Р“РµРЅ. OT-##.bg.js:'  ])+br // file | js
+        +htm_(['a',par('onclick',"htmCont('txt_',gen_ar('NT','js'))"           ),'Р“РµРЅ. NT-##.bg.js:'  ])+br // file | js
+        +htm_(['a',par('onclick',"htmCont('txt_',countwords('OT',1,50,1,'js'))"),'!СЂРµС‡РЅРёРє OT 1..50:'  ])+br // (zNm,bkFr,bkTo,3|1, js|htm)
+        +htm_(['a',par('onclick',"htmCont('txt_',countwords('NT',1,27,1,'js'))"),'!СЂРµС‡РЅРёРє NT 1..27:'  ])+br // 1:ask range; 3:no ask range
+        +htm_(['a',par('onclick',"htmCont('txt_',checkBCV_hdr('NT',nt,nh))"    ),'Р—Р°РіР». РєРЅРёРіРё РІ NT'   ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',checkBCV_hdr('OT',ot,oh))"    ),'Р—Р°РіР». РєРЅРёРіРё РІ OT'   ])+br
         +htm_(['a',par('onclick',"editableON   "                               ),'contentEditable ON' ])+br
         +htm_(['a',par('onclick',"editableOFF  "                               ),'contentEditable OFF'])+br
 //      +htm_(['a',par('onclick',"designModeON "                               ),'designMode ON'      ])+br
 //?     +htm_(['a',par('onclick',"designModeOFF"                               ),'designMode OFF'     ])+br // ?
-        +htm_(['a',par('onclick',"htmCont('txt_',html_buf.pg_web_clr)"         ),'Избор на цветове'   ])+br
+        +htm_(['a',par('onclick',"htmCont('txt_',html_buf.pg_web_clr)"         ),'РР·Р±РѕСЂ РЅР° С†РІРµС‚РѕРІРµ'   ])+br
 //      +htm_(['a',par('onclick',"hdr_.innerHTML=''"                           ),'hdr_'               ])+br // 
         +htm_(['a',par('onclick',"htmCont('txt_','')"                          ),'txt_'               ])+br // 
 //      +htm_(['a',par('onclick',"not_.innerHTML=''"                           ),'not_'               ])+br // 
@@ -141,7 +141,7 @@ var html='<FONT face="Tahoma" size="4">'
   return '<center>'+html+'</center>'
 }//-----------------      //  pathpages+'Bible-bg.'+ ... +'.htm'
 
-function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen')
+function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'РќРѕРІ' ,nh,'NTopen')
    // ---
    function sellistBH(n,defNo,sar,vsz_,evnt_){var vsz='' ,evnt='' ,tit='',val='';
      if (vsz_  && parseInt(vsz_)>0) vsz =par('size'    ,vsz_)
@@ -167,7 +167,7 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen'
                 btnTst='width:12px;font-size:10px;';
    if(zNm==Zavet.nt.name){btnT='btnB'; zNo=Zavet.nt.num; mnucol1clr=ntclr;} // tstNM
    else                  {btnT='btnB'; zNo=Zavet.ot.num; mnucol1clr=otclr;}
-   var fnd='възлюби ближния си'; 
+   var fnd='РІСЉР·Р»СЋР±Рё Р±Р»РёР¶РЅРёСЏ СЃРё'; 
    var bNo=cNo=vNo1=1,vNo2=''
       ,bcv=bcv2str(zNm,bNo,cNo,vNo1) // buf <- form.value 
    showfile=pathpages+'Bible-BG.show.htm'
@@ -194,7 +194,7 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen'
           +' style="'+winsub2style+'"'  +'>'
        +'<tr'+par('valign',"top")+par('BGCOLOR',mnucol1clr)+'>'+eol
    buf+='<td></td><td colspan="3">'+zNm+'.'
-             +inText(zNm+"bcv_" ,14,bcv,'кн.гл.ст-ст',''
+             +inText(zNm+"bcv_" ,14,bcv,'РєРЅ.РіР».СЃС‚-СЃС‚',''
           //  inText(n          ,sz,val,t            ,evnt_) 
           /**-/ +par('onChange',// ?
                  "bcv="+zNm+"bcv_.value; "                       
@@ -203,7 +203,7 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen'
                 +"bcvNo2val('"+zNm+"')" ) /**/
               )
        +'</td><td>'                                              
-           +'<a>'+btn("=" ,btnY,btnYst,"виж тази глава" ,// val2bcvNo(zNm) 
+           +'<a>'+btn("=" ,btnY,btnYst,"РІРёР¶ С‚Р°Р·Рё РіР»Р°РІР°" ,// val2bcvNo(zNm) 
                  "bcv="+zNm+"bcv_.value; "
                 +"err=''; var p=parselink('"+zNm+".'+bcv);"
                 +"if(err==''){bNo=p[1];cNo=p[2];vNo1=p[3];vNo2=p[4]}"
@@ -211,11 +211,11 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen'
              +loadrun,'=')
            +'</a>'               
    buf+='</td></tr><tr'+par('valign',"top")+par('BGCOLOR',mnucol1clr)+'>'+eol
-        +'<td>'+'кн'+'</td><td>'// «» ^ v
-           +'<a>'+btn("^" ,btnT,btnTst,"Първа книга"    ,
+        +'<td>'+'РєРЅ'+'</td><td>'// В«В» ^ v
+           +'<a>'+btn("^" ,btnT,btnTst,"РџСЉСЂРІР° РєРЅРёРіР°"    ,
              bcvgo(zNm,'B',"F"))// -> bcvNo2val(zNm)
            +'</a>'
-           +'<a>'+btn("<" ,btnT,btnTst,"Предишна книга" ,"bNo="+zNm+"b_.value;" 
+           +'<a>'+btn("<" ,btnT,btnTst,"РџСЂРµРґРёС€РЅР° РєРЅРёРіР°" ,"bNo="+zNm+"b_.value;" 
             +bcvgo(zNm,'B',"-"))
            +'</a>'
        +'</td><td>'
@@ -223,46 +223,46 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTopen'
             +"bcv=bcv2str(zNm,bNo,cNo,vNo1,vNo2);"// "bNo+'.'+cNo+'.'+vNo1+'-'+vNo2;"
             +bcvNo2val(zNm),'')
        +'</td><td>'
-           +'<a>'+btn(">" ,btnT,btnTst,"Следваща книга" ,"bNo="+zNm+"b_.value;" 
+           +'<a>'+btn(">" ,btnT,btnTst,"РЎР»РµРґРІР°С‰Р° РєРЅРёРіР°" ,"bNo="+zNm+"b_.value;" 
             +bcvgo(zNm,'B',"+"))
            +'</a>'
-           +'<a>'+btn("v" ,btnT,btnTst,"Последна книга" ,"bNo="+zNm+"b_.value;" 
+           +'<a>'+btn("v" ,btnT,btnTst,"РџРѕСЃР»РµРґРЅР° РєРЅРёРіР°" ,"bNo="+zNm+"b_.value;" 
             +bcvgo(zNm,'B',"L"))
            +'</a>'
        +'</td><td>'
-           +'<a>'+btn("w",btnY,btnYst,"Честотен речник за книга",val2bcvNo(zNm)
+           +'<a>'+btn("w",btnY,btnYst,"Р§РµСЃС‚РѕС‚РµРЅ СЂРµС‡РЅРёРє Р·Р° РєРЅРёРіР°",val2bcvNo(zNm)
             +"htmCont('txt_',countwords('"+zNm+"',bNo,bNo,1,'js'))")
            +'</a>'
             //+'a,LABEL,button,input,select,textarea: ACCESSKEY="d" // Alt+d key_mod_str
    buf+='</td></tr><tr'+par('valign',"top")+par('BGCOLOR',mnucol1clr)+'>'+eol
-       +'<td>'+'гл'+'</td><td>'
-           +'<a>'+btn("^" ,btnT,btnTst,"Първа глава "   ,val2bcvNo(zNm)+bcvgo(zNm,'C',"F"))+'</a>'
-           +'<a>'+btn("<" ,btnT,btnTst,"Предишна глава ",val2bcvNo(zNm)+bcvgo(zNm,'C',"-"))+'</a>'
+       +'<td>'+'РіР»'+'</td><td>'
+           +'<a>'+btn("^" ,btnT,btnTst,"РџСЉСЂРІР° РіР»Р°РІР° "   ,val2bcvNo(zNm)+bcvgo(zNm,'C',"F"))+'</a>'
+           +'<a>'+btn("<" ,btnT,btnTst,"РџСЂРµРґРёС€РЅР° РіР»Р°РІР° ",val2bcvNo(zNm)+bcvgo(zNm,'C',"-"))+'</a>'
        +'</td><td>'
-                 +inText(zNm+"c_" ,6,'1','глава'  ,'')   
+                 +inText(zNm+"c_" ,6,'1','РіР»Р°РІР°'  ,'')   
        +'</td><td>'
-           +'<a>'+btn(">" ,btnT,btnTst,"Следваща глава ",val2bcvNo(zNm)+bcvgo(zNm,'C',"+"))+'</a>'
-           +'<a>'+btn("v" ,btnT,btnTst,"Последна глава ",val2bcvNo(zNm)+bcvgo(zNm,'C',"L"))+'</a>'
+           +'<a>'+btn(">" ,btnT,btnTst,"РЎР»РµРґРІР°С‰Р° РіР»Р°РІР° ",val2bcvNo(zNm)+bcvgo(zNm,'C',"+"))+'</a>'
+           +'<a>'+btn("v" ,btnT,btnTst,"РџРѕСЃР»РµРґРЅР° РіР»Р°РІР° ",val2bcvNo(zNm)+bcvgo(zNm,'C',"L"))+'</a>'
        +'</td><td>'
-           +'<a>'+btn("=" ,btnY,btnYst,"виж тази глава"  ,
+           +'<a>'+btn("=" ,btnY,btnYst,"РІРёР¶ С‚Р°Р·Рё РіР»Р°РІР°"  ,
              val2bcvNo(zNm)+loadrun,'=')
            +'</a>'        
-           +'<a>'+btn("<" ,btnY,btnYst,"виж предна гл."  ,
+           +'<a>'+btn("<" ,btnY,btnYst,"РІРёР¶ РїСЂРµРґРЅР° РіР»."  ,
              val2bcvNo(zNm)+"CgoL('"+zNm+"',bNo,cNo,'-');"+bcvNo2val(zNm)+loadrun,'-')
            +'</a>'
-           +'<a>'+btn(">" ,btnY,btnYst,"виж следваща гл.",
+           +'<a>'+btn(">" ,btnY,btnYst,"РІРёР¶ СЃР»РµРґРІР°С‰Р° РіР».",
              val2bcvNo(zNm)+"CgoL('"+zNm+"',bNo,cNo,'+');"+bcvNo2val(zNm)+loadrun,'+')
            +'</a>'
    buf+='</td></tr><tr'+par('valign',"top")+par('BGCOLOR',mnucol1clr)+'>'+eol
-       +'<td>'+'ст'+'</td><td>'
-           +'<a>'+btn("^" ,btnT,btnTst,"Първи стих"      ,val2bcvNo(zNm)+bcvgo(zNm,'V',"F"))+'</a>'
+       +'<td>'+'СЃС‚'+'</td><td>'
+           +'<a>'+btn("^" ,btnT,btnTst,"РџСЉСЂРІРё СЃС‚РёС…"      ,val2bcvNo(zNm)+bcvgo(zNm,'V',"F"))+'</a>'
        +'</td><td>'
-           +      inText(zNm+"v1_",1,'1','от стих','') 
-           +  '-'+inText(zNm+"v2_",1,'' ,'до стих','')
+           +      inText(zNm+"v1_",1,'1','РѕС‚ СЃС‚РёС…','') 
+           +  '-'+inText(zNm+"v2_",1,'' ,'РґРѕ СЃС‚РёС…','')
        +'</td><td>'+' &nbsp;&nbsp; '
-           +'<a>'+btn("v" ,btnT,btnTst,"Последен стих"   ,val2bcvNo(zNm)+bcvgo(zNm,'V',"L"))+'</a>'
+           +'<a>'+btn("v" ,btnT,btnTst,"РџРѕСЃР»РµРґРµРЅ СЃС‚РёС…"   ,val2bcvNo(zNm)+bcvgo(zNm,'V',"L"))+'</a>'
        +'</td><td>'
-           +'<a'+par('title',zNm+' индекс') //+par('href','Bible-BG.books.htm#'+zNm)
+           +'<a'+par('title',zNm+' РёРЅРґРµРєСЃ') //+par('href','Bible-BG.books.htm#'+zNm)
             +par('href'   ,'javascript:ShowHide(\'idx.\'+\''+zNm+'\')')
         //  +par('onClick',           'ShowHide(\'idx.\'+\''+zNm+'\')') // ->idxgen(zNm)
            +'>'+tstname+'</a>' 
@@ -341,15 +341,15 @@ function idxgen(zNm){
    return buf
 }//--
 function pg_find(){       //~ 'find.htm'       err:?
-  function find_chk_and_load(zNm,tt,th){   ok=true; err=''; ftx='търсене';
+  function find_chk_and_load(zNm,tt,th){   ok=true; err=''; ftx='С‚СЉСЂСЃРµРЅРµ';
      //out(log_,'chkfind: begin'+eot)  
-     if(!(zNm==Zavet.nt.name || zNm==Zavet.ot.name)){err+='неправилно име на завет: zNm='+zNm+'\n'; ok=false;}
-     var msg='неуспешно зареждане на:';
+     if(!(zNm==Zavet.nt.name || zNm==Zavet.ot.name)){err+='РЅРµРїСЂР°РІРёР»РЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚: zNm='+zNm+'\n'; ok=false;}
+     var msg='РЅРµСѓСЃРїРµС€РЅРѕ Р·Р°СЂРµР¶РґР°РЅРµ РЅР°:';
      if(ok){
-       if(undef(tt) || tt==null || tt=='') {err+=msg+'tt за '+zNm+'\n'; ok=false;}
-       if(undef(th) || th==null || th=='') {err+=msg+'th за '+zNm+'\n'; ok=false;}
+       if(undef(tt) || tt==null || tt=='') {err+=msg+'tt Р·Р° '+zNm+'\n'; ok=false;}
+       if(undef(th) || th==null || th=='') {err+=msg+'th Р·Р° '+zNm+'\n'; ok=false;}
      }
-     if(err!=''){out(log_,'find:'+err+br)}//  Грешки при '+ftx?+':\n'
+     if(err!=''){out(log_,'find:'+err+br)}//  Р“СЂРµС€РєРё РїСЂРё '+ftx?+':\n'
      return ok
   }// ---
 // --- global find parameters
@@ -364,30 +364,30 @@ function pg_find(){       //~ 'find.htm'       err:?
 // ---
   function check_and_run(){// ->findTT(Zavet.nt.name,nt,nh);
     if(f1exp!=''){f=[]; lf=0;
-      if( (Nbk>0) && (find_chk_and_load(Zavet.nt.name,nt,nh)) ) // parent.idx.nt, parent.idx.nh
+      if((Nbk>0) && (find_chk_and_load(Zavet.nt.name,nt,nh)) ) // parent.idx.nt, parent.idx.nh
   	  findTT(Zavet.nt.name,nt,nh);// parent.idx.nt,parent.idx.nh
-      if( (Оbk>0) && (find_chk_and_load(Zavet.ot.name,ot,oh)) ) 
+      if((Obk>0) && (find_chk_and_load(Zavet.ot.name,ot,oh)) ) 
   	  findTT(Zavet.ot.name,ot,oh);
     }else{out(log_,errNOTODO+eot)}
   }// ---
   function fndform(){// ->htmlform -> check_and_run()
      winsub2style=' overflow:auto; padding:0px; text-align:left; border:1px inset; margin:0px;'
-     f1exp='ослица'//'господ мой'
-     errNOTODO='Няма текст или не е избрано място за търсене!' 
+     f1exp='РѕСЃР»РёС†Р°'//'РіРѕСЃРїРѕРґ РјРѕР№'
+     errNOTODO='РќСЏРјР° С‚РµРєСЃС‚ РёР»Рё РЅРµ Рµ РёР·Р±СЂР°РЅРѕ РјСЏСЃС‚Рѕ Р·Р° С‚СЉСЂСЃРµРЅРµ!' 
      wt=''; if(wait) wt+='out(txt_,\'wait:... \'+eot);';
      buffnd=
       '<table bgcolor="black" border=0 cellpadding="0" cellspacing="0"'
       +' width="'+'100%'+'">'// row1wid 310
-     +'<tr valign="top">'+eol+'<td>'+'Търсене в Библията '
-       +'<a>'+btn("почни",'btnY','width:50px;font-size:12px;',"почни тъсене",wt
+     +'<tr valign="top">'+eol+'<td>'+'РўСЉСЂСЃРµРЅРµ РІ Р‘РёР±Р»РёСЏС‚Р° '
+       +'<a>'+btn("РїРѕС‡РЅРё",'btnY','width:50px;font-size:12px;',"РїРѕС‡РЅРё С‚СЉСЃРµРЅРµ",wt
            //+"out(log_,'get form:'+eot);"
-           +"Nbk=Nbk_.value;Nbl=Nbl_.value; Оbk=Оbk_.value;Оbl=Оbl_.value;"+eol
+           +"Nbk=Nbk_.value;Nbl=Nbl_.value; Рћbk=Рћbk_.value;Рћbl=Рћbl_.value;"+eol
            +"f1exp=f1exp_.value;f1wrd=f1wrd_.value;f1reg=f1reg_.value;"+eol
            +"f2exp=f2exp_.value;f2wrd=f2wrd_.value;f2reg=f2reg_.value;f2plc=f2plc_.value;"+eol
            +"f3exp=f3exp_.value;f3wrd=f3wrd_.value;f3reg=f3reg_.value;"+eol
            /* */
            +"out(log_,'test find form:'+eot);" 
-           + "a='  Nbk=['+Nbk  +']   Nbl=['+Nbl +'] Obk=['+Оbk +'] Obl=['+Оbl+']';"
+           + "a='  Nbk=['+Nbk  +']   Nbl=['+Nbl +'] Obk=['+Рћbk +'] Obl=['+Рћbl+']';"
            +"a1='f1exp=['+f1exp+'] f1wrd='+f1wrd+' f1reg='+f1reg;"+eol
            +"a2='f2exp=['+f2exp+'] f2wrd='+f2wrd+' f2reg='+f2reg+' f2plc='+f2plc;"+eol
            +"a3='f3exp=['+f3exp+'] f3wrd='+f3wrd+' f3reg='+f3reg;"+eol
@@ -403,40 +403,40 @@ function pg_find(){       //~ 'find.htm'       err:?
          +'<table border=0 cellpadding="1" cellspacing="0"'//+' width="'+200+'"'
            +winsub2style+'>'+eol// 305
            /**/
-           +'<tr'+par('bgcolor',ntclr)+'>'+eol+'<td>'+'нов завет'
+           +'<tr'+par('bgcolor',ntclr)+'>'+eol+'<td>'+'РЅРѕРІ Р·Р°РІРµС‚'
            +'</td>'+eol+'<td>'
-             +sellist('Nbk_', 1,['никоя','всички','списък'],1,'',"")+' кн.'
-              +inText('Nbl_',6,'','списък: книгa,...'          ,"")//25
+             +sellist('Nbk_', 1,['РЅРёРєРѕСЏ','РІСЃРёС‡РєРё','СЃРїРёСЃСЉРє'],1,'',"")+' РєРЅ.'
+              +inText('Nbl_',6,'','СЃРїРёСЃСЉРє: РєРЅРёРіa,...'          ,"")//25
            +'</td>'+eol+'</tr>'+eol
            /**/
-           +'<tr'+par('bgcolor',otclr)+'>'+eol+'<td>'+'стар завет'
+           +'<tr'+par('bgcolor',otclr)+'>'+eol+'<td>'+'СЃС‚Р°СЂ Р·Р°РІРµС‚'
            +'</td>'+eol+'<td>'
-             +sellist('Оbk_', 0,['никоя','всички','списък'],1,'',"")+' кн.'
-              +inText('Оbl_',6,'','списък: книгa,...'          ,"")
+             +sellist('Рћbk_', 0,['РЅРёРєРѕСЏ','РІСЃРёС‡РєРё','СЃРїРёСЃСЉРє'],1,'',"")+' РєРЅ.'
+              +inText('Рћbl_',6,'','СЃРїРёСЃСЉРє: РєРЅРёРіa,...'          ,"")
            +'</td>'+eol+'</tr>'+eol
-           /**/// изрази,фрази
-           +'<tr valign="top">'+eol+'<td>'+'търси' 
-           +'</td>'+eol+'<td>'+ inText('f1exp_',22,f1exp,'израз','')
+           /**/// РёР·СЂР°Р·Рё,С„СЂР°Р·Рё
+           +'<tr valign="top">'+eol+'<td>'+'С‚СЉСЂСЃРё' 
+           +'</td>'+eol+'<td>'+ inText('f1exp_',22,f1exp,'РёР·СЂР°Р·','')
              +'<table>'
-               + '<tr><td>'+' съвпада '   +'</td><td>'+sellist('f1wrd_', 1,['точно','част','корен'],1,'','')+'</td></tr>'
-               + '<tr><td>'+' ред/гл '    +'</td><td>'+sellist('f1reg_', 1,['точно','без знач.']   ,1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЃСЉРІРїР°РґР° '   +'</td><td>'+sellist('f1wrd_', 1,['С‚РѕС‡РЅРѕ','С‡Р°СЃС‚','РєРѕСЂРµРЅ'],1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЂРµРґ/РіР» '    +'</td><td>'+sellist('f1reg_', 1,['С‚РѕС‡РЅРѕ','Р±РµР· Р·РЅР°С‡.']   ,1,'','')+'</td></tr>'
              +'</table>'
            +'</td>'+eol+'</tr>'+eol
            /**/
-           +'<tr valign="top">'+eol+'<td>'+'със '
-           +'</td>'+eol+'<td>'+ inText('f2exp_',22,f2exp,'израз','')
+           +'<tr valign="top">'+eol+'<td>'+'СЃСЉСЃ '
+           +'</td>'+eol+'<td>'+ inText('f2exp_',22,f2exp,'РёР·СЂР°Р·','')
              +'<table>'
-               + '<tr><td>'+' съвпада '   +'</td><td>'+sellist('f2wrd_', 1,['точно','част','корен'],1,'','')+'</td></tr>'
-               + '<tr><td>'+' ред/гл '    +'</td><td>'+sellist('f2reg_', 1,['точно','без знач.']   ,1,'','')+'</td></tr>'
-               + '<tr><td>'+' място '     +'</td><td>'+sellist('f2plc_', 1,['преди','след','в стиха','в главата'],1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЃСЉРІРїР°РґР° '   +'</td><td>'+sellist('f2wrd_', 1,['С‚РѕС‡РЅРѕ','С‡Р°СЃС‚','РєРѕСЂРµРЅ'],1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЂРµРґ/РіР» '    +'</td><td>'+sellist('f2reg_', 1,['С‚РѕС‡РЅРѕ','Р±РµР· Р·РЅР°С‡.']   ,1,'','')+'</td></tr>'
+               + '<tr><td>'+' РјСЏСЃС‚Рѕ '     +'</td><td>'+sellist('f2plc_', 1,['РїСЂРµРґРё','СЃР»РµРґ','РІ СЃС‚РёС…Р°','РІ РіР»Р°РІР°С‚Р°'],1,'','')+'</td></tr>'
              +'</table>'
            +'</td>'+eol+'</tr>'+eol
            /**/
-           +'<tr valign="top">'+eol+'<td>'+'без '     
-           +'</td>'+eol+'<td>'+ inText('f3exp_',22,f3exp,'израз','')
+           +'<tr valign="top">'+eol+'<td>'+'Р±РµР· '     
+           +'</td>'+eol+'<td>'+ inText('f3exp_',22,f3exp,'РёР·СЂР°Р·','')
              +'<table>'
-               + '<tr><td>'+' съвпада '   +'</td><td>'+sellist('f3wrd_', 1,['точно','част','корен'],1,'','')+'</td></tr>'
-               + '<tr><td>'+' ред/гл '    +'</td><td>'+sellist('f3reg_', 1,['точно','без знач.']   ,1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЃСЉРІРїР°РґР° '   +'</td><td>'+sellist('f3wrd_', 1,['С‚РѕС‡РЅРѕ','С‡Р°СЃС‚','РєРѕСЂРµРЅ'],1,'','')+'</td></tr>'
+               + '<tr><td>'+' СЂРµРґ/РіР» '    +'</td><td>'+sellist('f3reg_', 1,['С‚РѕС‡РЅРѕ','Р±РµР· Р·РЅР°С‡.']   ,1,'','')+'</td></tr>'
              +'</table>'
            +'</td>'+eol+'</tr>'+eol
             /**/
@@ -459,41 +459,41 @@ var html='<FONT face="Tahoma" size="4">'
   +htm_(['table',tpar,
     row_('',[
       [va+par('width',150)+par('bgcolor',icobg)
-        ,icon("HristosPantokrator.jpg"     ,"Христос Пантократор"       ,220) 
-        +icon("sv.Bogorodica Jerusalem.jpg","св.Богородица Йерусалимска",220)
+        ,icon("HristosPantokrator.jpg"     ,"РҐСЂРёСЃС‚РѕСЃ РџР°РЅС‚РѕРєСЂР°С‚РѕСЂ"       ,220) 
+        +icon("sv.Bogorodica Jerusalem.jpg","СЃРІ.Р‘РѕРіРѕСЂРѕРґРёС†Р° Р™РµСЂСѓСЃР°Р»РёРјСЃРєР°",220)
       ],
       [va  +par('bgcolor',icobg),''
-        +biblink('OT.Втор.06.04-07')+biblink('NT.Деян.10.12')      
-        +biblink('NT.Марк.12.29-30')+biblink('NT.Лука.10.27')+'<br>'
-        +'Господ, Бог наш, е Господ един; обичай Господа, твоя Бог,'
-        +' от всичкото си сърце, от всичката си душа и с всичките си сили.'+'<br>' 
-        +'Тия думи, които ти заповядвам днес, да бъдат в сърцето ти (и в душата ти);'+'<br>'
-        +biblink('NT.Марк.12.31')+'<br>'
-        +'Втора, подобна ней, е: "възлюби ближния си като себе си". Друга заповед, по-голяма от тия, няма.'+'<br>'
-        +biblink('NT.Иоан.14.06')+'<br>'
-        +'Аз съм пътят и истината и животът;'+'<br>'
-        +'никой не дохожда при Отца, освен чрез Мене.'+'<br>'
-        +biblink('NT.Иоан.13.34-35')+'<br>'
-        +'Нова заповед ви давам, да любите един другиго; както ви възлюбих, да любите и вие един другиго.<br>'
-        +'По това ще познаят всички, че сте Мои ученици, ако любов имате помежду си.<br>'
+        +biblink('OT.Р’С‚РѕСЂ.06.04-07')+biblink('NT.Р”РµСЏРЅ.10.12')      
+        +biblink('NT.РњР°СЂРє.12.29-30')+biblink('NT.Р›СѓРєР°.10.27')+'<br>'
+        +'Р“РѕСЃРїРѕРґ, Р‘РѕРі РЅР°С€, Рµ Р“РѕСЃРїРѕРґ РµРґРёРЅ; РѕР±РёС‡Р°Р№ Р“РѕСЃРїРѕРґР°, С‚РІРѕСЏ Р‘РѕРі,'
+        +' РѕС‚ РІСЃРёС‡РєРѕС‚Рѕ СЃРё СЃСЉСЂС†Рµ, РѕС‚ РІСЃРёС‡РєР°С‚Р° СЃРё РґСѓС€Р° Рё СЃ РІСЃРёС‡РєРёС‚Рµ СЃРё СЃРёР»Рё.'+'<br>' 
+        +'РўРёСЏ РґСѓРјРё, РєРѕРёС‚Рѕ С‚Рё Р·Р°РїРѕРІСЏРґРІР°Рј РґРЅРµСЃ, РґР° Р±СЉРґР°С‚ РІ СЃСЉСЂС†РµС‚Рѕ С‚Рё (Рё РІ РґСѓС€Р°С‚Р° С‚Рё);'+'<br>'
+        +biblink('NT.РњР°СЂРє.12.31')+'<br>'
+        +'Р’С‚РѕСЂР°, РїРѕРґРѕР±РЅР° РЅРµР№, Рµ: "РІСЉР·Р»СЋР±Рё Р±Р»РёР¶РЅРёСЏ СЃРё РєР°С‚Рѕ СЃРµР±Рµ СЃРё". Р”СЂСѓРіР° Р·Р°РїРѕРІРµРґ, РїРѕ-РіРѕР»СЏРјР° РѕС‚ С‚РёСЏ, РЅСЏРјР°.'+'<br>'
+        +biblink('NT.РРѕР°РЅ.14.06')+'<br>'
+        +'РђР· СЃСЉРј РїСЉС‚СЏС‚ Рё РёСЃС‚РёРЅР°С‚Р° Рё Р¶РёРІРѕС‚СЉС‚;'+'<br>'
+        +'РЅРёРєРѕР№ РЅРµ РґРѕС…РѕР¶РґР° РїСЂРё РћС‚С†Р°, РѕСЃРІРµРЅ С‡СЂРµР· РњРµРЅРµ.'+'<br>'
+        +biblink('NT.РРѕР°РЅ.13.34-35')+'<br>'
+        +'РќРѕРІР° Р·Р°РїРѕРІРµРґ РІРё РґР°РІР°Рј, РґР° Р»СЋР±РёС‚Рµ РµРґРёРЅ РґСЂСѓРіРёРіРѕ; РєР°РєС‚Рѕ РІРё РІСЉР·Р»СЋР±РёС…, РґР° Р»СЋР±РёС‚Рµ Рё РІРёРµ РµРґРёРЅ РґСЂСѓРіРёРіРѕ.<br>'
+        +'РџРѕ С‚РѕРІР° С‰Рµ РїРѕР·РЅР°СЏС‚ РІСЃРёС‡РєРё, С‡Рµ СЃС‚Рµ РњРѕРё СѓС‡РµРЅРёС†Рё, Р°РєРѕ Р»СЋР±РѕРІ РёРјР°С‚Рµ РїРѕРјРµР¶РґСѓ СЃРё.<br>'
         
-        +biblink('NT.Иоан.15.12-13')+'<br>'
-        +'Тази е Моята заповед: да любите един другиго, както Аз ви възлюбих.<br>'
-        +'Никой няма любов по-голяма от тая, да положи душата си за своите приятели.<br>'
+        +biblink('NT.РРѕР°РЅ.15.12-13')+'<br>'
+        +'РўР°Р·Рё Рµ РњРѕСЏС‚Р° Р·Р°РїРѕРІРµРґ: РґР° Р»СЋР±РёС‚Рµ РµРґРёРЅ РґСЂСѓРіРёРіРѕ, РєР°РєС‚Рѕ РђР· РІРё РІСЉР·Р»СЋР±РёС….<br>'
+        +'РќРёРєРѕР№ РЅСЏРјР° Р»СЋР±РѕРІ РїРѕ-РіРѕР»СЏРјР° РѕС‚ С‚Р°СЏ, РґР° РїРѕР»РѕР¶Рё РґСѓС€Р°С‚Р° СЃРё Р·Р° СЃРІРѕРёС‚Рµ РїСЂРёСЏС‚РµР»Рё.<br>'
         
-        +biblink('NT.2Иоан.01.06-07')+'<br>'
-        +'А любовта се състои в това, да постъпваме по Неговите заповеди.<br>' 
-        +'Тази е заповедта, която сте чули отначало, за да постъпвате по нея;<br>'
-        +'защото в света влязоха мнозина прелъстници, които не изповядват,<br>' 
-        +'че Иисус Христос е дошъл в плът; такъв човек е прелъстник и антихрист.<br>'
+        +biblink('NT.2РРѕР°РЅ.01.06-07')+'<br>'
+        +'Рђ Р»СЋР±РѕРІС‚Р° СЃРµ СЃСЉСЃС‚РѕРё РІ С‚РѕРІР°, РґР° РїРѕСЃС‚СЉРїРІР°РјРµ РїРѕ РќРµРіРѕРІРёС‚Рµ Р·Р°РїРѕРІРµРґРё.<br>' 
+        +'РўР°Р·Рё Рµ Р·Р°РїРѕРІРµРґС‚Р°, РєРѕСЏС‚Рѕ СЃС‚Рµ С‡СѓР»Рё РѕС‚РЅР°С‡Р°Р»Рѕ, Р·Р° РґР° РїРѕСЃС‚СЉРїРІР°С‚Рµ РїРѕ РЅРµСЏ;<br>'
+        +'Р·Р°С‰РѕС‚Рѕ РІ СЃРІРµС‚Р° РІР»СЏР·РѕС…Р° РјРЅРѕР·РёРЅР° РїСЂРµР»СЉСЃС‚РЅРёС†Рё, РєРѕРёС‚Рѕ РЅРµ РёР·РїРѕРІСЏРґРІР°С‚,<br>' 
+        +'С‡Рµ РРёСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ Рµ РґРѕС€СЉР» РІ РїР»СЉС‚; С‚Р°РєСЉРІ С‡РѕРІРµРє Рµ РїСЂРµР»СЉСЃС‚РЅРёРє Рё Р°РЅС‚РёС…СЂРёСЃС‚.<br>'
         
-        +biblink('NT.Откр.22.19')+'<br>'
-        +'и ако някой отнеме нещо от думите на книгата на това пророчество, <br>'
-        +'Бог ще отнеме дела му от книгата на живота и от светия град и от написаното в тая книга.<br>'
+        +biblink('NT.РћС‚РєСЂ.22.19')+'<br>'
+        +'Рё Р°РєРѕ РЅСЏРєРѕР№ РѕС‚РЅРµРјРµ РЅРµС‰Рѕ РѕС‚ РґСѓРјРёС‚Рµ РЅР° РєРЅРёРіР°С‚Р° РЅР° С‚РѕРІР° РїСЂРѕСЂРѕС‡РµСЃС‚РІРѕ, <br>'
+        +'Р‘РѕРі С‰Рµ РѕС‚РЅРµРјРµ РґРµР»Р° РјСѓ РѕС‚ РєРЅРёРіР°С‚Р° РЅР° Р¶РёРІРѕС‚Р° Рё РѕС‚ СЃРІРµС‚РёСЏ РіСЂР°Рґ Рё РѕС‚ РЅР°РїРёСЃР°РЅРѕС‚Рѕ РІ С‚Р°СЏ РєРЅРёРіР°.<br>'
         
-        +biblink('NT.Марк.16.15')+'<br>'  
-        +'И рече им: идете по цял свят и проповядвайте Евангелието на всички твари. <br>' 
-        +'Който повярва и се кръсти, ще бъде спасен, а който не повярва, ще бъде осъден.'
+        +biblink('NT.РњР°СЂРє.16.15')+'<br>'  
+        +'Р СЂРµС‡Рµ РёРј: РёРґРµС‚Рµ РїРѕ С†СЏР» СЃРІСЏС‚ Рё РїСЂРѕРїРѕРІСЏРґРІР°Р№С‚Рµ Р•РІР°РЅРіРµР»РёРµС‚Рѕ РЅР° РІСЃРёС‡РєРё С‚РІР°СЂРё. <br>' 
+        +'РљРѕР№С‚Рѕ РїРѕРІСЏСЂРІР° Рё СЃРµ РєСЂСЉСЃС‚Рё, С‰Рµ Р±СЉРґРµ СЃРїР°СЃРµРЅ, Р° РєРѕР№С‚Рѕ РЅРµ РїРѕРІСЏСЂРІР°, С‰Рµ Р±СЉРґРµ РѕСЃСЉРґРµРЅ.'
       ] ]) 
     ])
     +'</FONT>'
@@ -502,64 +502,64 @@ var html='<FONT face="Tahoma" size="4">'
 function pg_10GodCom(){   //+ 'OT-10GodCom'   
 var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
- +'<span id="bk"><center>† Десетте Божи заповеди</center></span>'
- +biblink('OT.Изх.20.02-17')
+ +'<span id="bk"><center>вЂ  Р”РµСЃРµС‚С‚Рµ Р‘РѕР¶Рё Р·Р°РїРѕРІРµРґРё</center></span>'
+ +biblink('OT.РР·С….20.02-17')
  +htm_(['table','',''
-   +row_(va,[['',' 1.'],['','Аз съм Господ, Бог твой; да нямаш други богове освен Мене.'] ])
-   +row_(va,[['',' 2.'],['','Не си прави кумир и никакво изображение на онова, що е горе на небето , що е долу на земята и що е във водата под земята, не им се кланяй и не им служи.'] ])
-   +row_(va,[['',' 3.'],['','Не изговаряй напразно името на Господа, твоя Бог.'] ])
-   +row_(va,[['',' 4.'],['','Помни съботния ден<sup><font color=\'lime\'>*</font></sup>, за да го светиш: шест дена работи и върши в тях всичките си работи; а седмият ден е събота на Господа, твоя Бог.'] ])
-   +row_(va,[['',' 5.'],['','Почитай баща си и майка си, за да ти бъде добре и да живееш дълго на земята.'] ])
-   +row_(va,[['',' 6.'],['','Не убивай.'         ] ])
-   +row_(va,[['',' 7.'],['','Не прелюбодействай.'] ])
-   +row_(va,[['',' 8.'],['','Не кради.'          ] ])
-   +row_(va,[['',' 9.'],['','Не лъжесвидетелствай против ближния си.' ] ])
-   +row_(va,[['','10.'],['','Не пожелавай дома на ближния си; не пожелавай жената на ближния си; нито нивата му; нито роба му; ни робинята му; ни вола му; ни осела му; нито някакъв негов добитък - нищо, което е на ближния ти.'] ])
+   +row_(va,[['',' 1.'],['','РђР· СЃСЉРј Р“РѕСЃРїРѕРґ, Р‘РѕРі С‚РІРѕР№; РґР° РЅСЏРјР°С€ РґСЂСѓРіРё Р±РѕРіРѕРІРµ РѕСЃРІРµРЅ РњРµРЅРµ.'] ])
+   +row_(va,[['',' 2.'],['','РќРµ СЃРё РїСЂР°РІРё РєСѓРјРёСЂ Рё РЅРёРєР°РєРІРѕ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РЅР° РѕРЅРѕРІР°, С‰Рѕ Рµ РіРѕСЂРµ РЅР° РЅРµР±РµС‚Рѕ , С‰Рѕ Рµ РґРѕР»Сѓ РЅР° Р·РµРјСЏС‚Р° Рё С‰Рѕ Рµ РІСЉРІ РІРѕРґР°С‚Р° РїРѕРґ Р·РµРјСЏС‚Р°, РЅРµ РёРј СЃРµ РєР»Р°РЅСЏР№ Рё РЅРµ РёРј СЃР»СѓР¶Рё.'] ])
+   +row_(va,[['',' 3.'],['','РќРµ РёР·РіРѕРІР°СЂСЏР№ РЅР°РїСЂР°Р·РЅРѕ РёРјРµС‚Рѕ РЅР° Р“РѕСЃРїРѕРґР°, С‚РІРѕСЏ Р‘РѕРі.'] ])
+   +row_(va,[['',' 4.'],['','РџРѕРјРЅРё СЃСЉР±РѕС‚РЅРёСЏ РґРµРЅ<sup><font color=\'lime\'>*</font></sup>, Р·Р° РґР° РіРѕ СЃРІРµС‚РёС€: С€РµСЃС‚ РґРµРЅР° СЂР°Р±РѕС‚Рё Рё РІСЉСЂС€Рё РІ С‚СЏС… РІСЃРёС‡РєРёС‚Рµ СЃРё СЂР°Р±РѕС‚Рё; Р° СЃРµРґРјРёСЏС‚ РґРµРЅ Рµ СЃСЉР±РѕС‚Р° РЅР° Р“РѕСЃРїРѕРґР°, С‚РІРѕСЏ Р‘РѕРі.'] ])
+   +row_(va,[['',' 5.'],['','РџРѕС‡РёС‚Р°Р№ Р±Р°С‰Р° СЃРё Рё РјР°Р№РєР° СЃРё, Р·Р° РґР° С‚Рё Р±СЉРґРµ РґРѕР±СЂРµ Рё РґР° Р¶РёРІРµРµС€ РґСЉР»РіРѕ РЅР° Р·РµРјСЏС‚Р°.'] ])
+   +row_(va,[['',' 6.'],['','РќРµ СѓР±РёРІР°Р№.'         ] ])
+   +row_(va,[['',' 7.'],['','РќРµ РїСЂРµР»СЋР±РѕРґРµР№СЃС‚РІР°Р№.'] ])
+   +row_(va,[['',' 8.'],['','РќРµ РєСЂР°РґРё.'          ] ])
+   +row_(va,[['',' 9.'],['','РќРµ Р»СЉР¶РµСЃРІРёРґРµС‚РµР»СЃС‚РІР°Р№ РїСЂРѕС‚РёРІ Р±Р»РёР¶РЅРёСЏ СЃРё.' ] ])
+   +row_(va,[['','10.'],['','РќРµ РїРѕР¶РµР»Р°РІР°Р№ РґРѕРјР° РЅР° Р±Р»РёР¶РЅРёСЏ СЃРё; РЅРµ РїРѕР¶РµР»Р°РІР°Р№ Р¶РµРЅР°С‚Р° РЅР° Р±Р»РёР¶РЅРёСЏ СЃРё; РЅРёС‚Рѕ РЅРёРІР°С‚Р° РјСѓ; РЅРёС‚Рѕ СЂРѕР±Р° РјСѓ; РЅРё СЂРѕР±РёРЅСЏС‚Р° РјСѓ; РЅРё РІРѕР»Р° РјСѓ; РЅРё РѕСЃРµР»Р° РјСѓ; РЅРёС‚Рѕ РЅСЏРєР°РєСЉРІ РЅРµРіРѕРІ РґРѕР±РёС‚СЉРє - РЅРёС‰Рѕ, РєРѕРµС‚Рѕ Рµ РЅР° Р±Р»РёР¶РЅРёСЏ С‚Рё.'] ])
   ])
 +'<font size="2" color="gold">'
-+'<sup>* </sup> (За християните още от апостолско време това е'
-+' денят на Христовото Възкресение - неделя)</font></font>'
++'<sup>* </sup> (Р—Р° С…СЂРёСЃС‚РёСЏРЅРёС‚Рµ РѕС‰Рµ РѕС‚ Р°РїРѕСЃС‚РѕР»СЃРєРѕ РІСЂРµРјРµ С‚РѕРІР° Рµ'
++' РґРµРЅСЏС‚ РЅР° РҐСЂРёСЃС‚РѕРІРѕС‚Рѕ Р’СЉР·РєСЂРµСЃРµРЅРёРµ - РЅРµРґРµР»СЏ)</font></font>'
   return html
 }//-----------------
 function pg_FaithSym(){   //+ 'NT-FaithSymbol'
 var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
-  +htm_(['span',' id="bk"','<center>† Символът на вярата</center>'])
+  +htm_(['span',' id="bk"','<center>вЂ  РЎРёРјРІРѕР»СЉС‚ РЅР° РІСЏСЂР°С‚Р°</center>'])
   +htm_(['table',' cellpadding="5" cellspacing="3" border="0"',
-      row_(va,[['', 1.],['','Вярвам в един Бог Отец, Вседържител, Творец на небето и земята, на всичко видимо и невидимо.']])
-     +row_(va,[['', 2.],['','И в един Господ Иисус Христос, Сина Божий, Единородния, Който е роден от Отца преди всички векове; Светлина от Светлина; Бог истинен от Бог истинен, роден, несътворен, единосъщен с Отца, чрез когото всичко е станало.']])
-     +row_(va,[['', 3.],['','Който заради нас, човеците, и заради нашето спасение слезе от небесата и се въплъти от Духа Светаго и Дева Мария и стана човек.']])
-     +row_(va,[['', 4.],['','И бе разпнат за нас при Понтия Пилата, и страда, и бе погребан.']])
-     +row_(va,[['', 5.],['','И възкръсна в третия ден, според Писанията.']])
-     +row_(va,[['', 6.],['','И възлезе на небесата и седи отдясно на Отца.']])
-     +row_(va,[['', 7.],['','И пак ще дойде със слава да съди живи и мъртви и царството Му не ще има край.']])
-     +row_(va,[['', 8.],['','И в Духа Светаго, Господа, Животворящия, Който от Отца изхожда, Комуто се покланяме и Го славим наравно с Отца и Сина, и Който е говорил чрез пророците.']])
-     +row_(va,[['', 9.],['','В една света, вселенска и апостолска Църква.']])
-     +row_(va,[['',10.],['','Изповядвам едно кръщение за опрощаване на греховете.']])
-     +row_(va,[['',11.],['','Чакам възкресение на мъртвите.']])
-     +row_(va,[['',12.],['','И живот в бъдещия век! Амин!']])
+      row_(va,[['', 1.],['','Р’СЏСЂРІР°Рј РІ РµРґРёРЅ Р‘РѕРі РћС‚РµС†, Р’СЃРµРґСЉСЂР¶РёС‚РµР», РўРІРѕСЂРµС† РЅР° РЅРµР±РµС‚Рѕ Рё Р·РµРјСЏС‚Р°, РЅР° РІСЃРёС‡РєРѕ РІРёРґРёРјРѕ Рё РЅРµРІРёРґРёРјРѕ.']])
+     +row_(va,[['', 2.],['','Р РІ РµРґРёРЅ Р“РѕСЃРїРѕРґ РРёСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ, РЎРёРЅР° Р‘РѕР¶РёР№, Р•РґРёРЅРѕСЂРѕРґРЅРёСЏ, РљРѕР№С‚Рѕ Рµ СЂРѕРґРµРЅ РѕС‚ РћС‚С†Р° РїСЂРµРґРё РІСЃРёС‡РєРё РІРµРєРѕРІРµ; РЎРІРµС‚Р»РёРЅР° РѕС‚ РЎРІРµС‚Р»РёРЅР°; Р‘РѕРі РёСЃС‚РёРЅРµРЅ РѕС‚ Р‘РѕРі РёСЃС‚РёРЅРµРЅ, СЂРѕРґРµРЅ, РЅРµСЃСЉС‚РІРѕСЂРµРЅ, РµРґРёРЅРѕСЃСЉС‰РµРЅ СЃ РћС‚С†Р°, С‡СЂРµР· РєРѕРіРѕС‚Рѕ РІСЃРёС‡РєРѕ Рµ СЃС‚Р°РЅР°Р»Рѕ.']])
+     +row_(va,[['', 3.],['','РљРѕР№С‚Рѕ Р·Р°СЂР°РґРё РЅР°СЃ, С‡РѕРІРµС†РёС‚Рµ, Рё Р·Р°СЂР°РґРё РЅР°С€РµС‚Рѕ СЃРїР°СЃРµРЅРёРµ СЃР»РµР·Рµ РѕС‚ РЅРµР±РµСЃР°С‚Р° Рё СЃРµ РІСЉРїР»СЉС‚Рё РѕС‚ Р”СѓС…Р° РЎРІРµС‚Р°РіРѕ Рё Р”РµРІР° РњР°СЂРёСЏ Рё СЃС‚Р°РЅР° С‡РѕРІРµРє.']])
+     +row_(va,[['', 4.],['','Р Р±Рµ СЂР°Р·РїРЅР°С‚ Р·Р° РЅР°СЃ РїСЂРё РџРѕРЅС‚РёСЏ РџРёР»Р°С‚Р°, Рё СЃС‚СЂР°РґР°, Рё Р±Рµ РїРѕРіСЂРµР±Р°РЅ.']])
+     +row_(va,[['', 5.],['','Р РІСЉР·РєСЂСЉСЃРЅР° РІ С‚СЂРµС‚РёСЏ РґРµРЅ, СЃРїРѕСЂРµРґ РџРёСЃР°РЅРёСЏС‚Р°.']])
+     +row_(va,[['', 6.],['','Р РІСЉР·Р»РµР·Рµ РЅР° РЅРµР±РµСЃР°С‚Р° Рё СЃРµРґРё РѕС‚РґСЏСЃРЅРѕ РЅР° РћС‚С†Р°.']])
+     +row_(va,[['', 7.],['','Р РїР°Рє С‰Рµ РґРѕР№РґРµ СЃСЉСЃ СЃР»Р°РІР° РґР° СЃСЉРґРё Р¶РёРІРё Рё РјСЉСЂС‚РІРё Рё С†Р°СЂСЃС‚РІРѕС‚Рѕ РњСѓ РЅРµ С‰Рµ РёРјР° РєСЂР°Р№.']])
+     +row_(va,[['', 8.],['','Р РІ Р”СѓС…Р° РЎРІРµС‚Р°РіРѕ, Р“РѕСЃРїРѕРґР°, Р–РёРІРѕС‚РІРѕСЂСЏС‰РёСЏ, РљРѕР№С‚Рѕ РѕС‚ РћС‚С†Р° РёР·С…РѕР¶РґР°, РљРѕРјСѓС‚Рѕ СЃРµ РїРѕРєР»Р°РЅСЏРјРµ Рё Р“Рѕ СЃР»Р°РІРёРј РЅР°СЂР°РІРЅРѕ СЃ РћС‚С†Р° Рё РЎРёРЅР°, Рё РљРѕР№С‚Рѕ Рµ РіРѕРІРѕСЂРёР» С‡СЂРµР· РїСЂРѕСЂРѕС†РёС‚Рµ.']])
+     +row_(va,[['', 9.],['','Р’ РµРґРЅР° СЃРІРµС‚Р°, РІСЃРµР»РµРЅСЃРєР° Рё Р°РїРѕСЃС‚РѕР»СЃРєР° Р¦СЉСЂРєРІР°.']])
+     +row_(va,[['',10.],['','РР·РїРѕРІСЏРґРІР°Рј РµРґРЅРѕ РєСЂСЉС‰РµРЅРёРµ Р·Р° РѕРїСЂРѕС‰Р°РІР°РЅРµ РЅР° РіСЂРµС…РѕРІРµС‚Рµ.']])
+     +row_(va,[['',11.],['','Р§Р°РєР°Рј РІСЉР·РєСЂРµСЃРµРЅРёРµ РЅР° РјСЉСЂС‚РІРёС‚Рµ.']])
+     +row_(va,[['',12.],['','Р Р¶РёРІРѕС‚ РІ Р±СЉРґРµС‰РёСЏ РІРµРє! РђРјРёРЅ!']])
     ]) 
   +'</FONT><font size="2" color="gold"><sup>* </sup>'
-  +'Окончателно съставен от Светите отци на 7-мия Вселенски събор в Никея през 787г<br>'
+  +'РћРєРѕРЅС‡Р°С‚РµР»РЅРѕ СЃСЉСЃС‚Р°РІРµРЅ РѕС‚ РЎРІРµС‚РёС‚Рµ РѕС‚С†Рё РЅР° 7-РјРёСЏ Р’СЃРµР»РµРЅСЃРєРё СЃСЉР±РѕСЂ РІ РќРёРєРµСЏ РїСЂРµР· 787Рі<br>'
   +'</font>'
   return html
 }//-----------------
 function pg_beatitudes(){ //+ 'NT-beatitudes' 
 var va=' valign="top"'
-var html='<FONT face="Tahoma" size="4"><a NAME="Блаженствата"></a>'
+var html='<FONT face="Tahoma" size="4"><a NAME="Р‘Р»Р°Р¶РµРЅСЃС‚РІР°С‚Р°"></a>'
   +htm_(['table','',
-     row_('',[[va,'<span id="bk"><center>† Блаженствата</center></span>']])
-    +row_('',[[va,biblink('NT.Мат.05.03-12') +biblink('NT.Лука.06.20-23')]])   
-    +row_('',[[va,'Блажени бедните духом, защото тяхно е царството небесно.']])
-    +row_('',[[va,'Блажени плачещите, защото те ще се утешат.']])
-    +row_('',[[va,'Блажени кротките, защото те ще наследят земята.']])
-    +row_('',[[va,'Блажени гладните и жадните за правда, защото те ще се наситят.']])
-    +row_('',[[va,'Блажени милостивите, защото те ще бъдат помилувани.']])
-    +row_('',[[va,'Блажени чистите по сърце, защото те ще видят Бога.']])
-    +row_('',[[va,'Блажени миротворците, защото те ще се нарекат синове Божии.']])
-    +row_('',[[va,'Блажени изгонените заради правда, защото тяхно е царството небесно.']])
-    +row_('',[[va,'Блажени сте вие, когато ви похулят и изгонят, и кажат против вас лъжовно каква и да е лоша дума заради Мене.']])
-    +row_('',[[va,'Радвайте се и се веселете, защото голяма е наградата ви на небесата; тъй бяха гонени и пророците, които бяха преди вас.']])
+     row_('',[[va,'<span id="bk"><center>вЂ  Р‘Р»Р°Р¶РµРЅСЃС‚РІР°С‚Р°</center></span>']])
+    +row_('',[[va,biblink('NT.РњР°С‚.05.03-12') +biblink('NT.Р›СѓРєР°.06.20-23')]])   
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё Р±РµРґРЅРёС‚Рµ РґСѓС…РѕРј, Р·Р°С‰РѕС‚Рѕ С‚СЏС…РЅРѕ Рµ С†Р°СЂСЃС‚РІРѕС‚Рѕ РЅРµР±РµСЃРЅРѕ.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РїР»Р°С‡РµС‰РёС‚Рµ, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ СЃРµ СѓС‚РµС€Р°С‚.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РєСЂРѕС‚РєРёС‚Рµ, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ РЅР°СЃР»РµРґСЏС‚ Р·РµРјСЏС‚Р°.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РіР»Р°РґРЅРёС‚Рµ Рё Р¶Р°РґРЅРёС‚Рµ Р·Р° РїСЂР°РІРґР°, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ СЃРµ РЅР°СЃРёС‚СЏС‚.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РјРёР»РѕСЃС‚РёРІРёС‚Рµ, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ Р±СЉРґР°С‚ РїРѕРјРёР»СѓРІР°РЅРё.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё С‡РёСЃС‚РёС‚Рµ РїРѕ СЃСЉСЂС†Рµ, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ РІРёРґСЏС‚ Р‘РѕРіР°.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РјРёСЂРѕС‚РІРѕСЂС†РёС‚Рµ, Р·Р°С‰РѕС‚Рѕ С‚Рµ С‰Рµ СЃРµ РЅР°СЂРµРєР°С‚ СЃРёРЅРѕРІРµ Р‘РѕР¶РёРё.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё РёР·РіРѕРЅРµРЅРёС‚Рµ Р·Р°СЂР°РґРё РїСЂР°РІРґР°, Р·Р°С‰РѕС‚Рѕ С‚СЏС…РЅРѕ Рµ С†Р°СЂСЃС‚РІРѕС‚Рѕ РЅРµР±РµСЃРЅРѕ.']])
+    +row_('',[[va,'Р‘Р»Р°Р¶РµРЅРё СЃС‚Рµ РІРёРµ, РєРѕРіР°С‚Рѕ РІРё РїРѕС…СѓР»СЏС‚ Рё РёР·РіРѕРЅСЏС‚, Рё РєР°Р¶Р°С‚ РїСЂРѕС‚РёРІ РІР°СЃ Р»СЉР¶РѕРІРЅРѕ РєР°РєРІР° Рё РґР° Рµ Р»РѕС€Р° РґСѓРјР° Р·Р°СЂР°РґРё РњРµРЅРµ.']])
+    +row_('',[[va,'Р Р°РґРІР°Р№С‚Рµ СЃРµ Рё СЃРµ РІРµСЃРµР»РµС‚Рµ, Р·Р°С‰РѕС‚Рѕ РіРѕР»СЏРјР° Рµ РЅР°РіСЂР°РґР°С‚Р° РІРё РЅР° РЅРµР±РµСЃР°С‚Р°; С‚СЉР№ Р±СЏС…Р° РіРѕРЅРµРЅРё Рё РїСЂРѕСЂРѕС†РёС‚Рµ, РєРѕРёС‚Рѕ Р±СЏС…Р° РїСЂРµРґРё РІР°СЃ.']])
   ])
   +'</FONT>'
   return html
@@ -568,68 +568,68 @@ function pg_prayers(){    //+ 'NT-prayers'
 var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
   +htm_(['table','',row_('',[[va,''
-   +'<span id="bk"><center>† Молитви</center></span>'
+   +'<span id="bk"><center>вЂ  РњРѕР»РёС‚РІРё</center></span>'
    
-   +'<span id="ch"><center>Свет е Господ-Саваот</center></span>'
-   +biblink('OT.Ис.6.3')
-   +'<br>„Свет, свет, свет е Господ-Саваот!'
-   +'<br>Пълни са небето и земята с Твоята слава!”'
+   +'<span id="ch"><center>РЎРІРµС‚ Рµ Р“РѕСЃРїРѕРґ-РЎР°РІР°РѕС‚</center></span>'
+   +biblink('OT.РСЃ.6.3')
+   +'<br>вЂћРЎРІРµС‚, СЃРІРµС‚, СЃРІРµС‚ Рµ Р“РѕСЃРїРѕРґ-РЎР°РІР°РѕС‚!'
+   +'<br>РџСЉР»РЅРё СЃР° РЅРµР±РµС‚Рѕ Рё Р·РµРјСЏС‚Р° СЃ РўРІРѕСЏС‚Р° СЃР»Р°РІР°!вЂќ'
    
-   +'<span id="ch"><center>Господнята молитва</center></span>'
-   +biblink('NT.Мат.6.9-13')+biblink('NT.Лука.11.2-4')
-   +'<br>„Отче наш, Който си на небесата!'
-   +'<br>Да се свети Твоето име; да дойде Твоето царство;'
-   +'<br>да бъде Твоята воля, както на небето тъй и на земята;'
-   +'<br>насъщният ни хляб дай ни днес; и прости нам дълговете ни,'
-   +'<br>както и ние прощаваме на длъжниците си;'
-   +'<br>и не въведи нас в изкушение, но избави ни от лукавия;'
-   +'<br>защото Твое е царството, и силата, и славата вовеки.'
-   +'<br>Амин!”'
+   +'<span id="ch"><center>Р“РѕСЃРїРѕРґРЅСЏС‚Р° РјРѕР»РёС‚РІР°</center></span>'
+   +biblink('NT.РњР°С‚.6.9-13')+biblink('NT.Р›СѓРєР°.11.2-4')
+   +'<br>вЂћРћС‚С‡Рµ РЅР°С€, РљРѕР№С‚Рѕ СЃРё РЅР° РЅРµР±РµСЃР°С‚Р°!'
+   +'<br>Р”Р° СЃРµ СЃРІРµС‚Рё РўРІРѕРµС‚Рѕ РёРјРµ; РґР° РґРѕР№РґРµ РўРІРѕРµС‚Рѕ С†Р°СЂСЃС‚РІРѕ;'
+   +'<br>РґР° Р±СЉРґРµ РўРІРѕСЏС‚Р° РІРѕР»СЏ, РєР°РєС‚Рѕ РЅР° РЅРµР±РµС‚Рѕ С‚СЉР№ Рё РЅР° Р·РµРјСЏС‚Р°;'
+   +'<br>РЅР°СЃСЉС‰РЅРёСЏС‚ РЅРё С…Р»СЏР± РґР°Р№ РЅРё РґРЅРµСЃ; Рё РїСЂРѕСЃС‚Рё РЅР°Рј РґСЉР»РіРѕРІРµС‚Рµ РЅРё,'
+   +'<br>РєР°РєС‚Рѕ Рё РЅРёРµ РїСЂРѕС‰Р°РІР°РјРµ РЅР° РґР»СЉР¶РЅРёС†РёС‚Рµ СЃРё;'
+   +'<br>Рё РЅРµ РІСЉРІРµРґРё РЅР°СЃ РІ РёР·РєСѓС€РµРЅРёРµ, РЅРѕ РёР·Р±Р°РІРё РЅРё РѕС‚ Р»СѓРєР°РІРёСЏ;'
+   +'<br>Р·Р°С‰РѕС‚Рѕ РўРІРѕРµ Рµ С†Р°СЂСЃС‚РІРѕС‚Рѕ, Рё СЃРёР»Р°С‚Р°, Рё СЃР»Р°РІР°С‚Р° РІРѕРІРµРєРё.'
+   +'<br>РђРјРёРЅ!вЂќ'
 
-   +'<span id="ch"><center>Утринна молитва</center></span>'
-   +'„Боже, благодаря Ти, че ме запази така милостиво и през тази нощ.'
-   +'Помогни ми да не те наскърбя с никакъв грях и да изживея днешния ден '
-   +'угодно на Теб и спасително за мен.'
-   +'<br>Амин!”'
+   +'<span id="ch"><center>РЈС‚СЂРёРЅРЅР° РјРѕР»РёС‚РІР°</center></span>'
+   +'вЂћР‘РѕР¶Рµ, Р±Р»Р°РіРѕРґР°СЂСЏ РўРё, С‡Рµ РјРµ Р·Р°РїР°Р·Рё С‚Р°РєР° РјРёР»РѕСЃС‚РёРІРѕ Рё РїСЂРµР· С‚Р°Р·Рё РЅРѕС‰.'
+   +'РџРѕРјРѕРіРЅРё РјРё РґР° РЅРµ С‚Рµ РЅР°СЃРєСЉСЂР±СЏ СЃ РЅРёРєР°РєСЉРІ РіСЂСЏС… Рё РґР° РёР·Р¶РёРІРµСЏ РґРЅРµС€РЅРёСЏ РґРµРЅ '
+   +'СѓРіРѕРґРЅРѕ РЅР° РўРµР± Рё СЃРїР°СЃРёС‚РµР»РЅРѕ Р·Р° РјРµРЅ.'
+   +'<br>РђРјРёРЅ!вЂќ'
 
-   +'<span id="ch"><center>Вечерна молитва</center></span>'
-   +'„Господи, Боже наш, като благ и човеколюбец,'
-   +'прости ми каквото съгреших този ден с думи, дела и помисъл.'
-   +'Дарувай ми мирен и спокоен сън. Прати Твоя Ангел пазител'
-   +'да ни закриля и пази от всяко зло, защото Ти си пазител на душите и телата ни,'
-   +'и на Теб - Отца, Сина и Светия Дух, въздаваме слава, сега и всякога, и во веки веков.'
-   +'<br>Амин!”'
+   +'<span id="ch"><center>Р’РµС‡РµСЂРЅР° РјРѕР»РёС‚РІР°</center></span>'
+   +'вЂћР“РѕСЃРїРѕРґРё, Р‘РѕР¶Рµ РЅР°С€, РєР°С‚Рѕ Р±Р»Р°Рі Рё С‡РѕРІРµРєРѕР»СЋР±РµС†,'
+   +'РїСЂРѕСЃС‚Рё РјРё РєР°РєРІРѕС‚Рѕ СЃСЉРіСЂРµС€РёС… С‚РѕР·Рё РґРµРЅ СЃ РґСѓРјРё, РґРµР»Р° Рё РїРѕРјРёСЃСЉР».'
+   +'Р”Р°СЂСѓРІР°Р№ РјРё РјРёСЂРµРЅ Рё СЃРїРѕРєРѕРµРЅ СЃСЉРЅ. РџСЂР°С‚Рё РўРІРѕСЏ РђРЅРіРµР» РїР°Р·РёС‚РµР»'
+   +'РґР° РЅРё Р·Р°РєСЂРёР»СЏ Рё РїР°Р·Рё РѕС‚ РІСЃСЏРєРѕ Р·Р»Рѕ, Р·Р°С‰РѕС‚Рѕ РўРё СЃРё РїР°Р·РёС‚РµР» РЅР° РґСѓС€РёС‚Рµ Рё С‚РµР»Р°С‚Р° РЅРё,'
+   +'Рё РЅР° РўРµР± - РћС‚С†Р°, РЎРёРЅР° Рё РЎРІРµС‚РёСЏ Р”СѓС…, РІСЉР·РґР°РІР°РјРµ СЃР»Р°РІР°, СЃРµРіР° Рё РІСЃСЏРєРѕРіР°, Рё РІРѕ РІРµРєРё РІРµРєРѕРІ.'
+   +'<br>РђРјРёРЅ!вЂќ'
 
-   +'<span id="ch"><center>Молитва преди хранене</center></span>'
-   +'„Благослови, Господи, ястието и питието на Твоите чеда, '
-   +'защото си свят сега и винаги и във вечни векове.'
-   +'<br>Амин!”'
+   +'<span id="ch"><center>РњРѕР»РёС‚РІР° РїСЂРµРґРё С…СЂР°РЅРµРЅРµ</center></span>'
+   +'вЂћР‘Р»Р°РіРѕСЃР»РѕРІРё, Р“РѕСЃРїРѕРґРё, СЏСЃС‚РёРµС‚Рѕ Рё РїРёС‚РёРµС‚Рѕ РЅР° РўРІРѕРёС‚Рµ С‡РµРґР°, '
+   +'Р·Р°С‰РѕС‚Рѕ СЃРё СЃРІСЏС‚ СЃРµРіР° Рё РІРёРЅР°РіРё Рё РІСЉРІ РІРµС‡РЅРё РІРµРєРѕРІРµ.'
+   +'<br>РђРјРёРЅ!вЂќ'
 
-   +'<span id="ch"><center>Молитва след хранене</center></span>'
-   +'„Благодарим Ти, Христе Боже наш, че ни насити с Твоите земни блага.'
-   +'Не ни лишавай и от Небесното си царство!'
-   +'<br>Амин!”'
+   +'<span id="ch"><center>РњРѕР»РёС‚РІР° СЃР»РµРґ С…СЂР°РЅРµРЅРµ</center></span>'
+   +'вЂћР‘Р»Р°РіРѕРґР°СЂРёРј РўРё, РҐСЂРёСЃС‚Рµ Р‘РѕР¶Рµ РЅР°С€, С‡Рµ РЅРё РЅР°СЃРёС‚Рё СЃ РўРІРѕРёС‚Рµ Р·РµРјРЅРё Р±Р»Р°РіР°.'
+   +'РќРµ РЅРё Р»РёС€Р°РІР°Р№ Рё РѕС‚ РќРµР±РµСЃРЅРѕС‚Рѕ СЃРё С†Р°СЂСЃС‚РІРѕ!'
+   +'<br>РђРјРёРЅ!вЂќ'
 
-// +'<span id="ch"><center>Молитва преди работа</center></span> 
-// +'<span id="ch"><center>Молитва след работа</center></span> 
-// +'<span id="ch"><center>Молитва преди учение</center></span> 
-// +'<span id="ch"><center>Молитва след учение</center></span> 
+// +'<span id="ch"><center>РњРѕР»РёС‚РІР° РїСЂРµРґРё СЂР°Р±РѕС‚Р°</center></span> 
+// +'<span id="ch"><center>РњРѕР»РёС‚РІР° СЃР»РµРґ СЂР°Р±РѕС‚Р°</center></span> 
+// +'<span id="ch"><center>РњРѕР»РёС‚РІР° РїСЂРµРґРё СѓС‡РµРЅРёРµ</center></span> 
+// +'<span id="ch"><center>РњРѕР»РёС‚РІР° СЃР»РµРґ СѓС‡РµРЅРёРµ</center></span> 
 
-   +'<span id="ch"><center>Вечерна молитва към ангела-пазител</center></span> '
-   +'„Ангеле Христов, мой свят пазител и покровител'
-   +'на душата и тялото ми,'
-   +'прости ми всичко, каквото днес съм съгрешил,'
-   +'и ме избави от всяко лукавство на преследващия ме враг,'
-   +'тъй че с никакъв грях да не разгневя моя Бог.'
-   +'Моли се за мене грешния и недостоен раб,'
-   +'та да ме направиш достоен за благостта и милостта'
-   +'на Пресвета Троица, на Майката на моя Господ, Иисус Христос'
-   +'и на всички светии. Амин”.'
+   +'<span id="ch"><center>Р’РµС‡РµСЂРЅР° РјРѕР»РёС‚РІР° РєСЉРј Р°РЅРіРµР»Р°-РїР°Р·РёС‚РµР»</center></span> '
+   +'вЂћРђРЅРіРµР»Рµ РҐСЂРёСЃС‚РѕРІ, РјРѕР№ СЃРІСЏС‚ РїР°Р·РёС‚РµР» Рё РїРѕРєСЂРѕРІРёС‚РµР»'
+   +'РЅР° РґСѓС€Р°С‚Р° Рё С‚СЏР»РѕС‚Рѕ РјРё,'
+   +'РїСЂРѕСЃС‚Рё РјРё РІСЃРёС‡РєРѕ, РєР°РєРІРѕС‚Рѕ РґРЅРµСЃ СЃСЉРј СЃСЉРіСЂРµС€РёР»,'
+   +'Рё РјРµ РёР·Р±Р°РІРё РѕС‚ РІСЃСЏРєРѕ Р»СѓРєР°РІСЃС‚РІРѕ РЅР° РїСЂРµСЃР»РµРґРІР°С‰РёСЏ РјРµ РІСЂР°Рі,'
+   +'С‚СЉР№ С‡Рµ СЃ РЅРёРєР°РєСЉРІ РіСЂСЏС… РґР° РЅРµ СЂР°Р·РіРЅРµРІСЏ РјРѕСЏ Р‘РѕРі.'
+   +'РњРѕР»Рё СЃРµ Р·Р° РјРµРЅРµ РіСЂРµС€РЅРёСЏ Рё РЅРµРґРѕСЃС‚РѕРµРЅ СЂР°Р±,'
+   +'С‚Р° РґР° РјРµ РЅР°РїСЂР°РІРёС€ РґРѕСЃС‚РѕРµРЅ Р·Р° Р±Р»Р°РіРѕСЃС‚С‚Р° Рё РјРёР»РѕСЃС‚С‚Р°'
+   +'РЅР° РџСЂРµСЃРІРµС‚Р° РўСЂРѕРёС†Р°, РЅР° РњР°Р№РєР°С‚Р° РЅР° РјРѕСЏ Р“РѕСЃРїРѕРґ, РРёСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ'
+   +'Рё РЅР° РІСЃРёС‡РєРё СЃРІРµС‚РёРё. РђРјРёРЅвЂќ.'
 
-// +'<span id="ch"><center>Хваление при тържественият Вход Господен в Йерусалим: </center></span><br>'
-// +biblink('NT.Мат.21.9')          // Марк.11:1-10;
-// +biblink('NT.Лука.19.37-38')     // Лука 19-28-38;
-// +biblink('NT.Иоан.12.12-13')     // Иоан.12:12-19.
+// +'<span id="ch"><center>РҐРІР°Р»РµРЅРёРµ РїСЂРё С‚СЉСЂР¶РµСЃС‚РІРµРЅРёСЏС‚ Р’С…РѕРґ Р“РѕСЃРїРѕРґРµРЅ РІ Р™РµСЂСѓСЃР°Р»РёРј: </center></span><br>'
+// +biblink('NT.РњР°С‚.21.9')          // РњР°СЂРє.11:1-10;
+// +biblink('NT.Р›СѓРєР°.19.37-38')     // Р›СѓРєР° 19-28-38;
+// +biblink('NT.РРѕР°РЅ.12.12-13')     // РРѕР°РЅ.12:12-19.
     ]])
   ])
   +'</FONT>'
@@ -638,20 +638,20 @@ var html='<FONT face="Tahoma" size="4">'
 function pg_album_icons(){//+ 'ikons-album'    err:?
 {// === globals, some loaded from albumfile
   var albumfile="scr/album-ikoni.js" 
-  //  f=[]; // масив за имена .jpg и описания
+  //  f=[]; // РјР°СЃРёРІ Р·Р° РёРјРµРЅР° .jpg Рё РѕРїРёСЃР°РЅРёСЏ
   var fname=0, fext=1, fsize=2, fdate=3, ftime=4, fatr=5, desc=6; 
   //  root=''//pathicons
-  //  albumdir='' // pathicons+"album/";/* снимки за преглед */ 
-  //  scandir ='' // pathicons+"scan/"; /* сканирани снимки - големи */
+  //  albumdir='' // pathicons+"album/";/* СЃРЅРёРјРєРё Р·Р° РїСЂРµРіР»РµРґ */ 
+  //  scandir ='' // pathicons+"scan/"; /* СЃРєР°РЅРёСЂР°РЅРё СЃРЅРёРјРєРё - РіРѕР»РµРјРё */
   //  scanext="tif";
   //  head='', foot=''
   var allfiledetails=false // true,false
   var eot='<br>'+eol
-  // *** за albumfile, albumdir, scandir: името на файла е в текущата папка или със пълен път    
-  // *** ако името включва път обърнете \ във / или го повторете \\ 
-  // *** ако името на файла е със пълен път трябва да почва с file:// или http://
+  // *** Р·Р° albumfile, albumdir, scandir: РёРјРµС‚Рѕ РЅР° С„Р°Р№Р»Р° Рµ РІ С‚РµРєСѓС‰Р°С‚Р° РїР°РїРєР° РёР»Рё СЃСЉСЃ РїСЉР»РµРЅ РїСЉС‚    
+  // *** Р°РєРѕ РёРјРµС‚Рѕ РІРєР»СЋС‡РІР° РїСЉС‚ РѕР±СЉСЂРЅРµС‚Рµ \ РІСЉРІ / РёР»Рё РіРѕ РїРѕРІС‚РѕСЂРµС‚Рµ \\ 
+  // *** Р°РєРѕ РёРјРµС‚Рѕ РЅР° С„Р°Р№Р»Р° Рµ СЃСЉСЃ РїСЉР»РµРЅ РїСЉС‚ С‚СЂСЏР±РІР° РґР° РїРѕС‡РІР° СЃ file:// РёР»Рё http://
 }// ===   
-  function albumShow(f){// показва всички файлове и описания от масив f[] в таблица
+  function albumShow(f){// РїРѕРєР°Р·РІР° РІСЃРёС‡РєРё С„Р°Р№Р»РѕРІРµ Рё РѕРїРёСЃР°РЅРёСЏ РѕС‚ РјР°СЃРёРІ f[] РІ С‚Р°Р±Р»РёС†Р°
      var s='',buf;cols=2;v=0 //  width="'+row2wid+'"
      s+='<table cellpadding="5" cellspacing="0"'
        +' style="background-color: #37371E;"'
@@ -682,9 +682,9 @@ function pg_album_icons(){//+ 'ikons-album'    err:?
   }// ---  
 var html='<FONT face="Tahoma" size="4">'
   +head+br
-  +biblink('NT.Иоан.14.6')+'<br>'
-     +'Аз съм пътят и истината и животът;'+'<br>'
-     +'никой не дохожда при Отца, освен чрез Мене.'+'<br>'
+  +biblink('NT.РРѕР°РЅ.14.6')+'<br>'
+     +'РђР· СЃСЉРј РїСЉС‚СЏС‚ Рё РёСЃС‚РёРЅР°С‚Р° Рё Р¶РёРІРѕС‚СЉС‚;'+'<br>'
+     +'РЅРёРєРѕР№ РЅРµ РґРѕС…РѕР¶РґР° РїСЂРё РћС‚С†Р°, РѕСЃРІРµРЅ С‡СЂРµР· РњРµРЅРµ.'+'<br>'
   +albumShow(album)
   +'</FONT>'
   return html
@@ -692,65 +692,65 @@ var html='<FONT face="Tahoma" size="4">'
 
 function pg_theme_list(){ //+ 'themes'         err: show/hide sublist
 var va=' valign="top"'
-{var theme1=[['','',0,0,0],'групи Пророчества за идването на Исус Христос <br> и паралели в Новия завет' 
-  ,['OT','Бит' ,  3,14,15],' бъдещата победа над злото чрез жена - "нейното семе"' 
-  ,['OT','Бит' , 12, 1   ],' Иисус Христос ще произлезе от семето на Авраама'
-  ,['OT','Бит' , 12, 2, 3],' при второто позоваване на Авраама в земята Харан'
-  ,['NT','Мат' ,  1, 1   ],' родословието - изпълнението на пророчеството се упоменава в Евангелие от Матея и Лука'
-  ,['OT','Бит' , 17,19   ],' от семени Исаака произойдет Спаситель, т. е. от сына Авраама'
-  ,['OT','Чис' , 24,15,19],' Пророчество о том, что Спаситель произойдет от Иакова, 3-го из патриархов'
-  ,['OT','Бит' , 49, 8,10],' Господь произойдет от колена Иудова, от одного из детей Израиля. пророчество о Примирителе, скипетр отошел от колена Иуды когда воцарился над израильским народом Ирод Великий, который был по крови не израильтянин, не иудей, а идумеянин'
-  ,['OT','Ис'  ,  9, 7   ],' по происхождению Иисус Христос является наследником царя Давида, т. е. является давидидом.'
-  ,['NT','Лука',  1,30,33],'-'//Это почти дословный перифраз Ис.9.7' 
-  ,['OT','Мих' ,  4, 1   ],'за рождество Господне във Витлеем - пр. Михей -8в.'
-  ,['OT','Мих' ,  4, 6,7 ],'-'
-  ,['OT','Мих' ,  5, 2,4 ],'-'
-  ,['NT','Мат' ,  2, 4,6 ],'-'
-  ,['OT','Дан' ,  9,20,27],'удивителна точност за времето на рождество Господне. В древноста под "седмини" се разбирало период от 7г, 69 седмини са 483г (Артаксеркс# -458г)'
-  ,['OT','Ис'  ,  7,14   ],'Христос Спасител е от рода Давидов '
-  ,['OT','Иер' , 31,15,16],'избиване на младенците'
-  ,['OT','Осия', 11, 1   ],'типологическо сходство на ситуации - "Из Египта воззвал сына Моего"'
-  ,['OT','Мал' ,  3, 1   ],'приготвяне пътя на Господа, Ангелът на завета'
-  ,['NT','Мат' , 11, 9,10],'-'
-  ,['OT','Пс'  ,  2, 7   ],'Христос е Син Божи, думите са произнесени не на Иордан, а на пл. Фавор, от Бог Отец'
-  ,['OT','Ис'  ,  9, 1, 2],'Христос начнет проповедовать в Галилее'
-  ,['OT','Втор', 18,15   ],'Христос - особенный Пророк'
-  ,['OT','Втор', 34,10   ],'-'
-  ,['NT','Деян',  3,22   ],'-'
-  ,['OT','Ис'  , 61, 1, 2],'Господ Ме помаза да благовестя на бедни, благоприятната Господня година'
-  ,['NT','Лука',  4,21,22],'-'
-  ,['OT','Ис'  , 53, 3   ],'народ не принял Его '
-  ,['NT','Иоан',  1,11   ],'-'
-  ,['OT','Зах' ,  9, 9   ],'О торжественном входе Господа в Иерусалим'
-  ,['OT','Пс'  , 40,10   ],'О предательстве'
-  ,['OT','Зах' , 11,12   ],'О продаже за 30 сребреников'
-  ,['OT','Пс'  , 34,11   ],'пророчества о том, что на Христа будут лжесвидетельствовать; '
-  ,['OT','Ис'  , 53, 7   ],'О безгласии перед обвинителями'
-  ,['OT','Ис'  , 50, 6   ],'О поругании и оплевании Господа'
-  ,['OT','Пс'  , 34,19,20],'О неправедно враждующих на Господа'
-  ,['NT','Иоан', 15,24,25],'-'
-  ,['OT','Ис'  , 53, 5   ],'изъязвлен был за грехи наши и мучим за беззакония наши'
-  ,['NT','1Пет',  2,23,24],'-'
-  ,['OT','Ис'  , 53,12   ],'О причтении к злодеям'
-  ,['NT','Марк', 15,27,28],'-'
-  ,['OT','Зах' , 12,10   ],'о пронзении'
-  ,['NT','Иоан', 19,37   ],'-'
-  ,['OT','Пс'  , 21, 8,9 ],'О том, как над Господом ругались и поносили'
-  ,['NT','Мат' , 27,39,40],'-'
-  ,['OT','Пс'  , 68,22   ],'Об уксусе, который поднесли Господу'
-  ,['NT','Мат' , 27,34   ],'-'
-  ,['OT','Пс'  ,108, 4,5 ],'как Господь молился за врагов'
-  ,['NT','Лука', 23,34   ],'-'
-  ,['OT','Пс'  , 21,18,19],'О жребии, который бросали за одежде Иисуса Христа'
-  ,['OT','Пс'  , 33,21   ],'что кость Нового Агнца не была сокрушена. У ветхозаветного агнца кость не была сокрушена, так как он целиком запекался и съедался, а все остатки от священной трапезы сжигались. Это повторилось и с Новозаветным Агнцем, Который взял на себя грехи мира.'
-  ,['NT','Иоан', 19,36   ],'-'
-  ,['OT','Ис'  , 53, 9   ],'О погребении у богатого'
-  ,['NT','Мат' , 27,57   ],'-'
-  ,['OT','Пс'  , 15,10   ],'О Воскресении'
-  ,['NT','Деян',  2,25   ],'-'
-  ,['NT','Деян', 13,35   ],'-'
-  ,['OT','Пс'  , 67,19   ],'о Вознесении'
-  ,['NT','Еф'  ,  4, 7,10],'-'
+{var theme1=[['','',0,0,0],'РіСЂСѓРїРё РџСЂРѕСЂРѕС‡РµСЃС‚РІР° Р·Р° РёРґРІР°РЅРµС‚Рѕ РЅР° РСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ <br> Рё РїР°СЂР°Р»РµР»Рё РІ РќРѕРІРёСЏ Р·Р°РІРµС‚' 
+  ,['OT','Р‘РёС‚' ,  3,14,15],' Р±СЉРґРµС‰Р°С‚Р° РїРѕР±РµРґР° РЅР°Рґ Р·Р»РѕС‚Рѕ С‡СЂРµР· Р¶РµРЅР° - "РЅРµР№РЅРѕС‚Рѕ СЃРµРјРµ"' 
+  ,['OT','Р‘РёС‚' , 12, 1   ],' РРёСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ С‰Рµ РїСЂРѕРёР·Р»РµР·Рµ РѕС‚ СЃРµРјРµС‚Рѕ РЅР° РђРІСЂР°Р°РјР°'
+  ,['OT','Р‘РёС‚' , 12, 2, 3],' РїСЂРё РІС‚РѕСЂРѕС‚Рѕ РїРѕР·РѕРІР°РІР°РЅРµ РЅР° РђРІСЂР°Р°РјР° РІ Р·РµРјСЏС‚Р° РҐР°СЂР°РЅ'
+  ,['NT','РњР°С‚' ,  1, 1   ],' СЂРѕРґРѕСЃР»РѕРІРёРµС‚Рѕ - РёР·РїСЉР»РЅРµРЅРёРµС‚Рѕ РЅР° РїСЂРѕСЂРѕС‡РµСЃС‚РІРѕС‚Рѕ СЃРµ СѓРїРѕРјРµРЅР°РІР° РІ Р•РІР°РЅРіРµР»РёРµ РѕС‚ РњР°С‚РµСЏ Рё Р›СѓРєР°'
+  ,['OT','Р‘РёС‚' , 17,19   ],' РѕС‚ СЃРµРјРµРЅРё РСЃР°Р°РєР° РїСЂРѕРёР·РѕР№РґРµС‚ РЎРїР°СЃРёС‚РµР»СЊ, С‚. Рµ. РѕС‚ СЃС‹РЅР° РђРІСЂР°Р°РјР°'
+  ,['OT','Р§РёСЃ' , 24,15,19],' РџСЂРѕСЂРѕС‡РµСЃС‚РІРѕ Рѕ С‚РѕРј, С‡С‚Рѕ РЎРїР°СЃРёС‚РµР»СЊ РїСЂРѕРёР·РѕР№РґРµС‚ РѕС‚ РР°РєРѕРІР°, 3-РіРѕ РёР· РїР°С‚СЂРёР°СЂС…РѕРІ'
+  ,['OT','Р‘РёС‚' , 49, 8,10],' Р“РѕСЃРїРѕРґСЊ РїСЂРѕРёР·РѕР№РґРµС‚ РѕС‚ РєРѕР»РµРЅР° РСѓРґРѕРІР°, РѕС‚ РѕРґРЅРѕРіРѕ РёР· РґРµС‚РµР№ РР·СЂР°РёР»СЏ. РїСЂРѕСЂРѕС‡РµСЃС‚РІРѕ Рѕ РџСЂРёРјРёСЂРёС‚РµР»Рµ, СЃРєРёРїРµС‚СЂ РѕС‚РѕС€РµР» РѕС‚ РєРѕР»РµРЅР° РСѓРґС‹ РєРѕРіРґР° РІРѕС†Р°СЂРёР»СЃСЏ РЅР°Рґ РёР·СЂР°РёР»СЊСЃРєРёРј РЅР°СЂРѕРґРѕРј РСЂРѕРґ Р’РµР»РёРєРёР№, РєРѕС‚РѕСЂС‹Р№ Р±С‹Р» РїРѕ РєСЂРѕРІРё РЅРµ РёР·СЂР°РёР»СЊС‚СЏРЅРёРЅ, РЅРµ РёСѓРґРµР№, Р° РёРґСѓРјРµСЏРЅРёРЅ'
+  ,['OT','РСЃ'  ,  9, 7   ],' РїРѕ РїСЂРѕРёСЃС…РѕР¶РґРµРЅРёСЋ РРёСЃСѓСЃ РҐСЂРёСЃС‚РѕСЃ СЏРІР»СЏРµС‚СЃСЏ РЅР°СЃР»РµРґРЅРёРєРѕРј С†Р°СЂСЏ Р”Р°РІРёРґР°, С‚. Рµ. СЏРІР»СЏРµС‚СЃСЏ РґР°РІРёРґРёРґРѕРј.'
+  ,['NT','Р›СѓРєР°',  1,30,33],'-'//Р­С‚Рѕ РїРѕС‡С‚Рё РґРѕСЃР»РѕРІРЅС‹Р№ РїРµСЂРёС„СЂР°Р· РСЃ.9.7' 
+  ,['OT','РњРёС…' ,  4, 1   ],'Р·Р° СЂРѕР¶РґРµСЃС‚РІРѕ Р“РѕСЃРїРѕРґРЅРµ РІСЉРІ Р’РёС‚Р»РµРµРј - РїСЂ. РњРёС…РµР№ -8РІ.'
+  ,['OT','РњРёС…' ,  4, 6,7 ],'-'
+  ,['OT','РњРёС…' ,  5, 2,4 ],'-'
+  ,['NT','РњР°С‚' ,  2, 4,6 ],'-'
+  ,['OT','Р”Р°РЅ' ,  9,20,27],'СѓРґРёРІРёС‚РµР»РЅР° С‚РѕС‡РЅРѕСЃС‚ Р·Р° РІСЂРµРјРµС‚Рѕ РЅР° СЂРѕР¶РґРµСЃС‚РІРѕ Р“РѕСЃРїРѕРґРЅРµ. Р’ РґСЂРµРІРЅРѕСЃС‚Р° РїРѕРґ "СЃРµРґРјРёРЅРё" СЃРµ СЂР°Р·Р±РёСЂР°Р»Рѕ РїРµСЂРёРѕРґ РѕС‚ 7Рі, 69 СЃРµРґРјРёРЅРё СЃР° 483Рі (РђСЂС‚Р°РєСЃРµСЂРєСЃ# -458Рі)'
+  ,['OT','РСЃ'  ,  7,14   ],'РҐСЂРёСЃС‚РѕСЃ РЎРїР°СЃРёС‚РµР» Рµ РѕС‚ СЂРѕРґР° Р”Р°РІРёРґРѕРІ '
+  ,['OT','РРµСЂ' , 31,15,16],'РёР·Р±РёРІР°РЅРµ РЅР° РјР»Р°РґРµРЅС†РёС‚Рµ'
+  ,['OT','РћСЃРёСЏ', 11, 1   ],'С‚РёРїРѕР»РѕРіРёС‡РµСЃРєРѕ СЃС…РѕРґСЃС‚РІРѕ РЅР° СЃРёС‚СѓР°С†РёРё - "РР· Р•РіРёРїС‚Р° РІРѕР·Р·РІР°Р» СЃС‹РЅР° РњРѕРµРіРѕ"'
+  ,['OT','РњР°Р»' ,  3, 1   ],'РїСЂРёРіРѕС‚РІСЏРЅРµ РїСЉС‚СЏ РЅР° Р“РѕСЃРїРѕРґР°, РђРЅРіРµР»СЉС‚ РЅР° Р·Р°РІРµС‚Р°'
+  ,['NT','РњР°С‚' , 11, 9,10],'-'
+  ,['OT','РџСЃ'  ,  2, 7   ],'РҐСЂРёСЃС‚РѕСЃ Рµ РЎРёРЅ Р‘РѕР¶Рё, РґСѓРјРёС‚Рµ СЃР° РїСЂРѕРёР·РЅРµСЃРµРЅРё РЅРµ РЅР° РРѕСЂРґР°РЅ, Р° РЅР° РїР». Р¤Р°РІРѕСЂ, РѕС‚ Р‘РѕРі РћС‚РµС†'
+  ,['OT','РСЃ'  ,  9, 1, 2],'РҐСЂРёСЃС‚РѕСЃ РЅР°С‡РЅРµС‚ РїСЂРѕРїРѕРІРµРґРѕРІР°С‚СЊ РІ Р“Р°Р»РёР»РµРµ'
+  ,['OT','Р’С‚РѕСЂ', 18,15   ],'РҐСЂРёСЃС‚РѕСЃ - РѕСЃРѕР±РµРЅРЅС‹Р№ РџСЂРѕСЂРѕРє'
+  ,['OT','Р’С‚РѕСЂ', 34,10   ],'-'
+  ,['NT','Р”РµСЏРЅ',  3,22   ],'-'
+  ,['OT','РСЃ'  , 61, 1, 2],'Р“РѕСЃРїРѕРґ РњРµ РїРѕРјР°Р·Р° РґР° Р±Р»Р°РіРѕРІРµСЃС‚СЏ РЅР° Р±РµРґРЅРё, Р±Р»Р°РіРѕРїСЂРёСЏС‚РЅР°С‚Р° Р“РѕСЃРїРѕРґРЅСЏ РіРѕРґРёРЅР°'
+  ,['NT','Р›СѓРєР°',  4,21,22],'-'
+  ,['OT','РСЃ'  , 53, 3   ],'РЅР°СЂРѕРґ РЅРµ РїСЂРёРЅСЏР» Р•РіРѕ '
+  ,['NT','РРѕР°РЅ',  1,11   ],'-'
+  ,['OT','Р—Р°С…' ,  9, 9   ],'Рћ С‚РѕСЂР¶РµСЃС‚РІРµРЅРЅРѕРј РІС…РѕРґРµ Р“РѕСЃРїРѕРґР° РІ РРµСЂСѓСЃР°Р»РёРј'
+  ,['OT','РџСЃ'  , 40,10   ],'Рћ РїСЂРµРґР°С‚РµР»СЊСЃС‚РІРµ'
+  ,['OT','Р—Р°С…' , 11,12   ],'Рћ РїСЂРѕРґР°Р¶Рµ Р·Р° 30 СЃСЂРµР±СЂРµРЅРёРєРѕРІ'
+  ,['OT','РџСЃ'  , 34,11   ],'РїСЂРѕСЂРѕС‡РµСЃС‚РІР° Рѕ С‚РѕРј, С‡С‚Рѕ РЅР° РҐСЂРёСЃС‚Р° Р±СѓРґСѓС‚ Р»Р¶РµСЃРІРёРґРµС‚РµР»СЊСЃС‚РІРѕРІР°С‚СЊ; '
+  ,['OT','РСЃ'  , 53, 7   ],'Рћ Р±РµР·РіР»Р°СЃРёРё РїРµСЂРµРґ РѕР±РІРёРЅРёС‚РµР»СЏРјРё'
+  ,['OT','РСЃ'  , 50, 6   ],'Рћ РїРѕСЂСѓРіР°РЅРёРё Рё РѕРїР»РµРІР°РЅРёРё Р“РѕСЃРїРѕРґР°'
+  ,['OT','РџСЃ'  , 34,19,20],'Рћ РЅРµРїСЂР°РІРµРґРЅРѕ РІСЂР°Р¶РґСѓСЋС‰РёС… РЅР° Р“РѕСЃРїРѕРґР°'
+  ,['NT','РРѕР°РЅ', 15,24,25],'-'
+  ,['OT','РСЃ'  , 53, 5   ],'РёР·СЉСЏР·РІР»РµРЅ Р±С‹Р» Р·Р° РіСЂРµС…Рё РЅР°С€Рё Рё РјСѓС‡РёРј Р·Р° Р±РµР·Р·Р°РєРѕРЅРёСЏ РЅР°С€Рё'
+  ,['NT','1РџРµС‚',  2,23,24],'-'
+  ,['OT','РСЃ'  , 53,12   ],'Рћ РїСЂРёС‡С‚РµРЅРёРё Рє Р·Р»РѕРґРµСЏРј'
+  ,['NT','РњР°СЂРє', 15,27,28],'-'
+  ,['OT','Р—Р°С…' , 12,10   ],'Рѕ РїСЂРѕРЅР·РµРЅРёРё'
+  ,['NT','РРѕР°РЅ', 19,37   ],'-'
+  ,['OT','РџСЃ'  , 21, 8,9 ],'Рћ С‚РѕРј, РєР°Рє РЅР°Рґ Р“РѕСЃРїРѕРґРѕРј СЂСѓРіР°Р»РёСЃСЊ Рё РїРѕРЅРѕСЃРёР»Рё'
+  ,['NT','РњР°С‚' , 27,39,40],'-'
+  ,['OT','РџСЃ'  , 68,22   ],'РћР± СѓРєСЃСѓСЃРµ, РєРѕС‚РѕСЂС‹Р№ РїРѕРґРЅРµСЃР»Рё Р“РѕСЃРїРѕРґСѓ'
+  ,['NT','РњР°С‚' , 27,34   ],'-'
+  ,['OT','РџСЃ'  ,108, 4,5 ],'РєР°Рє Р“РѕСЃРїРѕРґСЊ РјРѕР»РёР»СЃСЏ Р·Р° РІСЂР°РіРѕРІ'
+  ,['NT','Р›СѓРєР°', 23,34   ],'-'
+  ,['OT','РџСЃ'  , 21,18,19],'Рћ Р¶СЂРµР±РёРё, РєРѕС‚РѕСЂС‹Р№ Р±СЂРѕСЃР°Р»Рё Р·Р° РѕРґРµР¶РґРµ РРёСЃСѓСЃР° РҐСЂРёСЃС‚Р°'
+  ,['OT','РџСЃ'  , 33,21   ],'С‡С‚Рѕ РєРѕСЃС‚СЊ РќРѕРІРѕРіРѕ РђРіРЅС†Р° РЅРµ Р±С‹Р»Р° СЃРѕРєСЂСѓС€РµРЅР°. РЈ РІРµС‚С…РѕР·Р°РІРµС‚РЅРѕРіРѕ Р°РіРЅС†Р° РєРѕСЃС‚СЊ РЅРµ Р±С‹Р»Р° СЃРѕРєСЂСѓС€РµРЅР°, С‚Р°Рє РєР°Рє РѕРЅ С†РµР»РёРєРѕРј Р·Р°РїРµРєР°Р»СЃСЏ Рё СЃСЉРµРґР°Р»СЃСЏ, Р° РІСЃРµ РѕСЃС‚Р°С‚РєРё РѕС‚ СЃРІСЏС‰РµРЅРЅРѕР№ С‚СЂР°РїРµР·С‹ СЃР¶РёРіР°Р»РёСЃСЊ. Р­С‚Рѕ РїРѕРІС‚РѕСЂРёР»РѕСЃСЊ Рё СЃ РќРѕРІРѕР·Р°РІРµС‚РЅС‹Рј РђРіРЅС†РµРј, РљРѕС‚РѕСЂС‹Р№ РІР·СЏР» РЅР° СЃРµР±СЏ РіСЂРµС…Рё РјРёСЂР°.'
+  ,['NT','РРѕР°РЅ', 19,36   ],'-'
+  ,['OT','РСЃ'  , 53, 9   ],'Рћ РїРѕРіСЂРµР±РµРЅРёРё Сѓ Р±РѕРіР°С‚РѕРіРѕ'
+  ,['NT','РњР°С‚' , 27,57   ],'-'
+  ,['OT','РџСЃ'  , 15,10   ],'Рћ Р’РѕСЃРєСЂРµСЃРµРЅРёРё'
+  ,['NT','Р”РµСЏРЅ',  2,25   ],'-'
+  ,['NT','Р”РµСЏРЅ', 13,35   ],'-'
+  ,['OT','РџСЃ'  , 67,19   ],'Рѕ Р’РѕР·РЅРµСЃРµРЅРёРё'
+  ,['NT','Р•С„'  ,  4, 7,10],'-'
   ]} 
   bibthemetest=false // true false
   //document.body.contentEditable = 'true'; document.designMode='on';
@@ -801,7 +801,7 @@ function show_bibtheme(theme){// p=parent.idx; // hide!?
       bibthemebuf+=
          '<td'+par('align',"right")+t2+'>' //  BGCOLOR="black" <- no need
       //    +'<a'+par('name',bcvfull)+par('href','Bible-BG.show.htm#'+bcvfull)
-      //    +par('title',bcvstd/**-/+'\n^_ добави към библейския списък'/**/)
+      //    +par('title',bcvstd/**-/+'\n^_ РґРѕР±Р°РІРё РєСЉРј Р±РёР±Р»РµР№СЃРєРёСЏ СЃРїРёСЃСЉРє'/**/)
       //  //+par('onclick',"javascript:add_biblist("+_tbcv+")") 
       //    +'>'+'<span id="no">'+j+'</span>' //  vNo <-+-> bcvstd  ?!
       //    +'</a>'
@@ -898,7 +898,7 @@ var html='<FONT face="Tahoma" size="4">'
   // ---
      biblistbuf=
        '<table bgcolor="black" border=0 cellpadding="1" cellspacing="1"><tr>'+eol
-      +'<td><a href="javascript:ShowHide(\'biblist_\');">Библейски списък('+(biblist.length)+')</a>'
+      +'<td><a href="javascript:ShowHide(\'biblist_\');">Р‘РёР±Р»РµР№СЃРєРё СЃРїРёСЃСЉРє('+(biblist.length)+')</a>'
       +'</td></tr>'+eol
       +'<tr><td>'
       +'<div'+par('id','biblist_')+par('id','biblist_')+'>'+eol+biblistbuf+'</div>'+eol//name
@@ -910,7 +910,7 @@ var html='<FONT face="Tahoma" size="4">'
 function pg_bib_urls(){   //+ 'links'         
   var html='<font face="Arial Cyr,Arial,Tahoma,Verdana" size=3>'
     +'<font color="#FFBB77">'
-    +'<b>Bible-BG библейски интернет връзки:</b>'
+    +'<b>Bible-BG Р±РёР±Р»РµР№СЃРєРё РёРЅС‚РµСЂРЅРµС‚ РІСЂСЉР·РєРё:</b>'
      ,t=' target="_blank"' // _blank _self 
   for (var i=0; i<=(links.length-1); i++){ 
     html+=br+(i+1)+'. '
@@ -927,7 +927,7 @@ function pg_history(){    //- 'history'        // !
 var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
   +htm_(['table','',
-  // row_('',[[va,biblink('NT.Мат.05.03-12') +biblink('NT.Лука.06.20-23')]])   
+  // row_('',[[va,biblink('NT.РњР°С‚.05.03-12') +biblink('NT.Р›СѓРєР°.06.20-23')]])   
      row_('',[[va,'???']])
   ])
   +'</FONT>'
@@ -937,84 +937,84 @@ function pg_holydays(){   //~ 'NT-holydays'    // !
 var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
   +htm_(['table','',row_('',[[va,''
-+'<span id="bk"><center>† Християнски празници</center></span><br>'
++'<span id="bk"><center>вЂ  РҐСЂРёСЃС‚РёСЏРЅСЃРєРё РїСЂР°Р·РЅРёС†Рё</center></span><br>'
 +'<br>'
-+'По значимост празниците са:<br>'
-+'- <font color="red"    >Пасха(празник на празниците)</font><br>'
-+'- <font color="#66CCFF">12 велики (8 Господски и 4 Богородични)</font><br> '
-+'- <font color="lime"   >светийски</font><br>'
++'РџРѕ Р·РЅР°С‡РёРјРѕСЃС‚ РїСЂР°Р·РЅРёС†РёС‚Рµ СЃР°:<br>'
++'- <font color="red"    >РџР°СЃС…Р°(РїСЂР°Р·РЅРёРє РЅР° РїСЂР°Р·РЅРёС†РёС‚Рµ)</font><br>'
++'- <font color="#66CCFF">12 РІРµР»РёРєРё (8 Р“РѕСЃРїРѕРґСЃРєРё Рё 4 Р‘РѕРіРѕСЂРѕРґРёС‡РЅРё)</font><br> '
++'- <font color="lime"   >СЃРІРµС‚РёР№СЃРєРё</font><br>'
 +'<br>'
-+'По календар са: <u>подвижни (свързаните с Пасха)</u> и неподвижни<br>'
-+'На Първия вселенски събор в 325 г. Светите отци решили Християнската Пасха да се празнува '
-+'в първият неделен ден след мартенското пълнолуние, когато е еврейската Пасха, '
-+'за да не съвпадне никога с нея. Така празникът е в един от 35-те дни на интервала '
-+'<u>( 4-Април  8-Май)</u> по нов стил <br>'
++'РџРѕ РєР°Р»РµРЅРґР°СЂ СЃР°: <u>РїРѕРґРІРёР¶РЅРё (СЃРІСЉСЂР·Р°РЅРёС‚Рµ СЃ РџР°СЃС…Р°)</u> Рё РЅРµРїРѕРґРІРёР¶РЅРё<br>'
++'РќР° РџСЉСЂРІРёСЏ РІСЃРµР»РµРЅСЃРєРё СЃСЉР±РѕСЂ РІ 325 Рі. РЎРІРµС‚РёС‚Рµ РѕС‚С†Рё СЂРµС€РёР»Рё РҐСЂРёСЃС‚РёСЏРЅСЃРєР°С‚Р° РџР°СЃС…Р° РґР° СЃРµ РїСЂР°Р·РЅСѓРІР° '
++'РІ РїСЉСЂРІРёСЏС‚ РЅРµРґРµР»РµРЅ РґРµРЅ СЃР»РµРґ РјР°СЂС‚РµРЅСЃРєРѕС‚Рѕ РїСЉР»РЅРѕР»СѓРЅРёРµ, РєРѕРіР°С‚Рѕ Рµ РµРІСЂРµР№СЃРєР°С‚Р° РџР°СЃС…Р°, '
++'Р·Р° РґР° РЅРµ СЃСЉРІРїР°РґРЅРµ РЅРёРєРѕРіР° СЃ РЅРµСЏ. РўР°РєР° РїСЂР°Р·РЅРёРєСЉС‚ Рµ РІ РµРґРёРЅ РѕС‚ 35-С‚Рµ РґРЅРё РЅР° РёРЅС‚РµСЂРІР°Р»Р° '
++'<u>( 4-РђРїСЂРёР»  8-РњР°Р№)</u> РїРѕ РЅРѕРІ СЃС‚РёР» <br>'
 +'<br>'
-+'По дати от Началото на Църковната година - 1.Сеп '+biblink('NT.Лука.4.16-19')+'<br>'
-+'_1) <font color="#66CCFF">08.Сеп - Рождество на Пресвета Дева Мария   </font><br>'
-+'_2) <font color="#66CCFF">14.Сеп - Въздигане на Честния Кръст Господен</font><br>'
-+'_3) <font color="#66CCFF">21.Ное - Въведение Богородично              </font><br>'
-+'_4) <font color="#66CCFF">25.Дек - Рождество Христово и поклонението на пастирите </font><br>'
-+'_5) <font color="#66CCFF">06.Яну - Богоявление (Йордановден)          </font><br>'
-+'_6) <font color="#66CCFF">02.Фев - Обрезание и Сретение Господне      </font><br>'
-+'_7) <font color="#66CCFF">__.___ - <u>Вход Господен в Ерусалим (Цветница, Връбница) неделята преди Пасха</u></font><br>'
-+'_8) <font color="#66CCFF">25.Мар - Благовещение Богородично           </font><br>'
-+'__) <font color="lime"   >__.___ - <u>Разпятие Христово</u>           </font><br>'
-+'_†_ <font color="red"    >__.___ - <u>Пасха - Възкресение Христово<u> </font><br>'
-+'__) <font color="lime"   >__.___ - Срещата на Дева Мария с Елисавета  </font><br>'
-+'__) <font color="lime"   >__.___ - Кръщение Господне                  </font><br>'
-+'__) <font color="lime"   >__.___ - Отсичане главата на Йоан Предтеча  </font><br>'
-+'_9) <font color="#66CCFF">__.___ - <u>Възнесение Господне на 40-ия ден след Пасха </u></font><br>'
-+'10) <font color="#66CCFF">__.___ - <u>Петдесетница - Съшествие на Св. Дух над апостолите на 50-ия ден след Пасха</u></font><br>'
-+'11) <font color="#66CCFF">06.Авг - Преображение Господне              </font><br>'
-+'12) <font color="#66CCFF">15.Авг - Успение и Покров на Пресвета Богородица  </font><br>'
++'РџРѕ РґР°С‚Рё РѕС‚ РќР°С‡Р°Р»РѕС‚Рѕ РЅР° Р¦СЉСЂРєРѕРІРЅР°С‚Р° РіРѕРґРёРЅР° - 1.РЎРµРї '+biblink('NT.Р›СѓРєР°.4.16-19')+'<br>'
++'_1) <font color="#66CCFF">08.РЎРµРї - Р РѕР¶РґРµСЃС‚РІРѕ РЅР° РџСЂРµСЃРІРµС‚Р° Р”РµРІР° РњР°СЂРёСЏ   </font><br>'
++'_2) <font color="#66CCFF">14.РЎРµРї - Р’СЉР·РґРёРіР°РЅРµ РЅР° Р§РµСЃС‚РЅРёСЏ РљСЂСЉСЃС‚ Р“РѕСЃРїРѕРґРµРЅ</font><br>'
++'_3) <font color="#66CCFF">21.РќРѕРµ - Р’СЉРІРµРґРµРЅРёРµ Р‘РѕРіРѕСЂРѕРґРёС‡РЅРѕ              </font><br>'
++'_4) <font color="#66CCFF">25.Р”РµРє - Р РѕР¶РґРµСЃС‚РІРѕ РҐСЂРёСЃС‚РѕРІРѕ Рё РїРѕРєР»РѕРЅРµРЅРёРµС‚Рѕ РЅР° РїР°СЃС‚РёСЂРёС‚Рµ </font><br>'
++'_5) <font color="#66CCFF">06.РЇРЅСѓ - Р‘РѕРіРѕСЏРІР»РµРЅРёРµ (Р™РѕСЂРґР°РЅРѕРІРґРµРЅ)          </font><br>'
++'_6) <font color="#66CCFF">02.Р¤РµРІ - РћР±СЂРµР·Р°РЅРёРµ Рё РЎСЂРµС‚РµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ      </font><br>'
++'_7) <font color="#66CCFF">__.___ - <u>Р’С…РѕРґ Р“РѕСЃРїРѕРґРµРЅ РІ Р•СЂСѓСЃР°Р»РёРј (Р¦РІРµС‚РЅРёС†Р°, Р’СЂСЉР±РЅРёС†Р°) РЅРµРґРµР»СЏС‚Р° РїСЂРµРґРё РџР°СЃС…Р°</u></font><br>'
++'_8) <font color="#66CCFF">25.РњР°СЂ - Р‘Р»Р°РіРѕРІРµС‰РµРЅРёРµ Р‘РѕРіРѕСЂРѕРґРёС‡РЅРѕ           </font><br>'
++'__) <font color="lime"   >__.___ - <u>Р Р°Р·РїСЏС‚РёРµ РҐСЂРёСЃС‚РѕРІРѕ</u>           </font><br>'
++'_вЂ _ <font color="red"    >__.___ - <u>РџР°СЃС…Р° - Р’СЉР·РєСЂРµСЃРµРЅРёРµ РҐСЂРёСЃС‚РѕРІРѕ<u> </font><br>'
++'__) <font color="lime"   >__.___ - РЎСЂРµС‰Р°С‚Р° РЅР° Р”РµРІР° РњР°СЂРёСЏ СЃ Р•Р»РёСЃР°РІРµС‚Р°  </font><br>'
++'__) <font color="lime"   >__.___ - РљСЂСЉС‰РµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ                  </font><br>'
++'__) <font color="lime"   >__.___ - РћС‚СЃРёС‡Р°РЅРµ РіР»Р°РІР°С‚Р° РЅР° Р™РѕР°РЅ РџСЂРµРґС‚РµС‡Р°  </font><br>'
++'_9) <font color="#66CCFF">__.___ - <u>Р’СЉР·РЅРµСЃРµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ РЅР° 40-РёСЏ РґРµРЅ СЃР»РµРґ РџР°СЃС…Р° </u></font><br>'
++'10) <font color="#66CCFF">__.___ - <u>РџРµС‚РґРµСЃРµС‚РЅРёС†Р° - РЎСЉС€РµСЃС‚РІРёРµ РЅР° РЎРІ. Р”СѓС… РЅР°Рґ Р°РїРѕСЃС‚РѕР»РёС‚Рµ РЅР° 50-РёСЏ РґРµРЅ СЃР»РµРґ РџР°СЃС…Р°</u></font><br>'
++'11) <font color="#66CCFF">06.РђРІРі - РџСЂРµРѕР±СЂР°Р¶РµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ              </font><br>'
++'12) <font color="#66CCFF">15.РђРІРі - РЈСЃРїРµРЅРёРµ Рё РџРѕРєСЂРѕРІ РЅР° РџСЂРµСЃРІРµС‚Р° Р‘РѕРіРѕСЂРѕРґРёС†Р°  </font><br>'
 +'<br>'
-+'Св. Дух,<br> '
-+'неделите на месни и сирни заговезни,<br> '
-+'Тодоровден,<br> '
-+'Неделя Православна,<br> '
-+'Връбница,<br> '
-+'Велики Четвъртък, Петък и Събота.<br>'
++'РЎРІ. Р”СѓС…,<br> '
++'РЅРµРґРµР»РёС‚Рµ РЅР° РјРµСЃРЅРё Рё СЃРёСЂРЅРё Р·Р°РіРѕРІРµР·РЅРё,<br> '
++'РўРѕРґРѕСЂРѕРІРґРµРЅ,<br> '
++'РќРµРґРµР»СЏ РџСЂР°РІРѕСЃР»Р°РІРЅР°,<br> '
++'Р’СЂСЉР±РЅРёС†Р°,<br> '
++'Р’РµР»РёРєРё Р§РµС‚РІСЉСЂС‚СЉРє, РџРµС‚СЉРє Рё РЎСЉР±РѕС‚Р°.<br>'
 // BulgarianHolidays.ics 
 // http://www.mozilla.org/projects/calendar/caldata/BulgarianHolidays.ics
-/* През 2000 година:
-<br><b>Януари: </b><br>
-1 - Васильовден; 
-6 - Богоявление (Йордановден); 
-7 - Ивановден; <br>
-<b>Февруари:</b><br>
-2 - Сретение Господне; 
-<br><b>Март: </b><br>
-25 - Благовещение; 
-<br><b>Април: </b><br>
-30 април, 1 и 2 май - Възкресение Христово;  <br>
-<br><b>Май: </b><br>
-6 - Гергьовден; 
-11 - Св. св. Кирил и Методий; 
-<br><b>Юни: </b><br>
-8 - Възнесение Господне (Спасовден); 
-18 - Петдесетница; 
-19 - Св. Дух; 
-29 - Св. апостоли Петър и Павел (Петровден);  
-<br><b>Юли: </b><br>
-20 - св. пророк Илия; 
-<br><b>Август: </b><br>
-6 - Преображение Господне; 
-15 - Успение на Пресвета Богородица; 
-<br><b>Септември: </b><br>
-8 - Рождество на Пресвета Богородица;  
-14 - Кръстовден; 
-<br><b>Октомври: </b><br>
-19 - Преподобни Йоан Рилски;  
-26 - Димитровден; 
-<br><b>Ноември: </b><br>
-8 - Архангеловден;  
-21 - Въведение Богородично; 
-<br><b>Декември: </b><br>
-6 - Никулден; 
-25 - Рождество Христово; 
-26 - Събор на Пресвета Богородица; 
-27 - Св. първомъченик и архидякон Стефан (Стефановден)
+/* РџСЂРµР· 2000 РіРѕРґРёРЅР°:
+<br><b>РЇРЅСѓР°СЂРё: </b><br>
+1 - Р’Р°СЃРёР»СЊРѕРІРґРµРЅ; 
+6 - Р‘РѕРіРѕСЏРІР»РµРЅРёРµ (Р™РѕСЂРґР°РЅРѕРІРґРµРЅ); 
+7 - РРІР°РЅРѕРІРґРµРЅ; <br>
+<b>Р¤РµРІСЂСѓР°СЂРё:</b><br>
+2 - РЎСЂРµС‚РµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ; 
+<br><b>РњР°СЂС‚: </b><br>
+25 - Р‘Р»Р°РіРѕРІРµС‰РµРЅРёРµ; 
+<br><b>РђРїСЂРёР»: </b><br>
+30 Р°РїСЂРёР», 1 Рё 2 РјР°Р№ - Р’СЉР·РєСЂРµСЃРµРЅРёРµ РҐСЂРёСЃС‚РѕРІРѕ;  <br>
+<br><b>РњР°Р№: </b><br>
+6 - Р“РµСЂРіСЊРѕРІРґРµРЅ; 
+11 - РЎРІ. СЃРІ. РљРёСЂРёР» Рё РњРµС‚РѕРґРёР№; 
+<br><b>Р®РЅРё: </b><br>
+8 - Р’СЉР·РЅРµСЃРµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ (РЎРїР°СЃРѕРІРґРµРЅ); 
+18 - РџРµС‚РґРµСЃРµС‚РЅРёС†Р°; 
+19 - РЎРІ. Р”СѓС…; 
+29 - РЎРІ. Р°РїРѕСЃС‚РѕР»Рё РџРµС‚СЉСЂ Рё РџР°РІРµР» (РџРµС‚СЂРѕРІРґРµРЅ);  
+<br><b>Р®Р»Рё: </b><br>
+20 - СЃРІ. РїСЂРѕСЂРѕРє РР»РёСЏ; 
+<br><b>РђРІРіСѓСЃС‚: </b><br>
+6 - РџСЂРµРѕР±СЂР°Р¶РµРЅРёРµ Р“РѕСЃРїРѕРґРЅРµ; 
+15 - РЈСЃРїРµРЅРёРµ РЅР° РџСЂРµСЃРІРµС‚Р° Р‘РѕРіРѕСЂРѕРґРёС†Р°; 
+<br><b>РЎРµРїС‚РµРјРІСЂРё: </b><br>
+8 - Р РѕР¶РґРµСЃС‚РІРѕ РЅР° РџСЂРµСЃРІРµС‚Р° Р‘РѕРіРѕСЂРѕРґРёС†Р°;  
+14 - РљСЂСЉСЃС‚РѕРІРґРµРЅ; 
+<br><b>РћРєС‚РѕРјРІСЂРё: </b><br>
+19 - РџСЂРµРїРѕРґРѕР±РЅРё Р™РѕР°РЅ Р РёР»СЃРєРё;  
+26 - Р”РёРјРёС‚СЂРѕРІРґРµРЅ; 
+<br><b>РќРѕРµРјРІСЂРё: </b><br>
+8 - РђСЂС…Р°РЅРіРµР»РѕРІРґРµРЅ;  
+21 - Р’СЉРІРµРґРµРЅРёРµ Р‘РѕРіРѕСЂРѕРґРёС‡РЅРѕ; 
+<br><b>Р”РµРєРµРјРІСЂРё: </b><br>
+6 - РќРёРєСѓР»РґРµРЅ; 
+25 - Р РѕР¶РґРµСЃС‚РІРѕ РҐСЂРёСЃС‚РѕРІРѕ; 
+26 - РЎСЉР±РѕСЂ РЅР° РџСЂРµСЃРІРµС‚Р° Р‘РѕРіРѕСЂРѕРґРёС†Р°; 
+27 - РЎРІ. РїСЉСЂРІРѕРјСЉС‡РµРЅРёРє Рё Р°СЂС…РёРґСЏРєРѕРЅ РЎС‚РµС„Р°РЅ (РЎС‚РµС„Р°РЅРѕРІРґРµРЅ)
 */
   ]])
   ])
@@ -1049,195 +1049,195 @@ var va=' valign="top"'
 var html='<FONT face="Tahoma" size="4">'
   +htm_(['table','',
     row_('',[[va,'<span id="big"><font size="5"><b>Bible-BG</b></font>&nbsp;</span>'
-      +'<span id="bk" ><font size="5"><b>Библия на български</b></font>&nbsp;</span>'
+      +'<span id="bk" ><font size="5"><b>Р‘РёР±Р»РёСЏ РЅР° Р±СЉР»РіР°СЂСЃРєРё</b></font>&nbsp;</span>'
 +'<br>'
 +'<span id="hid"><font size="2">'+_ver()+'</font></span>' // _ver(st,bg,fg)
 +'<br>'
 +'<span id="bej" >'
-+'<b>"Всичкото Писание е боговдъхновено и полезно за поука, изобличаване,' 
-+' изправяне и назидаване в правдата, за да бъде Божият човек '
-+' съвършен и годен за всяко добро дело."</b>'
-+'<br>'+biblink('NT.2Тим.3.16-17') 
++'<b>"Р’СЃРёС‡РєРѕС‚Рѕ РџРёСЃР°РЅРёРµ Рµ Р±РѕРіРѕРІРґСЉС…РЅРѕРІРµРЅРѕ Рё РїРѕР»РµР·РЅРѕ Р·Р° РїРѕСѓРєР°, РёР·РѕР±Р»РёС‡Р°РІР°РЅРµ,' 
++' РёР·РїСЂР°РІСЏРЅРµ Рё РЅР°Р·РёРґР°РІР°РЅРµ РІ РїСЂР°РІРґР°С‚Р°, Р·Р° РґР° Р±СЉРґРµ Р‘РѕР¶РёСЏС‚ С‡РѕРІРµРє '
++' СЃСЉРІСЉСЂС€РµРЅ Рё РіРѕРґРµРЅ Р·Р° РІСЃСЏРєРѕ РґРѕР±СЂРѕ РґРµР»Рѕ."</b>'
++'<br>'+biblink('NT.2РўРёРј.3.16-17') 
 +'</span>'
-+'<br> Текстът на тази Библия е от превода и изданието на '
-+' Светия синод на Българската Православна Църква (София 1992).'
++'<br> РўРµРєСЃС‚СЉС‚ РЅР° С‚Р°Р·Рё Р‘РёР±Р»РёСЏ Рµ РѕС‚ РїСЂРµРІРѕРґР° Рё РёР·РґР°РЅРёРµС‚Рѕ РЅР° '
++' РЎРІРµС‚РёСЏ СЃРёРЅРѕРґ РЅР° Р‘СЉР»РіР°СЂСЃРєР°С‚Р° РџСЂР°РІРѕСЃР»Р°РІРЅР° Р¦СЉСЂРєРІР° (РЎРѕС„РёСЏ 1992).'
 +'<br>'
-+'<br><b>Библията е Свещена и Боговдъхновена книга. '
-+'<br> Тя е Богооткровена от Дух Светий към избрани човеци.'
-+'<br> Записана е от старозаветните пророци и новозаветните апостоли, '
-+'а при преписването е била редактирана от избрани хора.'
++'<br><b>Р‘РёР±Р»РёСЏС‚Р° Рµ РЎРІРµС‰РµРЅР° Рё Р‘РѕРіРѕРІРґСЉС…РЅРѕРІРµРЅР° РєРЅРёРіР°. '
++'<br> РўСЏ Рµ Р‘РѕРіРѕРѕС‚РєСЂРѕРІРµРЅР° РѕС‚ Р”СѓС… РЎРІРµС‚РёР№ РєСЉРј РёР·Р±СЂР°РЅРё С‡РѕРІРµС†Рё.'
++'<br> Р—Р°РїРёСЃР°РЅР° Рµ РѕС‚ СЃС‚Р°СЂРѕР·Р°РІРµС‚РЅРёС‚Рµ РїСЂРѕСЂРѕС†Рё Рё РЅРѕРІРѕР·Р°РІРµС‚РЅРёС‚Рµ Р°РїРѕСЃС‚РѕР»Рё, '
++'Р° РїСЂРё РїСЂРµРїРёСЃРІР°РЅРµС‚Рѕ Рµ Р±РёР»Р° СЂРµРґР°РєС‚РёСЂР°РЅР° РѕС‚ РёР·Р±СЂР°РЅРё С…РѕСЂР°.'
 +'<br></b> '
-+'<br> За християните Стария и Новия завет са неотделими.'
-+'<br> Не всички книги са с еднакво канонично достойнство.'
-+' Има канонични, неканонични и апокрифни книги. '
++'<br> Р—Р° С…СЂРёСЃС‚РёСЏРЅРёС‚Рµ РЎС‚Р°СЂРёСЏ Рё РќРѕРІРёСЏ Р·Р°РІРµС‚ СЃР° РЅРµРѕС‚РґРµР»РёРјРё.'
++'<br> РќРµ РІСЃРёС‡РєРё РєРЅРёРіРё СЃР° СЃ РµРґРЅР°РєРІРѕ РєР°РЅРѕРЅРёС‡РЅРѕ РґРѕСЃС‚РѕР№РЅСЃС‚РІРѕ.'
++' РРјР° РєР°РЅРѕРЅРёС‡РЅРё, РЅРµРєР°РЅРѕРЅРёС‡РЅРё Рё Р°РїРѕРєСЂРёС„РЅРё РєРЅРёРіРё. '
 +'</span>'
 /* */
-+'<hr><span id="bej"><h2><b>Какво предлага Bible-BG</b></h2></span>'
++'<hr><span id="bej"><h2><b>РљР°РєРІРѕ РїСЂРµРґР»Р°РіР° Bible-BG</b></h2></span>'
 +'<span id="bej">'
-+'<br> 1.Достъп до Православна Библия на български. Можеш да ползваш локално или от сайт, чрез браузър*</span>'
-+'<br> * продуктът работи с повечето браузъри'
++'<br> 1.Р”РѕСЃС‚СЉРї РґРѕ РџСЂР°РІРѕСЃР»Р°РІРЅР° Р‘РёР±Р»РёСЏ РЅР° Р±СЉР»РіР°СЂСЃРєРё. РњРѕР¶РµС€ РґР° РїРѕР»Р·РІР°С€ Р»РѕРєР°Р»РЅРѕ РёР»Рё РѕС‚ СЃР°Р№С‚, С‡СЂРµР· Р±СЂР°СѓР·СЉСЂ*</span>'
++'<br> * РїСЂРѕРґСѓРєС‚СЉС‚ СЂР°Р±РѕС‚Рё СЃ РїРѕРІРµС‡РµС‚Рѕ Р±СЂР°СѓР·СЉСЂРё'
 
 +'<br><span id="bej">'
-+'<br> 2.Оригиналният текст на кирилица (windows-1251) '
-+'може да се чете като обикновен текст върху много слаби машини.</span> '
-+'<br> Текстът в два некомпресирани файла: '
++'<br> 2.РћСЂРёРіРёРЅР°Р»РЅРёСЏС‚ С‚РµРєСЃС‚ РЅР° РєРёСЂРёР»РёС†Р° (windows-1251) '
++'РјРѕР¶Рµ РґР° СЃРµ С‡РµС‚Рµ РєР°С‚Рѕ РѕР±РёРєРЅРѕРІРµРЅ С‚РµРєСЃС‚ РІСЉСЂС…Сѓ РјРЅРѕРіРѕ СЃР»Р°Р±Рё РјР°С€РёРЅРё.</span> '
++'<br> РўРµРєСЃС‚СЉС‚ РІ РґРІР° РЅРµРєРѕРјРїСЂРµСЃРёСЂР°РЅРё С„Р°Р№Р»Р°: '
 +lnk('NT.js','../Bible-bg.text/text/NT.js')+'=  945Kib '
 +lnk('OT.js','../Bible-bg.text/text/OT.js')+'=3 836Kib '
-+'<br> За текста в компресиран вид - виж по-надолу:'
++'<br> Р—Р° С‚РµРєСЃС‚Р° РІ РєРѕРјРїСЂРµСЃРёСЂР°РЅ РІРёРґ - РІРёР¶ РїРѕ-РЅР°РґРѕР»Сѓ:'
 
 +'<br><span id="bej">'
-+'<br> 3.Преглед на библейския текст по глави и Навигация на преглеждането: </span>'
-+'стандартен интерфейс с бутони, менюта и полета за писане'
-+'<br>бутони ^ първи v последен < предишен > следващ '
-+'<br><li>избор на книга,глава,стих '
-+'<br><li>(=) Преглед на избраната книга и глава с маркиране на избрания стих'
-+'<br><li>(-) (+) Преглед на предишна/следваща глава '
-+'<br><li>(Нов) (Стар) индекс-меню за всички книги и глави излиза в лявата колона'
-+'<br><li>(w) списък на думите в глава със статистика '
++'<br> 3.РџСЂРµРіР»РµРґ РЅР° Р±РёР±Р»РµР№СЃРєРёСЏ С‚РµРєСЃС‚ РїРѕ РіР»Р°РІРё Рё РќР°РІРёРіР°С†РёСЏ РЅР° РїСЂРµРіР»РµР¶РґР°РЅРµС‚Рѕ: </span>'
++'СЃС‚Р°РЅРґР°СЂС‚РµРЅ РёРЅС‚РµСЂС„РµР№СЃ СЃ Р±СѓС‚РѕРЅРё, РјРµРЅСЋС‚Р° Рё РїРѕР»РµС‚Р° Р·Р° РїРёСЃР°РЅРµ'
++'<br>Р±СѓС‚РѕРЅРё ^ РїСЉСЂРІРё v РїРѕСЃР»РµРґРµРЅ < РїСЂРµРґРёС€РµРЅ > СЃР»РµРґРІР°С‰ '
++'<br><li>РёР·Р±РѕСЂ РЅР° РєРЅРёРіР°,РіР»Р°РІР°,СЃС‚РёС… '
++'<br><li>(=) РџСЂРµРіР»РµРґ РЅР° РёР·Р±СЂР°РЅР°С‚Р° РєРЅРёРіР° Рё РіР»Р°РІР° СЃ РјР°СЂРєРёСЂР°РЅРµ РЅР° РёР·Р±СЂР°РЅРёСЏ СЃС‚РёС…'
++'<br><li>(-) (+) РџСЂРµРіР»РµРґ РЅР° РїСЂРµРґРёС€РЅР°/СЃР»РµРґРІР°С‰Р° РіР»Р°РІР° '
++'<br><li>(РќРѕРІ) (РЎС‚Р°СЂ) РёРЅРґРµРєСЃ-РјРµРЅСЋ Р·Р° РІСЃРёС‡РєРё РєРЅРёРіРё Рё РіР»Р°РІРё РёР·Р»РёР·Р° РІ Р»СЏРІР°С‚Р° РєРѕР»РѕРЅР°'
++'<br><li>(w) СЃРїРёСЃСЉРє РЅР° РґСѓРјРёС‚Рµ РІ РіР»Р°РІР° СЃСЉСЃ СЃС‚Р°С‚РёСЃС‚РёРєР° '
 
-+'<br><li>Адресиране на 77 книги, 1 361 глави, 37 018 стиха, чрез стандартна номерация: книга.глава.стих -> '
-+biblink('NT.Откр.22.19')
-+'<br> В статусния ред на браузъра се вижда адреса '
-+'[Откр.22.19] като +[27.22.19]. Тук - е стар завет, + е нов, а книгата е с поредния си номер.'
-+'<br><li>Можете да пазите връзките (bookmarks) към глава,стих в Bible-bg и да ги извиквате извън контекста на сайта(само текста, без навигацията).'
-+'<br><li>Можете да маркирате цитати в Преглед и Търсене и така ги пазите в \'библейски списък\', но сега не се помнят извън сесията.'
++'<br><li>РђРґСЂРµСЃРёСЂР°РЅРµ РЅР° 77 РєРЅРёРіРё, 1 361 РіР»Р°РІРё, 37 018 СЃС‚РёС…Р°, С‡СЂРµР· СЃС‚Р°РЅРґР°СЂС‚РЅР° РЅРѕРјРµСЂР°С†РёСЏ: РєРЅРёРіР°.РіР»Р°РІР°.СЃС‚РёС… -> '
++biblink('NT.РћС‚РєСЂ.22.19')
++'<br> Р’ СЃС‚Р°С‚СѓСЃРЅРёСЏ СЂРµРґ РЅР° Р±СЂР°СѓР·СЉСЂР° СЃРµ РІРёР¶РґР° Р°РґСЂРµСЃР° '
++'[РћС‚РєСЂ.22.19] РєР°С‚Рѕ +[27.22.19]. РўСѓРє - Рµ СЃС‚Р°СЂ Р·Р°РІРµС‚, + Рµ РЅРѕРІ, Р° РєРЅРёРіР°С‚Р° Рµ СЃ РїРѕСЂРµРґРЅРёСЏ СЃРё РЅРѕРјРµСЂ.'
++'<br><li>РњРѕР¶РµС‚Рµ РґР° РїР°Р·РёС‚Рµ РІСЂСЉР·РєРёС‚Рµ (bookmarks) РєСЉРј РіР»Р°РІР°,СЃС‚РёС… РІ Bible-bg Рё РґР° РіРё РёР·РІРёРєРІР°С‚Рµ РёР·РІСЉРЅ РєРѕРЅС‚РµРєСЃС‚Р° РЅР° СЃР°Р№С‚Р°(СЃР°РјРѕ С‚РµРєСЃС‚Р°, Р±РµР· РЅР°РІРёРіР°С†РёСЏС‚Р°).'
++'<br><li>РњРѕР¶РµС‚Рµ РґР° РјР°СЂРєРёСЂР°С‚Рµ С†РёС‚Р°С‚Рё РІ РџСЂРµРіР»РµРґ Рё РўСЉСЂСЃРµРЅРµ Рё С‚Р°РєР° РіРё РїР°Р·РёС‚Рµ РІ \'Р±РёР±Р»РµР№СЃРєРё СЃРїРёСЃСЉРє\', РЅРѕ СЃРµРіР° РЅРµ СЃРµ РїРѕРјРЅСЏС‚ РёР·РІСЉРЅ СЃРµСЃРёСЏС‚Р°.'
 +'<br>'
 +'<span id="bej">'
-+'<br> 4.Търсене:</span> генерира списък стихове в които е от намерен израза, като той е маркиран в цвят'
-+'<br><li>избор на диапазон: завет и книги'
++'<br> 4.РўСЉСЂСЃРµРЅРµ:</span> РіРµРЅРµСЂРёСЂР° СЃРїРёСЃСЉРє СЃС‚РёС…РѕРІРµ РІ РєРѕРёС‚Рѕ Рµ РѕС‚ РЅР°РјРµСЂРµРЅ РёР·СЂР°Р·Р°, РєР°С‚Рѕ С‚РѕР№ Рµ РјР°СЂРєРёСЂР°РЅ РІ С†РІСЏС‚'
++'<br><li>РёР·Р±РѕСЂ РЅР° РґРёР°РїР°Р·РѕРЅ: Р·Р°РІРµС‚ Рё РєРЅРёРіРё'
 
-//+'<br><li>избор на основен израз за търсене с частично/точно съвпадение и регистър точно/не'
-//+'<br><li>избор на втори израз и място спрямо първия'
-//+'<br><li>избор на отхвърлящ израз'
-//+'сравнения на промените в различни редакции и версии'
+//+'<br><li>РёР·Р±РѕСЂ РЅР° РѕСЃРЅРѕРІРµРЅ РёР·СЂР°Р· Р·Р° С‚СЉСЂСЃРµРЅРµ СЃ С‡Р°СЃС‚РёС‡РЅРѕ/С‚РѕС‡РЅРѕ СЃСЉРІРїР°РґРµРЅРёРµ Рё СЂРµРіРёСЃС‚СЉСЂ С‚РѕС‡РЅРѕ/РЅРµ'
+//+'<br><li>РёР·Р±РѕСЂ РЅР° РІС‚РѕСЂРё РёР·СЂР°Р· Рё РјСЏСЃС‚Рѕ СЃРїСЂСЏРјРѕ РїСЉСЂРІРёСЏ'
+//+'<br><li>РёР·Р±РѕСЂ РЅР° РѕС‚С…РІСЉСЂР»СЏС‰ РёР·СЂР°Р·'
+//+'СЃСЂР°РІРЅРµРЅРёСЏ РЅР° РїСЂРѕРјРµРЅРёС‚Рµ РІ СЂР°Р·Р»РёС‡РЅРё СЂРµРґР°РєС†РёРё Рё РІРµСЂСЃРёРё'
 
 +'<br>'
 +'<span id="bej">'
-+'<br> 5.Форматиране на библейския текст и форматиране при преглеждане:</span>'
-+'<br><li>минимално количество форматиращи символи в текста: '
-+'<br>   име на книга #...#, глава номер |...|, цитат "..." и \'...\', '
-+'<br>   вариант на превод (Ева){Живот},коментар * и (...), нов ред = '
-+'<br>   паралел: в текста [а] ->  в края на текста [а:Откр.22.19,...]'
-+'<br><li>Когато текста в "..." от стих продължава в следващия, са ДОБАВЕНИ кавички '
-+'в края на този и началото на следващия, за да има всеки стих самостоятелно форматиране'
-+'<br><li>Форматиране при преглед: '
-+'Определянето на ошрифтяване, оцветяване и подреждане зависи от '
-+'bible-bg.css и зададената логика на форматиране<br>'
++'<br> 5.Р¤РѕСЂРјР°С‚РёСЂР°РЅРµ РЅР° Р±РёР±Р»РµР№СЃРєРёСЏ С‚РµРєСЃС‚ Рё С„РѕСЂРјР°С‚РёСЂР°РЅРµ РїСЂРё РїСЂРµРіР»РµР¶РґР°РЅРµ:</span>'
++'<br><li>РјРёРЅРёРјР°Р»РЅРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ С„РѕСЂРјР°С‚РёСЂР°С‰Рё СЃРёРјРІРѕР»Рё РІ С‚РµРєСЃС‚Р°: '
++'<br>   РёРјРµ РЅР° РєРЅРёРіР° #...#, РіР»Р°РІР° РЅРѕРјРµСЂ |...|, С†РёС‚Р°С‚ "..." Рё \'...\', '
++'<br>   РІР°СЂРёР°РЅС‚ РЅР° РїСЂРµРІРѕРґ (Р•РІР°){Р–РёРІРѕС‚},РєРѕРјРµРЅС‚Р°СЂ * Рё (...), РЅРѕРІ СЂРµРґ = '
++'<br>   РїР°СЂР°Р»РµР»: РІ С‚РµРєСЃС‚Р° [Р°] ->  РІ РєСЂР°СЏ РЅР° С‚РµРєСЃС‚Р° [Р°:РћС‚РєСЂ.22.19,...]'
++'<br><li>РљРѕРіР°С‚Рѕ С‚РµРєСЃС‚Р° РІ "..." РѕС‚ СЃС‚РёС… РїСЂРѕРґСЉР»Р¶Р°РІР° РІ СЃР»РµРґРІР°С‰РёСЏ, СЃР° Р”РћР‘РђР’Р•РќР РєР°РІРёС‡РєРё '
++'РІ РєСЂР°СЏ РЅР° С‚РѕР·Рё Рё РЅР°С‡Р°Р»РѕС‚Рѕ РЅР° СЃР»РµРґРІР°С‰РёСЏ, Р·Р° РґР° РёРјР° РІСЃРµРєРё СЃС‚РёС… СЃР°РјРѕСЃС‚РѕСЏС‚РµР»РЅРѕ С„РѕСЂРјР°С‚РёСЂР°РЅРµ'
++'<br><li>Р¤РѕСЂРјР°С‚РёСЂР°РЅРµ РїСЂРё РїСЂРµРіР»РµРґ: '
++'РћРїСЂРµРґРµР»СЏРЅРµС‚Рѕ РЅР° РѕС€СЂРёС„С‚СЏРІР°РЅРµ, РѕС†РІРµС‚СЏРІР°РЅРµ Рё РїРѕРґСЂРµР¶РґР°РЅРµ Р·Р°РІРёСЃРё РѕС‚ '
++'bible-bg.css Рё Р·Р°РґР°РґРµРЅР°С‚Р° Р»РѕРіРёРєР° РЅР° С„РѕСЂРјР°С‚РёСЂР°РЅРµ<br>'
 +'<span id="bej">'
-+'<br>6.Важни части от библията и документи в първостепенна връзка:</span> '
-+'<br><li>Десетте Божи заповеди'
-+'<li>Символът на вярата '
-+'<li>Блаженствата '
-+'<li>Молитви'
++'<br>6.Р’Р°Р¶РЅРё С‡Р°СЃС‚Рё РѕС‚ Р±РёР±Р»РёСЏС‚Р° Рё РґРѕРєСѓРјРµРЅС‚Рё РІ РїСЉСЂРІРѕСЃС‚РµРїРµРЅРЅР° РІСЂСЉР·РєР°:</span> '
++'<br><li>Р”РµСЃРµС‚С‚Рµ Р‘РѕР¶Рё Р·Р°РїРѕРІРµРґРё'
++'<li>РЎРёРјРІРѕР»СЉС‚ РЅР° РІСЏСЂР°С‚Р° '
++'<li>Р‘Р»Р°Р¶РµРЅСЃС‚РІР°С‚Р° '
++'<li>РњРѕР»РёС‚РІРё'
 +'<br>'
 +'<span id="bej">'
-+'<br>7.За празниците и събитията, които честваме:</span> '
-+'<br><li>Видове празници '
-+'<li>Хронология на събитията '
-+'<li>Календар с празниците и светиите '
++'<br>7.Р—Р° РїСЂР°Р·РЅРёС†РёС‚Рµ Рё СЃСЉР±РёС‚РёСЏС‚Р°, РєРѕРёС‚Рѕ С‡РµСЃС‚РІР°РјРµ:</span> '
++'<br><li>Р’РёРґРѕРІРµ РїСЂР°Р·РЅРёС†Рё '
++'<li>РҐСЂРѕРЅРѕР»РѕРіРёСЏ РЅР° СЃСЉР±РёС‚РёСЏС‚Р° '
++'<li>РљР°Р»РµРЅРґР°СЂ СЃ РїСЂР°Р·РЅРёС†РёС‚Рµ Рё СЃРІРµС‚РёРёС‚Рµ '
 +'<br>'
 +'<span id="bej">'
-+'<br>8.За Иконите</span> '
++'<br>8.Р—Р° РРєРѕРЅРёС‚Рµ</span> '
 +'<br><li>!'
-+'<li>албум Икони '
++'<li>Р°Р»Р±СѓРј РРєРѕРЅРё '
 +'<br>'
 +'<span id="bej">'
-+'<br>9.Теми - разгънат списък връзки по дадена тема</span>'
-+'<br><li>сега съдържа само тема \'Пророчества за Христос\' '
-+'<br><li>Търсят се теми за добавяне'
++'<br>9.РўРµРјРё - СЂР°Р·РіСЉРЅР°С‚ СЃРїРёСЃСЉРє РІСЂСЉР·РєРё РїРѕ РґР°РґРµРЅР° С‚РµРјР°</span>'
++'<br><li>СЃРµРіР° СЃСЉРґСЉСЂР¶Р° СЃР°РјРѕ С‚РµРјР° \'РџСЂРѕСЂРѕС‡РµСЃС‚РІР° Р·Р° РҐСЂРёСЃС‚РѕСЃ\' '
++'<br><li>РўСЉСЂСЃСЏС‚ СЃРµ С‚РµРјРё Р·Р° РґРѕР±Р°РІСЏРЅРµ'
 +'<br>'
 +'<span id="bej">'
-+'<br>10.Библии в интернет и полезни връзки(links)</span> '
-+'<br><li>интернет връзки '
++'<br>10.Р‘РёР±Р»РёРё РІ РёРЅС‚РµСЂРЅРµС‚ Рё РїРѕР»РµР·РЅРё РІСЂСЉР·РєРё(links)</span> '
++'<br><li>РёРЅС‚РµСЂРЅРµС‚ РІСЂСЉР·РєРё '
 +'<br>'
 +'<span id="bej">'
-+'<br>11.Настойка на цветовете/шрифтове/размери</span>'
-+'<br><li>файлове '
-+lnk('colors.js','scr/colors.js')+' и '+lnk('Bible-BG.css','scr/Bible-BG.css')
-+'<br><li>избор цвят   '
++'<br>11.РќР°СЃС‚РѕР№РєР° РЅР° С†РІРµС‚РѕРІРµС‚Рµ/С€СЂРёС„С‚РѕРІРµ/СЂР°Р·РјРµСЂРё</span>'
++'<br><li>С„Р°Р№Р»РѕРІРµ '
++lnk('colors.js','scr/colors.js')+' Рё '+lnk('Bible-BG.css','scr/Bible-BG.css')
++'<br><li>РёР·Р±РѕСЂ С†РІСЏС‚   '
 +lnk('web-clr.htm','scr/web-clr.htm')
 +'<br>'
 +'<span id="bej">'
-+'<br>12.Смъкване(download) в компресиран(zip) вид на всичко, или на части за локално ползване:</span> '
-+'<br> + сайта Bible-bg (със иконите от албума и текста): '
++'<br>12.РЎРјСЉРєРІР°РЅРµ(download) РІ РєРѕРјРїСЂРµСЃРёСЂР°РЅ(zip) РІРёРґ РЅР° РІСЃРёС‡РєРѕ, РёР»Рё РЅР° С‡Р°СЃС‚Рё Р·Р° Р»РѕРєР°Р»РЅРѕ РїРѕР»Р·РІР°РЅРµ:</span> '
++'<br> + СЃР°Р№С‚Р° Bible-bg (СЃСЉСЃ РёРєРѕРЅРёС‚Рµ РѕС‚ Р°Р»Р±СѓРјР° Рё С‚РµРєСЃС‚Р°): '
 +lnk('Bible-bg.09.zip','../~down/Bible-bg.zip')+'=13 314Kib -> ?Kib '
-+'<br> - текста на библията 2 файла в .js формат (javasript масив) '
-+'<br> - '+lnk('Bible.js2.zip','../~down/Bible.js2.zip')+'=1 523Kib -> ?Kib след разкомпресиране'
-+'<br> - текста на библията 27+50 файла в .js формат - разделен по книги '
++'<br> - С‚РµРєСЃС‚Р° РЅР° Р±РёР±Р»РёСЏС‚Р° 2 С„Р°Р№Р»Р° РІ .js С„РѕСЂРјР°С‚ (javasript РјР°СЃРёРІ) '
++'<br> - '+lnk('Bible.js2.zip','../~down/Bible.js2.zip')+'=1 523Kib -> ?Kib СЃР»РµРґ СЂР°Р·РєРѕРјРїСЂРµСЃРёСЂР°РЅРµ'
++'<br> - С‚РµРєСЃС‚Р° РЅР° Р±РёР±Р»РёСЏС‚Р° 27+50 С„Р°Р№Р»Р° РІ .js С„РѕСЂРјР°С‚ - СЂР°Р·РґРµР»РµРЅ РїРѕ РєРЅРёРіРё '
 +'<br> - '+lnk('Bible.js77.zip','../~down/Bible.js77.zip')+'=?Kib -> ?Kib'
-+'<br> - иконите от албума на Bible-bg: '
++'<br> - РёРєРѕРЅРёС‚Рµ РѕС‚ Р°Р»Р±СѓРјР° РЅР° Bible-bg: '
 +'<br> - '+lnk('icons.zip','../~down/icons.zip')+'=2 679Kib -> ?Kib '
-+'<br> - сайта Bible-bg - без иконите от албума и текста: '
++'<br> - СЃР°Р№С‚Р° Bible-bg - Р±РµР· РёРєРѕРЅРёС‚Рµ РѕС‚ Р°Р»Р±СѓРјР° Рё С‚РµРєСЃС‚Р°: '
 +'<br> - '+lnk('Bible-bg.09.zip','../~down/Bible-bg.zip')+'=?Kib -> ?Kib '
-+'<br> * 1 килобайт - 1Kib=1024b, за разлика от 1Kb=1000b'
-+'<br> * текста на библията е в 2 варианта по избор, 2 големи файла или 77(по книги)'
-+'<br> --- ако смъквате на части, разкомпресирате в следната структура папки '
-+' (dirs, folds) в избраната за главна Bible-bg/:'
-+'<br> --- Bible-bg/ - главна папка за *.htm файловете, с главен файл index.htm'
-+'<br> --- Bible-bg/scr/ - скриптове *.js и стилове *.css  за сайта'
-+'<br> --- Bible-bg/Bible/ - текста на библията NT*.js, OT*.js'
-+'<br> --- Bible-bg/icons/ - иконите за албума *.jpg'
++'<br> * 1 РєРёР»РѕР±Р°Р№С‚ - 1Kib=1024b, Р·Р° СЂР°Р·Р»РёРєР° РѕС‚ 1Kb=1000b'
++'<br> * С‚РµРєСЃС‚Р° РЅР° Р±РёР±Р»РёСЏС‚Р° Рµ РІ 2 РІР°СЂРёР°РЅС‚Р° РїРѕ РёР·Р±РѕСЂ, 2 РіРѕР»РµРјРё С„Р°Р№Р»Р° РёР»Рё 77(РїРѕ РєРЅРёРіРё)'
++'<br> --- Р°РєРѕ СЃРјСЉРєРІР°С‚Рµ РЅР° С‡Р°СЃС‚Рё, СЂР°Р·РєРѕРјРїСЂРµСЃРёСЂР°С‚Рµ РІ СЃР»РµРґРЅР°С‚Р° СЃС‚СЂСѓРєС‚СѓСЂР° РїР°РїРєРё '
++' (dirs, folds) РІ РёР·Р±СЂР°РЅР°С‚Р° Р·Р° РіР»Р°РІРЅР° Bible-bg/:'
++'<br> --- Bible-bg/ - РіР»Р°РІРЅР° РїР°РїРєР° Р·Р° *.htm С„Р°Р№Р»РѕРІРµС‚Рµ, СЃ РіР»Р°РІРµРЅ С„Р°Р№Р» index.htm'
++'<br> --- Bible-bg/scr/ - СЃРєСЂРёРїС‚РѕРІРµ *.js Рё СЃС‚РёР»РѕРІРµ *.css  Р·Р° СЃР°Р№С‚Р°'
++'<br> --- Bible-bg/Bible/ - С‚РµРєСЃС‚Р° РЅР° Р±РёР±Р»РёСЏС‚Р° NT*.js, OT*.js'
++'<br> --- Bible-bg/icons/ - РёРєРѕРЅРёС‚Рµ Р·Р° Р°Р»Р±СѓРјР° *.jpg'
 /** **/
 /** **-/
-+'<hr><pre><span id="bej">незавършени/липсващи:</span>'
-+' Празници'
-+' За иконите'
-+' Хронология на библейските събития '
-+' Теми: Пророчества за Христос - като търсенето'
-+' Промяна на цветовете - меню, запис във файл'
-+' Търсене на втори и трети израз'
-+' форматиране:'
-+'	паралел: [a:bcv,...] и да показва с title съдържанието му '
-+'	речник: Ева {Живот} да стане (Ева){Живот} и събиране на речник за ?'
++'<hr><pre><span id="bej">РЅРµР·Р°РІСЉСЂС€РµРЅРё/Р»РёРїСЃРІР°С‰Рё:</span>'
++' РџСЂР°Р·РЅРёС†Рё'
++' Р—Р° РёРєРѕРЅРёС‚Рµ'
++' РҐСЂРѕРЅРѕР»РѕРіРёСЏ РЅР° Р±РёР±Р»РµР№СЃРєРёС‚Рµ СЃСЉР±РёС‚РёСЏ '
++' РўРµРјРё: РџСЂРѕСЂРѕС‡РµСЃС‚РІР° Р·Р° РҐСЂРёСЃС‚РѕСЃ - РєР°С‚Рѕ С‚СЉСЂСЃРµРЅРµС‚Рѕ'
++' РџСЂРѕРјСЏРЅР° РЅР° С†РІРµС‚РѕРІРµС‚Рµ - РјРµРЅСЋ, Р·Р°РїРёСЃ РІСЉРІ С„Р°Р№Р»'
++' РўСЉСЂСЃРµРЅРµ РЅР° РІС‚РѕСЂРё Рё С‚СЂРµС‚Рё РёР·СЂР°Р·'
++' С„РѕСЂРјР°С‚РёСЂР°РЅРµ:'
++'	РїР°СЂР°Р»РµР»: [a:bcv,...] Рё РґР° РїРѕРєР°Р·РІР° СЃ title СЃСЉРґСЉСЂР¶Р°РЅРёРµС‚Рѕ РјСѓ '
++'	СЂРµС‡РЅРёРє: Р•РІР° {Р–РёРІРѕС‚} РґР° СЃС‚Р°РЅРµ (Р•РІР°){Р–РёРІРѕС‚} Рё СЃСЉР±РёСЂР°РЅРµ РЅР° СЂРµС‡РЅРёРє Р·Р° ?'
 
-+' Календар, файлът със светиите по дни е:'
-+' 	смяна на година/месец/формат'
-+' 	цветове на празниците '
-+' 	изчисляване/задаване на Пасха '
-+' 	и изчисление на плаващите празници'
-+' 	списък празници под/до месеца'
++' РљР°Р»РµРЅРґР°СЂ, С„Р°Р№Р»СЉС‚ СЃСЉСЃ СЃРІРµС‚РёРёС‚Рµ РїРѕ РґРЅРё Рµ:'
++' 	СЃРјСЏРЅР° РЅР° РіРѕРґРёРЅР°/РјРµСЃРµС†/С„РѕСЂРјР°С‚'
++' 	С†РІРµС‚РѕРІРµ РЅР° РїСЂР°Р·РЅРёС†РёС‚Рµ '
++' 	РёР·С‡РёСЃР»СЏРІР°РЅРµ/Р·Р°РґР°РІР°РЅРµ РЅР° РџР°СЃС…Р° '
++' 	Рё РёР·С‡РёСЃР»РµРЅРёРµ РЅР° РїР»Р°РІР°С‰РёС‚Рµ РїСЂР°Р·РЅРёС†Рё'
++' 	СЃРїРёСЃСЉРє РїСЂР°Р·РЅРёС†Рё РїРѕРґ/РґРѕ РјРµСЃРµС†Р°'
 
-+' клавиши, бутони и меню ако си върху елемент? '
-+'    стар/нов:     -> (Shift/Alt)+'
-+'	кн: (^ v < >) -> (home end pgup pgdn) Shift+home/Alt+home,... '
-+'	гл: (^ v < >) -> (up down left right)'
-+'	ст: (^ v)     -> (ins del) ?'
-+'	бутони за преглед: (-) (+) (=)/(s)how '
-+'	менюта:(d)ocs (o)ld-index (n)ew-index (h)olydays (i)cons (w)ords (f)ind (b)iblist (a)dd-to-biblist/del? (t)hemes (c)alendar'
++' РєР»Р°РІРёС€Рё, Р±СѓС‚РѕРЅРё Рё РјРµРЅСЋ Р°РєРѕ СЃРё РІСЉСЂС…Сѓ РµР»РµРјРµРЅС‚? '
++'    СЃС‚Р°СЂ/РЅРѕРІ:     -> (Shift/Alt)+'
++'	РєРЅ: (^ v < >) -> (home end pgup pgdn) Shift+home/Alt+home,... '
++'	РіР»: (^ v < >) -> (up down left right)'
++'	СЃС‚: (^ v)     -> (ins del) ?'
++'	Р±СѓС‚РѕРЅРё Р·Р° РїСЂРµРіР»РµРґ: (-) (+) (=)/(s)how '
++'	РјРµРЅСЋС‚Р°:(d)ocs (o)ld-index (n)ew-index (h)olydays (i)cons (w)ords (f)ind (b)iblist (a)dd-to-biblist/del? (t)hemes (c)alendar'
 /* *-/
-+' допълнително групиране и коментар в индекса на книгите и главите'
-+'    Използвани означения към името на книгата в Стария Завет:'
-+'    [пе##] п=K|N|A: Канонични,Неканонични,Апокрифни - православни'
-+'    --------- е=T|N|K: Закон(Thora=5), Пророци(Neviim=8), Писания(Kethobim=11) - еврейски'
-+'    --------- ##|--: еврейски каноничен номер 1..24, -- евр.апокриф
-+'    (12) - дванадесетте малки пророка, кн. - книга, пр. - пророк
++' РґРѕРїСЉР»РЅРёС‚РµР»РЅРѕ РіСЂСѓРїРёСЂР°РЅРµ Рё РєРѕРјРµРЅС‚Р°СЂ РІ РёРЅРґРµРєСЃР° РЅР° РєРЅРёРіРёС‚Рµ Рё РіР»Р°РІРёС‚Рµ'
++'    РР·РїРѕР»Р·РІР°РЅРё РѕР·РЅР°С‡РµРЅРёСЏ РєСЉРј РёРјРµС‚Рѕ РЅР° РєРЅРёРіР°С‚Р° РІ РЎС‚Р°СЂРёСЏ Р—Р°РІРµС‚:'
++'    [РїРµ##] Рї=K|N|A: РљР°РЅРѕРЅРёС‡РЅРё,РќРµРєР°РЅРѕРЅРёС‡РЅРё,РђРїРѕРєСЂРёС„РЅРё - РїСЂР°РІРѕСЃР»Р°РІРЅРё'
++'    --------- Рµ=T|N|K: Р—Р°РєРѕРЅ(Thora=5), РџСЂРѕСЂРѕС†Рё(Neviim=8), РџРёСЃР°РЅРёСЏ(Kethobim=11) - РµРІСЂРµР№СЃРєРё'
++'    --------- ##|--: РµРІСЂРµР№СЃРєРё РєР°РЅРѕРЅРёС‡РµРЅ РЅРѕРјРµСЂ 1..24, -- РµРІСЂ.Р°РїРѕРєСЂРёС„
++'    (12) - РґРІР°РЅР°РґРµСЃРµС‚С‚Рµ РјР°Р»РєРё РїСЂРѕСЂРѕРєР°, РєРЅ. - РєРЅРёРіР°, РїСЂ. - РїСЂРѕСЂРѕРє
 
-//+'лого кръст за Bible-BG'
-+' статия за кръстовете '
+//+'Р»РѕРіРѕ РєСЂСЉСЃС‚ Р·Р° Bible-BG'
++' СЃС‚Р°С‚РёСЏ Р·Р° РєСЂСЉСЃС‚РѕРІРµС‚Рµ '
    
-+' увеличаване/намаляване на шрифта във всеки прозорец А+/-'
-+' пренасочване съдържанието на прозорец в друг(fnd<-txt/?) и таблица за преход!?'
++' СѓРІРµР»РёС‡Р°РІР°РЅРµ/РЅР°РјР°Р»СЏРІР°РЅРµ РЅР° С€СЂРёС„С‚Р° РІСЉРІ РІСЃРµРєРё РїСЂРѕР·РѕСЂРµС† Рђ+/-'
++' РїСЂРµРЅР°СЃРѕС‡РІР°РЅРµ СЃСЉРґСЉСЂР¶Р°РЅРёРµС‚Рѕ РЅР° РїСЂРѕР·РѕСЂРµС† РІ РґСЂСѓРі(fnd<-txt/?) Рё С‚Р°Р±Р»РёС†Р° Р·Р° РїСЂРµС…РѕРґ!?'
 +'</pre>'
 /* */
 
-+'<hr> <span id="bej">Свободно изтегляне от интернет: </span> -'+bible_bg_web 
-+'<br> <span id="bej">Редактиране, корекции и др.:    </span> +'+bible_bg_mail
++'<hr> <span id="bej">РЎРІРѕР±РѕРґРЅРѕ РёР·С‚РµРіР»СЏРЅРµ РѕС‚ РёРЅС‚РµСЂРЅРµС‚: </span> -'+bible_bg_web 
++'<br> <span id="bej">Р РµРґР°РєС‚РёСЂР°РЅРµ, РєРѕСЂРµРєС†РёРё Рё РґСЂ.:    </span> +'+bible_bg_mail
 
-+'<br> Библейският текст е взет от сайта за глухонеми:'
++'<br> Р‘РёР±Р»РµР№СЃРєРёСЏС‚ С‚РµРєСЃС‚ Рµ РІР·РµС‚ РѕС‚ СЃР°Р№С‚Р° Р·Р° РіР»СѓС…РѕРЅРµРјРё:'
 +lnk('bsbible.zip',"http://123.dir.bg/bsbible.zip")
-+'<br> вижте още много други: '
-+lnk('Библии и Православни връзки в мрежата',"../scr/links.htm")
++'<br> РІРёР¶С‚Рµ РѕС‰Рµ РјРЅРѕРіРѕ РґСЂСѓРіРё: '
++lnk('Р‘РёР±Р»РёРё Рё РџСЂР°РІРѕСЃР»Р°РІРЅРё РІСЂСЉР·РєРё РІ РјСЂРµР¶Р°С‚Р°',"../scr/links.htm")
 
 +'<hr> <span id="hi">'
-+'     Свободни сте да променяте всичко без текста на Библията, '
-+'<br> освен ако отстранявате грешки и неточности.  '
-+'<br> "Рапространението и ползването на цялостния продукт: '
-+'<br> \'текст и уеб интерфейс\' е свободно с условието да НЕ се искат '
-+'<br> пари,облаги или обезщетения за него '
-+'<br> , тъй като нито библията, нито продукта са направени с тази цел"'
-+'<br> Не ограничавайте тази свобода на другите хора, чрез продажба или по друг начин!'
-+'<br> Вместо това, поучете се ако не знаете и помогнете ако можете,'
-+'<br> да стане продукта по-добър. '
++'     РЎРІРѕР±РѕРґРЅРё СЃС‚Рµ РґР° РїСЂРѕРјРµРЅСЏС‚Рµ РІСЃРёС‡РєРѕ Р±РµР· С‚РµРєСЃС‚Р° РЅР° Р‘РёР±Р»РёСЏС‚Р°, '
++'<br> РѕСЃРІРµРЅ Р°РєРѕ РѕС‚СЃС‚СЂР°РЅСЏРІР°С‚Рµ РіСЂРµС€РєРё Рё РЅРµС‚РѕС‡РЅРѕСЃС‚Рё.  '
++'<br> "Р Р°РїСЂРѕСЃС‚СЂР°РЅРµРЅРёРµС‚Рѕ Рё РїРѕР»Р·РІР°РЅРµС‚Рѕ РЅР° С†СЏР»РѕСЃС‚РЅРёСЏ РїСЂРѕРґСѓРєС‚: '
++'<br> \'С‚РµРєСЃС‚ Рё СѓРµР± РёРЅС‚РµСЂС„РµР№СЃ\' Рµ СЃРІРѕР±РѕРґРЅРѕ СЃ СѓСЃР»РѕРІРёРµС‚Рѕ РґР° РќР• СЃРµ РёСЃРєР°С‚ '
++'<br> РїР°СЂРё,РѕР±Р»Р°РіРё РёР»Рё РѕР±РµР·С‰РµС‚РµРЅРёСЏ Р·Р° РЅРµРіРѕ '
++'<br> , С‚СЉР№ РєР°С‚Рѕ РЅРёС‚Рѕ Р±РёР±Р»РёСЏС‚Р°, РЅРёС‚Рѕ РїСЂРѕРґСѓРєС‚Р° СЃР° РЅР°РїСЂР°РІРµРЅРё СЃ С‚Р°Р·Рё С†РµР»"'
++'<br> РќРµ РѕРіСЂР°РЅРёС‡Р°РІР°Р№С‚Рµ С‚Р°Р·Рё СЃРІРѕР±РѕРґР° РЅР° РґСЂСѓРіРёС‚Рµ С…РѕСЂР°, С‡СЂРµР· РїСЂРѕРґР°Р¶Р±Р° РёР»Рё РїРѕ РґСЂСѓРі РЅР°С‡РёРЅ!'
++'<br> Р’РјРµСЃС‚Рѕ С‚РѕРІР°, РїРѕСѓС‡РµС‚Рµ СЃРµ Р°РєРѕ РЅРµ Р·РЅР°РµС‚Рµ Рё РїРѕРјРѕРіРЅРµС‚Рµ Р°РєРѕ РјРѕР¶РµС‚Рµ,'
++'<br> РґР° СЃС‚Р°РЅРµ РїСЂРѕРґСѓРєС‚Р° РїРѕ-РґРѕР±СЉСЂ. '
 +'</span>     '
 +'<hr>'
     ]])

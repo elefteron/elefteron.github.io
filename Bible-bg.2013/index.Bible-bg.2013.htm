@@ -1,6 +1,6 @@
 <html lang="bg">
 <head><title>Bible-bg</title>
-  <meta content="text/html; charset=windows-1251" http-equiv="Content-Type" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <meta content="Bible-bg" name="description" />
   <meta content="mailto:elefter@abv.bg" name="author"      />  
   <link href ="Bible-bg.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
@@ -15,7 +15,7 @@
   //'<a title="Bible-BG.zip '  +progID+progVer
   //+'" href="http://www.elefter.hit.bg/down/Bible-BG.zip">Bible-BG.zip</a>'
   var bible_bg_mail='<a title="elefter@abv.bg '+progVer
-    +'" href="mailto:elefter@abv.bg">уеб поща</a>'
+    +'" href="mailto:elefter@abv.bg">СѓРµР± РїРѕС‰Р°</a>'
   function _ver(cs_,cb_,cf_){ 
     function t_(t1){t=''; if(t1!=undefined && t1!=null) t=t1; return t} // '' or valid string  
   	cs=t_(cs_); cb=t_(cb_); cf=t_(cf_); eb=ef='';
@@ -145,9 +145,9 @@
       html_buf.pg_hdr        =pg_hdr()
       
 //    out(log_,'::: pg_sel_nt :::'+br)
-//    html_buf.pg_sel_nt     =pg_sel_nt()     // selgen('+','Нов' ,nh,'NTopen') 
+//    html_buf.pg_sel_nt     =pg_sel_nt()     // selgen('+','РќРѕРІ' ,nh,'NTopen') 
 //    out(log_,'::: pg_sel_ot :::'+br)
-//    html_buf.pg_sel_ot     =pg_sel_ot()     // selgen('-','Стар',oh,'OTopen') 
+//    html_buf.pg_sel_ot     =pg_sel_ot()     // selgen('-','РЎС‚Р°СЂ',oh,'OTopen') 
 
 //    out(log_,'::: pg_idx_nt :::'+br)
 //    html_buf.pg_idx_nt     =pg_idx_nt()     // p+'books.htm#+' -- index NT
@@ -156,13 +156,13 @@
 
       out(log_,'::: pg_bib_list :::'+br)
       // -- init-biblist
-      add_biblist(['OT','Пс'  , 1, 1]);// 1: 'Пс'  =22
-      add_biblist(['OT','Сир' , 1, 1]);// 2: 'Сир' =27
-      add_biblist(['NT','Иоан',20,28]);// 3: 'Иоан'= 4
-      add_biblist(['OT','Иер' ,36,29]);// 4: 'Иер' =29
-      add_biblist(['OT','2Пар',36,23]);// 5: '2Пар'=14
-      add_biblist(['OT','3Езд', 9,31]);// 6: '3Езд'=50
-      add_biblist(['OT','3Езд', 9,30]);// 7: '3Езд'=50
+      add_biblist(['OT','РџСЃ'  , 1, 1]);// 1: 'РџСЃ'  =22
+      add_biblist(['OT','РЎРёСЂ' , 1, 1]);// 2: 'РЎРёСЂ' =27
+      add_biblist(['NT','РРѕР°РЅ',20,28]);// 3: 'РРѕР°РЅ'= 4
+      add_biblist(['OT','РРµСЂ' ,36,29]);// 4: 'РРµСЂ' =29
+      add_biblist(['OT','2РџР°СЂ',36,23]);// 5: '2РџР°СЂ'=14
+      add_biblist(['OT','3Р•Р·Рґ', 9,31]);// 6: '3Р•Р·Рґ'=50
+      add_biblist(['OT','3Р•Р·Рґ', 9,30]);// 7: '3Р•Р·Рґ'=50
   //  html_buf.pg_bib_list   =pg_bib_list()   // p+'biblist'       +'.htm'
       // --      
       out(log_,'::: pg_theme_list :::'+br)
@@ -208,12 +208,12 @@
    s1='ot[50][16][78] exists='
    if(undef(ot) || undef(ot[50][16][78])) out(log_,s1+'NOT'+s2+br); 
    else out(log_,s1+'yes'+s2);
-   var err='', msg='неуспешно зареждане на ';
+   var err='', msg='РЅРµСѓСЃРїРµС€РЅРѕ Р·Р°СЂРµР¶РґР°РЅРµ РЅР° ';
    if(undef(nt) || nt==null || nt=='') err+=msg+'nt'; 
    if(undef(ot) || ot==null || ot=='') err+=msg+'ot';
    if(undef(nh) || nh==null || nh=='') err+=msg+'nh';
    if(undef(oh) || oh==null || oh=='') err+=msg+'oh'; 
-   if(err!='') out(log_,'Грешка:'+err+br) 
+   if(err!='') out(log_,'Р“СЂРµС€РєР°:'+err+br) 
 // ---
     out(log_,'::: work :::'+br)
 /* calendar table test *-/
