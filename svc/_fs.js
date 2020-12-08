@@ -1,3 +1,4 @@
+load_new('scr/_fs.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
   fsiomode={read:1, write:2, append:8}
   fsformat={SystemDefault:-2,Unicode:-1, ASCII:0}
@@ -200,3 +201,5 @@
 	  
       return
   }
+
+load_end();

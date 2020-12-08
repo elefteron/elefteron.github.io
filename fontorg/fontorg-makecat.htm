@@ -6,7 +6,7 @@
   <script> eol='\n'; br='<br/>'; 
     
 	modules=[]; mn=-1;  
-	function load_new(module,loadstatus){ modules[++mn]={'name':module,'state':'start'} }
+	function load_new(module){ modules[++mn]={'name':module,'state':'start'} } // load_new('scr/');...load_end();
 	function load_end(){ modules[mn].state='ok' }
 	function load_lst(){ var i,buf=''
     // log(' ... loads expected['+load_exp.length+']='+load_exp) //  [#]. {module:state} 

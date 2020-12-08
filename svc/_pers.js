@@ -1,3 +1,4 @@
+load_new('scr/_pers.js');
 /* ANSI!: ах, чудна българска земьо, полюшвай цъфтящи жита! */
 pp=-1; // total parameter values:69480 
 pers_=[
@@ -71,6 +72,4 @@ pers_=[
 --- */
 ]; pp=pers_.length-1; 
 // pers_[++pp]=["im","#"  ,"test"       ,  0  ,file         ,byk?,    ?,    4,   4 ] // ?
-
-
-
+load_end();

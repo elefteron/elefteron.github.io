@@ -1,3 +1,4 @@
+load_new('scr/_global.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
 id={
   "id": "SVC",
@@ -79,3 +80,4 @@ thisID='<font class="id">'+'<a href="mailto:'+id.author+'?Subject=SVC_usr_msg:" 
 	return fnd
   }
 // ---
+load_end();

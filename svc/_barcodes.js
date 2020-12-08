@@ -1,3 +1,4 @@
+load_new('scr/_barcodes.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
 bcn_=[{bcnum: 0,bcid:'No-barcode'   ,bcnm:'no barcode'} 
      ,{bcnum:  1,bcid:'Code-11'      ,bcnm:'Code 11'}
@@ -133,3 +134,4 @@ See details>
   }
   // alert(bcn_.length); // 50  
   // _ISBN=69; _ean14=72; _ean13=13; _code128=20;       barcodetype=_code128
+load_end();

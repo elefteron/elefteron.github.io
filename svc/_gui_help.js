@@ -1,3 +1,4 @@
+load_new('scr/_gui_help.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
   svc_sch='svc-scheme-3.svg'// 'stb-scheme.svg'
   bg=0; en=1; // dict=['bg','en'] - tolang=en;
@@ -274,3 +275,4 @@ colect out: [+val],ord,id,bcn,k,r [>out: csv_ind]
 -xp: set_val():: id:xfil innerHTML: (No-barcode_00000)!=(No-barcode_00000) 
 -xp: ... eps repl: open inp:C:\$desk\#pers\#data\tmp\A19E00001.eps event:"Error: File not found" may be not created
 */
+load_end();

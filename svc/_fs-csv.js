@@ -1,3 +1,4 @@
+load_new('scr/_fs-csv.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
   function putCSVzint() { var mes,f,rec, bcn=bcn_id(par[p].bcn) // global ,filetype,ar
 	if(bcn==bcn_[0].bcid) bcn='' 
@@ -127,33 +128,33 @@
 /* get_csv() *-/
    function get_csv(csv_imp){var f // <-C:\Tery\+\barcode_gen\input.csv
    if( isFunc(typeof(window.ActiveXObject)) ){
-     log('open to import file:'+csv_imp) // if(dbg) 
-     if(csv_imp=='' || undef(csv_imp)) {log('undefined/empty file name'); return}
+     msg('open to import file:'+csv_imp) // if(dbg) 
+     if(csv_imp=='' || undef(csv_imp)) {msg('undefined/empty file name'); return}
      try{ f = fso.OpenTextFile(csv_imp, fsiomode.read, false,fsformat.ASCII); 
-     //log('opened')
-       }catch(err){ log('--getcsv open("'+csv_imp+'")\n  err:'+err);
-        if(err=='Error: Permission denied') log(' may be this file is opened from another apl.')
+     //msg('opened')
+       }catch(err){ msg('--getcsv open("'+csv_imp+'")\n  err:'+err);
+        if(err=='Error: Permission denied') msg(' may be this file is opened from another apl.')
      }
    }
    
    if(!undef(f)) { var l=-1, Rin=-1, Kin=-1, buf='', row_in=[]
      val_imp=[]
      while(!f.AtEndOfStream) { 
-       try{ buf=f.ReadLine();l++;} catch(err){ log('--getCSV_'+l,' ("'+buf+'")\n  err:'+err);}
+       try{ buf=f.ReadLine();l++;} catch(err){ msg('--getCSV_'+l,' ("'+buf+'")\n  err:'+err);}
        row_in=buf.split(',');
        if(l==0){ Rin=-1; Kin=row_in.length-1; }
    	if(par[p].has_hdr && l==0){ 
-   	  log('hdr:'+row_in.join(','))
+   	  msg('hdr:'+row_in.join(','))
    	  continue;
    	} else {
-   	  Rin++; val_imp[Rin]=row_in; // log(l+':'+row_in.join(','))
-   	  log('['+(Rin+1)+']:'+val_imp[Rin].join(','))
+   	  Rin++; val_imp[Rin]=row_in; // msg(l+':'+row_in.join(','))
+   	  msg('['+(Rin+1)+']:'+val_imp[Rin].join(','))
    	}
        }
      }
-     if(!undef(f)){	log('get '+csv_imp+' '+l+' lines'); f.close(); log('close '+csv_imp) }
+     if(!undef(f)){	msg('get '+csv_imp+' '+l+' lines'); f.close(); msg('close '+csv_imp) }
      Rin++; Kin++;
-   par[p].Rin=Rin; par[p].Kin=Kin; log(' Rin:'+(Rin)+' Kin:'+(Kin))
+   par[p].Rin=Rin; par[p].Kin=Kin; msg(' Rin:'+(Rin)+' Kin:'+(Kin))
    par[p].Rcv=Rin; par[p].Kcv=Kin; 
    //par[p].byKcv=true; // default true mean kols to rows else rows to kols
    // set_val("Rin"    , 'htm', par[p].Rin   )
@@ -177,7 +178,7 @@
 	// default true mean kols to rows else rows to kols
 	  for (var k=0; k<=Kcv-1; k++) { 
 	    for (var r=0; r<=Rcv-1; r++) { 
-	      v=val_imp[r][k]; seq[++a]=v; // log(v+' ')
+	      v=val_imp[r][k]; seq[++a]=v; // msg(v+' ')
 	    }
 	  }
     } else { // --- todo:: submatrix
@@ -188,11 +189,12 @@
       }
     }
 	
-    log('convert imported csv kol to rows='+par[p].byKcv+' and export by Rex:'+par[p].Rex+' Kex:'+par[p].Kex) // hdr!
+    msg('convert imported csv kol to rows='+par[p].byKcv+' and export by Rex:'+par[p].Rex+' Kex:'+par[p].Kex) // hdr!
     var k=par[p].Kex, buf='',l=0
 	for (i=1; i<=seq.length-1; i+k) { l++; buf='['+l+']:'
 	  for (j=1; j<=k; j++) { buf+= seq[i]; i++; if(j<k) buf+=','}
-	  log(buf)
+	  msg(buf)
 	}
   }
 /* */
+load_end();

@@ -1,3 +1,4 @@
+load_new('scr/_gui.js');
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
   test_gui=true
   
@@ -41,13 +42,7 @@
   }
 
   function reloadPage(){ window.location.reload();} 
-  function msg(s) { 
-    if (typeof(s)===undefined || s==='') return;
-    else if(typeof(msg_)===undefined){ alert('msg_:'+s); return}
-    if (msg_===null) msg_.innerHTML =s+crlf+'<br>'; // new content
-    else             msg_.innerHTML+=s+crlf+'<br>'; // append
 
-  }
 // --------------------------------------------------------
   function chk_par(){var mes='', br='<br/>'// check par and chk_par
 	 par_ok=true
@@ -321,3 +316,4 @@
 
    new_par(); // new_par call chk_par() -- onchange view to data: form to par[p].*
   }
+load_end();
