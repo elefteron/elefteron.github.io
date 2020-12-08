@@ -432,7 +432,7 @@ dbg=!true;
     load_end();
 </script>
 <script>
-//  msg_=document.getElementById("msg"); 
+    if(msg_==null) {msg_=document.getElementById("msg"); msg(' msg_ forced!');}
     window.onload = load_lst();
 //  window.onload = (event) => {
 //    console.log('page is fully loaded'); onload.load_lst();
