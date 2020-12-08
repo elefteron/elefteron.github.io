@@ -8,8 +8,12 @@
   <meta name="keywords" content="Seria values, sequences, barcodes">
   <meta name="author" content="Elefter Arnaudov"> 
   <meta name="contact" content="mailto:elefter@abv.bg" />  
-  
-  <meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; media-src *;  img-src 'self'; child-src 'none';">
+  <!-- 
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy 
+    https://w3c.github.io/webappsec-trusted-types/dist/spec/#trusted-html
+    meta http-equiv="Content-Security-Policy" content="default-src *; script-src *; media-src *;  img-src 'self'; child-src 'none';"
+  -->
+  <meta http-equiv="Content-Security-Policy" content="">
   
   <script> eol='\n'; br='<br/>';    
 	modules=[]; mn=-1;  
