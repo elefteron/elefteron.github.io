@@ -305,7 +305,7 @@ dbg=!true;
 // dict[  #]=['','']
 }// ---
    // todo: info-> outhlp(help_tech,tolang)
-
+   alert(load_lst());
    gui_init(); fs_init();
    xusr_.innerHTML=user   
    xpth_.innerHTML=workpath; // alert(wp)
@@ -434,7 +434,7 @@ dbg=!true;
     load_end();
 </script>
 <script>
-    alert(load_lst());
+//  alert(load_lst());
     if(msg_===null || msg_===undefined) {msg_=document.getElementById("msg"); msg(' msg_ forced!');}
     window.onload = msg(load_lst()); 
 //  window.onload = (event) => {
