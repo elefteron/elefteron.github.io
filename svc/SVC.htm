@@ -14,20 +14,21 @@
 	function load_new(module){ modules[++mn]={'name':module,'state':'start'} } 
     load_new('svc.htm#script1');
 	function load_end(){ modules[mn].state='ok' }
-	function load_lst(){ var i,buf=''
+	function load_lst(){ var i,buf='',ok=0;
     // msg(' ... loads expected['+load_exp.length+']='+load_exp) //  [#]. {module:state} 
-	   for (i=0; i<=mn; i++) 
-         buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'+eol+br
-       msg(' ... loads occured ['+(mn+1)+']: '+eol+br+buf) //  [#]. {module:state} 
+	   for (i=0; i<=mn; i++) { if(modules[i].state=='ok') ok++;
+         buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'+eol+br;
+       }
+       msg(' ... loads ['+(mn+1)+']: ok='+ok+eol+br+buf) //  [#]. {module:state} 
 	}; 
     
     function msg(s) { 
-      if (typeof(s)===undefined) {
-        try{
-          document.write('»msg:'+s+eol+br); 
+      if (typeof(s)===undefined) return;
+      if (msg_===undefined || msg==null) {
+        try{               document.write('»msg:'+s+eol+br); 
         }catch(Exception){ alert('»»msg:'+s);}
         return
-      } else if(typeof(msg_)===undefined){ alert('»msg_:'+s); return}
+      }
       
       if (msg_===null) msg_.innerHTML =''; // clear old  content
       else             msg_.innerHTML+=s+eol+'<br>'; // append
@@ -432,7 +433,7 @@ dbg=!true;
     load_end();
 </script>
 <script>
-    if(msg_==null) {msg_=document.getElementById("msg"); msg(' msg_ forced!');}
+    if(msg_===null || msg_===undefined) {msg_=document.getElementById("msg"); msg(' msg_ forced!');}
     window.onload = load_lst();
 //  window.onload = (event) => {
 //    console.log('page is fully loaded'); onload.load_lst();
