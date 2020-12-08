@@ -46,10 +46,10 @@ function showyear(sy,m1,m2){  var ln='\n', ln2='<br>', test=true;
   y=sy;  
 
 //var dowbg=new Array
-//('неделя','понеделник','вторник','сряда','четвъртък','петък','събота')
-  weeknm=['п','в','с','ч','п','с','н'];
+//('РЅРµРґРµР»СЏ','РїРѕРЅРµРґРµР»РЅРёРє','РІС‚РѕСЂРЅРёРє','СЃСЂСЏРґР°','С‡РµС‚РІСЉСЂС‚СЉРє','РїРµС‚СЉРє','СЃСЉР±РѕС‚Р°')
+  weeknm=['Рї','РІ','СЃ','С‡','Рї','СЃ','РЅ'];
   var monbg=
-  ['Яну','Фев','Мар','Апр','Май','Юни','Юли','Авг','Сеп','Окт','Ное','Дек'];
+  ['РЇРЅСѓ','Р¤РµРІ','РњР°СЂ','РђРїСЂ','РњР°Р№','Р®РЅРё','Р®Р»Рё','РђРІРі','РЎРµРї','РћРєС‚','РќРѕРµ','Р”РµРє'];
 /* kalendar clr-cfg.js */
 
   ky=0;wy=0; hy=0; ry=0; fy=0; wey=0;  buf=''; 
@@ -76,11 +76,11 @@ function showyear(sy,m1,m2){  var ln='\n', ln2='<br>', test=true;
       var s1='', h=false; // not a holiday
       bgclr=rowbg; if (sameday(d,m,y ,tdd,tmm,tyy)) bgclr=crntday;
       tclr=''; iss=''; // Wday:w/n; Hday:h/+/-/e/n;
-      if  (Wday(d,m,y)=='w') {iss+='работен'; // also work on holidays
+      if  (Wday(d,m,y)=='w') {iss+='СЂР°Р±РѕС‚РµРЅ'; // also work on holidays
         wm++; wy++;    tclr=wrk_fg;
         iss=' #'+wy+'['+wm+'] '+iss;
         if      (Hday(d,m,y)=='+')         {tclr=r_fg; ry++;}
-      }else{                  iss+='неработен';// holiday or/and weekend
+      }else{                  iss+='РЅРµСЂР°Р±РѕС‚РµРЅ';// holiday or/and weekend
         if      (Hday(d,m,y)=='h') { hy++;  tclr=hd_fg;}
         else if (Hday(d,m,y)=='e') { wey++; tclr=we_fg;}
         else if (Hday(d,m,y)=='+')          tclr=we_fg;// gold
@@ -136,15 +136,15 @@ function showyear(sy,m1,m2){  var ln='\n', ln2='<br>', test=true;
   s=''; if (showstat){
     fy=18; //?
     h=((y%4)==0) && ((y%100)!=0) || ((y%400)==0);
-    if (h) {s1='366 дни';} else s1='365 дни';// +' всички дни='+ky
-    s=ln2+'Легенда:'+ln2+'година '+y+' c '+s1+' по слънчевия календар'+ln2
-     +' <font color="'+weekno_fg+'"> # седмица (52*5+52*2)=52*7 =(раб.260 + поч.104)=364дни'+'</font> '+ln2                                          
-     +' <font color="'+wrk_fg   +'"> работни:'+wy                    +' </font> '
-     +' <font color="'+we_fg    +'"> почивни(съб/нед):'+wey          +' </font> '+ln2
-     +'празници '+(hy+ry+fy)+': '
-     +' <font color="'+hd_fg    +'"> официални:'            +hy      +' </font> '+ln2
-     +' <font color="'+r_fg     +'"> + православни твърди :'+ry      +' </font> '+ln2
-     +' <font color="'+f_fg     +'"> † православни плаващи:'+fy      +' </font> '+ln2
+    if (h) {s1='366 РґРЅРё';} else s1='365 РґРЅРё';// +' РІСЃРёС‡РєРё РґРЅРё='+ky
+    s=ln2+'Р›РµРіРµРЅРґР°:'+ln2+'РіРѕРґРёРЅР° '+y+' c '+s1+' РїРѕ СЃР»СЉРЅС‡РµРІРёСЏ РєР°Р»РµРЅРґР°СЂ'+ln2
+     +' <font color="'+weekno_fg+'"> # СЃРµРґРјРёС†Р° (52*5+52*2)=52*7 =(СЂР°Р±.260 + РїРѕС‡.104)=364РґРЅРё'+'</font> '+ln2                                          
+     +' <font color="'+wrk_fg   +'"> СЂР°Р±РѕС‚РЅРё:'+wy                    +' </font> '
+     +' <font color="'+we_fg    +'"> РїРѕС‡РёРІРЅРё(СЃСЉР±/РЅРµРґ):'+wey          +' </font> '+ln2
+     +'РїСЂР°Р·РЅРёС†Рё '+(hy+ry+fy)+': '
+     +' <font color="'+hd_fg    +'"> РѕС„РёС†РёР°Р»РЅРё:'            +hy      +' </font> '+ln2
+     +' <font color="'+r_fg     +'"> + РїСЂР°РІРѕСЃР»Р°РІРЅРё С‚РІСЉСЂРґРё :'+ry      +' </font> '+ln2
+     +' <font color="'+f_fg     +'"> вЂ  РїСЂР°РІРѕСЃР»Р°РІРЅРё РїР»Р°РІР°С‰Рё:'+fy      +' </font> '+ln2
      +' <font color="gray">'    
      +'err on week#35 at 1-st week of sep-2009'+ln2
      +'todo: see today, see note without _ clnk(tx)'+ln2
