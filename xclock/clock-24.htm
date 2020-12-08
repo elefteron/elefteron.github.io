@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+  <HEAD><title>clock-24+</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <style>
+    *     { padding:0; margin:0;  }
+  body    { background-color:#000; color:yellow; 
+			text-align:center; vertical-align: middle;
+            font-size:11pt; line-height:11.2pt; font-weight:bold; 
+			width:150px; height:36;
+  font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
+          }
+    </style>
+    <script src="clock.js"></script> 
+    <script src="loader.js"></script> 
+    <script> 
+      { var dbg=1,big=true // --- globals, config:
+        var showsec=!true, refreshms=1*1000, rsz=false // true | false
+           ,fnts=[{sz:28,lh:28,fam:'DigiFace'}
+                 ,{sz:28,lh:28,fam:'Digital'}
+                 ,{sz:28,lh:28,fam:"'Digital2 Medium'"}
+                 ,{sz:36,lh:28,fam:"'SF Digital Readout Heavy'"}
+                 ,{sz:24,lh:24,fam:'Impact'}      
+                 // big 
+            //   ,{sz:490,lh:450,fam:'Agency FB'}      // bold?
+                 ,{sz:290,lh:250,fam:'Agency FB'}      // bold?
+                 ,{sz:210,lh:200,fam:'Impact'}         //  
+            //   ,{sz:210,lh:200,fam:'PoplarStd'}    //  ?
+            //   ,{sz:210,lh:200,fam:'OCR A Extended'}    //  
+            //   ,{sz:210,lh:200,fam:'Monoid'}    //  ?
+            //   ,{sz:210,lh:200,fam:'Lucida Sans'}    //   
+            //   ,{sz:210,lh:200,fam:'Lucida Sans Demibold Roman'}    //  ?
+            //   ,{sz:210,lh:200,fam:'IrisUPC Bold'}    //  ?
+            //   ,{sz:210,lh:200,fam:'Haettenschweiler'}    //       
+            //   ,{sz:210,lh:200,fam:'Gill Sans Ext Condensed Bold'}    //  ?     
+            //   ,{sz:210,lh:200,fam:'Gill Sans MT'}    //    
+            //   ,{sz:210,lh:200,fam:'Fantastique Sans Mono'}    //  ?     
+            //   ,{sz:210,lh:200,fam:'Eras Demi ITC'}    //  ?     
+            //   ,{sz:210,lh:200,fam:'DejaVu Sans Mono'} //        
+            //   ,{sz:210,lh:200,fam:'Anastasia'}      //        
+                 ]
+		   ,fsel=4 
+// The quick brown fox jumps over the lazy dog.
+// АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ абвгдежзийклмнопрстуфхцчшщъьюя
+// €§«»°©®№ ЁёЫыЭэ 0123456789
+	    if (big) fsel=5
+        var fnt_={fg:'#468c00',bg:'#111111' // #6495ED #4169E1 #87CEEB      // <- fg:,bg:?
+                 ,fam:fnts[fsel].fam, sz:fnts[fsel].sz, lh:fnts[fsel].lh}          // <- 4,4,4         
+           ,pic_={h:30,w:14,path:'pics.num/',pref:'w',ext:'.gif'}         // <- 30,14,w
+           // pic,h 8..64 px;  pref:'c'|'k'|'w'; real=h:21px,w:16px; w:0 -> only h
+           ,ctyp='fnt'// 'pic','fnt'                                      // <- fnt
+        var w=1050, h=350 // w=1050, h=350 w=150, h=36 if(!_iex) whr=w// (w+margin*2+padding*2)
+	    if(big) {w=810; h=350;}
+        //-------------------------- color buttons -- 
+        bfnt='300'; bbrdw='2'; btxt='white'; 
+        bbgPG   ='black'; bbgRUN='maroon'; bbgCTRL='gray';
+        bfrmMISS='black'  // notexist|unknown  'dimgray'
+        bfrmFREE='white'  // exist+unused      'yellow' 
+        bfrmUsed='yellow' // exist+used        'red'    
+        bfrm=bfrmFREE 
+        btn=' STYLE="color:'+btxt+'; background-color:'+bbgCTRL+'; border-color:'+bfrm+';'
+           +' font-weight:' +bfnt+'; border-width:'    +bbrdw  +';"'
+        //--
+        var monname=new Array(12), dayname=new Array(7);
+            monname=['януари','февруари','март','април','май','юни','юли'
+                    ,'август','септември','октомври','ноември','декември']
+        var dayname=['понеделник','вторник','сряда','четвъртък','петък','събота','неделя']
+      }//--
+      function cbtn (b,t,e){ 
+        return ('<input ' +b+' type=button'+' value="'+t
+               +'" onclick=\'javascript: '+e+'\'>')
+      }// ------------------------
+      function runbtn(dir,path){ 
+        return (' STYLE="color:'+btxt+'; background-color:'+bbg+'; border-color:'+bfrm+';'
+               +' font-weight:' +bfnt+'; border-width:'    +bbrdw+';"')
+      }//--------------------------
+      var expand_status=0;
+      function expand(){ 
+        if (expand_status===0){  expand_status=1;
+          window.resizeTo(we,h); window.moveTo(x,y)
+        }else{                   expand_status=0;
+          window.resizeTo(w,h);  window.moveTo(x,y)
+        }
+      }//--------------------------
+      function expsign(){ var expsign='>';
+        if (expand_status==2) expsign='<';
+        return(expsign)
+      }//--------------------------
+      function setw(x,y,w,h){moveTo(x,y);resizeTo(w,h);}
+      function getW(){ // ok in ie7-hta
+         x =window.screenLeft  // window.screenX=undefined
+         y =window.screenTop   // window.screenY=undefined
+         w =document.body.clientWidth  // window.innerWidth  ==undefined
+         h =document.body.clientHeight // window.innerHeight ==undefined
+         xywh  =[x,y,w,h]; 
+         maxx=screen.availWidth;  
+         maxy=screen.availHeight;
+      // alert('getW[x,y,w,h]:['+xywh+'],maxx:'+maxx+',maxywh:'+maxy) 
+         return xywh;
+      }  
+      function tW() { getW(); y=0;}      // top
+      function bW() { getW(); y=maxy-h;} // bot
+      function lW() { getW(); x=0;}      // left
+      function rW() { getW(); x=maxx-w;} // right
+      function saveW(){ // save as new default
+      }
+      function hidesw(){ // hide switch on/off  
+      }
+      function clrcfg(){ // clr menu 
+      }
+      function GetCrntDate(){
+        tday =new Date()   // get 
+        tdow =tday.getDay  ()// this day day of week
+        if (tdow == 0) tdow=7; // day of week 0..7 -> 1..7
+        tdd  =tday.getDate ()// this day dd-mm-yyy
+        tmm  =tday.getMonth()// +1
+        tyy  =tday.getYear ()
+      //if (tyy<1900) 
+        tyy=tyy+1900 // current (in IE 2005, in MZ/FF 105 or -1795 !?)
+      }
+    </script>
+  </HEAD>
+<BODY vLink="cyan" hlink="lime" link="#87CEEB" 
+bgColor="#000000" text="cyan" textsize="3" 
+marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
+<span id="layout.clock"></span>
+<script>
+  window.onload=clock_show; // body onLoad="clock_show()" 
+  /*  *-/ window.onerror=_load._err; /* not show some syntax errors */
+  {// ----------------------------------         
+    var       lay_=null, layID='layout.clock' 
+       ,wrk=0,wrk_=null, wrkID='wrk.clock'
+       ,log=1,log_=null, logID='log.clock';
+    var stl='margin:0px;padding:0px;overflow:auto;border:none;'
+	       +' text-align:left; vertical-align:middle;'// border:1px inset;
+    var wlog=500; // if(!_iex) whr=w// (w+margin*2+padding*2)
+    var box=make_box(
+    [{no:wrk,id:wrkID,t:'row' ,w:w,h:h   ,u:'px',bg:'#000',st:stl} // w:200 bg:'#222'
+    ,{no:log,id:logID,t:'row' ,w:w,h:200 ,u:'px',bg:'#333',st:stl  
+	   ,sh:shell_line(logID,250,9,'#444','#88f')} // w:500,h:300
+    ],layID)
+	
+    lay_=            document.getElementById(layID)
+    wrk_=box[wrk].p_=document.getElementById(wrkID);  
+    log_=box[log].p_=document.getElementById(logID); 
+    var islayok=true  
+    if(undef(lay_) || lay_==null){ islayok=false; err+='"lay_" missing'+eol}
+    if(undef(log_) || log_==null){ islayok=false; err+='"log_" missing'+eol}
+    if(undef(wrk_) || wrk_==null){ islayok=false; err+='"wrk_" missing'+eol}
+  }// ---------------------------------- 
+  if(!islayok) alert(err); else{
+    Hide(logID)
+    if(dbg>0 || _load._has_err()) out(log_,_load._list())
+    maxx=screen.availWidth  // screen.width; 
+    maxy=screen.availHeight // screen.height
+    ln='\n';
+    clock_set(ctyp,pic_,fnt_,showsec,refreshms); // -- #0
+    if(rsz) expbtn='y'; else expbtn='n';
+    pos='br'; lines=1;  caption='y'; // also in <HTA: caption =
+    if (pos=='') pos='br';
+    w=128; if (expbtn =='y') w=w+11;
+    hk=0;  if (caption=='y') hk=25
+    h=28+28*(lines-1)+hk; // first line h=28 next lines h=20(depend on font size)
+    x=0; y=0; 
+    we=300; //  270 |286  err: right expand out of screen on tr|br
+    if ((pos=='tr')||(pos='tl')) y=0; 
+    if ((pos=='br')||(pos='bl')) y=maxy-h;
+    if ((pos=='tr')||(pos='br')) x=maxx-w 
+    if ((pos=='tl')||(pos='bl')) x=0
+    if(rsz) setw(x,y,w,h)
+    // get current date - err: not auto refreshed at new day
+    clock_color='#87CEEB'
+    document.body.style.backgroundColor = "#000";
+    // --- menu: DragPos:move_xy() ?
+    // accesskey='h' ==> alt-h
+    expstyle='style="background-color:maroon; height:6px; font-size:8pt; color:'+clock_color+';'
+    expbar=''
+    if(rsz){ 
+      expbar=' <a href="#" accesskey="g" onclick=\'   xywh=getW();\''          +'><u>G</u></a>et'
+            +' <a href="#" accesskey="t" onclick=\'   xywh=tW();setW(xywh);\'' +'><u>T</u></a>op'
+            +'|<a href="#" accesskey="b" onclick=\'   xywh=bW();setW(xywh);\'' +'><u>B</u></a>ot'
+            +' <a href="#" accesskey="<" onclick=\'   xywh=lW();setW(xywh);\'' +'><u><</u></a>'
+            +'|<a href="#" accesskey=">" onclick=\'   xywh=rW();setW(xywh);\'' +'><u>></u></a>'
+            +' <a href="#" accesskey="s" onclick=\' saveW(xywh);\''            +'><u>S</u></a>ave'
+            +' <a href="#" accesskey="c" onclick=\'    clrcfg();\''            +'><u>C</u></a>lr'    
+            +' <a href="#" accesskey="h" onclick=\'  hideshow();\''            +'><u>H</u></a>ide' 
+    }
+    xywh=[-1,-1,-1,-1] // [x,y,w,h]
+    xywh=getW();
+    // <a target="_blank|_self|_parent|_top|framename">
+    GetCrntDate() // -> tyy,(tmm+1),tdd,(tdow-1)
+    tmm2=tmm+1; if(tmm2<10) tmm2='0'+tmm2;
+    tdd2=tdd;   if(tdd <10) tdd2='0'+tdd;
+    expdate=' '+tyy+'-'+tmm2+'-'+tdd
+    //     +'&nbsp;'+monname[tmm].substring(0,3)+'&nbsp;'+tyy
+    //     +'&nbsp;('+(tdow)+')'
+           +'&nbsp;('+dayname[tdow-1].substring(0,2)+')'
+    view=''//'&nbsp;'// --- view ---
+    view+=clock_place()                                      // -- #1. 
+/// if(expbtn=='y') view+=cbtn(btn,expsign(),'expand();')+expdate
+/// if(expbar!='')  view+='<tr '+expstyle+'"><td>'+expbar+'</td></tr>'
+    out(wrk_,view)
+  //('<font face="digital" size="3" color="'+clock_color+'"><b>'+'test'+'</b></font>'+ln)
+  }
+</script>
+</BODY>
+</HTML>
