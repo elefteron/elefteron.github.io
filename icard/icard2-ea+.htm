@@ -8,14 +8,14 @@
   <meta name="updates"     content="2013-06-10,07-14" />
 <style>
   HTML, body{margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;
-             padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll
+             padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll;
+         /* color:#ffeedd; background-color:#5c5145; /* */
             }
-  body      {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
+  body  {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
              font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
 		     text-align:left;font-style:normal; vertical-align:top;
             }
   ul        {list-style-type: circle; margin-left:15px; padding: 0;}
-  body      {background-color:#5c5145; color:#ffeedd;}
   .subhd    {                          color:#ffd24c;}
   .txt      {                          color:#ffd24c;}
  a:visited  {                          color:#ff8040; text-decoration:none;}
@@ -257,14 +257,11 @@ TkSuQmCC";
 var zapclr="javascript:(function(){var%20newSS,%20styles='*%20{%20background:%20white%20!%20important;%20color:%20black%20!important%20}%20:link,%20:link%20*%20{%20color:%20#0000EE%20!important%20}%20:visited,%20:visited%20*%20{%20color:%20#551A8B%20!important%20}';%20if(document.createStyleSheet)%20{%20document.createStyleSheet(%22javascript:'%22+styles+%22'%22);%20}%20else%20{%20newSS=document.createElement('link');%20newSS.rel='stylesheet';%20newSS.href='data:text/css,'+escape(styles);%20document.getElementsByTagName(%22head%22)[0].appendChild(newSS);%20}%20})();"
 // out(link_('',zapclr,'zap clr','ч/б'))
 
-  var prj= [{nam:'icard'   ,pth:'x14/icard/icard2-ea.htm'} // back 2 from elefter.dev/x14/icard
-           ,{nam:'cv'      ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-           ,{nam:'Xclock'  ,pth:'x-acek/clock-24+.htm'}
-           ,{nam:'CharMap'  ,pth:'Charmap/CharMap-table2.htm'}
-           ,{nam:'Xclk'    ,pth:'x14/clk/clock-24.htm'}
-           ,{nam:'Xkal'    ,pth:'x14/cal/calendar.htm'}
-           ,{nam:'Xdrv'    ,pth:'x14/drv/drv-info.htm'} // ?
-        // ,{nam:'Xwdg'    ,pth:''}
+  var prj= [{nam:'icard'   } // back 2 from elefter.dev/x14/icard
+           ,{nam:'cv'        }
+           ,{nam:'Xclock'  }
+           ,{nam:'CharMap' }
+           ,{nam:'X14/wdg'    }
            ,{nam:'SVC'     ,pth:'SVC-8/SVC-8.htm'}
            ,{nam:'Bible_bg',pth:'Bible-bg/Bible-bg.2013/index.Bible-bg.2013.htm'}
            ,{nam:'proj'    ,pth:'proj/proj.htm'}        // ?
