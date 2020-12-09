@@ -88,19 +88,19 @@
                       ,gitdev:'https://github.com/elefteron/'
                       ,gitweb:'https://elefteron.github.io/'
                      }
-            ,root_=root.gitweb;
+                     ,root_=root.gitweb;
       // window.location.href = root_
-       var prj=[{nam:'icard'   ,pth:'icard/icard2-ea+.htm'}
-               ,{nam:'cv'      ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-               ,{nam:''        }
-               ,{nam:'SVC'     ,pth:'svc/SVC.htm'}
-               ,{nam:'Bible_bg',pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
-               ,{nam:'FontOrg' ,pth:'fontorg/fontorg-makecat.htm'}
+       var prj=[{nam:'icard' ,pth:'icard/icard2-ea+.htm'}
+               ,{nam:'cv'           ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
+               ,{nam:'',pth:''}
+               ,{nam:'SVC'        ,pth:'svc/SVC.htm'}
+               ,{nam:'Bible_bg' ,pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
+               ,{nam:'FontOrg'  ,pth:'fontorg/fontorg-makecat.htm'}
                ,{nam:'CharMap' ,pth:'charmap/CharMap-table2.htm'}
-               ,{nam:''        }
+               ,{nam:'',pth:''}
                ,{nam:'x14 wdg' ,pth:'x14/run/x-widget.htm'}
-               ,{nam:'Xclock'  ,pth:'xclock/clock-24+.htm'}
-               ,{nam:'proj'    ,pth:'proj/proj.htm'}
+               ,{nam:'Xclock'     ,pth:'xclock/clock-24+.htm'}
+               ,{nam:'proj'        ,pth:'proj/proj.htm'}
                ,{nam:'boot_log',pth:'boot-log/boot-log.htm'}
                ] // relative paths
         // ---
@@ -112,7 +112,7 @@
         // ---
        out(mnu_,'<ul>')
        for(i=0;i<prj.length;i++){
-         if(prj[i].pth=='') out(mnu_,'<br/>');
+         if(prj[i].nam=='') out(mnu_,'<br/>');
          else  out(mnu_,'<li><a class="subhd" '+'target="work" '
                +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
                +'>'+prj[i].nam+'</a></li>')
