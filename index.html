@@ -1,28 +1,25 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-  
     <meta charset="utf-8" /> 
     <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
     
     <META name="description" content="elefteron on GitHub" />
     <META name="author"      content="mailto:elefter@abv.bg" />
-    
-  <!-- 
+    <!-- 
     https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy 
     https://w3c.github.io/webappsec-trusted-types/dist/spec/#trusted-html
     https://content-security-policy.com/
     https://content-security-policy.com/#source_list
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self';">   
-  -->
-    <meta http-equiv="Content-Security-Policy" content="*">   
-    
+    -->
+    <!-- ? --> <meta http-equiv="Content-Security-Policy" content="*" /> <!--  -->
     <style>
       HTML, body{margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;
                padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll
               }
-      body      {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
+      body  {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
                  font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
   		         text-align:left;font-style:normal; vertical-align:top;
                 }
@@ -33,11 +30,8 @@
       a:active  {                          color:#d93600; text-decoration:none;}
       a:link    {                          color:#d93600; text-decoration:none;}
     </style>
-    <script type="text/javascript">
-         rot= {loc:'file:///F:/elefter.dev/',web:'https://elefteron.github.io/',git:'https://github.com/elefteron'}
+    <script type="text/javascript"> sel=null;
       // <meta http-equiv="refresh" content="0; url=https://github.com/elefteron">
-      // window.location.href = rot.dev
-
       function undef(v) {return (typeof(v)==='undefined') }
       function getid(id){
         if(undef(id)  || id=='')  { sys('no/empty id');return}
@@ -45,9 +39,7 @@
         if(undef(id_) || id_=='') { sys('miss id'); return}
         return id_
       }
-
-      function   sys(s) {document.write(s)}
-
+      function sys(s) {document.write(s)}
       function out(){// out(id_,p1,...)
         var s='',id_=arguments[0]; // Variadic function use arguments[] special variable!
         var clear=(arguments[1]==null) // flag for begin with null to clear box
@@ -59,48 +51,62 @@
       }
     </script>
   </head>
+  
   <body marginheight="5mm" marginwidth="5mm" leftmargin="5mm" topmargin="5mm">
     <title>elefteron</title>
-
-    <a href='https://github.com/elefteron'>elefteron on GitHub</a></br>
+        elefteron  on
+        <select id="sel_root"
+          onchange="var sel=this.value; console.log(sel); root_=root.sel;" style="height:22px;">
+          <option value="locdev" >locdev</option>
+          <option value="gitdev" >gitdev</option>
+          <option value="gitweb" selected="selected">gitweb</option>
+        </select>
+        <span id="show_root">...</span>
+    </br>
     <table border="0" cellspacing="5">
     <tr><td valign="top">
       <span id="mnu" name="mnu"></span>
     </td><td>
-      <iframe
-      scrolling="auto" height="820px" width="920px" id="_work" name="work" allowtransparency="false"
-      frameborder="1"  marginwidth="10" marginheight="10"></iframe>
+      <iframe id="work" name="work" height="820px" width="920px" style="background-color:#575148;"
+        scrolling="no" allowtransparency="false" frameborder="0"  marginwidth="10" marginheight="10"></iframe>
     </td></tr>
     </table>
 
     <script>
-       var id_=getid("mnu");
+      var root= {locdev:'file:///F:/elefter.dev/!GitHub.local/github.com.dev/' 
+                      ,gitdev:'https://github.com/elefteron/'
+                      ,gitweb:'https://elefteron.github.io/'
+                     }
+            ,root_=root.gitweb;
+      // window.location.href = root_
        var prj=[{nam:'icard'   ,pth:'icard/icard2-ea+.htm'}
                ,{nam:'cv'      ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-               ,{nam:''        ,pth:''}
+               ,{nam:''        }
                ,{nam:'SVC'     ,pth:'svc/SVC.htm'}
                ,{nam:'Bible_bg',pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
                ,{nam:'FontOrg' ,pth:'fontorg/fontorg-makecat.htm'}
                ,{nam:'CharMap' ,pth:'charmap/CharMap-table2.htm'}
-               ,{nam:''        ,pth:''}
-               ,{nam:'Xclock'  ,pth:'xclock/clock-24+.htm'}
-               ,{nam:''        ,pth:''}
-               ,{nam:'x14/clk' ,pth:'x14/clk/clock-24.htm'}
-               ,{nam:'x14/kal' ,pth:'x14/cal/calendar.htm'}
-               ,{nam:'x14/drv' ,pth:'x14/drv/drv-info.htm'}
+               ,{nam:''        }
                ,{nam:'x14 wdg' ,pth:'x14/run/x-widget.htm'}
-               ,{nam:''        ,pth:''}
+               ,{nam:'Xclock'  ,pth:'xclock/clock-24+.htm'}
                ,{nam:'proj'    ,pth:'proj/proj.htm'}
                ,{nam:'boot_log',pth:'boot-log/boot-log.htm'}
                ] // relative paths
-       out(id_,'<ul>')
+        // ---
+        var mnu_=getid("mnu");
+        var sel_root=getid("sel_root");
+        var show_root=getid("show_root");
+        // select root {locdev, gitdev, gitweb}
+        
+        // ---
+       out(mnu_,'<ul>')
        for(i=0;i<prj.length;i++){
-         out(id_,'<li><a class="subhd" href="'+rot.web+prj[i].pth+'"'
-                                   +' title="'+rot.web+prj[i].pth+'"'
-                                   +' target="work"'
-            +'>'+prj[i].nam+'</a><br></li>')
+         if(prj[i].pth=='') out(mnu_,'<br/>');
+         else  out(mnu_,'<li><a class="subhd" '+'target="work" '
+               +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
+               +'>'+prj[i].nam+'</a></li>')
        }
-       out(id_,'</ul>')
+       out(mnu_,'</ul>')
     </script>
   <body>
 </html>
