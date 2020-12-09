@@ -4,7 +4,6 @@
 <head>
   <meta http-equiv="Content-Type"content="text/html; charset=utf-8">
   <title>CharMap table</title>
-  <base href="E:\Tedy\!myDoc's\Soft work\~Java script\" target="map">
   <script language="javascript">
 /* CharMap table 
 ABCDEFGHIJKLMNOPRSTUVWXYZ abcdefghijklmnoprstuvwxyz 
@@ -12,6 +11,8 @@ ABCDEFGHIJKLMNOPRSTUVWXYZ abcdefghijklmnoprstuvwxyz
 Aa????Oo ?????????????? €§«»°©®№ ЁёЫыЭэ 0123456789:;.,-+=()[]<>{}«» 
 $??€??#%‰&'"???????.,:;‘’“”‚„!???«»‹›+=±??<>¬–—??…·•@©®™()[]{}|¦/\?*†‡§¶?°???µ^~?`???????????
 */
+//   <base href="E:\Tedy\!myDoc's\Soft work\~Java script\" target="map">
+
 // problems:
 // get active font names ?
 // table not eq to orig charmap.exe and "<pre>..." for codes >127 (incl kir.,№=185, ...) !?
@@ -65,7 +66,7 @@ function CharMap(fsz,bold,face,chars){
   </script>
 <style>
   body { background-color:#777777; color:#cccccc; 
-	font-family:Arial;font-size:12pt; margin:3px 3px 3px 3px;
+	font-family:Arial;font-size:12pt; margin:0px 0px 0px 0px;
   }
   * {box-sizing: border-box;}
   table, th, td {  border: 1px solid #444444; background-color:#111111; border-collapse: collapse; }
@@ -102,7 +103,8 @@ function CharMap(fsz,bold,face,chars){
 </style>
 </head>
 
-<body bgcolor="black" text=3><span id="chars" style='font-face:"Lucida Console"; font-size:12pt;'>.</span>
+<body bgcolor="black" text=3>
+<span id="chars" style='font-face:"Lucida Console"; font-size:12pt;'>.</span>
 <script language="javascript">  
   out_=document.getElementById("chars");  out_.innerHTML=''; // .innerHTML | .innerText - dbg
   bold=false; size='12pt'; face='Licida Console'; face='Arial'; 
