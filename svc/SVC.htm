@@ -104,7 +104,7 @@
 	   
     }// func
     function nv(o,name){ if(o.name==name) return o.value; else return null;}
-    function _dict(tolang){ // dict[indx][tolang=0] 'bg'
+    function _dict(sel_lang){ tolang=sel_lang // dict[indx][tolang=0] 'bg'
       var tag="span", atr="lang",l,ai,val
       var indx,i,k=0,haslang; if(typeof(tolang)==undefined || tolang<0 || tolang>1) return
       var spans=document.getElementsByTagName(tag)
@@ -207,7 +207,7 @@
       </button>
       <span style='float:right;'> <!-- crnt select option not showed correctly after reload !? -->
         <span lang="0">език.</span>
-        <select id="lang-sel" onchange="_dict(this.value);" style="height:22px;" value="0">
+        <select id="lang-sel" onchange="_dict(this.value);" style="height:22px;">
           <option value="0" selected="selected">Bg</option>
           <option value="1" >En</option>
         </select>
