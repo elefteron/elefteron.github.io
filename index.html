@@ -30,7 +30,7 @@
       a:active  {                          color:#d93600; text-decoration:none;}
       a:link    {                          color:#d93600; text-decoration:none;}
     </style>
-    <script type="text/javascript"> sel=null;
+    <script type="text/javascript">
       // <meta http-equiv="refresh" content="0; url=https://github.com/elefteron">
       function undef(v) {return (typeof(v)==='undefined') }
       function getid(id){
@@ -49,14 +49,25 @@
         else try             {if(clear) id_.innerHTML=''; id_.innerHTML+=s}
              catch(Exception){sys('»»'+s)}
       }
-    </script>
+      function set_root(new_root){ var msg='';
+        // console.log('set_root:'+new_root);
+        switch (new_root) {
+          case 'locdev': root_=root.locdev; break;
+          case 'gitdev':  root_=root.gitdev; break;
+          case 'gitweb': root_=root.gitweb; break;
+          default: msg=' bad set_root:'+new_root; break;
+        }
+        // console.log('root:'+root_+msg);
+        out(show_root_,null);
+        out(show_root_,root_);
+      }
+  </script>
   </head>
   
   <body marginheight="5mm" marginwidth="5mm" leftmargin="5mm" topmargin="5mm">
     <title>elefteron</title>
         elefteron  on
-        <select id="sel_root"
-          onchange="var sel=this.value; console.log(sel); root_=root.sel;" style="height:22px;">
+        <select id="sel_root"  onchange="set_root(this.value)" style="height:22px;">
           <option value="locdev" >locdev</option>
           <option value="gitdev" >gitdev</option>
           <option value="gitweb" selected="selected">gitweb</option>
@@ -94,10 +105,10 @@
                ] // relative paths
         // ---
         var mnu_=getid("mnu");
-        var sel_root=getid("sel_root");
-        var show_root=getid("show_root");
-        // select root {locdev, gitdev, gitweb}
-        
+        // console.log('root:'+root_)
+        var show_root_=getid("show_root"); // select root {locdev, gitdev, gitweb}
+        out(show_root_,null);
+        out(show_root_,root_);
         // ---
        out(mnu_,'<ul>')
        for(i=0;i<prj.length;i++){
