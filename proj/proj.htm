@@ -1,0 +1,1850 @@
+<html lang="en">
+<head>
+  <title>projects load from proj.js</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <!-- content= "IE=5"|"IE=7"|"IE=EmulateIE7"|"IE=8"|"IE=EmulateIE8"|"IE=9"|"IE=EmulateIE9"|"IE=10"|"ie=edge"
+  if not "IE=9" then cant colapse and cant show icon
+    content="text/html; charset=utf-8" - w3schools.com/charsets/ref_utf_cyrillic.asp
+  -->
+  <meta name="author"  content="elefter">
+  <meta name="contact" content="mailto:elefter@abv.bg">
+  <meta name="description" content="projects action menu">
+  <link href="ico/inodebdv.ico" type="image/x-icon" rel ="icon"          />
+  <link href="ico/inodebdv.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <style> e {color:#d90000;} w {color:#ffd24c;} n {color:#40ff00;} c {color:#00ffff;} g {color:#bfff00;} l {color:#b3ff99;}
+    body { background-color:#101010; color:#cccccc;
+      font-family: "DejaVu Sans", "Arial"; font-size:11pt;
+      text-align:left; vertical-align:top;
+      margin:0; padding: 1px 1px 1px 1px; overflow:auto;
+    }
+    .clr_ { display:table-cell;
+          border: 0px; border-collapse:collapse;
+          width:5px; height:5;
+          font-size:2pt;
+          overflow: hidden;
+    }
+
+    div,span { word-wrap:break-word; }
+    a        { cursor: pointer; }
+
+    .info    { width:400px; background-color:#101010; color:#cccccc;
+               vertical-align:top; text-align:left; margin:1;
+               border-spacing:1; border:1px solid #eeeeee; border-radius:2px;
+               font-size:11pt; word-wrap:break-word; overflow:auto;
+             }
+    .info2   { width:400px; background-color:#101010; color:#cccccc;
+              vertical-align:top; text-align:left; margin:0;
+              border-spacing:0; border:0px;
+              font-size:9pt; word-wrap:break-word; overflow:auto;
+             }
+
+    .line    { cursor:pointer;  background-color:#ffd24c;color:#06090e;
+            /* border:1px solid #ffbf00; #b3ff99 overflow:auto;*/
+               border-radius:2px; border-spacing:1;  word-wrap:break-word;
+             }
+    .bRun    { cursor:pointer; /**-/ background-color:#555555;color:#ffff99; /
+             * border:1px solid #ffbf00; */
+               border-radius:2px; border-spacing:1;
+             }
+
+    .line:hover  { border:1px solid #bfff00;border-collapse: collapse; }
+    .brun:hover  { border:1px solid #bfff00;border-collapse: collapse; }
+
+    .tTable      { display: block;}
+    .tBody,.tRow { clear: both; margin:1 1 1 1;}
+    .tHead       { display:table-cell;
+                   font-weight: bold;
+                   background-color: #000000;
+             /**/  border: 1px solid #555555; /**/ border-collapse: collapse;
+             /**-/ float: left; height: 14px;/**/
+                   overflow: hidden;
+                 }
+    .tCell       { display:table-cell;
+                   font-weight: normal;
+                   background-color: #202020;
+             /**/  border: 1px solid #555555; /**/ border-collapse: collapse;
+             /**-/ float: left; height: 14px;/**/
+                   overflow: hidden;
+                 }
+    .tCell:hover { border:1px solid #bfff00;}
+  </style>
+  <script> dbg=true;/*!true | true */ eol='\n'; heol='</br>\n';  kw=['pre','code']; //  eoln='\r\n';
+
+
+  tmp='' // tmp collect messages before define log() at body onload
+  { // --- undef(),in_range(),lz(),z(),dt(op,th),dur(d1,d2),repl_char(),bck_slash  --- utils; "..." and bck_slash(root/fld/) - use to run(),img() !!!
+    function bck_slash(s){ return repl_char(s,'/','\\') }
+    function undef(s) { return(typeof(s)=== "undefined" || s===null); }
+    function in_range(n_,min,max){ var n=n_; if(n<min)n=min; if(n>max)n=max; return n;}
+    function lz(val,maxn)  { // val,maxn - lead zeroes l:2..6
+      var res,n,lz_, a=['0','00','000','0000','00000','000000'];
+      if(maxn<2 || maxn>6) return val; // no change
+      n=val.toString().length; // .toString(2|8|16)
+      lz_=maxn-n; if(lz_<=0) return val; // no change
+      res=a[lz_-1]+val; // log('lz('+val+','+maxn+'):'+res)
+      return res;
+   }
+    function z(s,clr){ c='r'; if(!undef(clr) && clr!='') c=clr;
+   // arguments.length; arguments[i]; // Variadic
+     if(c=='r') c='red';  if(c=='g') c='lime';   if(c=='b') c='#265cff';
+     if(c=='c') c='cyan'; if(c=='m') c='magenta'; if(c=='y') c='yellow';
+     return '<span style="color:'+c+';">'+s+'</span>'
+   }; r_='r'; g_='g'; b_='b'; c_='c'; m_='m'; y_='y';
+    function dt(op,_ms){ var yr=0,mo=0,dy=0,hr=0,mn=0,sc=0,th=0, ms=true, o={},a=[],s='' ,d='.', tday =new Date();
+      if(!undef(_ms)) ms=_ms;
+      yr =tday.getYear ();
+      mo =tday.getMonth()+1; // +1 on ie/mshta/ff
+      dy =tday.getDate ();   // this day dd-mm-yyy
+      if (yr<1900) yr+=1900; // current (in IE 2005, in MZ/FF 105 or -1795 !?)
+      hr =tday.getHours();
+      mn =tday.getMinutes();
+      sc =tday.getSeconds();
+      th =tday.getMilliseconds();   /* yyyy.mm.dd hh.mm.ss.th */
+      ms_=''; if(ms) ms_=d+lz(th,3)
+      o ={ymd:lz(yr,4)+d+lz(mo,2)+d+lz(dy,2)  ,hmst:lz(hr,2)+d+lz(mn,2)+d+lz(sc,2)+ms_ };
+      s =     lz(yr,4)+d+lz(mo,2)+d+lz(dy,2)       +lz(hr,2)+d+lz(mn,2)+d+lz(sc,2)+ms_  ;
+      if(ms) a=[yr,mo,dy ,hr,mn,sc,th]; else a=[yr,mo,dy ,hr,mn,sc,0];
+      switch(op){
+        case 'o':{ r=o; break;} // obj
+        case 's':{ r=s; break;} // str
+        case 'a':{ r=a; break;} // arr
+        default :{ r=a; break;}
+      }
+      return r
+    }
+    function dur(d1,d2){
+      var beg_sc=d1[5]+d1[4]*60+d1[3]*60*60
+         ,end_sc=d2[5]+d4[4]*60+d2[3]*60*60
+         ,dur_th=( (end_sc*1000+d4[6])-(beg_sc*1000+d1[6]) ) / 1000;
+      return dur_th;
+    }
+    function repl_char(s_old,fr,to){ var i,l=0, s_new='',c; // =repl_char(s,'/','\\')
+      if(s_old!==undefined && s_old!==null && s_old!=='') l=s_old.length;
+      for(i=0; i<l; i++){ c=s_old.substr(i,1); if(c===fr) c=to; s_new+=c; }
+   // if(dbg) { dmp('repl:'+s_new); else alert('repl:'+s_new)}
+      return s_new;
+    }
+  }
+    d1=dt(); // log('chk_run beg:'+d.ymd+' '+d.hms)
+  { ext={}; // --- ext_typ(ext_)->[]: exe,run,src,arc,bin
+    ext.exe = ['exe' ,'com' ,'dll' ,'lnk' ]
+    ext.run = ['cmd' ,'bat' ,'hta' ,'htm' ,'html']
+    ext.src = ['cmd' ,'bat' ,'hta' ,'htm' ,'html'
+              ,'css' ,'js'  ,'xml' ,'htt' ,'afs' ,'vbs' ,'cfg' ,'json','csv'
+              ]
+    ext.txt = ['txt' ,'lst' ,'md5' ,'ini' ,'reg' ,'svg' ,'ses' ,'log','dif','log','url'
+              ]
+    ext.arc = ['zip' ,'7z'  ,'rar' ,'epub']
+    ext.bin = ['zip' ,'7z'  ,'rar' ,'ico' ,'jpg' ,'gif' ,'png' ,'xls' ,'eps' ,'icc'
+              ,'indd','ai'  ,'psh' ,'rtf' ,'doc' ,'ttf' ,'otf' ,'fnt' ,'hlp' ,'chm'
+              ,'mht' ,'epub'
+              ]
+    function ext_typ(ext_){ var i=-1,typ=[];
+    // log('msg-log'+' in .src='+('msg-log' in ext.src)) // fa;se !?
+       if(ext.src.indexOf(ext_)>=0) typ[++i]='src';
+       if(ext.txt.indexOf(ext_)>=0) typ[++i]='txt';
+       if(ext.exe.indexOf(ext_)>=0) typ[++i]='exe';
+       if(ext.run.indexOf(ext_)>=0) typ[++i]='run';
+       if(ext.arc.indexOf(ext_)>=0) typ[++i]='arc';
+       if(ext.bin.indexOf(ext_)>=0) typ[++i]='bin';
+       return typ;
+    };
+  }
+  { eng=[ {id:'cmd'            ,ver:' 6.1  .   ' ,fld:'C:/Windows/System32/cmd.exe'}
+         ,{id:'cscript'        ,ver:' 5.8  .   ' ,fld:'C:/Windows/System32/cscript.exe'}
+         ,{id:'wscript'        ,ver:' 5.8  .   ' ,fld:'C:/Windows/System32/wscript.exe'}
+         ,{id:'mshta'          ,ver:'11.0  .   ' ,fld:'C:/Windows/System/mshta.exe'} // Microsoft HTML Application host 11.0.9600.16428
+      // techrepublic.com/article/ quick-tip-control-windows-explorer-with-command-line-switches/
+         ,{id:'mshta'          ,ver:'11.0'       ,fld:'C:/Windows/SysWOW64/mshta.exe'}
+         ,{id:'Iexplore'       ,ver:'  .   .x32' ,fld:'C:/Program Files (x86)/Internet Explorer/iexplore.exe'} // -extoff
+         ,{id:'Iexplore'       ,ver:'  .   .x64' ,fld:'C:/Program Files/Internet Explorer/iexplore.exe'}
+         ,{id:'Firefox.devEd'  ,ver:'  .   .   ' ,fld:'C:/Program Files/Firefox Developer Edition/firefox.exe'}
+         ,{id:'Firefox'        ,ver:'  .   .   ' ,fld:'F:/!prog.run/FireFox/firefox.exe'}
+         ,{id:'msedge'         ,ver:'  .   .x32' ,fld:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'}
+         ,{id:'K-Meleon.port'  ,ver:'  .   .   ' ,fld:'F:/!prog.run/+PortableApps/PortableApps/K-MeleonPortable/App/K-Meleon/k-meleon.exe'}
+         ,{id:'Palemoon'       ,ver:' 4.6  .   ' ,fld:'F:/!prog.run/Palemoon-Portable-28.9.3.win64/Bin/Palemoon/palemoon.exe'}
+         ,{id:'Palemoon.port'  ,ver:' 3.3  .   ' ,fld:'F:/!prog.run/Palemoon-Portable-28.9.3.win64/Palemoon-Portable.exe'}
+         ,{id:'SeaMonkey '     ,ver:' 2.53 .   ' ,fld:'F:/!prog.run/SeaMonkey/seamonkey.exe'}
+         ,{id:'SeaMonkey.port' ,ver:' 2.4  .   ' ,fld:'F:/!prog.run/SeaMonkeyPortable/SeaMonkeyPortable.exe'}
+         ,{id:'Safari'         ,ver:' 5.34 .x32' ,fld:'C:/Program Files (x86)/Safari/Safari.exe'}
+         ,{id:'Netscape'       ,ver:'  .   .x32' ,fld:'C:/Program Files (x86)/Netscape/Navigator 9/navigator.exe'}
+         ,{id:'Dragon'         ,ver:'  .   .   ' ,fld:'F:/!prog.run/Dragon/dragon.exe'}
+         ,{id:'Chrome'         ,ver:'  .   .x32' ,fld:'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'}
+         ,{id:'Falkon '        ,ver:' 3.1  .   ' ,fld:'C:/Program Files/Falkon/falkon.exe'} //new konqueror
+         ,{id:'Slimjet'        ,ver:'  .   .   ' ,fld:'F:/!prog.run/slimjet_x64/slimjet.exe'}
+         ,{id:'QtWeb.port'     ,ver:'  .   .   ' ,fld:'F:/!prog.run/QtWeb/QtWeb.exe'}
+    //   ,{name:'',path:''}
+    ]; // %HOMEDRIVE%%HOMEPATH%
+   run_npp       = bck_slash('F:/!prog.run/npp+/notepad++.exe');
+   run_md5deep64 = bck_slash('F:/!prog.run/md5deep-4.4/md5deep64.exe');  //
+// run_hashdeep64= 'F:/!prog.run/md5deep-4.4/hashdeep64.exe'; //
+// run_sha1deep64= 'F:/!prog.run/md5deep-4.4/sha1deep64.exe'; //
+// run_md5summ   = 'F:/!prog.run/md5summer/md5summer.exe'; // cli?
+// run_md5sum32  = 'F:/!prog.run/md5sum/md5sum.exe';       // 32b only, check: -cv MD5SUM.TXT
+   run_zip       = bck_slash('C:/Program Files/7-Zip/7z.exe');
+
+  }
+  { function traverse_(o) { var result=[],i=0 // [{key:null,val:null},...]
+      if ((typeof o) == "object") {
+        for (var key in o) { // log('['+i+']'+"key: "+ key+" val: "+o[key]);
+           result[i]={"key":key, "val":o[key],typ:'object'}; i++; // traverse_(o[key])
+        // console.log(result[i]+'~'+traverse_(o[key]))
+        }
+      } else if ((typeof o) == "strung"){
+           result[i]={"key":'', "val":o,typ:'strung'}; i++;
+        // console.log(' string='+o+' ') //  result[i].val=o; log("val: "+o)
+      } else {
+           result[i]={"key":'', "val":o,typ:'(typeof o)'}; i++;
+      }
+      return result
+    }
+  }
+  { k=1; help=['<'+kw[k]+'>'+'<b>proj.js with html GUI</b> 2020-08-23 v0.3b',''
+  ,'<u>s descr ... s[-:todo, ~:work, =:ok, !warn, ?:ask]</u>'
+  ,'=  gui: data format= proj.{id:, fld:, ico:, act:[{}], .subs:[{}], .runs[]}'
+  ,' '
+  ,'-  gui title proj/act: showhide(proj,p#)->[#] pname / run([p#,s#]) -> proj[p#,s#] cmd:\n ... '
+  ,' '
+  ,'=  act run wait before, use .cmd '
+  ,'~  act call Activex, works on mshta/msie/chrome+(ie based tab)?/edge? '
+  ,'~  auto scan subs with name "$..." for [cmd,bat,hta,htm]: {"$fld":}  '
+  ,'=  act run() cmd: act name=.xxx '
+  ,'~  ext type by src/run/bin '
+  ,'=  dump proj with syntax sugar '
+  ,'~  generate colors from 255 down by step: gry(1), rgb_(8,8,8) == (8,16,4) == (256/8)^3=32768 '// too big html '
+  ,'=  set_def() - auto-gen act:[] '
+  ,'-  set_def() <- chk_fld(), set_ext to {}/set_def '
+  ,'=  act .chk & .md5 by md5deep64 '
+  ,'?  md5 assoc; ? replace/add md5 after zip make '
+  ,'-  kill_str.hta file=lst_fld str=root+fld atpos=1/* '
+  ,'-  lst2js.hta file=lst_fld '
+  ,'-  .lst: copy  *.lst -> proj.files[] -> *.files.js ! overwrite: save old, view old&new, ask'
+  ,'-  chk: if miss lst/md5 - make it '
+  ,'?  grp menu no hover frame'
+  ,'?  .ico cant see in ffx,saf '
+  ,'?  dmp cant work on ffx'
+  ,'?  openwin cant work on ffx'
+  ,'?  openwin cant test work on iex'
+
+  ,'~  @lst,@hsh,@chk,@zip - activex; separate @lst from @md5, dont 3 waits'
+//,    '?bad wrk @hsh: if no 3 waits after call dir... then get:[0] is incorect and path hide not work'
+  ,'-  @run,@src with select eng=[{name:"",typ:"run/src",fld:"",par:""}]'
+  ,''
+  ,'-  proj show   btn[this only(on name)/invert/all/none]'
+  ,'-  proj select btn[this y-n (on name)/invert/all/none/filter/sort] '
+  ,'~  run_all[all/sel] btn[lst/chk/md5/zip/all]'
+  ,''
+  ,'-  exist_test: test file exist before ation'
+  ,'-  test-cases: [{id:"",must:"",run:"",note:""},...]'
+  ,''
+/* ----------------------------------------------------------------------- *=/
+  show.projs  :[*:reload,+:open all,-:close all,^:invert opn-cls, ]
+  list.Files  :[byExt/byExtType[src,run,bin]/byName/byModif/bySize]
+  list.projs  :[byGrp/byName/byModif/byOrd]
+select.projs  :[Crnt/All/None/ThisOnly/Others/InvertSel/byFilter]
+select.Files  :[Crnt/All/None/ThisOnly/Others/InvertSel/byFilter/byPurpose]
+action.withSel:[Open/Edit/run/Lst[script]/Hsh/Chk/Zip/LHC]
+config.act_eng:[file_eng[],edit_eng[],run_eng[],scrFile,hash_eng[],zip_eng[]]
+/* ----------------------------------------------------------------------- */
+  ,'--- urf-8 ---'
+  ,'[CYR.BG] ах чудна българска земьо полюшвай цъфтящи жита. '
+  ,'АаБбВвГгДдЕеЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЬьЮюЯя'
+  ,'ÀàÁáÈèÉéЍѝÒòÓó ЁёЄєЭэЫы №€§°©®∆†«» Ѣѣ...'
+  ,''
+  ,'[LAT.EN] the quick brown fox jumps over the lazy dog. Ùù Úú Ýý'
+  ,'[MATH] ∀ ∃ ∈ ∉ ∑ ∓ √ ∞ ▽ △ ∩ ∪ ⊂ ⊃ ∴ ∵ ≈ ≠ ≣ † ⊕ ⊖ ⊗ ⊙ ✠ ♀ ♂ ♣ ♦ ♥ ♠ '
+  ,''
+
+  ,' w3schools.com/charsets/ref_utf_cyrillic.asp              '
+  ,' w3schools.com/charsets/ref_utf_cyrillic_supplement.asp   '
+  ,''
+  ,' w3schools.com/html/html_charset.asp                      '
+  ,' utf8-chartable.de/unicode-utf8-table.pl                  '
+  ,' w3schools.com/charsets/ref_utf_math.asp                  '
+  ,' w3schools.com/charsets/ref_utf_geometric.asp             '
+  ,''
+  ,' iana.org/assignments/character-sets/character-sets.xhtml '
+  ,' tools.ietf.org/html/rfc3629                              '
+  ,' unicode.org/standard/standard.html                       '
+  ,' unicode.org/releases/index.html                          '
+  ,' developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent '
+  ,' developer.mozilla.org/en-US/docs/Web/API/Navigator             '
+  ,' xul.fr/javascript/navigator.php                                '
+  ,''
+  ,'</'+kw[k]+'>'];
+  }
+
+  { // --- tbl(),row(),cell(),img(),lnk(), _htm()  --- menu by div,span not table,tr,td
+    function tbl(bdy)        { var kwrd='div'; // div|span
+      return '<'+kwrd+' class="tTable">'    +bdy+'</'+kwrd+'>'+eol;
+    }
+    function row(bdy)        { var kwrd='div'; // div|span
+      return '<'+kwrd+' class="tRow">' +bdy+'</'+kwrd+'>'+eol; //  class="line"
+    }
+    titles=0;                /* <- cell() <- build_menu() */
+    miss_fld=0; miss_file=0; /* <- set_def(pn) */
+    function cell(bdy,clas,stl_,a_) { // cell(bdy,[clas,...],stl_,a_)
+      var kwrd='span' // div|span
+      var cls='',i // clas: ["tCell", "line"]
+         ,stl=' '
+         ,onc=' onclick="'
+         ,tit=' title="', asm=''
+         ,d_ =[':'          ,'>'          ,'='         ,'»'           ]
+         ,dsc=[': open fld ','> run file ','= edit ses','» run cmd',''], dn=null,p=''
+         ,f_ =['s'          ,'g'          ,'r'  ]
+         ,fr =['ShowHide'   ,'ShowHide'   ,'run'],fn=null ,run_='';
+      if       (a_[0]==f_[0]) { fn=0; // ['s',j,pnj]
+        tit+='['+a_[1]+'] '+a_[2]+'"';
+        onc+=fr[fn]+'(\''+a_[2]+'\')"';
+
+      } else if(a_[0]==f_[1]) { fn=1; // ['g',grp]
+        tit+='grp +/-: '+a_[1]+'"';
+        onc+=fr[fn]+'(\'grp.'+a_[1]+'\')"';
+
+      } else if(a_[0]==f_[2]) { fn=2; // ['r',j,i, pnj,b[0]]
+        var act=proj[a_[1]].act[a_[2]];
+      //if(!iex && dbg) console.log(proj[a_[1]].act[a_[2]])
+        switch (a_[4].substr(0,1)) { // not for every proj
+          case d_[0] : { dn=0; d='\n'+act[2];     p='\n'+act[3]; break;} // run file
+          case d_[1] : { dn=1; d='\n'+act[2]+':'; p='\n'+act[3]; break;} // open fld
+          case d_[2] : { dn=2; d='\n'+act[2];     p='\n'+act[3]; break;} // ses
+          case d_[3] : { dn=3; d='\n'+act[2];     p='\n'+act[3]; break;} // cmd !
+          default    : { dn=4; d='';              p='';          break;}
+        }
+        tit+='['+a_[1]+']['+a_[2]+'] '/* *-/+a_[3]+' '+a_[4]+'\n'/* */+dsc[dn]+d+p+' "';
+      //if(dbg) dmp('~ '+(++titles)/* */+' '+tit/* */)
+        onc+=fr[fn]+'(['+a_[1]+','+a_[2]+'])"';
+
+      } else {tit=''; onc='';}
+
+      if(!undef(clas)) for(i in clas) cls+=' class="'+clas[i]+'" ';
+      if(stl_ !='') stl+='style="'+stl_ +'" ';
+
+      asm= '<'+kwrd+tit+onc+cls+stl+'>'+bdy+'</'+kwrd+'>'+eol
+      // if(dbg) dmp(asm);
+      // if(dbg) dmp(tit+heol+onc+heol)
+      return asm+eol;
+    }
+    function span(p){ var bdy='',tit='',evt='',enm='',clas='',bg='',fg='',aln='',w='',h=''
+    // <- p.___ // p=arguments; // Variadic {}
+      var asembled='',evt='',stl=''
+      enm='onclick'
+
+      if(!undef(p.bdy ))  bdy=p.bdy
+      if(!undef(p.tit ))  tit=' title="'+p.tit+'"'
+      if(!undef(p.evn ))  enm=p.enm // else en=onclick
+      if(!undef(p.evt ))  evt=' '+enm+'="'+p.evt+'"'
+      if(!undef(p.clas)) clas=' class="'+p.clas+'"'
+
+      if(!undef(p.bg  )) stl+="background-color:"+p.bg +";"
+      if(!undef(p.fg  )) stl+=           "color:"+p.fg +";"
+      if(!undef(p.aln )) stl+=      "text-align:"+p.aln+";"
+      if(!undef(p.w   )) stl+=           "width:"+p.w  +";"
+      if(!undef(p.h   )) stl+=          "height:"+p.h  +";"
+      if(stl!='') stl=' style="'+stl+'"'
+
+      asembled='<span'+clas+stl+evt+tit+'>'+bdy+'</span>';
+      if(dbg) out(bot_,_htm(asembled)+'<br>\n');
+      return asembled+eol;
+    }
+    function img(fld,pic,sz,stl_){ var kwrd='img',asm; // div|span
+      var stl=''; if(stl_!=='')  stl=' style="'+stl_+'"'
+      var file=bck_slash(fld+'/'+pic)
+      asm='<'+kwrd+' src="'+file+'" width="'+sz+'" height="'+sz+'"'+stl+'>';
+      // if(dbg) dmp(asm);
+      return asm+eol;
+    }
+    function lnk(bdy,stl_,key,on_) { var kwrd='a'; // (body,runkey,action,stl)
+      var onc=' ', tit=' ', stl=' ',asm='';
+      if(stl_!=='')  stl=' style="'+stl_+'"'
+      tit=' title="'+on_+'"';
+      if(key==='@lst' || key==='@md5' || key==='@zip' || key==='@chk') tit=' title="['+on_+']"';
+      if(on_!==''){  onc=' onclick="'+on_+'"';  // default
+        if(key!=='') onc=' onclick="run(\''+key+'\',\''+on_+'\')"';
+      }
+      asm='<'+kwrd+' '+onc+tit+stl+'>'+bdy+'</'+kwrd+'>'// if(dbg) dmp(asm);
+      return asm+eol;
+    }
+    function _htm(s_) { // to look html code will encode <...> to &lt;...&gt;
+      var i,s=''+s_,b=''  // Uncaught TypeError: s.substr is not a function
+         ,l=s.length;
+      for(i=0;i<l;i++){ c=s.substr(i,1);
+        if(c=='<') b+='&lt;'
+        else if(c=='>') b+='&gt;'//+'</br>'+crlf
+        else b+=c
+      }
+      return b
+    }
+  }
+  { // --- gry_(),rgb_()  --- clr
+    function gry_(stp){ var buf='',t='&nbsp' ,i,k=0
+      step=8; if(typeof(stp)!=undefined && stp>=1 && stp<=77) step=stp; // 256/4=64 256/5=77
+      buf='step:'+step
+      buf+='<div>\n'
+      for(var i=0; i<=256; i=i+step){
+      //  000 016 032 048    064 080 096 112    128 144 160 176    192 208 224 240   255
+        i=in_range(i,0,255)
+        k++; buf+=rgb_([i,i,i],1,lz(i,3))
+        if(k==17){ k=0; buf+='</div>\n<div>'}
+      }
+      buf+='</div>'
+      return buf
+    }
+    rgb_ord='r'; // Rgb,Grb,Brg
+    function rgb_(rgb,s_,b_){ var buf='',hex,dec,d=' ',r,g,b // ([r,g,b],stp,b_)
+      var bdy='&nbsp'; if(typeof(b_)!=undefined && b_!='') bdy=b_
+      var stp=1;       if(typeof(s_)!=undefined && s_>=0)  stp=s_
+      if     (rgb_ord=='g'){ g=rgb[0]; r=rgb[1]; b=rgb[2];} // rgb->grb
+      else if(rgb_ord=='b'){ b=rgb[0]; r=rgb[1]; g=rgb[2];} // rgb->brg
+      else                 { r=rgb[0]; g=rgb[1]; b=rgb[2];} // rgb
+      r=(r*stp).toFixed(0); g=(g*stp).toFixed(0); b=(b*stp).toFixed(0);
+      //tmp+='-- rd:'+r+' gd:'+g+' bd:'+b
+      r=in_range(r,0,255); g=in_range(g,0,255); b=in_range(b,0,255);
+      rh=Number(r).toString(16); gh=Number(g).toString(16); bh=Number(b).toString(16);
+      //tmp+=' -- rh:'+rh+' gh:'+gh+' bh:'+bh+heol // 00,33,66,9a,cd
+      rh=lz(rh,2); gh=lz(gh,2); bh=lz(bh,2);
+      hex='#'+rh+gh+bh; dec=lz(r,3)+d+lz(g,3)+d+lz(b,3);
+      buf ='<span title="'+hex+'\n'+dec+'" ' +' class="clr_"'
+         +' style="background-color:'+hex+'; width:16px;height:16px; font-size:6pt;margin:0 0 0 0;display:table-cell;'
+      // +' border:1px;' // always no border in iex?, always border in ffx?
+         +'"'
+      // +' overflow: hidden;' +' border-collapse:collapse;'
+      // +' ondblclick='+'"document.body.style.color=\''          +hex+'\'"'
+      // +' onclick='   +'"document.body.style.backgroundColor=\''+hex+'\'"'
+         +'>'+bdy+'</span>\n'
+
+      return buf
+    }
+    function hex2dec(hex_) { // '0123456789abcdefgh'.indexOf() vs h=parseInt(ar[i], 16);
+      var result = 0, digitValue, hex = hex_.toLowerCase();
+      for (var i = 0; i < hex.length; i++) {
+        digitValue = '0123456789abcdefgh'.indexOf(hex[i]);
+        result = result * 16 + digitValue;
+      }; // alert(result)
+      return result;
+    }
+    function ipv4_rgb(ipv4_str){ // '194.145.161.199' a b c d : r g b g = 4 dec
+      var i,buf
+      ipv4_dec=ipv4_str.split('.');
+      for(i=0; i<=3; i++) ipv4_dec[i]=Number(ipv4_dec[i]);
+      ipv4_hex=[]; for(i=0; i<=3; i++) ipv4_hex[i]=ipv4_dec[i].toString(16);
+
+      buf='ipv4: '+ipv4_str+'='+ipv4_hex;
+      i=0; // rgb[0,1,2] = ipv4 a b c
+      buf+= rgb_([ ipv4_dec[i+0]    ,ipv4_dec[i+1]    ,ipv4_dec[i+2] ] ,1
+                ,  ipv4_hex[i+0]+'.'+ipv4_hex[i+1]+'.'+ipv4_hex[i+2] )
+      i=3; // rgb[3,4=5='oo'] = ipv4 d
+      buf+= rgb_([ ipv4_dec[i+0]    ,ipv4_dec[i+0]    ,ipv4_dec[i+0] ] ,1
+                ,  ipv4_hex[i+0]+'.'+ipv4_hex[i+0]+'.'+ipv4_hex[i+0] )
+      return buf
+    }
+    function ipv6_rgb(ipv6_str_){ // '2002:c291:a1c7:0000:c291:a1c7:0000:0000' = 8 hex
+      var i,j=-1,buf
+      // ipv6 {xxxx:xxxx:xxxx} :xxxx: {xxxx:xxxx:xxxx:xxxx}
+      //       global prefix   subnet  interface id
+      //      '2002:c291:a1c7  :0000:  c291:a1c7:0000:0000'
+      //            a b  c d           a b  c d
+      //            r g  b g
+      //       0 1 .2.3 .4.5    6  7  .8.9.10.11 12 13 14 15
+      ipv6_str=ipv6_str_.split(':').join('');
+      ipv6_hex=[]
+      for(i=0; i<32; i=i+2) { j++; // every 2 hex chars to 1 clr value [0..16]
+        ipv6_hex[j]=ipv6_str.charAt(i)+ipv6_str.charAt(i+1);
+      }
+      ipv6_dec=[]; for(i=0; i<=15; i++) ipv6_dec[i]=hex2dec(ipv6_hex[i])
+
+      buf='ipv6: '+ipv6_str_; // alert(ipv6_hex+'='+ipv6_dec)
+      {i=0; // rgb [0,1,'oo']
+        buf+=rgb_([ipv6_dec[i+0]    ,ipv6_dec[i+1]    ,0] ,1
+                 , ipv6_hex[i+0]+'.'+ipv6_hex[i+1]+'.'+'00'    )
+      }
+      {i=2; // rgb[2,3,4] == ipv4  a b c
+        buf+=rgb_([ipv6_dec[i+0]    ,ipv6_dec[i+1]    ,ipv6_dec[i+2]] ,1
+                 , ipv6_hex[i+0]+'.'+ipv6_hex[i+1]+'.'+ipv6_hex[i+2]    )
+      }
+      {i=5; // rgb[5,6=7=0] == ipv4 d
+        buf+=rgb_([ipv6_dec[i+0]    ,ipv6_dec[i+0]    ,ipv6_dec[i+0]] ,1
+                 , ipv6_hex[i+0]+'.'+ipv6_hex[i+0]+'.'+ipv6_hex[i+0]    )
+      }
+
+      {i=8; // rgb [8,9,10]
+        buf+=rgb_([ipv6_dec[i+0]    ,ipv6_dec[i+1]    ,ipv6_dec[i+2]] ,1
+                 , ipv6_hex[i+0]+'.'+ipv6_hex[i+1]+'.'+ipv6_hex[i+2]    )
+      }
+      {i=11;// rgb [11,12,13]
+        buf+=rgb_([ipv6_dec[i+0]    ,ipv6_dec[i+0]    ,ipv6_dec[i+0]] ,1
+                 , ipv6_hex[i+0]+'.'+ipv6_hex[i+0]+'.'+ipv6_hex[i+0]    )
+      }
+      return buf
+    }
+
+    function rgb2cmyk(rgb){ var R,G,B, C,M,Y,K // [r,g,b] -> [c,m,y,k] - 0..255 -> 0..100%
+        R=rgb[0]; G=rgb[1]; B=rgb[2];
+    // javascripter.net/faq/rgb2cmyk.htm
+    // javascripter.net/faq/rgb2hsv.htm
+        if ((R == 0) && (G == 0) && (B == 0)) {  C=0; M=0; Y=0; K=1;
+        } else {
+          C = 1 - (R / 255);
+          M = 1 - (G / 255);
+          Y = 1 - (B / 255);
+
+          K = Math.min(C, Math.min(M,Y));
+          C = (C - K) / (1 - K);
+          M = (M - K) / (1 - K);
+          Y = (Y - K) / (1 - K);
+        }
+        return [C, M, Y, K];
+    }
+    function rgb_perc(value){ return (value/ 255)* 100; }
+
+    function arc_(){  var stp=(256/5).toFixed(4)/* 256/5=77 */, buf=''; rgb_ord='r';
+    //           r g b *stp
+      buf+=rgb_([4,0,0],stp,''); buf+=rgb_([4,1,0],stp,'');
+      buf+=rgb_([4,2,0],stp,''); buf+=rgb_([4,3,0],stp,'');
+      buf+=rgb_([4,4,0],stp,''); buf+=rgb_([3,4,0],stp,'');
+      buf+=rgb_([2,4,0],stp,''); buf+=rgb_([1,4,0],stp,'');
+      buf+=rgb_([0,4,0],stp,''); buf+=rgb_([0,4,1],stp,'');
+      buf+=rgb_([0,4,2],stp,''); buf+=rgb_([0,4,3],stp,'');
+      buf+=rgb_([0,4,4],stp,''); buf+=rgb_([0,3,4],stp,'');
+      buf+=rgb_([0,2,4],stp,''); buf+=rgb_([0,1,4],stp,'');
+      buf+=rgb_([0,0,4],stp,''); buf+=rgb_([1,0,4],stp,'');
+      buf+=rgb_([2,0,4],stp,''); buf+=rgb_([3,0,4],stp,'');
+      buf+=rgb_([4,0,4],stp,''); buf+=rgb_([4,0,3],stp,'');
+      buf+=rgb_([4,0,2],stp,''); buf+=rgb_([4,0,1],stp,'');
+      buf+=rgb_([4,0,0],stp,'');
+      return buf
+    }
+    function clrs_(){ var stp=(256/8).toFixed(4)/* 256/8=32 */, buf='', sp=rgb_([0,0,0],stp,'')
+    //              r g b *stp
+      buf+=sp+rgb_([8,7,7],stp,'');
+      buf+=sp+rgb_([8,6,6],stp,''); buf+=rgb_([7,6,6],stp,'');
+      buf+=sp+rgb_([8,5,5],stp,''); buf+=rgb_([7,5,5],stp,''); buf+=rgb_([6,5,5],stp,'');
+      buf+=sp+rgb_([8,4,4],stp,''); buf+=rgb_([7,4,4],stp,''); buf+=rgb_([6,4,4],stp,''); buf+=rgb_([5,4,4],stp,'');
+      buf+=sp+rgb_([8,3,3],stp,''); buf+=rgb_([7,3,3],stp,''); buf+=rgb_([6,3,3],stp,'');
+                                    buf+=rgb_([5,3,3],stp,''); buf+=rgb_([4,3,3],stp,'');
+      buf+=sp+rgb_([8,2,2],stp,''); buf+=rgb_([7,2,2],stp,''); buf+=rgb_([6,2,2],stp,'');
+                                    buf+=rgb_([5,2,2],stp,''); buf+=rgb_([4,2,2],stp,''); buf+=rgb_([3,2,2],stp,'');
+      buf+=sp+rgb_([8,1,1],stp,''); buf+=rgb_([7,1,1],stp,''); buf+=rgb_([6,1,1],stp,'');
+                                    buf+=rgb_([5,1,1],stp,''); buf+=rgb_([4,1,1],stp,''); buf+=rgb_([3,1,1],stp,'');
+                                    buf+=rgb_([2,1,1],stp,'');
+      buf+=sp+rgb_([8,0,0],stp,''); buf+=rgb_([7,0,0],stp,''); buf+=rgb_([6,0,0],stp,'');
+                                    buf+=rgb_([5,0,0],stp,''); buf+=rgb_([4,0,0],stp,''); buf+=rgb_([3,0,0],stp,'');
+                                    buf+=rgb_([2,0,0],stp,''); buf+=rgb_([1,0,0],stp,'');
+
+      return buf
+    }
+    function r_g_b_(rstp,gstp,bstp){ var buf=''     ,t='&nbsp',d=',',r,g,b, bh,gh,rh, r_,g_,b_
+       rstep=16; if(!undef(rstp) && rstp>=2 && rstp<=77) rstep=rstp; // 256/32=8
+       gstep=16; if(!undef(gstp) && gstp>=2 && gstp<=77) gstep=gstp; // 256/32=8
+       bstep=16; if(!undef(bstp) && bstp>=2 && bstp<=77) bstep=bstp; // 256/32=8
+       rgb_ord='r';
+       pwr=(256/rstep)*(256/gstep)*(256/bstep);
+       maxpwr=(256/4)*(256/4)*(256/4)
+       buf='steps r:'+rstp+' g:'+gstp+' b:'+bstp+' pwr:'+pwr;
+       if(pwr>maxpwr) { msg='too much values '+pwr+'> (256/4)^3='+maxpwr+' ! skiped.'
+         log(msg); return
+       }
+       for(r=0; r<=256; r=r+rstep){
+         buf+='<div>\n'
+         for(g=0; g<=256; g=g+gstep){
+           buf+='<div>\n'
+           for(b=0; b<=256; b=b+bstep){ buf+=rgb_([r,g,b],1,'') }
+           buf+='</div>\n'
+         }
+         buf+='</div>\n'
+       }
+       return buf
+    }
+  }
+  { // --- out(),log(),mnu(),dmp(),id_(),hasID(),ShowHide(),Show(),Hide(),WinOpen(),browserID() -- gui & win
+    function clean(id) { id.innerHTML=''}
+    function out(id_,s){ if(s!=null)   id_.innerHTML+=s+eol;  else  id_.innerHTML=''} // clr: storage reached
+    function log(s)    { if(s!=null)  log_.innerHTML+=s+heol; else log_.innerHTML=''} // span: s+heol but hide \
+    function dmp(s)    { if(s!=null)  dmp_.innerHTML+=s+eol;  else dmp_.innerHTML=''} // textarea!
+    function mnu(s)    { if(s!=null)  mnu_.innerHTML+=s+eol;  else mnu_.innerHTML=''} // span: s+heol but hide \
+    function id_(id){return document.getElementById(id)}
+//  log_=id_('msg-log'); mnu_=id_('mnu'); dmp_=id_('dmp');  hlp_=id_('hlp');  clr_=id_('clr');
+    function hasID(str,id){ if(!undef(id)) return (str.indexOf(id)>=0); return !true; }
+    function ShowHide(id){ if(undef(id)) return;
+      var p_=document.getElementById(id);
+      if(undef(p_)) return;
+      if(p_.style.display!=="none") p_.style.display = "none"; else p_.style.display = "block";
+    }
+    function Show(id){
+      if(undef(id) || id=='' || id=='.') return; // log('show('+id+')')
+      var p_=document.getElementById(id);
+      if(undef(p_) || p_===null) return;
+      p_.style.display = "block";
+    }
+    function Hide(id){
+      if(undef(id) || id=='' || id=='.') return; // log('hide('+id+')')
+      var p_=document.getElementById(id);
+      if(undef(p_) || p_===null) return;
+      p_.style.display = "none";
+    }
+
+    win_=null; browser_=''; browser_win_ok=!true; // true | !true
+    function WinOpen(data,tag){ //  onclick="WinOpen(help,'proj help');"
+      // www.w3schools.com/jsref/met_win_open.asp
+      // developer.mozilla.org/en-US/docs/Web/API/Window/open
+      // developer.mozilla.org/en-US/docs/Web/API/Window/open/Privileged_features
+      // javascript.info/popup-windows
+
+      // accessify.com/features/tutorials/the-perfect-popup/
+      // <a href="file.htm" rel="popup">Here is my link</a>
+      url='';
+      name={blank:'_blank ',parent:'_parent ',self:'_self ',top:'_top ',user:''}; name.user=tag;
+      url_replace={y:true,n:!true}; // ie only
+      specs="toolbar=no,menubar=no,location=no,titlebar=no"  // ff:no
+           +",scrollbars=yes,resizable=yes,status=no"        // ff:no
+           +",top=40,left=200,width=400,height=200";
+      // [yes|no|1|0]; comma-separated list of items, no whitespaces
+      var data_=data.join('</br>')// for(i=0; i<data.length; i++) data_+=data[i]+'</br>';
+      // console.log(iex,browser_win_ok,win_,tag,data) // ffx: f t n proj help
+      out(hlp_,data_); ShowHide('hlp');
+      // --- ?
+      if(!browser_win_ok) return hlp_;
+      // --- window.open in ffx
+      // if(win_ != null && !win_.closed) win_.close();
+      // if(win_ == null || win_.closed){
+      mes='WinOpen(help,"proj help"):'
+      try{ win_=window.open(url, name.blank, specs, url_replace.n); // name.user | name.blank
+        win_.document.write(data_); // ff:yes
+        win_.focus();
+      } catch(err) { mes+='... err:'+tag+' event:"'+err+'"';
+        log(mes); if(dbg) alert(mes);
+      }
+ //   ie crash: ... winopen:proj help event:"Error: Server execution failed "
+ //   KB886549 (support.microsoft.com/en-gb/help/886549) to run the Microsoft Fixit tool
+ //   win_.innerHTML=data_;       // ff:no
+    }
+
+    function browserID(){var i,tgs=[],fnd=[],br='',nav='' ,app,hdr,heol='</br>\n';
+      hdr=navigator.userAgent; app=navigator.appName;
+      nav += 'appName:  "' + navigator.appName   +'"'+heol;
+      nav += 'platform: "' + navigator.platform  +'"'+heol;
+   // nav += 'appVers:  "' + navigator.appVersion+'"'+heol;
+   // nav += "CodeName: "  + navigator.appCodeName   +heol;
+   //?nav += "js: "        + navigator.?             +heol; // true
+   // nav += "Java: "      + navigator.javaEnabled() +heol; // true
+   // nav += "Cookies: "   + navigator.cookieEnabled +heol; // true
+   // nav += "Language: "  + navigator.language      +heol; // undefined
+   // nav += "Online: "    + navigator.onLine        +heol; // true
+      nav += 'header: "'  + hdr+'"'                  +heol;
+      var isHTA=!true,isIE=!true,isChrome=!true,isOpera=!true,isSafari=!true, isFirefox=!true;
+   {  i= 0; tgs[i]='HTA'; fnd[i]=hasID(app,"Internet Explorer") && hasID(hdr,'MSIE'); // MSIE 9.0; Trident/7.0
+            isHTA=fnd[i];
+      i= 1; tgs[i]='IEX'; fnd[i]=hasID(app,"Internet Explorer") && hasID(hdr,'MSIE')
+            && (/*@cc_on!@*/!true || !!document.documentMode); //+ ie 6-11
+            isIE=fnd[i];
+      i= 2; tgs[i]='EDG'; fnd[i]=hasID(hdr,"Edg/")
+            && !isIE // && !!window.StyleMedia; // Edg/84.0.522.52
+      i= 3; tgs[i]='NSC'; fnd[i]=hasID(hdr,"Navigator/");// Navigator/9.0.0.6
+      i= 4; tgs[i]='FFX'; fnd[i]=hasID(hdr,"Firefox/")
+            && !undef(InstallTrigger); //+ Firefox/68.0  Firefox DevEd undetectable
+            isFirefox=fnd[i];
+      i= 5; tgs[i]='PMN'; fnd[i]=hasID(hdr,"PaleMoon/"); // PaleMoon/28.11.0
+      i= 6; tgs[i]='SMK'; fnd[i]=hasID(hdr,"SeaMonkey/"); // SeaMonkey/2.53.2
+      i= 7; tgs[i]='KML'; fnd[i]=hasID(hdr,"K-Meleon/"); // K-Meleon/76.2
+      i= 8; tgs[i]='CHR'; fnd[i]=hasID(hdr,"Chrome/")
+            && window.chrome && (window.chrome.webstore || window.chrome.runtime); //+ Chrome/84.0.4147.105 Safari/537.36
+            isChrome=fnd[i];
+      i= 9; tgs[i]='SAF'; fnd[i]= hasID(hdr,"Safari/")
+            && /constructor/i.test(window.HTMLElement)
+            || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })
+            (!window['safari'] || (!undef(safari) && safari.pushNotification)) //+ Safari/534.57.2
+            isSafari=fnd[i];
+      i=10; tgs[i]='OPR'; fnd[i]=(!!window.opr && !!opr.addons) || !!window.opera || hasID(hdr,"OPR/"); // OPR/70.0.3728.71
+            isOpera=fnd[i];
+      i=11; tgs[i]='DRG'; fnd[i]=hasID(hdr,"Dragon/"); // Dragon/58.0.3029.115
+      i=12; tgs[i]='QTW'; fnd[i]=hasID(hdr,"QtWeb Internet Browser/"); // QtWeb Internet Browser/3.8.5
+      i=13; tgs[i]='FLK'; fnd[i]=hasID(hdr,"Falkon/"); // Falkon/3.1.0
+
+   // i=14; tgs[i]='SJT'; fnd[i]=hasID(hdr,"SlimJet"); // undetectable
+   // i=15; tgs[i]='KQR'; fnd[i]=hasID(hdr,"Konqueror"); // not exist anymore to download
+   // i=16; tgs[i]='BLK'; fnd[i]=(isChrome || isOpera) && !!window.CSS; // ?Blink engine
+   }
+      if (fnd[ 8]/*isChrome*/
+      && (fnd[11]/*'DRG'*/ || fnd[13]/*'FLK'*/ || fnd[ 2]/*'EDG'*/ || fnd[10]/*'OPR'*/)) {
+          fnd[ 8]=!true; isChrome=!true;
+      }
+      if (fnd[ 4]/*isFirefox*/
+      && (fnd[ 7]/*'KML'*/ || fnd[ 5]/*'PMN'*/ || fnd[ 6]/*'SMK'*/ || fnd[ 3]/*'NSC'*/)) {
+          fnd[ 4]=!true; isFirefox=!true;
+      }
+
+      br=''; l=tgs.length;   // if(dbg) dmp(nav+eol);
+      if(l>0) for(i=0; i<=l-1; i++){
+        if (fnd[i]) { if(br!='') br+=' '; br+=tgs[i];
+        // if(dbg) dmp('['+i+']='+tgs[i]+' : '+fnd[i]);
+        }
+      };
+      if (br=='') br='?'
+      return br
+    }// ---
+  }
+  { // --- dump(j) --- proj obj  --- ?old_dump(), ?dump_all()
+/* *-/
+    buf_=''; for (j in proj) buf_+=old_dump(j); dmp(_htm(buf));
+    function old_dump(key){ var r='',heol='</br>\r\n',i,j,p
+       r+='proj['+key+'].id:"'+proj[key].id+'"; proj[key].state:'+proj[key].state+'"; proj[key].fld:"'+proj[key].fld+'";'
+         +' proj[key].work:"'+proj[key].work+'";'+heol
+    // r+=' .vol_name:"'+proj.vol_name+'" .vol_id:"'+proj.vol_id+'" .vol_fs:"'+proj.vol_fs+'"'+heol
+       if(proj[key].files.length>0){ //
+         r+=(' proj['+key+'].files: '+proj[key].files.length+heol); j=0;
+         for (i=0;i<=proj[key].files.length-1;i++) {
+             r+='  '+i+':"'+proj[key].files[i]+'"';
+             j++;
+             if(j==5) {j=0; r+=heol;}
+           }
+         r+=heol
+       }
+       r+=('proj['+key+'].act: // ['+al+']'+heol)
+       a=traverse_(proj[key].act); var al=0; for (var i in a) al++; // proj[key].act=[{key:val}, ... ]
+       for (i in a){
+         if(a[i].key=='@hsh') { p=a[i].val; // proj[key].act.hsh;
+           r+=' '+'['+i+']='+ a[i].key+': {'+'fld:"'+p.fld+'" msk:"'+p.msk+'" lst:"'+p.lst+'" hsh:"'+p.hsh+'"}'+heol;
+         }else{
+           r+=' '+'['+i+']='+ a[i].key+': "'+a[i].val+'"'+heol;
+         }
+       }
+    // r+=('<hr>')
+       return r+' '+heol
+    }
+
+    function dump_all(){ var al,bl,a,b,i,j,k,p1,p2,p3,buf='root:'+root+'<hr>'; //
+      for (j in proj){
+        if(proj[j].fld=='===') buf+='<hr>'
+        buf+='['+lz(j,2)+'] '+z(' { ',y_)+z('id')+z(': ',b_)+z(proj[j].id,m_) // +proj_indx(proj[j].id) // -- same #
+        if(!undef(proj[j].fld) && proj[j].fld!='') buf+=z(', ',b_)+z('.fld')+z(': ',b_)+proj[j].fld
+        if(!undef(proj[j].ico) && proj[j].ico!='') buf+=z(', ',b_)+z('.ico')+z(': ',b_)+proj[j].ico
+      //al=proj[j].act.length; // [ {...},{key:[]},{...},... ]
+        a=proj[j].act; al=0; for (i in a) al++;
+        // al=a.length; -> TypeError: can't access property "length", a is undefined
+
+        if(!undef(a) && al>0) {
+          buf+=heol+','+z('act')+'['+al+'] '+z(' : ',b_)+z(' [ ')+heol
+
+          for (i in a) { b=a[i]; for (k in b) bl++; // bl=b.length;
+             buf+='&nbsp; ['+lz(i,2)+']'+z(' [ ',c_)+z(b[0],g_)+z(' : ',b_)
+          // buf+=+'...'+z(' ] ',c_)
+             p2=b[2];if(p2!='') p2=z(', ',b_)+p2
+             p3=b[3];if(p3!='') p3=z(', ',b_)+p3
+             buf+=b[1]+p2+p3+eol
+          // for (k in b) buf+=b[i]+eol; !??????????????
+             buf+=z(' ] ',c_)
+             if(i<al-1) buf+=heol
+          }; buf+=z(heol+' ] ')+heol
+
+        };
+
+      }; buf+=z(' } ',y_)
+
+      return buf+'<hr>';
+    }
+/**/
+    function dump(j)   { var al,bl,a,b,i,j,k,p1,p2,p3,buf=''; // '---'+heol
+      buf+='['+lz(j,2)+'] '+z(' { ',y_)
+            +z(' .grp') +z(': ',b_)+z(proj[j].grp,m_)
+        +','+z(' .id' ) +z(': ',b_)+z(proj[j].id ,m_)
+        +','+z(' .root:')+root
+        +heol  // +proj_indx(proj[j].id) // -- same #
+        +','+z(' .sel') +z(': ',b_)+z(proj[j].sel,m_)
+      if(!undef(proj[j].ico) && proj[j].ico!='')
+        buf+=z(', ',b_)+z(' .ico')+z(': ',b_)+proj[j].ico
+//    [ {...},{key:[]},{...},... ]  // a.length -> TypeError: can't access property "length", a is undefined
+      a=proj[j].subs; al=0; for (i in a) al++;
+      if(!undef(a) && al>0) {
+        buf+=heol+','+z(' .subs')+'['+al+'] '+z(' : ',b_)+z(' [ ')+heol
+        for (i in a) { b=traverse_(a[i]);
+        // if(!iex && dbg) console.log('--- '+b[0].key+':'+b[0].val);
+           var files=proj[j].subs[i].files;
+
+           fld='';sub_fld_='';c=' ';exist_fld=!true;
+           if(b[0].key=='fld'){ fld=root+'/'+proj[j].subs[0].fld;
+           } else{              fld=root+'/'+proj[j].subs[0].fld+'/'+b[0].val; }
+           c=b[0].val.substr(0,1);
+           if(c=='>'){          fld=repl_char(b[0].val,'>',''); }
+
+           var se=null; if(ActiveX) se=fso.FolderExists(fld);
+           var sub_exist='';
+           if(se==null) sub_exist=z(' /* fld unkn? */',y_);
+           else if(se)  sub_exist=z(' /* fld exist */',c_);
+           else         sub_exist=z(' /* fld miss! */',m_);
+
+           buf+='&nbsp; '+'['+lz(i,2)+'] '+sub_exist
+               +z(' [{ ',c_)  +"'"+z(b[0].key,g_)+"'"+z(' : ',b_)+'"'+b[0].val+'"'+eol  +z(' }] ',c_)+heol+'&nbsp;&nbsp;,'
+
+           buf+='<span style="background-color:#444444;cursor:pointer;" '
+             + 'onclick="ShowHide(\'fil-'+j+'-'+i+'\')" title="+/-">'
+              buf+=' '+z('.files')+'['+lz(files.length,3)+']'+z(' [ ',c_)+heol
+           buf+='</span>'
+           buf+='<span id="fil-'+j+'-'+i+'" style="display:none;">'
+             al=0; for (k in files) al++;
+             for (k in files) { buf+='&nbsp;&nbsp; ['+k+'] '+files[k];
+               if(k<al-1) buf+=heol
+             }
+           buf+='</span>'+z(' ] ',c_)+eol
+        }; buf+=z(' ] ')
+      };
+      //  [ {...},{key:[]},{...},... ]  // a.length -> TypeError: can't access property "length", a is undefined
+      a=proj[j].act; al=0; for (i in a) al++;
+      if(!undef(a) && al>0) {
+        buf+=heol+',' // act +/-:
+        buf+='<span style="background-color:#444444;cursor:pointer;" onclick="ShowHide(\'dmp-'+j+'\')" title="+/-">'
+          buf+=z(' .act')+'['+al+'] '+z(' : ',b_)+z(' [ ')+heol
+        buf+='</span>'
+        buf+='<span id="dmp-'+j+'" style="display:none;">'
+          for (i in a) { b=a[i]; for (k in b) bl++; // bl=b.length;
+             buf+='&nbsp; ['+lz(i,2)+'] '+z(' [ ',c_)+"'"+z(b[0],g_)+"'"+z(' : ',b_)  // buf+=+'...'+z(' ] ',c_)
+             p1=''; if(!undef(b[1])){p1=b[1]; p1=       '  '    +b[1]} else p1=z('undef!')
+             p2=''; if(!undef(b[2])){p2=b[2]; p2=heol+z(', ',b_)+b[2]}
+             p3=''; if(!undef(b[3])){p3=b[3]; p3=heol+z(', ',b_)+b[3]}
+             var p123=p1+p2+p3; // if(p123.length>120) p123=heol+p1+p2+p3
+             buf+=p123+eol
+          // for (k in b) buf+=b[i]+eol; !?
+             buf+=z(' ] ',c_)
+             if(i<al-1) buf+=heol
+          };
+        buf+='</span>'
+        buf+=z(' ] ')// +heol
+      };
+      buf+=z(' } ',y_)
+      return buf+eol;
+    }
+  }
+  { // --- ![run_(), run_all(), run_lst(), run_md5(), run_zip(), run_chk()] ,getUrl(), getLnk(), get(),put()  --- fsio ActiveX
+    fsiomode={read:1, write:2, append:8};
+    fsformat={SystemDefault:-2,Unicode:-1, ASCII:0};
+    WinStl={hide:0,act:1,min_act:2,max_act:3,rcnt_act:4,crnt_act:5
+           ,next_lvl:6,min_back:7,crnt_back:8,rest_act:9,prnt_act:10};
+    /* WinStl= *-/
+0     'Hides the window and activates another window.'
+1     'Activates and displays a window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when displaying the window for the first time.'
+2     'Activates the window and displays it as a minimized window.'
+3     'Activates the window and displays it as a maximized window.'
+4     'Displays a window in its most recent size and position. The active window remains active.'
+5     'Activates the window and displays it in its current size and position.'
+6     'Minimizes the specified window and activates the next top-level window in the Z order.'
+7     'Displays the window as a minimized window. The active window remains active.'
+8     'Displays the window in its current state. The active window remains active.'
+9     'Activates and displays the window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when restoring a minimized window.'
+10     'Sets the show state based on the state of the program that started the application.'
+    /* */
+    fso=null; fsn=null; fsh=null;
+    ActiveX=!true; if(typeof(window.ActiveXObject)==='function') ActiveX=true;
+//  if(ActiveX==undefined || ActiveX=='' || ActiveX==null) ActiveX=!true;
+    if(!ActiveX){ // alert('ActiveX undefined.')
+    } else { // log('ActiveX exist.') // ff,node?
+        fso = new ActiveXObject("Scripting.FileSystemObject");
+        // fso.FolderExists(fld) , fso.FileExists(file) , f =fso.GetFolder(rfld)
+        //
+        // fso.OpenTextFile(fname, fsiomode.write, true/*create*/,fsformat.ASCII);
+        fsn = new ActiveXObject("WScript.Network"); // fsn.UserName
+        fsh = new ActiveXObject("WScript.Shell");
+        // fsh.CreateShortcut(l_)
+    }
+    function run(ap){ // ap={prj:#,act:#}  -> pn=p.prj; an=p.act;
+      var pn,an,act,mes_act,mes_sta
+      pn=ap[0]; an=ap[1];  // log(': run('+ap+') -> pn:'+pn+',an:'+an); // (ar[]) -> : : run(0,0) -> pn:0,an:0
+      act=proj[pn].act[an];// log('. run(): act:'+act) // -> . run(): act:fld,F:/elefter.dev/SVC-8
+      // if(!iex && dbg) console.log(act);
+      // back_slash()
+      mes_act='. run .id['+pn+']:'+proj[pn].id+' .act['+an+']:'+act[0]+', cmd:'
+      if(!ActiveX) { mes_sta="... ignored:ActiveX not accessible.";
+        log(mes_act+heol+act[1]+heol+ mes_sta); return
+      }
+      if ( isok = confirm (mes_act+eol+act[1]) ) {
+        try { fsh.run (act[1],WinStl.act,!true/*WaitOnReturn:*/ ); mes_sta=' .. ok.';
+        } catch (err) { mes_sta=' ... '+err+'.';}
+      } else mes_sta=' ... skiped.';
+      log(mes_act+heol+act[1]+heol+ mes_sta);
+    }
+/* */ // ---
+    brw=browserID(); iex=(brw.indexOf('HTA')>=0) || (brw.indexOf('IEX')>=0);
+    browser_win_ok=!(brw.indexOf('HTA')>=0);
+    browser_win_ok=!true; // ffx openwin err !?
+    function run_(key,cmd,indx_){ var i,j=-1,c,a,mes
+       if(undef(cmd)){ log("run: empty par's"); return -1;}
+       if(undef(indx_)) indx='?'; else indx=indx_
+     //var d=dt(), s=d.hms+' '+'<u>'+key+'</u> ';
+       if(key=='@md5') { a=cmd.split(',');
+         dmp('run. ['+indx+']: key:'+key+', cmd: ['+a[0]+','+a[1]+','+a[2]+']');
+         c={fld:a[0], md5:a[1], lst:a[2]}; // reconstruct object from [fld_ ,md5_ ,lst_ ] ---? lst
+         d=[    a[0],     a[1],     a[2]];
+         if(!iex && dbg) console.log(c);
+         if(undef(c) || undef(c.fld) || undef(c.md5) || undef(c.lst) ){
+           log("run @md5: empty par"); return -1;
+         };
+         md5_run(d,indx);
+       } else if (key=='@lst') { a=cmd.split(',');
+         dmp('run. ['+indx+']: key:'+key+', cmd: ['+a[0]+','+a[1]+','+a[2]+']');
+         c={fld:a[0], lst:a[1], msk:a[2]}; // reconstruct object from [fld_ ,lst_ ,msk_ ]
+         d=[    a[0],     a[1],     a[2]];
+         if(!iex && dbg) console.log(c);
+         if(undef(c) || undef(c.fld) || undef(c.lst) || undef(c.msk)){
+           log("run @lst: empty par"); return -1; // run zip_make: empty par's
+         };
+         lst_run(d,indx);
+       } else if (key=='@chk') { a=cmd.split(',');
+         dmp('run. ['+indx+']: key:'+key+', cmd: ['+a[0]+','+a[1]+']');
+         c={fld:a[0], md5:a[1]}; // reconstruct object from [fld_ ,md5_ ]
+         d=[    a[0],     a[1]];
+         if(!iex && dbg) console.log(c);
+         if(undef(c) || undef(c.fld) || undef(c.md5)){
+           log("run @chk: empty par"); return -1;
+         };
+         chk_run(d,indx);
+       } else if (key=='@zip') { a=cmd.split(',');
+         dmp('run. ['+indx+']: key:'+key+', cmd: ['+a[0]+','+a[1]+','+a[2]+']');
+         c={fld:a[0], zip:a[1], msk:a[2]}; // reconstruct object from [fld_ ,zip_ ,msk_ ]
+         d=[    a[0],     a[1],     a[2]];
+         if(!iex && dbg) console.log(c);
+         if(undef(c) || undef(c.fld) || undef(c.zip) || undef(c.msk)){
+           log("run zip_make: empty par"); return -1; // run zip_make: empty par's
+         };
+         zip_run(d,indx);
+       } else {                  a=cmd.split(',');
+         dmp('run. ['+indx+'] key:'+key+' cmd: ['+a[0]+']');   // if(!iex && dbg) console.log(a);
+         if(ActiveX) {
+           try { fsh.run(a[0],WinStl.act,!true/*WaitOnReturn:*/ );
+                 /*  wait=true ->  err:unable to wait the process */
+           } catch(err) { mes='fsh.run('+a[0]+') err:'+err; dmp(mes);
+           };
+         } else { log("run: ignored due to ActiveX is not accessible");return -2; }
+       }
+       return 0;
+    }
+    function run_all(op){ var j,i,a,p,v,pnj,todo,d;// op: l/h/c/z/*
+      if(!(op=='l' || op=='m' || op=='c' || op=='z' || op=='a') || proj.length<1) {
+        log('run_all('+op+') skipped due to unknown option [m,z,c,*] / no projects '+proj.length); return;
+      }
+      d=dt(); log('all_run beg:'+d.ymd+' '+d.hms+' @'+op)
+      for (j in proj) { pnj=proj[j].id // pnj=proj.id[j]
+      //set_proj(pnj);
+        a=traverse_(proj[j].act);
+        for (i in a){ todo=null;
+          if        (a[i].key=='@md5' && (op=='m' || op=='*')) { todo=true;  p=a[i].val;
+            v=[p.fld, p.md5, p.lst];  // ['@md5', fld_ ,md5_ ,lst_ ] obj2arr
+          } else if (a[i].key=='@lst' && (op=='c' || op=='*')) { todo=true;  p=a[i].val;
+            v=[p.fld, p.lst, p.msk];  // ['@lst', fld_ ,lst_ ,msk_ ] obj2arr
+          } else if (a[i].key=='@zip' && (op=='z' || op=='*')) { todo=true;  p=a[i].val;
+            v=[p.fld, p.zip, p.msk]   // ['@zip', fld_ ,zip_ ,msk_ ] obj2arr
+          } else if (a[i].key=='@chk' && (op=='c' || op=='*')) { todo=true;  p=a[i].val;
+            v=[p.fld, p.md5 ]         // ['@chk', fld_ ,md5_       ] obj2arr
+          } else todo=!true;
+          if(todo){
+            dmp('all_run('+op+')> proj['+j+'].id:'+proj[j].id+' '+a[i].key+' '+pnj+' ['+v+']');
+            if        (a[i].key=='@md5'){ md5_run(p,j);
+            } else if (a[i].key=='@lst'){ lst_run(p,j);
+            } else if (a[i].key=='@zip'){ zip_run(p,j);
+            } else if (a[i].key=='@chk'){ chk_run(p,j); // ?run(a[i].key,v,j)
+            }
+          }
+        }
+      }
+      d=dt(); log('all_run end:'+d.ymd+' '+d.hms+' @'+op)
+    }
+    function run_lst(p,indx){ var pause=' && echo."wait to look for some errors!" && pause'
+       var isok,d, fldlen,len,i,buf,dir;
+    // {fld:proj.fld,msk:'*.*',lst:'proj.lst',hsh:'proj.hsh'} + hsh - path to exe
+       log('lst:: fld:'+p.fld+' msk:'+p.msk+' lst:'+p.lst)
+       d=dt(); log('lst_run beg: '+d.ymd+' '+d.hms);
+
+       pause=' && echo."del if exist, dir: wait to look for some errors!" && pause'
+       cmd='cmd /C cd /d '+p.fld+' && if exist '+p.lst+' del '+p.lst
+                                +' && if exist '+p.hsh+' del '+p.hsh
+       cmd+=' && dir '+p.msk+' /A-D -l /-c /ogn /tw /4 /r /b /s>'+p.lst;
+    // err=put(prj+'/dir-lst.bat',[cmd+' && pause']); if(err!=0) log(err); run('dir',prj+'/dir-lst.bat')
+       run('dir',cmd+pause, 1,/*WaitOnReturn:*/true); // start /wait dir !?
+       isok = confirm("md5_make: pause to wait dir list ");
+    // !? if no wait after call dir... then get:[0] is incorect and path hide not work
+
+    // dmp('hide root fld:'+p.fld); //  get, replace, put
+       proj[indx].files=get(repl_char(p.fld,'/','\\') +'\\'+p.lst);
+    // dmp(proj[indx].files.join(', '))
+      fldlen=p.fld.length+1,len,i,buf;
+      for(i=0; i<=proj[indx].files.length-1;i++){
+         buf=proj[indx].files[i]; len=buf.length;      // dmp('hid['+i+']:'+buf+' start:'+fldlen+' stop:'+len )
+         proj[indx].files[i]=buf.substring(fldlen,len);// dmp('hid['+i+']='+proj[indx].files[i])
+      }
+      log('hid: ['+proj[indx].files.length+']:'+proj[indx].files.join(', '))
+      dir=proj[indx].files;
+      put(repl_char(p.fld,'/','\\')+'\\'+p.lst, dir)
+
+      l=proj[indx].files.length-1; dir='proj[indx].files/* ['+(l+1)+'] */=[';
+      for(i=0; i<=l; i++) { dir+='"'+repl_char(proj[indx].files[i],'\\','/')+'"'; if(i<l) dir+=','; }
+      dir+='];';
+      fname=repl_char(p.fld,'/','\\')+'\\proj.files.js';
+      try{ file_out = fso.OpenTextFile(fname, fsiomode.write, true/*create*/,fsformat.ASCII);
+           file_out.Write(dir);
+           file_out.close();
+      }catch(err){ log( '... put file:'+fname+' err:"'+err+'"');}
+      d=dt(); log('lst_run end: '+d.hms);
+    }
+    function run_md5(p,indx){ var pause=' && echo."wait to look for some errors!" && pause'
+       var isok,d, fldlen,len,i,buf,dir;
+    // {fld:proj.fld,msk:'*.*',lst:'proj.lst',hsh:'proj.hsh'} + hsh - path to exe
+       log('md5_make:: fld:'+p.fld+' msk:'+p.msk+' lst:'+p.lst+' hsh:'+p.hsh)
+       d=dt(); log('md5_run beg: '+d.ymd+' '+d.hms);
+/* *-/
+       pause=' && echo."del if exist, dir: wait to look for some errors!" && pause'
+       cmd='cmd /C cd /d '+p.fld+' && if exist '+p.lst+' del '+p.lst
+                                +' && if exist '+p.hsh+' del '+p.hsh
+       cmd+=' && dir '+p.msk+' /A-D -l /-c /ogn /tw /4 /r /b /s>'+p.lst;
+    // err=put(prj+'/dir-lst.bat',[cmd+' && pause']); if(err!=0) log(err); run('dir',prj+'/dir-lst.bat')
+       run('dir',cmd+pause, 1,true); // start /wait dir !?
+       isok = confirm("md5_make: pause to wait dir list ");
+    // !? if no wait after call dir... then get:[0] is incorect and path hide not work
+
+    // dmp('hide root fld:'+p.fld); //  get, replace, put
+       proj[indx].files=get(repl_char(p.fld,'/','\\') +'\\'+p.lst);
+    // dmp(proj[indx].files.join(', '))
+      fldlen=p.fld.length+1,len,i,buf;
+      for(i=0; i<=proj[indx].files.length-1;i++){
+         buf=proj[indx].files[i]; len=buf.length;      // dmp('hid['+i+']:'+buf+' start:'+fldlen+' stop:'+len )
+         proj[indx].files[i]=buf.substring(fldlen,len);// dmp('hid['+i+']='+proj[indx].files[i])
+      }
+      log('hid: ['+proj[indx].files.length+']:'+proj[indx].files.join(', '))
+      dir=proj[indx].files;
+      put(repl_char(p.fld,'/','\\')+'\\'+p.lst, dir)
+
+      l=proj[indx].files.length-1; dir='proj[indx].files=[';
+      for(i=0; i<=l; i++) { dir+='"'+repl_char(proj[indx].files[i],'\\','/')+'"'; if(i<l) dir+=','; }
+      dir+='];';
+      fname=repl_char(p.fld,'/','\\')+'\\proj.files.js';
+      try{ file_out = fso.OpenTextFile(fname, fsiomode.write, true,fsformat.ASCII);
+           file_out.Write(dir);
+           file_out.close();
+      }catch(err){ log( '... put file:'+fname+' err:"'+err+'"');}
+/* */
+      log('hsh fold:'+p.fld+' list:'+p.lst+' hsh:'+p.hsh)
+      pause=' && echo."hsh make: wait to look for some errors!" && pause'
+      cmd='cmd /C cd /d '+p.fld+' && "'+(hsh)+'" -r -e -l -k -f '+p.lst+'>'+p.hsh
+      // err=put(prj+'/dir-hsh.bat',[cmd+' && pause']); if(err!=0) log(err); run('dir',prj+'/dir-hsh.bat')
+      run('hsh:',cmd+pause, 1,/*WaitOnReturn:*/!true);
+      d=dt(); log('md5_run end: '+d.hms);
+    }
+    function run_zip(p,indx){ var pause=' && echo."wait to look for some errors!" && pause',d
+      d=dt(); log('zip_make beg: '+d.ymd+' '+d.hms+' p.fld:'+p.fld+' p.msk:'+p.msk+' p.zip:'+p.zip);
+      pause=' && echo."del if exist: wait to look for some errors!" && pause'
+      cmd ='cmd /C cd /d '+p.fld+' && if exist '+p.zip+' del '+p.zip;
+      pause=' && echo."zip: wait to look for some errors!" && pause'
+      run('zip',cmd+pause, 1,/*WaitOnReturn:*/true); // dont use start 7z.exe
+      cmd ='cmd /C cd /d '+p.fld+' && "'+(zip)+'" a -r '+p.zip+' '+p.msk;
+      run('zip',cmd+pause, 1,/*WaitOnReturn:*/true); // dont use start 7z.exe
+      d=dt(); log('zip_make end: '+d.hms);
+    }
+    function run_chk(p,indx){
+      d=dt(); log('chk_run beg:'+d.ymd+' '+d.hms)
+      d=dt(); log('chk_run end:'+d.ymd+' '+d.hms)
+    }
+/* */ // ---
+    function getUrl(file){ var f,url=''// url=getUrl(srcdir+d.name+'.'+d.ext)
+        if(dbg) dmp(' getUrl: file='+file)
+        try{f = fso.OpenTextFile(file, fsiomode.read, !true) // abs path
+            while(!f.AtEndOfStream){
+              var r=f.ReadLine();
+                 if (r.indexOf('URL=')>-1) url=decodeURI(r.substring(4,r.length))
+            }
+            f.close();
+        }catch(err){ log('--getUrl("'+file+'")\n  err:'+err);}
+        return url
+    }
+    function getLnk(l_){ var p,lnk,i
+      if(dbg) dmp(' getLnk:'+l_)
+      i=l_.lastIndexOf('.lnk');
+      if(i>=0){// http://lpetr.org/blog/archives/creating-start-menu-shortcuts-with-javascript
+        lnk_ = fsh.CreateShortcut(l_)
+        p=lnk_.TargetPath;
+        if(p.charAt(0)=='\\' && p.charAt(1)=='\\') { // \\192.168.1.222\d$\Me...
+          if(dbg) dmp('unmaped net adr .lnk:'+p)
+        } else if(p.charAt(1)!=':') {
+          if(dbg) dmp('curious .lnk:'+p)
+        }
+        if(dbg) dmp('.lnk->p:'+p)
+      }
+      return p
+    }
+    function get(fname){
+       log('get open:'+fname)
+       if(!ActiveX || fname== null || fname==''){
+         log('... get: empty parameters / not activex'); return []
+       }
+       try{ file_inp = fso.OpenTextFile(fname, fsiomode.read, !true/*create*/,fsformat.ASCII);
+       }catch(err){ mes='... get open:'+fname+' event:"'+err+'"';
+         if(err=='Error: Permission denied') mes+='   may be opened from another apl.'
+         if(err=='Error: File not found')    mes+='   may be not created'
+         log(mes); return []
+       }
+    // -- read all to eof;  = file.ReadAll();
+       var i=-1, buf=[];
+       while(!file_inp.AtEndOfStream){ i++;
+         try{ buf[i]=file_inp.ReadLine(); }
+         catch(err){ msg('... get:['+i+'] err:"'+err+'"'); return [];}
+       }
+    // -- close input
+       if(!undef(file_inp)) file_inp.close();
+       log('get: ['+buf.length+'] ') // +buf.join(',')
+       return buf
+    }
+    function put(fname,dir){ var line,i,err=0;
+       log('put: ['+dir.length+'] to file:'+fname); // +dir.join(', ')
+       if(!ActiveX || fname== null) return '... put: empty parameters / not activex';
+       try{ file_out = fso.OpenTextFile(fname, fsiomode.write, true/*create*/,fsformat.ASCII);
+       }catch(err){ var mes='... put open:'+fname+' event:"'+err+'"';
+         if(err=='Error: Permission denied') mes+='   may be opened from another apl.'
+         if(err=='Error: File not found')    mes+='   may be not created'
+         return mes
+       }
+    // -- read all to eof;  = file.WriteAll();
+       for(i=0;i<=dir.length-1;i++){
+         try{ file_out.WriteLine(dir[i]); }
+         catch(err){ mes=('... put:['+i+'] err:"'+err+'"'); return mes;}
+       }
+    // -- close input
+       if(!undef(file_out)) file_out.close();
+       return err
+    }
+  }
+  /* --- defaults overwriten by proj.js */
+  { proj_={}; sys={};  // --- set_def(pn),scanFileList_to_ar(root,fld),=proj_indx(.id) // proj[]<- "proj.js", sys[]<- "$inc.js" // j
+    proj_.vol_name="p4-247gb"; proj_.vol_id="A283-7C29"; proj_.vol_fs="NTFS";proj_.state='2b 2020-08-19';
+    sys={p:'proj',os:"windows 7", comp:"GA-P55A_W7-64", user:"elefter" , date:"2020.08.24", time:"09.02"};
+  }
+  { tbr='rr'; scrn='r'; sp=28; xc=19; yc=14; // 38,19,14 :manual! space for scroll; screen grid x, y cells -?auto get
+    sw=screen.width; sh=screen.height;                     // 1280,1024
+    swa=screen.availWidth; sha=screen.availHeight          // 1280,1024 ?
+    wcell=(swa/xc).toFixed(2); hcell=(sha/yc).toFixed(2);  // 64,73.14;  67.37,73.14   // num.toPrecision(4)== .toFixed(2)
+    tbw=64; tbh=0; // tbw=(sw-swa); tbh=(sh-sha);          // 64,0;      0?,0?
+ // tmp+='--- wcell:'+wcell+', hcell:'+hcell+', tbw:'+tbw+', tbh:'+tbh+' sw:'+sw+' sh:'+sh+' swa:'+swa+' sha:'+sha+heol;
+    mw=(3*wcell-sp).toFixed(0); // :manual 3*64-28=164
+    // scr pos=[rl]:r; tbr pos=scr+pos[trbl]: rr;
+    if      (scrn=='r'){ // r scr x:right-mw,y:top
+    // proj_.xy=[sw -mw           ,   0]; proj_.wh=[mw+sp,sh ]; // l tb
+    // proj_.xy=[sw -mw-  sp  -tbw,   0]; proj_.wh=[mw+sp,sh ]; // r tb
+       proj_.xy=[sw -mw-1*sp  -tbw,74/2]; proj_.wh=[mw+sp,700]; // r tb
+    }else if(scrn=='l'){ // l scr x:right-mw,y:top
+       proj_.xy=[sw -mw-1*sp -1280,74/2]; proj_.wh=[mw+sp,sh-2*45];
+    }
+  }
+    proj_.mnu_grp='background-color:#7373ff;color:#000000; height:11px; border:0;font-size:10pt;'; //  width:'+mw+'px;
+    proj_.mnu_hdr='background-color:#4ca6ff;color:#000000; height:19px;' //  width:'+mw+'px;
+    proj_.mnu_bdy='background-color:#313140;color:#ffff99; height:16px;' //  width:'+mw+'px;
+  { run_npp       = bck_slash('F:/!prog.run/npp+/notepad++.exe');
+    run_md5deep64 = bck_slash('F:/!prog.run/md5deep-4.4/md5deep64.exe');  //
+//  run_hashdeep64= 'F:/!prog.run/md5deep-4.4/hashdeep64.exe'; //
+//  run_sha1deep64= 'F:/!prog.run/md5deep-4.4/sha1deep64.exe'; //
+//  run_md5summ   = 'F:/!prog.run/md5summer/md5summer.exe'; // cli?
+//  run_md5sum32  = 'F:/!prog.run/md5sum/md5sum.exe';       // 32b only, check: -cv MD5SUM.TXT
+    run_zip       = bck_slash('C:/Program Files/7-Zip/7z.exe');
+  }
+  { root='F:/elefter.dev'; proj=[];
+   /* - fld is relative to root, subs are relative to fld, except abs. paths like '>...'
+       - scan subs[].files[] <- scanFileList_to_ar(root,subfld)
+       - j=-1; proj[++j]={grp:n ,id:"proj" ,ico:"ico/inodebdv.ico",subs:[{fld:"proj" }] }
+   */
+  }
+  {// --- scanFileList_to_ar(root,subfld), build_menu()
+    function scanFileList_to_ar(root,subfld) { // -> files_list=[[p|f,str],...]
+      var rfld=root; if(subfld!='') rfld+='/'+subfld;
+	// {"t:"f|d|v","s":"999","e":"xxx","n":"nnnnnnnnn","m":"date"}
+      var f=null,fc=null,s=[], d='',fa='',fi='',i=-1;
+      // in rfld change / with \\ before eval
+	  d=rfld.split('\\'); d=d.join('/') // log(d)
+	  if(d.charAt(d.length-1)!='/') d+='/'
+      try { f =fso.GetFolder(rfld)    } catch(err) { tmp+=('=== fs.fld "'+rfld+'" get err:'+err); return [] }
+      try { fc=new Enumerator(f.files)} catch(err) { tmp+=('=== fs.fld enum err:'+err); return [] }
+
+      for (; !fc.atEnd(); fc.moveNext()) {
+        var file=fc.item(), name=file.Name, ext=file.Name.lastIndexOf(".") // lastIndexOf(str[,start])
+        if(ext>=0){
+            name=file.Name.substring(0,ext)
+            ext=file.Name.substring(ext+1,file.Name.length)
+        } else ext=''
+	//  var mod=DateYMDHMStoStr(GetDate(file.DateLastModified)), e=ext.toUpperCase() // .DateCreated .DateLastAccessed
+	//  try{ fa =fsAttr(fso.GetFile(d+file.Name))}catch(err){log('--d2j fa "'+name+'"\n  err:'+err)}
+    //  if(e=='URL') fi=getUrl(d+name+'.url') else if(e=='LNK') fi=getLnk(d+name+'.lnk')
+	//  if(fi!='' && fi.indexOf('\\')>=0) { var fi$=fi.split('\\'); fi=fi$.join('/') }
+    //  s[++i]='{"t":"f"' +',"s":"'+file.Size +'"'+',"m":"'+mod+'"'+',"fa":"'+fa+'"'+',"n":"'+name +'"'+',"e":"'+ext+'"'+',"fi":"'+fi+'"}'
+        s[++i]= name+'.'+ext;
+      }
+      return (s);
+    }
+  }
+  {// --- proj_indx(name), subs_indx(pn,key)
+    function proj_indx(name) { var j,indx=null//, l=proj.length;
+      for (j in proj) if(proj[j].id==name) {indx=j; break}
+      return indx;
+    }
+    function subs_indx(pn,key) { var j,indx=null
+      for(j in proj[pn].subs){ b=traverse_(proj[pn].subs[j]);
+        if(key==b[0].key) {indx=j; break}
+      }
+      return indx;
+    }
+  }
+    function set_lst(root_fld_,lst_fn_,md5_fn_,dif_fn_,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // »
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['» lst', 'cmd /c cd /d "'+fld+'"'
+          //?+'if not exist "'+fld+'" (echo."miss fld" && pause && goto eof)'
+          // +' && if exist "'+md5_fn_+'" del "'+md5_fn_+'" && if exist "'+dif_fn_+'" del "'+dif_fn_+'"'
+             +' && del "'+md5_fn_+'" && del "'+dif_fn_+'"'
+             +' &&  call dir *.* /A-D -l /-c /ogn /tw /4 /r /b /s >"'+lst_fn_+'"'                              // call=ok,inviz on err
+             +' &&  start '+run_npp+' "'+lst_fn_+'"'
+             +' && pause',lst_fn_,sub_] // call=ok,inviz on err
+          // dir *.* /A-D -l /-c /ogn /tw /4 /r /b /s >proj.lst                                            // int=ok
+    }
+    function set_zip(root_fld_,zip_fn_                ,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // »
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['» zip', 'cmd /C cd /d "'+fld+'"'
+          // +' && if exist '+zip_fn_+' del '+zip_fn_
+             +' && del '+zip_fn_
+             +' && pause'
+             +' && call "'+run_zip+'" a -r '+zip_fn_+' *.* '+' && echo.":: look result ::"'
+             +' && pause',zip_fn_,sub_]   // call=ok,inviz on err
+          // "C:\Program Files\7-Zip\7z.exe" a -r proj.zip *.*
+          // zip.cmd proj *.* '                                                                            // int=ok//call cmd=no?
+          // "C:\Program Files\7-Zip\7z.exe" a -r proj.zip *.* && echo.":: look result:: " && pause        // int=ok
+    }
+    function set_md5(root_fld_,md5_fn_,lst_fn_        ,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // »
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['» md5', 'cmd /c cd /d "'+fld+'"'
+      //  --- kill_str.hta file=lst_fld str=root+fld atpos=1/*                                             // todo
+      //  --- lst2js.hta file=lst_fld                                                                      // todo
+             +' && call "'+run_md5deep64+'" -r -e -l -k -f '+lst_fn_+'  > ' +md5_fn_
+             +' && pause',md5_fn_,sub_] // call=ok,inviz on err
+          // "F:\!prog.run\md5deep-4.4\md5deep64.exe" -r -e -l -k -f proj.lst > proj.md5                   // int=ok
+    }
+    function set_dif(root_fld_,dif_fn_,md5_fn_,lst_fn_,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // »
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['» dif', 'cmd /c cd /d "'+fld+'"'
+             +' && call "'+run_md5deep64+'" -r -e -l -k -f '+lst_fn_+' -x ' +md5_fn_+' -w >'+dif_fn_
+             +' && pause',dif_fn_,sub_]      // call=ok,inviz on err
+          // "F:\!prog.run\md5deep-4.4\md5deep64.exe" -r -e -l -k -f proj.lst -x proj.md5 -w >proj.dif     // int=ok
+    }
+    function set_fil(root_fld_,fil_fn_                ,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // ?
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['~ fil', 'cmd /c cd /d "'+fld+'" && start '+run_npp+' '+fil_fn_, fil_fn_,sub_] // +' start '?
+    }
+    function set_ses(root_fld_,ses_fn_                ,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // =
+      var sub_=sub; if(sub!='') sub_+='/';
+      return ['= dev', 'cmd /c cd /d "'+fld+'" && start '+run_npp+' -openSession ' +ses_fn_, ses_fn_,sub_]
+    }
+    function set_fld(root_fld_,key                ,sub,f,c){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // . :
+      var sub_=sub,key_=key;
+      if(sub=='') sub_=root_fld_; if(sub!='') sub_+='/';
+      if(key=='fld') key_='/'
+      return [': '+key, '"'+root_fld_+'"',key_,sub_,f,c ]
+    }
+    function set_cmd(root_fld_,key,file_par           ,sub){ var fld=root_fld_; if(sub!='') fld+='/'+sub; // : >
+       var sub_=sub; if(sub!='') sub_+='/'; var run_=['','start ','call ']
+       return ['> '+key, 'cmd /c cd /d "'+fld+'" && '+run_[1]+file_par            ,file_par,sub_ ] // +' && pause'
+    }
+    i_ex=0; i_mi=0;
+  {// -- set_def(pn), make_files_list(), =reorder_files_by_ext(f)
+    ext_ord={  ses       :['.ses','.session']
+              ,scr_cmd   :['.cmd' ,'.bat' ,'.hta'  ]
+              ,scr_wsc   :['.ws'  ,'.wsc' ,'.wsh' ,'.wsf']
+              // .wsc,scriptlet,wscript.exe,scrobj.dll,{06290BD2-48AA-11D2-8432-006008C3FBFC}
+              // "C:\Windows\system32\RUNDLL32.EXE" "C:\Windows\system32\scrobj.dll",GenerateTypeLib "%1"
+              // REGSVR32.EXE /i:"%1" "C:\Windows\system32\scrobj.dll"
+              // there is no scripting engine for file extension ".wsc"
+              // xp: C:\WINDOWS\inf\wsh.inf
+              // file-extensions.org/wsc-file-extension
+              // filext.com/file-extension/WSC
+              // resource.dopus.com/t/howto-create-a-function-library-with-windows-script-components-wsc/21042
+              ,scr_pwrshl:['.ps1' ,'.psm1','.psd1' ,'.pssc','.psxml','.cdxml']
+              ,web_cont  :['.htm' ,'.html','.xhtml','.js'  ,'.jse'  ,'.vbs', '.vba', '.vbe', '.vb'
+                          ,'.cs'  ,'.css' ,'.xslt' ,'.dtd' ,'.svg']
+              ,scr_pyth  :['.py'  ,'.pyw']
+              ,txt_data  :['.htt' ,'.xml' ,'.cfg'  ,'.ini' ,'.lst','.log'  ,'.txt' ,'.md5' ,'.csv','.json','.mdb'  ]
+              ,bin_arch  :['.zip' ,'.rar' ,'7z' ]
+              ,bin_exe   :['.exe' ,'.com' ,'.dll'  ,'.ocx' ,'.msi','.msp','.scr','.cpl','.jar','.drv']
+              ,bin_dsgn  :['.indd','.ai' ]
+              ,bin_publ  :['.epub','.xls' ,'.eps'  ,'.icc' ,'.rtf' ,'.doc','.hlp' ,'.chm' ,'.mht','.swf' ]
+              ,web_ptr   :['.url' ]
+              ,bin_ptr   :['.lnk' ,'.pif']
+              ,bin_fnt   :['.ttf' ,'.otf' ,'.fnt' ,'.woff' ,'.woff2' ]
+              ,bin_pic   :['.ico' ,'.jpg' ,'.gif' ,'.bmp' ,'.png' ,'.psh' ]
+            } // ie options: render =soft!, iexplore.exe –extoff
+
+    re_err=0
+    function reorder_files_by_ext(f,subn,pn){ // sort&reord proj[pn].subs[j].files ['',...]-> [[f,e ,s,m,a ,t],..]
+      if(undef(f) || !typeof(f)=='array' || f.length<1) return [];
+      var finp=f.sort(), fout=[] ,i,j ,buf='',fl=finp.length,a   ,k,l, tofnd,file,ext
+      if(dbg) tmp+=heol; k=0;
+      for(i in ext_ord) { a=traverse_(ext_ord[i]);
+        if(dbg && !iex) tmp+=('--- '+(++k)+'.'+i+': ['+ext_ord[i]+']'+heol) // console.log
+        for(j in a) { //a// i=key, a[j].val=val
+        // if(dbg) tmp+='-- <w>'+i+'</w>: ['+j+'] <c>'+a[j].val+'</c>'+heol;
+          tofnd = a[j].val
+
+            for(l in finp){    file = finp[l]; p=file.lastIndexOf('.'); ext=''
+              if(p>0) {         ext = file.substr(p,file.length).toLowerCase();
+                if(ext==tofnd){ fout.push([file,ext ,null,null,null ,i]); finp.splice(l,1);} // [[file,ext ,sz,mod,atr ,tag],..]
+              }; // if(dbg) tmp+=('--- ['+lz(j,4)+'] file:'+file+' ext:'+'<l>'+ext+'</l>')+heol
+            }
+
+        }
+      }
+      if(finp.length>0)
+        for(j in finp) { file = finp[j]; p=file.lastIndexOf('.'); ext=''
+          if(p>0) {         ext = file.substr(p,file.length);
+            fout.push([file,ext ,null,null,null ,'etc']) // the rest
+          }
+        }
+
+      if(fl!=fout.length) buf+=heol+'--- reord [<c>'+fl+'</c>]) > '+'[<e>'+fout.length+'</e>] --- '+heol
+      if(dbg & !iex) console.log('--- reord [',pn,'][',subn,'][',fout.length,']:',fout);
+      tmp+=buf; re_err+= fl-fout.length;
+      return fout
+    }
+
+    function set_def(pn){ var i,j,k,n1,n2,n3,n4,miss_fld_prj=0,miss_file_prj=0
+       //  wrk_fld(fld) -> "cd /d fld" before start|call
+       //  chk_fs(fld,[fil]) -> fnd/mis/acs/err
+       // "" for cmd long file names
+       var msk_ = '*.*'                    ,ses_fn_ = ''+proj[pn].id+'.npp.ses'
+          ,lst_fn_ = ''+proj[pn].id+'.lst' ,md5_fn_ = ''+proj[pn].id+'.md5'
+          ,zip_fn_ = ''+proj[pn].id+'.zip' ,dif_fn_ = ''+proj[pn].id+'.dif'
+     //if(dbg) tmp+='--- '+('set_def('+pn+') msk:'+msk_+', lst:'+lst_fn_+', md5:'+md5_fn_+', zip:'+zip_fn_)+eol
+       if(undef(proj[pn].act)) proj[pn].act=[];
+       var i=proj[pn].act.length-1;
+
+       // back_slash() - use before run !!!
+       var root_fld_ , sub_fld_ ,c,b,exist_fld, subfiles,fld
+
+       root_fld_=root+'/'+proj[pn].subs[0].fld;
+       // ---
+       for(j in proj[pn].subs){  b=traverse_(proj[pn].subs[j]); // console.log(a)
+         proj[pn].sel=!true;
+         if(dbg) tmp+=('--- '+'['+pn+'] .id:'+proj[pn].id+' .subs['+j+']= {'+b[0].key+':'+b[0].val+'}');
+
+         fld='';sub_fld_='';c=' ';exist_fld=!true;
+         if(b[0].key=='fld'){ root_fld_=root;
+                              sub_fld_ =proj[pn].subs[0].fld;              fld=root+'/'+sub_fld_;
+         } else{              root_fld_=root;
+                              sub_fld_ =proj[pn].subs[0].fld+'/'+b[0].val; fld=root+'/'+sub_fld_;
+         }
+         c=b[0].val.substr(0,1);
+         if(c=='>'){          root_fld_=repl_char(b[0].val,'>',''); c='>'; fld=root_fld_; sub_fld_=''; }
+
+         if(ActiveX) { exist_fld = fso.FolderExists(fld)
+           proj[pn].subs[j].files=[]
+           if(exist_fld){ ++i_ex; tmp+=(' '+i_ex+'<n> exist fld:</n>"'+fld+'"'+eol);
+           } else       { ++i_mi; tmp+=(eol+i_mi+'<e> miss. fld:</e>"' +fld+'"'+eol); miss_fld_prj++; miss_fld++; }
+           var subfiles=scanFileList_to_ar(root_fld_,sub_fld_);
+           if(dbg) tmp+='<c> sub[].files['+subfiles.length+']</c>'+eol;
+           tmp+=heol
+           for(k in subfiles) proj[pn].subs[j].files.push(subfiles[k]); // apnd subfiles[] for every subs[]
+         } else { // proj[pn].subs[j].files must be loaded before by files_list.js -> load_files_list()
+         //if(dbg) tmp+=(eol+' <w>proj['+pn+'].subs['+j+']:</w> .act[] generate skip because ActiveX inactive'+heol);
+         }
+         proj[pn].act[++i] = set_fld(fld ,b[0].key ,sub_fld_   ,lz(proj[pn].subs[j].files.length,3),c)
+         proj[pn].subs[j].files=reorder_files_by_ext( proj[pn].subs[j].files,j,pn ) // ['',...]-> [[f,e ,s,m,a ,t],..]
+         if(dbg){ if(c=='>') tmp+=' >'; else tmp+='  '
+           tmp+=' <c>'+proj[pn].subs[j].files.length+'=['+(proj[pn].subs[j].files)+']</c>'+heol;
+         }
+         // --- files[]->act[]; [[f,e ,s,m,a ,t],..] - get sz,mod,atr
+         for(k in proj[pn].subs[j].files){ var file_ar=proj[pn].subs[j].files[k]; // [sub/][...]file.ext
+            var file=file_ar[0],ext=file_ar[1];
+            if(file.toLowerCase()==ses_fn_.toLowerCase()){
+              proj[pn].act[++i] = set_ses(root_fld_,ses_fn_,sub_fld_);
+              if(iex && ActiveX && !fso.FileExists(fld+'/'+ses_fn_)) {
+                ++miss_file; ++miss_file_prj; tmp+=eol+'*** miss file ses:"'+fld+'/'+ses_fn_+'"'+eol;
+              }
+            }
+            if(b[0].key=='fld' || b[0].key.indexOf('#')==0){ // # in key mean fld has cmd/bat/hta/htm files to run in menu
+            // n1=file.lastIndexOf('.cmd'); if(n1>0 && (n1+4)==file.length) ...
+            // n2=file.lastIndexOf('.bat');
+            // n3=file.lastIndexOf('.hta');
+            // n4=file.lastIndexOf('.htm')
+               if     (ext=='.cmd') proj[pn].act[++i] = set_cmd(root_fld_,'cmd',file,sub_fld_)
+               else if(ext=='.bat') proj[pn].act[++i] = set_cmd(root_fld_,'bat',file,sub_fld_)
+               else if(ext=='.hta') proj[pn].act[++i] = set_cmd(root_fld_,'hta',file,sub_fld_)
+               else if(ext=='.htm') proj[pn].act[++i] = set_cmd(root_fld_,'htm',file,sub_fld_)
+               else { if(ext!='.ses' && file!=ses_fn_) // .toLowerCase()
+                                    proj[pn].act[++i] = set_fil(root_fld_,file,sub_fld_)
+               }
+            // else if(ext=='.wsf') proj[pn].act[++i] = set_cmd(root_fld_,'wsf',file,sub_fld_)
+            } else {                proj[pn].act[++i] = set_fil(root_fld_,file,sub_fld_)
+            }
+         }
+
+       }
+    // tmp+='::: ['+pn+'] files['+proj[pn].files.length+'] '+eol //+'['+proj[pn].files+']'+eol
+       // ---
+       sub_fld_    = proj[pn].subs[0].fld
+       proj[pn].act[++i] = set_lst(root,lst_fn_,md5_fn_,dif_fn_,sub_fld_)
+       proj[pn].act[++i] = set_zip(root,zip_fn_                ,sub_fld_)
+       proj[pn].act[++i] = set_md5(root,md5_fn_,lst_fn_        ,sub_fld_)
+       proj[pn].act[++i] = set_dif(root,dif_fn_,md5_fn_,lst_fn_,sub_fld_)
+
+    // proj[pn].act[++i] = ['@lst', root_fld_ ,lst_fn_ ,msk_    ] // dir full path
+    // proj[pn].act[++i] = ['@zip', root_fld_ ,zip_fn_ ,msk_    ] // 7z
+    // proj[pn].act[++i] = ['@md5', root_fld_ ,md5_fn_ ,lst_fn_ ] // md5deep64.exe
+    // proj[pn].act[++i] = ['@dif', root_fld_ ,dif_fn_ ,md5_fn_ ,lst_fn_ ]
+       if(miss_fld >0) tmp+='<e> .sub: miss  fld:</e> '+miss_fld_prj+heol;
+       if(miss_file>0) tmp+='<e> .sub: miss file:</e> '+miss_file_prj+heol;
+    }
+    function make_files_list(){ var i,j,k  ,root_fld_,sub_fld_,full,c,b ,sub=0,buf='',sav='',note,f=0,v,p;
+    //buf+=       '= '+root+heol;
+      for    (i in proj){  v=' ,';  if(i==0) v='  ';
+        sav+=v+'["n","'+proj[i].id+'"]'+eol
+        for  (j in proj[i].subs){ ++sub; ++f;
+          { fld=''; sub_fld_=''; c=' '; root_fld_='' // root;
+            b=traverse_(proj[i].subs[j]); c=b[0].val.substr(0,1);
+            if(b[0].key=='fld'){
+                        sub_fld_ =proj[i].subs[0].fld; full=sub_fld_; // root+'/'+sub_fld_
+            } else{     sub_fld_ =b[0].val;            full=sub_fld_; // root+'/'+sub_fld_
+            }
+            if(c=='>'){ sub_fld_ =repl_char(b[0].val,'>',''); }
+          };
+        //buf+=''// +'... '+'proj['+i+'].subs'+'['+j+'] ('+proj[i].subs[j].files.length+') '
+        //       // +' <w>'+b[0].key+'</w>'+':'+'<c>'+b[0].val+'</c>'+' .id:<c>'+proj[i].id+'</c>' +heol
+        //       +lz(sub,3)+'= '+full+heol;
+          v=' ,'; // if(j==0) v=''
+          p='p'; if(c=='>') p=c;
+          sav+=v+'["k","'+b[0].key+'"]'  +v+'["'+p+'","'+sub_fld_+'"]'+eol
+          for(k in proj[i].subs[j].files){  ++f;
+        //   buf+='' // +'proj['+i+'].subs'+'['+j+']'+'.fil['+k+']:'
+        //       +'-- '+proj[i].subs[j].files[k]+heol;
+             v=' ,'; // if(k==0) v=''
+             sav+=v+'["f","'+proj[i].subs[j].files[k]+'"]'+eol;
+          }
+          sav+=eol
+        }
+      }
+    //tmp+=buf;
+      note='// subs:'+sub  +' files:'+f
+      return note +eol+'files_list=['+eol+sav+']'+eol
+    }
+    function load_files_list(fl){ // [[n,id],[k,key], [p,path],[f,file],... ]
+      var i,j ,pn,kn ,name,key,path,file ,b,mes=''
+      tmp+=('load_files_list:'+fl.length)
+      for (i in fl){ a=null;
+        switch (fl[i][0]) {
+          case 'n': { key=null;
+            name = fl[i][1]; j=-1; pn=proj_indx(name);
+            mes2=(heol+'['+i+'] n:'+name+'>'+pn +heol);
+            if(pn==null || pn<0){ mes2+='<e>***</e>'; tmp+=(mes2)}
+            mes+=mes2
+          break; }
+          case 'k': { path=null;
+            key  = fl[i][1]; j=-1; kn=subs_indx(pn,key); b=traverse_(proj[pn].subs[kn]);
+            mes2=('['+i+'] k:'+key+'>'+kn +' k:'+b[0].key+' v:'+b[0].val+heol);
+            if(kn==null || kn<0) {mes2+='<e>***</e>'; tmp+=(mes2)}
+            mes+=mes2
+          break; }
+          case 'p': {
+            path = fl[i][1]; j=-1;
+            mes+=('['+i+'] p:'+path+heol);
+          break; }
+          case '>': {
+            path ='>'+fl[i][1]; j=-1;
+            mes+=('['+i+'] >:'+path+heol);
+          break; }
+          case 'f': {
+            file = fl[i][1]; ++j;
+            mes2=('['+i+']['+j+'] f:'+file+heol); // alert(mes)
+            if(b[0].val != path) { mes2+=('<e>'+path+' != '+b[0].val +'</e> '+heol); tmp+=(mes2)}
+            if(undef(proj[pn].subs[kn].files)){
+              proj[pn].subs[kn].files=[]             // create when loaded by file
+              proj[pn].subs[kn].files[j]=file;       //  apnd .push(file) ?
+            } else
+              proj[pn].subs[kn].files[j]=file;       //  apnd ?
+          break; }
+          default: break;
+        }
+      }
+      return mes
+    }
+/* *-/ load_files_list:1120 load: 0.061sc
+[0] n:SVC-8>0
+[1] k:fld>0 k:fld v:SVC-8
+[2] p:SVC-8
+[3][0] f:$svc.usr
+[4][1] f:desktop.ini
+[5][2] f:jquery-3.5.1.js
+[6][3] f:R19G00001.ico
+[7][4] f:svc-8.bat
+[8][5] f:svc-8.files.js
+[9][6] f:SVC-8.hta
+[10][7] f:SVC-8.htm
+[11][8] f:svc-8.lst
+[12][9] f:svc-8.md5
+[13][10] f:svc-8.npp.ses
+[14][11] f:svc-8.zip
+[15][12] f:svc-scheme-3.svg
+[16][13] f:_barcodes.js
+[17][14] f:_fs-csv.js
+[18][15] f:_fs.js
+[19][16] f:_global.js
+[20][17] f:_gui.js
+[21][18] f:_gui_help.js
+[22][19] f:_pers.js
+
+[23] k:work>1 k:work v:>C:/$desk/#pers/
+[24] >:>C:/$desk/#pers/
+[25][0] f:#pers_elefter.log
+[26][1] f:desktop.ini
+...
+[1110] n:drv-log>23
+[1111] k:fld>0 k:fld v:drv-log
+[1112] p:drv-log
+[1113][0] f:D.ico
+[1114][1] f:Desktop.ini
+[1115][2] f:drv-log.data.js
+[1116][3] f:drv-log.fmt.js
+[1117][4] f:drv-log.hta
+[1118][5] f:drv-log.htm
+[1119][6] f:drv-log.npp.ses
+
+/* */
+  }
+  { grp_=[]; grp_cnt=null; grp_opn=[]; prj_opn=[]; grp_sel=[]; all_sel=null; // 0|1|null; // proj[j].sel
+    // this.checked -> true|!true (checked, indeterminate, value) :: developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox
+    function grp_def(){ //- > grp_=[], grp_opn=[]; grp_sel=[]; all_sel; -- init before build_menu()
+       var i=-1,j,prv_grp=null;
+       for(j in proj) if(proj[j].grp!=prv_grp) { grp_[++i]=proj[j].grp; prv_grp=proj[j].grp; }
+       for(i in grp_){ grp_cnt++; grp_opn[i]=!true; grp_sel[i]=!true;
+         // sel_grp_prj(grp_[i] ,!true); // --- init after build_menu()
+       }
+    }
+    function sel_all(v){ var id_,i,j  // all_sel
+    // for (j in proj) if(proj[j].grp!=prv_grp) { prv_grp=proj[j].grp; grp_[++i]=proj[j].grp; }
+       for (i in grp_) sel_grp(grp_[i] ,v);
+    // for (i in grp_) { id_=document.getElementById(grp_[i]); id_.checked=v; } // in grp menu!
+       id_=document.getElementById('sel-all');
+       all_sel=true; if(v) all_sel=true;
+       if(all_sel!=true && all_sel!=!true) id_.indeterminate = true; else id_.indeterminate = !true;
+    }
+    function sel_grp(grp,v){var id_,i,j ,s // select grp and his projects
+       s=true; if(v) s=!true; for(i in grp_) if(grp==grp_[i]) grp_sel[i]=s;
+       for(j in proj) if(grp==proj[j].grp){ proj[j].sel=v; sel_prj(j,v) }
+       { id_=document.getElementById(grp); id_.checked=v; } // in grp menu!
+
+       id_=document.getElementById('sel-all'); // back to parrent state all_sel
+       if(all_sel!=s) id_.indeterminate = true; else id_.indeterminate = !true;
+    }
+    function sel_prj(id,v) { var id_i,j
+       id_=document.getElementById('sel.'+id); id_.checked=v; proj[id].sel=v;
+       if(dbg && v!=id_.checked) log('<e>sel_prj(id='+id+',val='+v+')</e> != '+id_.checked);
+       // back to parrent menu=[all,his grp menu], if this sel change his crnt state
+       for (i in grp_) { id_=document.getElementById(proj[id].grp); id_.indeterminate = true;}
+       //id_=document.getElementById('sel-all');    id_.indeterminate = true;
+    }
+    // --
+    function tog_prj(i){ // unused
+      if(prj_opn[i]) Show(proj[j].id); else Hide(proj[j].id);
+      prj_opn[i]=!prj_opn[i];
+    }
+    function tog_grp(i){ // grp with prj
+      if(!grp_opn[i]) Show('grp.'+grp_[i]); else Hide('grp.'+grp_[i]);
+      grp_opn[i]=!grp_opn[i];
+    }
+  }
+    empty=null;
+    function main_menu(){ var spacer='<div style="height:5px;"></div>'
+    ,menu=[''
+    ,spacer
+    ,'<div style="background-color:#575748;color:#06090e;width:'+mw+'px;">'//<!-- mnu mw 170 -->
+    ,'<span class="line" style="background-color:#8888ff;color:#06090e;width:80px;" title="mnu +/-" '
+    +' onclick="ShowHide(\'mnu\');ShowHide(\'cmd-btns\');">. mnu </span>&nbsp;'
+    ,'<span class="line" accesskey="+" title="proj +/-"'
+    ,'  style="background-color:#8888ff; color:black;" align="left"'
+    ,'  onclick="for(var i in grp_)tog_grp(i);"> proj </span>&nbsp;'
+    ,'<span class="line" title="reload/F5" '
+    ,'  style="background-color:#8888ff; color:black;" accesskey="*"'
+    ,'  onclick="window.location.reload()"> * </span>'
+    ,''
+    ,'<span style="float:right;">'
+    ,'  <input type="checkbox" title="all select/none" id="sel-all" accesskey="!"'
+    ,'     style="background-color:#7373ff;color:#06090e; height:14px;"'
+    ,'     onchange="sel_all(this.checked);">'
+    ,'</span>'
+
+    ,'<div id="cmd-btns" style="background-color:#0059b3;color:black; width:'+mw+'px;" id="cmd">'//<!-- cmd btns -->
+    ,spacer
+    ,span({bdy:'P',tit:"* put lst for all"         ,evt:"all_run(\'p\');",clas:"bRun",bg:"#96ff73",fg:"#000000",aln:"left"})
+    ,span({bdy:'G',tit:"* get lst for all"         ,evt:"all_run(\'g\');",clas:"bRun",bg:"#96ff73",fg:"#000000",aln:"left"})
+    ,span({bdy:'^',tit:"* upload zip+md5 for all"  ,evt:"all_run(\'^\');",clas:"bRun",bg:"#ffff99",fg:"#000000",aln:"left"})
+    ,span({bdy:'v',tit:"* download zip+md5 for all",evt:"all_run(\'v\');",clas:"bRun",bg:"#ffff99",fg:"#000000",aln:"left"})
+    ,span({bdy:'L',tit:"* lst for all"             ,evt:"all_run(\'l\');",clas:"bRun",bg:"#ff8000",fg:"#000000",aln:"left"})
+    ,span({bdy:'Z',tit:"* zip for all"             ,evt:"all_run(\'z\');",clas:"bRun",bg:"#ff8000",fg:"#000000",aln:"left"})
+    ,span({bdy:'M',tit:"* md5 for all"             ,evt:"all_run(\'m\');",clas:"bRun",bg:"#ff8000",fg:"#000000",aln:"left"})
+    ,span({bdy:'@',tit:"* lzm for all"             ,evt:"all_run(\'@\');",clas:"bRun",bg:"#b82905",fg:"#000000",aln:"left"})
+    ,span({bdy:'D',tit:"* dif for all"             ,evt:"all_run(\'d\');",clas:"bRun",bg:"#ff8000",fg:"#000000",aln:"left"})
+    ,span({bdy:'=',tit:"* = ses for all"           ,evt:"all_run(\'s\');",clas:"bRun",bg:"#400000",fg:"#ffff99",aln:"left"})
+    ,'</div>'
+
+    ,'<div id="mnu"></div>'//<!-- generated proj menu -->
+    ,'</div>'
+
+    ,spacer
+    ,'<div style="width:'+mw+'px;background-color:#575748;color:#000000;">'//<!-- msg log -->
+    ,'  <span class="line" style="background-color:#ffff99;color:#06090e;width:110px;" '
+    ,'  onclick="ShowHide(\'msg-log\')" title="msg +/-">. msg log </span>&nbsp;'
+    ,span({bdy:'s',tit:"all proj syntax",evt:"for(j in proj) log(dump(j));",clas:"bRun"
+    ,bg:"#ffff99",fg:"#06090e",aln:"right"})
+    ,'  <div style="float:right;">'
+    ,span({bdy:'*',tit:"clear msg log",evt:"clean(log_);",clas:"bRun",bg:"#ffff99",fg:"#06090e",aln:"left"})
+    ,'  </div>'
+    ,'  <span id="msg-log" class="info" style="background-color:#15152b;'
+    ,'    width:700px;height:700px; display:none; padding:1px 1px 1px 10px;"></span>'
+    ,'</div>'
+    // <!-- textarea have rearrange corner in ff, text is black and no new lines, show html! -->
+
+    ,spacer
+    ,'<div style="width:'+mw+'px;background-color:#575748;color:#000000;">'//<!-- dmp-->
+    ,'  <span class="line" style="background-color:#b3ff99;color:#06090e;width:110px;"'
+    ,'  onclick="ShowHide(\'dmp\')" title="dmp +/-">. dmp log </span>&nbsp;'
+    ,span({bdy:'m',tit:"main_mnu",evt:"dmp_.innerHTML=_htm(main_menu());" ,clas:"bRun",bg:"#b3ff99",fg:"#06090e",aln:"right"})
+    ,span({bdy:'p',tit:"proj_mnu",evt:"dmp_.innerHTML=_htm(proj_menu());" ,clas:"bRun",bg:"#b3ff99",fg:"#06090e",aln:"right"})
+    ,'  <div style="float:right;">'
+    ,span({bdy:'*',tit:"clear dmp",evt:"clean(dmp_);",clas:"bRun",bg:"#b3ff99",fg:"#06090e",aln:"left"})
+    ,'  </div>'
+    ,'  <textarea id="dmp" class="info" style="background-color:#15152b;color:#cecebf; '
+     +'display:none; width:700px;height:700px; padding: 1px 1px 1px 10px;"></textarea> '
+    ,'</div>'
+
+    ,spacer
+    ,'<div style="width:'+mw+'px;background-color:#575748;color:#000000;">'//<!-- hlp -->
+    ,'  <span class="line" style="background-color:#79796a;color:#06090e; width:120px;" '
+    ,'    onclick="ShowHide(\'hlp\')" title="hlp +/-">. help info </span>  '
+    ,'  <span id="hlp" class="info" '
+    ,'    style=\'font-family: "DejaVu Sans", "Arial"; font-size:12pt;background-color:#15152b;  display:none;'
+    ,'     width:700px;height:700px; padding: 1px 1px 1px 10px;\'></span>'
+    ,'</div>'
+
+    ,spacer
+    ,'<div style="width:'+mw+'px;background-color:#575748;color:#000000;">'//<!-- clr -->
+    ,'  <span class="line" style="background-color:#79796a;color:#000000; width:110px;" '
+    ,'    onclick="ShowHide(\'clr\');" title="clr gen">. colors </span>&nbsp;'
+    // clr_.innerHTML=gry_(16)+rgb_(16,16,16)+arc_();
+    //<!-- dmp(_htm( gry+(2)+'<hr>\n'+rgb_( 4,16, 8) )) big 36mb, slow , 1,2,4=256/64,5=256/77,6.xx,7.xx,8=256/32,12.xx,16^2,32,64,77-->
+    ,'  <div style="float:right;">'
+    ,span({bdy:'*',tit:"clear clr",evt:"clean(clr_);",clas:"bRun",bg:"#79796a",fg:"#000000",aln:"left"})
+    ,'  </div>'
+    ,'</div>'
+    ,'<div id="clr" class="info" style="width:350px;height:700px; padding: 1px 1px 1px 10px; display:none;"></div>'
+
+    ]
+    /* font-family:"DejaVu Sans","Arial"; font-size:8pt; background-color:#20202f;color:#a8a8b7;
+      ShowHide('clr');clr_.innerHTML=gry_(1)+rgb_(8,8,8);
+      max:(4,4,4) (8,8,8) (16,32,8) (8,16,4) #202830 #646473
+      class="info" add border in ff, class="info2" ?hide clr btn
+    */
+      return menu.join(eol)
+    };
+      function _ts(s){return 'font-size:'+(s)+';'} // 11pt
+      function _tf(f){return 'font-family:'+(f)+';'}
+      function _bg(c){return 'background-color:'+(c)+';'}
+      function _fg(c){return            'color:'+(c)+';'}
+      function _cr(){return           'cursor:'+('pointer')+';'} // _cr('pointer')
+      function _wd(n){return            'width:'+(n)+'px;'}
+      function _hg(n){return           'height:'+(n)+'px;'}
+      function _br(){return           'border:'+('0 0 0 0 ')+('solid ')+('#313140')+';'} // T r b L */
+    function proj_menu(){ // : | • • &nbsp; « » … ‣
+      // developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
+      // margin:auto;overflow:auto;display:flex; text-align:center;
+      // cell(bdy,[clas_,...],stl_,on_); lnk(body,stl_,runkey,action); img(fld,pic,sz,stl_);
+      // a=traverse_(proj[j].act);
+      // (b[0]=='@lst') [b[1],b[2],b[3]] - fld, LST, msk | fld, MD5, lst | fld, ZIP, msk
+      var bdy='',buf='',buf_='',pnj,grp,sh,stl=' vertical-align:middle; cursor: pointer; '
+      // if(!iex && dbg) console.log(proj);
+      var jj=0,j,i,k,a,b,al,bl,grp_crnt=null,prj_dmp,prj_sel,grp_sel;
+      var _st=_cr()+_br()+_ts('9pt'), _sb=_cr()+_br() ,_sp='&nbsp;',wn=30, wr=12 ,kk=0 // mw=3*wcell-sp; =164
+      // ---
+      for (j in proj) { pnj=proj[j].id; grp=proj[j].grp;// set_proj(proj[j].id); // -- in order of appearence
+          if(grp!=grp_crnt){ w= 'width:'+mw+'px;'
+            if(grp_crnt!=null) bdy+= '</div></div>'+eol;
+            grp_crnt=grp;        // grp content end
+            bdy+='<div style="height:2px;"></div>'+eol
+            grp_dmp='<span class="line" title="grp proj syntax"'
+                       +' style="background-color:#7373ff;color:#06090e;"'
+                       +' onclick="for(var i in proj) if(proj[i].grp==\''+grp+'\') log(dump(i));">-</span>'+eol
+            grp_sel='<input id="'+grp+'" type="checkbox" ' //
+                        +' onchange="sel_grp(\''+grp+'\',this.checked);" title="select grp"'
+                        +' style="background-color:#7373ff;color:#06090e; height:12px;" >'+eol
+            bdy+=row( cell('&nbsp;&nbsp;&nbsp;&nbsp; '+proj[j].grp      // !? + class="line"
+                          ,['tCell'],' '+proj_.mnu_grp+w+_cr(), ['g',grp])+' ' // 'grp.'+grp;
+                    + cell(grp_dmp,['tCell'],'','')+' '
+                    + cell(grp_sel,['tCell'],'',''));// grp content beg
+            bdy+='<div id="grp.'+grp+'"'+' style="display:none;">'+eol
+          }
+          a=proj[j].act; al=0; for (i in a) al++; // proj[j].act=[{key:val}, ... ]
+          if(!undef(a) && al>0){ jj++; // if(proj[j].subs[0].fld == undefined) log('! miss .fld')
+             prj_dmp='<span class="line" title="crnt proj syntax"'
+                       +' style="background-color:#4ca6ff;color:#06090e;"'
+                       +' onclick="log(dump('+j+'));">-</span> '+eol
+             prj_sel='<input id="'+'sel.'+j+'" type="checkbox"' // 0|1 == !true|true->; this.value> on
+                     // +' onchange="proj['+j+'].sel=this.checked;"'
+                        +' onchange="sel_prj('+j+',this.checked);"'
+                        +' title="select prj"' // change | input
+                        +' style="background-color:#4ca6ff;color:#06090e;" >'+eol
+             bdy+= row( cell( img(root+'/'+proj[j].subs[0].fld ,proj[j].ico,16,'')+' '+pnj
+                            ,['tCell'], stl+proj_.mnu_hdr+w ,['s',j,pnj])
+                      + cell(prj_dmp,['tCell'],'','')
+                      + cell(prj_sel,['tCell'],'','') ) //  style="width:40px;float:right;"
+             bdy+= '<div id="'+pnj+'"'   +' style="display:none">'+eol // proj content beg
+             // #313140; color:#ffff99; height:16px; border:0;'; //  width:'+mw+'px;
+             var bdy_r=cell('»'+_sp,['tCell'],_bg('#424251')+_fg('#ffff99')+_wd(wr),[]);
+             var bdy_sub='',bdy_act='',r,c,pth,lzmd,cnt,file_ar,file,ext
+             /* */
+             kk=0;
+             for (i in proj[j].act) { act=proj[j].act[i];  // bl=act.length;
+             // if(!iex && dbg) console.log(act); //  act[0]+' '+act[2]
+                c=act[0].substr(0,1); r=''
+                if        (c=='»'){ // lzmd
+                  lzmd=' '+act[0].substr(2,3)+' '// _bg('#152b00')
+                  bdy_r+=cell(lzmd,['tCell'],_bg('#ffff99')+_fg('#000000')+_wd(wr)      +_sb,['r',j,i,pnj ,act[0]])
+                } else if (c==':'){ // fld
+                  pth='/'; if(act[2]!='/') pth+=act[2]; cnt='['+act[4]+']'
+                  if(act[5].substr(0,1)=='>')pth='<c>'+act[2]+'</c>'; //  ['. '+key, '"'+root_fld_+'"',key_,sub_,f,c ]
+                  r+=cell(pth    ,['tCell'], _bg('#002040')+_fg('#ffff99')+_wd(mw-wn-wr)+_st,[])
+                  r+=cell(cnt    ,['tCell'], _bg('#002040')+_fg('#ffff99')+_wd(wn)      +_st,[])
+                  r+=cell(_sp+':',['tCell'], _bg('#2693ff')+_fg('#000000')+_wd(wr)      +_sb,['r',j,i,pnj ,act[0]])
+                } else if (c=='='){ // ses
+                  r+=cell(_sp    ,['tCell'], _bg('#002040')+_fg('#000000')+_wd(5)       +_st,[])
+                  r+=cell(act[2] ,['tCell'], _bg('#400010')+_fg('#ffff99')+_wd(mw-wr-5) +_st,[])
+                  r+=cell('='    ,['tCell'], _bg('#2693ff')+_fg('#000000')+_wd(wr)      +_sb,['r',j,i,pnj ,act[0]])
+                } else if (c=='>'){ // cmd
+                  r+=cell(_sp    ,['tCell'], _bg('#002040')+_fg('#000000')+_wd(5)       +_st,[])
+                  r+=cell(act[2] ,['tCell'], _bg('#313140')+_fg('#ffff99')+_wd(mw-wr-5) +_st,[])
+                  r+=cell('>'    ,['tCell'], _bg('#2693ff')+_fg('#000000')+_wd(wr)      +_sb,['r',j,i,pnj ,act[0]])
+                } else            {// etc
+                  kk++       // proj_.mnu_bdy;
+                  r+=cell(_sp    ,['tCell'], _bg('#002040')+_fg('#000000')+_wd(5)       +_st,[])
+                  r+=cell(act[2] ,['tCell'], _bg('#444444')+_fg('#ffff99')+_wd(mw-wr-5) +_st,[])
+                  r+=cell('~'    ,['tCell'], _bg('#2693ff')+_fg('#000000')+_wd(wr)      +_sb,['r',j,i,pnj ,act[0]])
+               }
+               bdy_act+= row(r)
+             }
+             log('== proj:'+proj[j].id+' kk:'+kk) // if(kk>0)
+             /* */
+             bdy+= row(bdy_r)+bdy_act+bdy_sub+'</div>'+eol // end content: actions for files
+          }
+      };
+      bdy+= '</div>'+eol;// last grp content end
+      buf+=tbl(bdy)
+      return buf; //mnu(buf);
+    }
+  </script>
+  <script src="$sys.js"></script>      <!-- sys{}        <- proj.cmd -->
+  <script src="files_list.js"></script><!-- files_list[] <- make_files_list() <- onload ActiveX  -->
+  <script src="proj.js"></script>      <!-- proj[] -->
+</head>
+<body border="0" scrolling="auto">
+  <span id="gui"></span>
+
+  <div style="height:5px;"></div>
+  <div class="line" style="background-color:#200040;color:#ffff99; width:170px;"
+    onclick="ShowHide('boot');" title="boot"> boot dmp </div>
+    <span id="boot" style="background-color:#200040;color:#ffff99;padding:1px 1px 1px 10px;
+      display:none;">
+    </span>
+  <noscript><pre>
+ (EN)
+ Requires enable JavaScript for full functionality! See how: <a href="https://www.enable-javascript.com/" target="_blank">"JS enable"</a>
+ Specifically this WAP (web application page) needs
+ - HTA (Html application) / browser IE9+ for file i/o
+
+ (BG)
+ Изисква разрешен JavaScript за пълна функционалност! Виж как: <a href="https://www.enable-javascript.com/" target="_blank">"JS enable"</a>
+ Специално тази WAP (web application page) изисква
+ - HTA (Html application) / браузър IE9+ за файлов вх/изх.
+ </pre></noscript>
+  <script>
+   document.title='proj src';
+   bot_=id_('boot'); gui_=id_('gui');
+   out(gui_,main_menu())
+   mnu_=id_('mnu');
+   log_=id_('msg-log');  dmp_=id_('dmp');  hlp_=id_('hlp');  clr_=id_('clr');
+
+               out(clr_,gry_(16)+heol)
+               out(clr_,arc_()  +heol)
+   rgb_ord='r';out(clr_,clrs_() +heol);
+   rgb_ord='g';out(clr_,clrs_() +heol);
+   rgb_ord='b';out(clr_,clrs_() +heol);
+               out(clr_,r_g_b_(16,16,16))
+
+   // get ipv6: ipconfig
+   out(clr_,ipv6_rgb('2002:c291:a1c7:0000:c291:a1c7:0000:0000'))
+   //                 0 1  2 3  4 5 -6 -7 8 9 10 11 12 13 14 15
+   out(clr_,ipv4_rgb('194.145.161.199'))
+
+   p=sys.p; /* input parameters sys from cmd to $sys.js, p is default proj */
+   tst=['zip','log','xls','exe','cmd','?']; /* for(i in tst) log('test ext:'+tst[i]+' type: '+ext_typ(tst[i])) */
+
+   WinOpen(help,'proj help') /* -> hlp_ & win_? // brw=browserID(); browser_win_ok=!(brw.indexOf('HTA')>=0); */
+   if(!iex && dbg) console.log(proj) /* {iex:n,ffx:y,edg:y} */
+
+   mnu(proj_menu()); sel_all(!true); for(i in grp_) sel_grp(grp_[i] ,!true)
+   for(j in proj) Hide(proj[j].id);
+
+   w=[{id:'dmp',sh:'h'},{id:'clr',sh:'h'},{id:'hlp',sh:'h'},{id:'msg-log',sh:'h'}];
+   for(i in w){ if(w[i].sh=='s') Show(w[i].id); else Hide(w[i].id); }
+
+   d4=dt(); d5=dt('o',!true/* ms==th */);
+   log(     ' welcome:<g>'+d5.ymd+' '+d5.hmst +'</g>'
+      +heol+' load: <w>'+dur(d1,d4)+'</w>sc'
+      +heol+' titles :<g>'+titles+'</g>'
+      +heol+' browser: <g>'+brw+'</g>'
+      +heol+' win_opn: <g>'+browser_win_ok+'</g>');
+
+   if(miss_fld >0) log('<w>miss  fld: '+miss_fld +'</w>')
+   if(miss_file>0) log('<w>miss file: '+miss_file+'</w>')
+   if(re_err   >0) log('<e>reorder miss:'+re_err +'</e>');
+
+   log('');
+
+   window.moveTo  (proj_.xy[0], proj_.xy[1]);  /* proj_.xy=[ 60,mw];  */
+   window.resizeTo(proj_.wh[0], proj_.wh[1]);  /* proj_.wh=[165, 50]; */
+   out(bot_,'--- wcell:'+wcell+' hcell:'+hcell+' tbw:'+tbw+' tbh:'+tbh
+           +heol+' sw:'+sw+' sh:'+sh+' swa:'+swa+' sha:'+sha
+           +heol+' mw:'+mw+' sp:'+sp
+           +heol+' xy:['+proj_.xy+']'
+           +heol+' wh:['+proj_.wh+']'+heol);
+   if(tmp!=''){
+     out(bot_,heol+'<span class="line" style="background-color:#ffff99;color:#06090e;width:'+mw+'px;" '
+        +'onclick="ShowHide(\'tmp\')">. tmp load msg </span>'
+        +'<span id="tmp" class="info" style="background-color:#15152b; width:670px; display:none; padding:1px 1px 1px 10px;">'
+        +tmp+'</span>')
+   }
+
+   if(iex){
+     if(dbg) dmp(make_files_list());  /* iex dmp      -> files_list.js */
+   } else {
+     // msg=load_files_list(files_list); /* files_list[] <- files_list.js */ if(dbg) log(msg) // before set_def
+     if(dbg) dmp(files_list);
+     if(dbg) console.log(files_list);
+   }
+
+/*  #8888ff; #ffff99; #ff8000; #b3ff99; #006384; #313140; #ffff99; #d9ff00; #66001a #d96c00; #00bfff; #14bbda
+    padding: 1px 1px 1px 1px; border: 1px solid { color: #66001a; }
+    display:flex;    box-sizing:content-box; initial;
+    .tTable:after {visibility: hidden;display: block; font-size: 0;content: " ";clear: both;height: 0;    }
+   w3schools.com/tags/att_global_accesskey.asp
+   onmouseover="this.style.color='#ff9326';" onmouseout="this.style.color='#ffff99';"
+
+  --- p:project as input parameter: string or .lnk:
+   var i,p,PROG="proj.hta",cmd=proj_HTA.commandLine;
+   if(dbg) dmp('proj cmd:'+cmd )
+   if(dbg) HTAProp('proj_HTA')
+   if(cmd==undefined) p=''; else p=cmd
+   i=p.indexOf(PROG)+PROG.length+1;
+   if(i>=0) p=p.substring(i,p.length);  if(dbg) dmp('i:'+i+' new p:'+p) // 43
+   p=p.split(';')[0];
+   if(p.charAt(0)=='"') p=p.split('"')[1];  // !? "W:\D\a b"
+
+   if(p.charAt(0)=='"') p=p.split('"')[1];  // !? "W:\D\a b"
+   if(dbg) dmp('"p":'+p)
+   if(p.length>0 && p.lastIndexOf('.lnk')>=0) {p=getLnk(p); dmp('.lnk "p":'+p)}
+   log('head.id:'+document.head.id)
+*/
+</script>
+</body>
+</html>

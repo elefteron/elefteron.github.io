@@ -1,0 +1,125 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1620" startPos="2066" endPos="2066" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.js" backupFilePath="" originalFileLastModifTimestamp="1664585119" originalFileLastModifTimestampHigh="30834654" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Mark line="81" />
+                <Mark line="83" />
+                <Fold line="0" />
+                <Fold line="4" />
+                <Fold line="12" />
+                <Fold line="23" />
+                <Fold line="36" />
+                <Fold line="68" />
+                <Fold line="75" />
+                <Fold line="89" />
+                <Fold line="99" />
+            </File>
+            <File firstVisibleLine="1140" xOffset="0" scrollWidth="1490" startPos="36586" endPos="36589" selMode="0" offset="0" wrapCount="1" lang="HTML" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.htm" backupFilePath="" originalFileLastModifTimestamp="-1442813129" originalFileLastModifTimestampHigh="30834722" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="538983209" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Mark line="69" />
+                <Mark line="453" />
+                <Mark line="1020" />
+                <Mark line="1065" />
+                <Mark line="1076" />
+                <Mark line="1234" />
+                <Fold line="5" />
+                <Fold line="14" />
+                <Fold line="73" />
+                <Fold line="77" />
+                <Fold line="85" />
+                <Fold line="91" />
+                <Fold line="113" />
+                <Fold line="127" />
+                <Fold line="151" />
+                <Fold line="185" />
+                <Fold line="200" />
+                <Fold line="275" />
+                <Fold line="276" />
+                <Fold line="284" />
+                <Fold line="333" />
+                <Fold line="345" />
+                <Fold line="357" />
+                <Fold line="371" />
+                <Fold line="396" />
+                <Fold line="413" />
+                <Fold line="432" />
+                <Fold line="455" />
+                <Fold line="517" />
+                <Fold line="530" />
+                <Fold line="582" />
+                <Fold line="641" />
+                <Fold line="654" />
+                <Fold line="687" />
+                <Fold line="693" />
+                <Fold line="716" />
+                <Fold line="732" />
+                <Fold line="742" />
+                <Fold line="762" />
+                <Fold line="766" />
+                <Fold line="798" />
+                <Fold line="813" />
+                <Fold line="818" />
+                <Fold line="833" />
+                <Fold line="843" />
+                <Fold line="880" />
+                <Fold line="885" />
+                <Fold line="923" />
+                <Fold line="933" />
+                <Fold line="938" />
+                <Fold line="941" />
+                <Fold line="949" />
+                <Fold line="952" />
+                <Fold line="964" />
+                <Fold line="969" />
+                <Fold line="977" />
+                <Fold line="986" />
+                <Fold line="1006" />
+                <Fold line="1010" />
+                <Fold line="1018" />
+                <Fold line="1029" />
+                <Fold line="1037" />
+                <Fold line="1044" />
+                <Fold line="1054" />
+                <Fold line="1071" />
+                <Fold line="1075" />
+                <Fold line="1082" />
+                <Fold line="1093" />
+                <Fold line="1105" />
+                <Fold line="1114" />
+                <Fold line="1125" />
+                <Fold line="1129" />
+                <Fold line="1135" />
+                <Fold line="1140" />
+                <Fold line="1141" />
+                <Fold line="1168" />
+                <Fold line="1199" />
+                <Fold line="1228" />
+                <Fold line="1290" />
+                <Fold line="1343" />
+                <Fold line="1358" />
+                <Fold line="1403" />
+                <Fold line="1410" />
+                <Fold line="1418" />
+                <Fold line="1426" />
+                <Fold line="1434" />
+                <Fold line="1438" />
+                <Fold line="1443" />
+                <Fold line="1547" />
+                <Fold line="1635" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="19206" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="HTML" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.hta" backupFilePath="" originalFileLastModifTimestamp="871527298" originalFileLastModifTimestampHigh="30828905" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1936020271" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Fold line="10" />
+                <Fold line="15" />
+                <Fold line="24" />
+                <Fold line="28" />
+                <Fold line="41" />
+                <Fold line="53" />
+                <Fold line="93" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="19206" startPos="692" endPos="692" selMode="0" offset="0" wrapCount="1" lang="Batch" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.cmd" backupFilePath="" originalFileLastModifTimestamp="-786254090" originalFileLastModifTimestampHigh="30832635" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1141161984" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1620" startPos="35" endPos="35" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\files_list.js" backupFilePath="" originalFileLastModifTimestamp="1765091862" originalFileLastModifTimestampHigh="30833700" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1141309440" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="432" startPos="662" endPos="0" selMode="3" offset="0" wrapCount="1" lang="Normal Text" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.lst" backupFilePath="" originalFileLastModifTimestamp="161199117" originalFileLastModifTimestampHigh="30834723" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="620" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="Normal Text" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\proj\proj.md5" backupFilePath="" originalFileLastModifTimestamp="1124220467" originalFileLastModifTimestampHigh="30834723" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

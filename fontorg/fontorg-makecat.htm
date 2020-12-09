@@ -31,29 +31,29 @@
       var clear=(arguments[1]==null) // begin with null to clear box
       for (var i=1; i<arguments.length; ++i) 
         if(arguments[i]!=null && arguments[i]!='') s+= arguments[i]; // skip empty's
-      if(plc_===undefined || plc_==null || plc_==='')  out_stack+='»:'+s // document.write(s)
+      if(plc_===undefined || plc_==null || plc_==='')  out_stack+='Â»:'+s // document.write(s)
       else
         try{ 
           if(clear) plc_.innerHTML=''
           plc_.innerHTML+=out_stack+s; 
           out_stack='' 
-        }catch(Exception){ document.write(out_stack+'»»:'+s); out_stack=''}
+        }catch(Exception){ document.write(out_stack+'Â»Â»:'+s); out_stack=''}
     }//--
     
     function hdr(s) {
       if(hdr_!=undefined ) { 
         if(s=='' || s==null) hdr_.innerHTML=''; else hdr_.innerHTML+=s;
-      } else out('»hdr:'+s+eol)
+      } else out('Â»hdr:'+s+eol)
     } 
     function sta(s) {
       if(sta_!=undefined ) { 
        if(s=='' || s==null) sta_.innerHTML=''; else  sta_.innerHTML+=s; 
-      } else out('»sta:'+s+eol+br)
+      } else out('Â»sta:'+s+eol+br)
     } 
     function log(s) {
       if(log_!=undefined ) { 
         if(s=='' || s==null) log_.innerHTML=''; else log_.innerHTML+=s; 
-      } else out('»log:'+s+eol+br)
+      } else out('Â»log:'+s+eol+br)
     } 
     // ---
     function ShowHideIDs(ids){ var i,e,l=ids.length // [id,...]

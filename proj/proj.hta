@@ -1,0 +1,110 @@
+<html><head>
+  <HTA:APPLICATION
+    ID="proj_HTA"  applicationName="prj" icon="ico/inodebdv.ico"
+    singleInstance="no"      showInTaskBar ="yes"  application   ="yes"
+    contextMenu   ="yes"     selection     ="yes"  borderStyle   ="raised"
+    scrollFlat    ="no"      scroll        ="yes"  caption       ="yes"
+    maximizeButton="yes"      minimizeButton="yes"  sysMenu       ="yes"
+    windowState   ="normal"  navigable     ="yes"  innerBorder   ="no"
+    border        ="thick"    version       ="1.0"  status        ="yes"
+  />
+  <!-- witout spaces between "hta:" and "application"
+    border			="thick"	// none,thin, dialog, THICK
+    borderStyle		="raised"	// normal, complex, RAISED, static,sunken
+    windowState		="normal"	// minimize, maximize,NORMAL
+  -->
+  <!-- proj.cmd - proj.hta - proj.htm
+  F:/!prog.run/+prog.ea/proj/ico/inodebdv.ico
+  C:\Users\%username%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
+  -->
+  <title>proj.htm redirect mshta to proj.htm</title>
+
+  <link href ="ico/inodebdv.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <link href ="ico/inodebdv.ico" type="image/x-icon" rel ="icon"          />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <!-- content="IE=5"|"IE=7"|"IE=EmulateIE7"|"IE=8"|"IE=EmulateIE8"|"IE=9"|"IE=EmulateIE9"|"IE=10"|"ie=edge"
+  if not "IE=9" then cant colapse and cant show icon
+  -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!-- encoding: utf-8/ansii="windows-1251" check string: 
+	BG: ах, чудна българска земьо, полюшвай цъфтящи жита!
+    EN: quick brown fox jumps over the lazy dog!
+  -->
+
+  <meta name="author" content="elefter" >
+  <meta name="contact" content="mailto:elefter@abv.bg" >
+  <meta name="description" content="projects actions menu">
+
+  <script type="text/JScript">
+    function out(id_,s){ id_.innerHTML+=s;}// .innerHTML .innerText
+	function gohtm(cmd){
+	  var i,p; if(cmd==undefined) p=''; else p=cmd;
+      /* get link from first par *-/
+        if(dbg) alert('gohtm prog:'+PROG+' cmd:'+cmd )
+        i=p.indexOf('proj.hta ')+9;
+        if(i>=0) p=p.substring(i,p.length);  if(dbg) alert('i:'+i+' new p:'+p) // 43
+	    p=p.split(';')[0];
+	    if(p.charAt(0)=='"') p=p.split('"')[1];  // !? "W:\D\a b"
+	    if(dbg) alert('"p":'+p)
+	    if(p.length>0) p=getLnk(p);
+      /* */
+      document.location.href ='proj.htm'+'#'+p; // replace content
+    // <META HTTP-EQUIV="refresh" CONTENT="0; URL=proj.htm">
+	}
+    function HTAprop(_HTA){ eol='</br>\n';
+	    return '<hr width="500px">'+
+         "border           = " + _HTA.border          + eol +
+      // border           : none, thin, dialog, thick - to resize
+         "borderStyle      = " + _HTA.borderStyle     + eol +
+      // borderStyle      : complex, static, sunken, raised, normal
+         "windowState      = " + _HTA.windowState     + eol +
+      // windowState      : minimize, maximize, normal
+         "caption          = " + _HTA.caption         + eol +
+         "contextMenu      = " + _HTA.contextMenu     + eol +
+         "scroll           = " + _HTA.scroll          + eol +
+         "maximizeButton   = " + _HTA.maximizeButton  + eol +
+         "minimizeButton   = " + _HTA.minimizeButton  + eol +
+         "singleInstance   = " + _HTA.singleInstance  + eol +
+         "sysMenu          = " + _HTA.sysMenu         + eol +
+         "innerBorder      = " + _HTA.innerBorder     + eol +
+         "scrollFlat       = " + _HTA.scrollFlat      + eol +
+         "selection        = " + _HTA.selection       + eol +
+
+         "applicationName  = " + _HTA.applicationName + eol +
+         "version          = " + _HTA.version         + eol +
+         "icon             = " + _HTA.icon            + eol +
+      // "ID               = " + _HTA                 + eol + // [obj] ?
+      // "application      = " + _HTA.application     + eol + // undef!?
+      // "showInTaskBar    = " + _HTA.showInTaskbar   + eol + // undef!?
+      // "navigable        = " + _HTA.navigable       + eol + // undef!?
+
+         "commandLine      = " + _HTA.commandLine     + eol
+		 +'<hr width="500px">'                        + eol
+       /* This function also retrieves the value of the commandLine property,
+          which cannot be set as an attribute.  */
+    }
+  </script>
+</head>
+<body>
+  <BUTTON onclick="out(log_,HTAprop(proj_HTA));">HTAprop</BUTTON>
+  <BUTTON onclick="gohtm(proj_HTA.commandLine)">Go</BUTTON>
+  <div id="log"></div>
+  <script> log_=document.getElementById('log');
+  dbg=false; if(!dbg) gohtm(proj_HTA.commandLine);
+/*     // p=getLnk(p);
+
+  // try { onload = function(){ document.location.href = 'proj.htm'; }
+  // } catch(err) { alert('... hta event:"'+err+'"'); }
+  // document.body.innerText = JSON.stringify(proj, null, 2)
+
+  // Automation server can't create object
+  // ie:Server execution failed
+  // KB886549 (support.microsoft.com/en-gb/help/886549) to run the Microsoft Fixit tool
+
+  // docs.microsoft.com/en-us/deployedge/edge-ie-mode
+  // docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance
+  // docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/tips-and-tricks-to-manage-ie-compatibility
+*/
+  </script>
+</body>
+</html>
