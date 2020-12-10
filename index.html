@@ -50,14 +50,13 @@
              catch(Exception){sys('»»'+s)}
       }
       function set_root(new_root){ var msg='';
-        // console.log('set_root:'+new_root);
         switch (new_root) {
           case 'locdev': root_=root.locdev; break;
-          case 'gitdev':  root_=root.gitdev; break;
-          case 'gitweb': root_=root.gitweb; break;
-          default: msg=' bad set_root:'+new_root; break;
+          case 'gitdev': root_=root.gitdev; break;
+          default: msg=' bad set_root:'+new_root; root_==''; break;
         }
-        // console.log('root:'+root_+msg);
+        console.log('root:'+root_+msg);
+        if(msg!='') alert('*** err "'+msg+'" on set_root()')
         out(show_root_,null);
         out(show_root_,root_);
       }
@@ -68,9 +67,8 @@
     <title>elefteron</title>
         elefteron  on
         <select id="sel_root"  onchange="set_root(this.value)" style="height:22px;">
-          <option value="locdev" >locdev</option>
-          <option value="gitdev" >gitdev</option>
-          <option value="gitweb" selected="selected">gitweb</option>
+          <option value="gitdev" selected="selected">github</option>
+          <option value="locdev" >local</option>
         </select>
         <span id="show_root">...</span>
     </br>
@@ -84,24 +82,25 @@
     </table>
 
     <script>
-      var root= {locdev:'file:///F:/elefter.dev/!GitHub.local/github.com.dev/' 
-                      ,gitdev:'https://github.com/elefteron/'
-                      ,gitweb:'https://elefteron.github.io/'
-                     }
-                     ,root_=root.gitweb;
+      var root= {locdev:'file:///F:/elefter.github.io/' 
+                ,gitdev:'https://elefteron.github.io/'
+                }
+                ,root_='';
+      set_root('gitdev');
       // window.location.href = root_
-       var prj=[{nam:'icard' ,pth:'icard/icard2-ea+.htm'}
-               ,{nam:'cv'           ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-               ,{nam:'',pth:''}
-               ,{nam:'SVC'        ,pth:'svc/SVC.htm'}
-               ,{nam:'Bible_bg' ,pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
-               ,{nam:'FontOrg'  ,pth:'fontorg/fontorg-makecat.htm'}
-               ,{nam:'CharMap' ,pth:'charmap/CharMap-table2.htm'}
-               ,{nam:'',pth:''}
-               ,{nam:'x14 wdg' ,pth:'x14/run/x-widget.htm'}
-               ,{nam:'Xclock'     ,pth:'xclock/clock-24+.htm'}
-               ,{nam:'proj'        ,pth:'proj/proj.htm'}
-               ,{nam:'boot_log',pth:'boot-log/boot-log.htm'}
+       var prj=[{nam:'root'     ,trg:'self' ,pth:''}
+               ,{nam:'icard'    ,trg:'work' ,pth:'icard/icard2-ea+.htm'}
+               ,{nam:'cv'       ,trg:'work' ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
+               ,{nam:''}            
+               ,{nam:'SVC'      ,trg:'work' ,pth:'svc/SVC.htm'}
+               ,{nam:'Bible_bg' ,trg:'work' ,pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
+               ,{nam:'FontOrg'  ,trg:'work' ,pth:'fontorg/fontorg-makecat.htm'}
+               ,{nam:'CharMap'  ,trg:'work' ,pth:'charmap/CharMap-table2.htm'}
+               ,{nam:''}            
+               ,{nam:'x14 wdg'  ,trg:'work' ,pth:'x14/run/x-widget.htm'}
+               ,{nam:'Xclock'   ,trg:'work' ,pth:'xclock/clock-24+.htm'}
+               ,{nam:'proj'     ,trg:'work' ,pth:'proj/proj.htm'}
+               ,{nam:'boot_log' ,trg:'work' ,pth:'boot-log/boot-log.htm'}
                ] // relative paths
         // ---
         var mnu_=getid("mnu");
@@ -111,9 +110,9 @@
         out(show_root_,root_);
         // ---
        out(mnu_,'<ul>')
-       for(i=0;i<prj.length;i++){
+       for(i=0;i<prj.length;i++){ // 'https://github.com/elefteron/'
          if(prj[i].nam=='') out(mnu_,'<br/>');
-         else  out(mnu_,'<li><a class="subhd" '+'target="work" '
+         else  out(mnu_,'<li><a class="subhd" '+'target="'+prj[i].trg+'" '
                +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
                +'>'+prj[i].nam+'</a></li>')
        }
