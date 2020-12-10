@@ -8,7 +8,7 @@ project      : condition
 `SVC`          : --, can't load all
 `Bible_bg`     : --, can't load all
 `FontOrg`      : ok, 
-`CharMap`      : ok`
+`CharMap`      : ok
 
 `x14/widget`   : ok, x14/drv break iframe
 `Xclock`       : ok
