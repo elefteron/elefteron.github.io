@@ -30,19 +30,19 @@ err='';
 function bNm2bNo(zNm,bNm){ var bNo=0,err='', j;// bNm_to_bNo
   if      (zNm==Zavet.nt.name){ 
     for (j=1; j<=27; j++){ if(bNm.toUpperCase().indexOf(nh_[j].toUpperCase())>=0){ bNo=j;break} }
-    if(bNo<1) err=' Неразпознато име на книга:' +zNm+'.'+bNm+' ->'+bNo
+    if(bNo<1) err=' РќРµСЂР°Р·РїРѕР·РЅР°С‚Рѕ РёРјРµ РЅР° РєРЅРёРіР°:' +zNm+'.'+bNm+' ->'+bNo
   }else if(zNm==Zavet.ot.name){ 
     for (j=1; j<=50; j++){ if(bNm.toUpperCase().indexOf(oh_[j].toUpperCase())>=0){ bNo=j;break} }
-    if(bNo<1) err=' Неразпознато име на книга:'+zNm+'.'+bNm+' ->'+bNo
+    if(bNo<1) err=' РќРµСЂР°Р·РїРѕР·РЅР°С‚Рѕ РёРјРµ РЅР° РєРЅРёРіР°:'+zNm+'.'+bNm+' ->'+bNo
   }else       err=' bad zNm='+zNm+' ';
 
   if(err!='') {out(log_,'bNm2bNo: '+err+br); bNo=0}
-  if(dbg>1)    out(log_,'bNm2bNo: книга:'+zNm+'.'+bNm+' ->'+bNo+br)
+  if(dbg>1)    out(log_,'bNm2bNo: РєРЅРёРіР°:'+zNm+'.'+bNm+' ->'+bNo+br)
   return bNo 
 }// ---
 var err=''
 var alerts=10
-function parselink(link_){ // 'NT.27|Откр.12:20-23' -> [zNm, bNo, cNo, vNo1, vNo2], err
+function parselink(link_){ // 'NT.27|РћС‚РєСЂ.12:20-23' -> [zNm, bNo, cNo, vNo1, vNo2], err
   err=''; if(undef(link_)){err='undef. link'; 
     if(alerts>0) {alert('parselink:err='+err+eol); alerts--}
     return err
@@ -54,15 +54,15 @@ function parselink(link_){ // 'NT.27|Откр.12:20-23' -> [zNm, bNo, cNo, vNo1, vNo
   i=link.indexOf(' '); if(i>=0) link=link.substring(0,i)+'.'+link.substring(i+1,link.length)
   i=link.indexOf(','); if(i>=0) link=link.substring(0,i)+'.'+link.substring(i+1,link.length)
   var a=link.split('.'); 
-  if     (undef(a[0])) err+='липсва име на завет '
-  else if(undef(a[1])) err+='липсва име/номер на книга '
-  else if(undef(a[2])) err+='липсва име на глава '
-  else if(undef(a[3])) err+='липсва име на стих '
+  if     (undef(a[0])) err+='Р»РёРїСЃРІР° РёРјРµ РЅР° Р·Р°РІРµС‚ '
+  else if(undef(a[1])) err+='Р»РёРїСЃРІР° РёРјРµ/РЅРѕРјРµСЂ РЅР° РєРЅРёРіР° '
+  else if(undef(a[2])) err+='Р»РёРїСЃРІР° РёРјРµ РЅР° РіР»Р°РІР° '
+  else if(undef(a[3])) err+='Р»РёРїСЃРІР° РёРјРµ РЅР° СЃС‚РёС… '
   else{ parsed.zNm=a[0];  parsed.bNo=a[1];  parsed.cNo=a[2]; parsed.vNo1=a[3]; 
     if(undef(a[4])) parsed.vNo2=0; else parsed.vNo2=a[4];
   }
   if(parsed.zNm!=Zavet.ot.name && parsed.zNm!=Zavet.nt.name){ 
-    err+='невалидно Име на завет:'+parsed.zNm+' ';
+    err+='РЅРµРІР°Р»РёРґРЅРѕ РРјРµ РЅР° Р·Р°РІРµС‚:'+parsed.zNm+' ';
   }
   if(err!=''){ out(log_,' parselink:"'+link+'" err:'+err+br); return err}
   //--
@@ -70,10 +70,10 @@ function parselink(link_){ // 'NT.27|Откр.12:20-23' -> [zNm, bNo, cNo, vNo1, vNo
   if(err!=''){ out(log_,' parselink:"'+link+'" err:'+err+br); return err}
   if(dbg>1) with(parsed) { // cut lead zeroes, convert to number, check
     bNo=bNo/1; cNo=cNo/1; vNo1=vNo1/1; vNo2=vNo2/1;
-    if(bNo <1 || bNo > 50 || isNaN(bNo ) || undef(bNo )){err+='невалидна книга:'  +bNo +eol;}
-    if(cNo <1 || cNo >151 || isNaN(cNo ) || undef(cNo )){err+='невалидна глава:'  +cNo +eol;}
-    if(vNo1<1 || vNo1>176 || isNaN(vNo1) || undef(vNo1)){err+='невалиден стих-от:'+vNo1+eol;}
-    if(vNo2<0 || vNo2>176 || isNaN(vNo2) || undef(vNo2)){err+='невалиден стих-до:'+vNo2+eol;}
+    if(bNo <1 || bNo > 50 || isNaN(bNo ) || undef(bNo )){err+='РЅРµРІР°Р»РёРґРЅР° РєРЅРёРіР°:'  +bNo +eol;}
+    if(cNo <1 || cNo >151 || isNaN(cNo ) || undef(cNo )){err+='РЅРµРІР°Р»РёРґРЅР° РіР»Р°РІР°:'  +cNo +eol;}
+    if(vNo1<1 || vNo1>176 || isNaN(vNo1) || undef(vNo1)){err+='РЅРµРІР°Р»РёРґРµРЅ СЃС‚РёС…-РѕС‚:'+vNo1+eol;}
+    if(vNo2<0 || vNo2>176 || isNaN(vNo2) || undef(vNo2)){err+='РЅРµРІР°Р»РёРґРµРЅ СЃС‚РёС…-РґРѕ:'+vNo2+eol;}
     if(err!='') err=' err:'+err
     out(log_,'parselink:"'+link+'"->'+zNm+'.'+bNo+'.'+cNo+'.'+vNo1+'-'+vNo2+err+br)
     if(err!='') return err
@@ -85,15 +85,15 @@ function check_lnk(lnk){ // 'NT.27.12.20-23' -> [zNm, bNo, cNo, vNo1, vNo2], err
   var parsed={zNm:lnk[0], bNo:lnk[1], bNm:lnk[1], cNo:lnk[2], vNo1:lnk[3], vNo2:''}
   if(!undef(lnk[4])) parsed.vNo2=lnk[4]
   if(parsed.zNm!=Zavet.ot.name && parsed.zNm!=Zavet.nt.name){ 
-    err+='невалидно Име на завет='+parsed.zNm; fatal=true; 
+    err+='РЅРµРІР°Р»РёРґРЅРѕ РРјРµ РЅР° Р·Р°РІРµС‚='+parsed.zNm; fatal=true; 
   }else { 
     with(parsed) {
       if(isNaN(bNm)) bNo=bNm2bNo(zNm,bNm);    
       bNo=bNo/1; cNo=cNo/1; vNo1=vNo1/1; vNo2=vNo2/1;
-      if(bNo <1 || bNo > 50 || isNaN(bNo ) || undef(bNo )){err+='невалидна книга='  +bNo +eol; fatal=true;}
-      if(cNo <1 || cNo >151 || isNaN(cNo ) || undef(cNo )){err+='невалидна глава='  +cNo +eol; fatal=true;}
-      if(vNo1<1 || vNo1>176 || isNaN(vNo1) || undef(vNo1)){err+='невалиден стих-от='+vNo1+eol; fatal=true;}
-      if(vNo2<0 || vNo2>176 || isNaN(vNo2) || undef(vNo2)){err+='невалиден стих-до='+vNo2+eol; fatal=true;}
+      if(bNo <1 || bNo > 50 || isNaN(bNo ) || undef(bNo )){err+='РЅРµРІР°Р»РёРґРЅР° РєРЅРёРіР°='  +bNo +eol; fatal=true;}
+      if(cNo <1 || cNo >151 || isNaN(cNo ) || undef(cNo )){err+='РЅРµРІР°Р»РёРґРЅР° РіР»Р°РІР°='  +cNo +eol; fatal=true;}
+      if(vNo1<1 || vNo1>176 || isNaN(vNo1) || undef(vNo1)){err+='РЅРµРІР°Р»РёРґРµРЅ СЃС‚РёС…-РѕС‚='+vNo1+eol; fatal=true;}
+      if(vNo2<0 || vNo2>176 || isNaN(vNo2) || undef(vNo2)){err+='РЅРµРІР°Р»РёРґРµРЅ СЃС‚РёС…-РґРѕ='+vNo2+eol; fatal=true;}
     } 
   }
   if(err!='') {out(log_,' check_lnk:"'+lnk+'" err:'+err+br)}
@@ -143,7 +143,7 @@ function bib_lnk(lnk,nam,evnt,tt,cm_,fndstr,flg){ // bib_lnk('NT.3.11.2-4','2-4'
        +' fnd:'+fnd+' slnk:'+slnk+' snam:'+snam+' r:'+r+' cm:'+cm+br)
   return spanbgclr(parsed.zNm,'<a '+r+'>'+snam+'</a>',flg)+' '
 }// ---
-function biblink(link){// biblink('NT.3|'Лука'.11.2-4') ->bib_lnk(['NT',3,11,2,4])
+function biblink(link){// biblink('NT.3|'Р›СѓРєР°'.11.2-4') ->bib_lnk(['NT',3,11,2,4])
   var parsed=parselink(link)
   if(err!='') return err
   return bib_lnk(parsed)
@@ -166,9 +166,9 @@ function icon(p,n,h) {
   var n_='';if(n.length<20)n_='<br>&nbsp;'
   return('<table><tr>'+eol
    +'<td>'+'<a><img src="'+pathicons+p+'"'+h_+' border="2"'
-          +par('alt',p+'; икона '+n)+par('title',p+'\nикона '+n)+'></a>'
+          +par('alt',p+'; РёРєРѕРЅР° '+n)+par('title',p+'\nРёРєРѕРЅР° '+n)+'></a>'
    +'<\/td></tr><tr>'+eol
-   +'<td align="right">икона <b>"'+n+'"<\/b>'+n_
+   +'<td align="right">РёРєРѕРЅР° <b>"'+n+'"<\/b>'+n_
    +'<\/td><\/tr><\/table><br>'+eol)
 }// ---
 function n2(n){var nn=n; if(nn<10)  nn='0'  +nn; return(nn)} // lead zero 
@@ -224,7 +224,7 @@ function btn(bname,btnclass,btnstyle,t_,evnt,acskey_){
 }
 function intok(ch){
   var tokens=[' ','.',':',',',';','!','?',"'",'"','*','#','=','|'   ,'(',')','[',']','<','>','{','}'] 
-  tl=tokens.length // без '-' по-големи и без ударение '`' - Вара`ва
+  tl=tokens.length // Р±РµР· '-' РїРѕ-РіРѕР»РµРјРё Рё Р±РµР· СѓРґР°СЂРµРЅРёРµ '`' - Р’Р°СЂР°`РІР°
   for (k=0; k<=tl-1; k++){ if(ch==tokens[k]) return true;}
   return false
 }// ---
@@ -260,12 +260,12 @@ function getdate(){dt='';ti='';
 /* usage example:
    if(fndstr && fndstr!=''){
      count=highlight(fndstr,bghi,fghi); // -1:text empty,0..n:count
-     if(count>0) out(log_,'маркирани са '+count+' броя на "'+fndstr+'"'+eol)
+     if(count>0) out(log_,'РјР°СЂРєРёСЂР°РЅРё СЃР° '+count+' Р±СЂРѕСЏ РЅР° "'+fndstr+'"'+eol)
    }
 /* */
 function highlight(text,bghi,fghi){
 	var count=0, dv;
-//var text=prompt("Търсена фраза:", "");
+//var text=prompt("РўСЉСЂСЃРµРЅР° С„СЂР°Р·Р°:", "");
 	if(text==null || text.length==0)return -1;
 	dv=document.defaultView;
 	function searchWithinNode(node, te, len){
@@ -289,7 +289,7 @@ function highlight(text,bghi,fghi){
 		}
 		return skip;
 	}
-	//window.status="търся...";
+	//window.status="С‚СЉСЂСЃСЏ...";
 	searchWithinNode(document.body, text.toUpperCase(), text.length);
 	// window.status="Found "+count+" occurrence"+(count==1?"":"s")+" of '"+text+"'.";
 	return count
@@ -302,10 +302,10 @@ id="T"
 <script for="T" event="onfocus">window.status = this.name; return true;</script>
 <script for="T" event="onmouseout">window.status = ''; return true;</script>
 */
-// <a href="../scr/Bible-BG.show.htm#АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя" title="АБВ">АБВ</a>
+// <a href="../scr/Bible-BG.show.htm#РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇР°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ" title="РђР‘Р’">РђР‘Р’</a>
 // %C0%C1%C2%C3%C4%C5%C6%C7%C8%C9%CA%CB%CC%CD%CE%CF%D0%D1%D2%D3%D4%D5%D6%D7%D8%D9%DA%DB%DC%DD%DE%DF%E0%E1%E2%E3%E4%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%EF%F0%F1%F2%F3%F4%F5%F6%F7%F8%F9%FA%FB%FC%FD%FE%FF
 // ?<form ENCTYPE="" ? or 'encoding' object model property for attribute
-// %C8%E7%F0%E0%E8%EB "ascii":израил "utf8":E`c,?a`e`e"
+// %C8%E7%F0%E0%E8%EB "ascii":РёР·СЂР°РёР» "utf8":E`c,?a`e`e"
 // url encode="windows-1251"
 function unescape_ascii_cyr(s){
 	    // unicode? 1byte  
@@ -314,9 +314,9 @@ function unescape_ascii_cyr(s){
       +'%E0%E1%E2%E3%E4%E5%E6%E7%E8%E9%EA%EB%EC%ED%EE%EF'
       +'%F0%F1%F2%F3%F4%F5%F6%F7%F8%F9%FA%FB%FC%FD%FE%FF%20'
       //1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6
-   cha='АБВГДЕЖЗИЙКЛМНОП'+'РСТУФХЦЧШЩЪЫЬЭЮЯ'+'абвгдежзийклмноп'+'рстуфхцчшщъыьэюя'+' ' // ascii cyr
+   cha='РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџ'+'Р РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ'+'Р°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРї'+'СЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ'+' ' // ascii cyr
      // 1234567890123456   1234567890123456   1234567890123456   1234567890123456   1
-   // %C0..%FF -> 192..223,224..255; Э=alt-0221 (DD)
+   // %C0..%FF -> 192..223,224..255; Р­=alt-0221 (DD)
    chs_=  s.split("%"); ls=chs_.length;  // [0] is empty !
    cht_=cht.split("%"); lt=cht_.length;  // [0] is empty !
 // out(log_,'unescape_ascii_cyr:'+eol+ls+' chs_='+chs_+eol/*+lt+' cht_='+cht_+eol*/)
@@ -339,7 +339,7 @@ function unescape_ascii_cyr2(s){
       +'%D0%A0%D0%A1%D0%A2%D0%A3%D0%A4%D0%A5%D0%A6%D0%A7'+'%D0%A8%D0%A9%D0%AA%D0%AB%D0%AC%D0%AD%D0%AE%D0%AF'
       +'%D0%B0%D0%B1%D0%B2%D0%B3%D0%B4%D0%B5%D0%B6%D0%B7'+'%D0%B8%D0%B9%D0%BA%D0%BB%D0%BC%D0%BD%D0%BE%D0%BF'
       +'%D1%80%D1%81%D1%82%D1%83%D1%84%D1%85%D1%86%D1%87'+'%D1%88%D1%89%D1%8A%D1%8B%D1%8C%D1%8D%D1%8E%D1%8F'
-   cha='АБВГДЕЖЗИЙКЛМНОП'+'РСТУФХЦЧШЩЪЫЬЭЮЯ'+'абвгдежзийклмноп'+'рстуфхцчшщъыьэюя' // ascii cyr
+   cha='РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџ'+'Р РЎРўРЈР¤РҐР¦Р§РЁР©РЄР«Р¬Р­Р®РЇ'+'Р°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРї'+'СЂСЃС‚СѓС„С…С†С‡С€С‰СЉС‹СЊСЌСЋСЏ' // ascii cyr
      // 1234567890123456   1234567890123456   1234567890123456   1234567890123456   1
    chs_=  s.split("%"); ls=chs_.length;  // [0] is empty !
    cht_=cht.split("%"); lt=cht_.length;  // [0] is empty !
@@ -471,33 +471,33 @@ function checkBCV_hdr(zNm,tt,th){ var html=''
    out(log_,'checkBCV_hdr:'+zNm+' begin'+eot)
    if(zNm==Zavet.nt.name)maxbooks=27; else maxbooks=50; Ccnt=Vcnt=Vmiss=Vnew=0
    for (var bNo=1;     bNo<=maxbooks;       bNo++){ 
-     html+=br+'кн.'+bNo           +': '+tt[bNo][0]
+     html+=br+'РєРЅ.'+bNo           +': '+tt[bNo][0]
      for (var cNo=1;   cNo<=th[bNo][2];     cNo++){ 
-       html+=br+'кн.'+bNo+' гл.'+cNo+': '+tt[bNo][cNo][0]
+       html+=br+'РєРЅ.'+bNo+' РіР».'+cNo+': '+tt[bNo][cNo][0]
        v=0; Ccnt++
        for (var vNo=1; vNo<=th[bNo][2+cNo]; vNo++){ 
          // see no if bad range cNo in th[3+] or bad tt[] numeration!!
          if(undef(tt[bNo][cNo][vNo])){
            if(zNm==Zavet.ot.name && ((bNo==22 || bNo==23) && (vNo==1 || vNo==2))){ // skip 66 cases
            } else if(vNo<=th[bNo][2+cNo]) {Vmiss++; 
-             msg='липсва стих#:'+bNo+'.'+cNo+'.'+vNo +br
+             msg='Р»РёРїСЃРІР° СЃС‚РёС…#:'+bNo+'.'+cNo+'.'+vNo +br
              out(log_,msg)
              html+=br+msg
            }
          } else if(vNo> th[bNo][2+cNo]) {Vnew++;
-             msg='добавен стих#:'+bNo+'.'+cNo+'.'+vNo +br
+             msg='РґРѕР±Р°РІРµРЅ СЃС‚РёС…#:'+bNo+'.'+cNo+'.'+vNo +br
              out(log_,msg)      
              html+=br+msg
          } else {Vcnt++ // skip verses
-             // v++;if(v==1) html+=br+'ст.:'+vNo;if(!tt[bNo][cNo][vNo]) html+='? '
-             // html+=br+'кн.'+bNo+' гл.'+cNo+' ст.'+vNo+': '+tt[bNo][cNo][vNo]
+             // v++;if(v==1) html+=br+'СЃС‚.:'+vNo;if(!tt[bNo][cNo][vNo]) html+='? '
+             // html+=br+'РєРЅ.'+bNo+' РіР».'+cNo+' СЃС‚.'+vNo+': '+tt[bNo][cNo][vNo]
          }
        }
      }
    }
-   html+=br+'в '+zNm+' има '+maxbooks+' книги, '+Ccnt+' глави, '+Vcnt+' стиха.'+eot
-   if(Vmiss>0) html+='липсват ' +Vmiss+' стиха.'
-   if(Vnew>0)  html+='има нови '+Vnew +' стиха.'
+   html+=br+'РІ '+zNm+' РёРјР° '+maxbooks+' РєРЅРёРіРё, '+Ccnt+' РіР»Р°РІРё, '+Vcnt+' СЃС‚РёС…Р°.'+eot
+   if(Vmiss>0) html+='Р»РёРїСЃРІР°С‚ ' +Vmiss+' СЃС‚РёС…Р°.'
+   if(Vnew>0)  html+='РёРјР° РЅРѕРІРё '+Vnew +' СЃС‚РёС…Р°.'
    html+=br
    //clst();
    out(log_,'checkBCV_hdr: end'+br);//clsl();
