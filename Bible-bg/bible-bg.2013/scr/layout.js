@@ -1,4 +1,4 @@
-_load._new('scr/layout.js')
+_load._new('scr/layout.js') 
 /** borderStyle=['none'  ,'hidden','dotted','dashed','solid','double'   ,'inherit'
                 ,'groove','ridge' ,'inset' ,'outset'] // 3d, 
 // 3d - The effect depends on the border-color value
