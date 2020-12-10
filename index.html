@@ -56,10 +56,44 @@
           default: msg=' bad set_root:'+new_root; root_==''; break;
         }
         console.log('root:'+root_+msg);
-        if(msg!='') alert('*** err "'+msg+'" on set_root()')
+        if(msg!='') alert('*** err "'+msg+'" on set_root()');
+        
         out(show_root_,null);
         out(show_root_,root_);
+        
+        out(mnu_,null);
+        out(mnu_,mnu_gen());
       }
+      function mnu_gen(){ var buf=''
+       buf+='<ul>'
+       for(i=0;i<prj.length;i++){ // 'https://github.com/elefteron/'
+         if(prj[i].nam=='') buf+='<br/>';
+         else buf+='<li><a class="subhd" '+'target="'+prj[i].trg+'" '
+               +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
+               +'>'+prj[i].nam+'</a></li>';
+       }
+       buf+='</ul>';
+       return buf;
+      }
+      root= {locdev:'file:///F:/elefter.github.io/' 
+            ,gitdev:'https://elefteron.github.io/'}
+            ,root_='';
+       prj=[{nam:'root'     ,trg:'self' ,pth:''}
+           ,{nam:'icard'    ,trg:'work' ,pth:'icard/icard2-ea+.htm'}
+           ,{nam:'cv'       ,trg:'work' ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
+           ,{nam:''}            
+           ,{nam:'SVC'      ,trg:'work' ,pth:'svc/SVC.htm'}
+           ,{nam:'Bible_bg' ,trg:'work' ,pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
+           ,{nam:'FontOrg'  ,trg:'work' ,pth:'fontorg/fontorg-makecat.htm'}
+           ,{nam:'CharMap'  ,trg:'work' ,pth:'charmap/CharMap-table2.htm'}
+           ,{nam:''}            
+           ,{nam:'x14 wdg'  ,trg:'work' ,pth:'x14/run/x-widget.htm'}
+           ,{nam:'Xclock'   ,trg:'work' ,pth:'xclock/clock-24+.htm'}
+           ,{nam:'proj'     ,trg:'work' ,pth:'proj/proj.htm'}
+           ,{nam:'boot_log' ,trg:'work' ,pth:'boot-log/boot-log.htm'}
+           ] // relative paths
+      // --- 
+      mnu_=null; show_root_=null;
   </script>
   </head>
   
@@ -82,41 +116,13 @@
     </table>
 
     <script>
-      var root= {locdev:'file:///F:/elefter.github.io/' 
-                ,gitdev:'https://elefteron.github.io/'
-                }
-                ,root_='';
-      set_root('gitdev');
-      // window.location.href = root_
-       var prj=[{nam:'root'     ,trg:'self' ,pth:''}
-               ,{nam:'icard'    ,trg:'work' ,pth:'icard/icard2-ea+.htm'}
-               ,{nam:'cv'       ,trg:'work' ,pth:'cv/elefter-arnaudov_cv_dotbrain 2020-09-06.pdf'}
-               ,{nam:''}            
-               ,{nam:'SVC'      ,trg:'work' ,pth:'svc/SVC.htm'}
-               ,{nam:'Bible_bg' ,trg:'work' ,pth:'Bible-bg/bible-bg.2013/index.Bible-bg.2013.htm'}
-               ,{nam:'FontOrg'  ,trg:'work' ,pth:'fontorg/fontorg-makecat.htm'}
-               ,{nam:'CharMap'  ,trg:'work' ,pth:'charmap/CharMap-table2.htm'}
-               ,{nam:''}            
-               ,{nam:'x14 wdg'  ,trg:'work' ,pth:'x14/run/x-widget.htm'}
-               ,{nam:'Xclock'   ,trg:'work' ,pth:'xclock/clock-24+.htm'}
-               ,{nam:'proj'     ,trg:'work' ,pth:'proj/proj.htm'}
-               ,{nam:'boot_log' ,trg:'work' ,pth:'boot-log/boot-log.htm'}
-               ] // relative paths
-        // ---
-        var mnu_=getid("mnu");
-        // console.log('root:'+root_)
-        var show_root_=getid("show_root"); // select root {locdev, gitdev, gitweb}
+        mnu_=getid("mnu"); // console.log('root:'+root_)
+        show_root_=getid("show_root"); // select root {locdev, gitdev, gitweb}
+        
         out(show_root_,null);
         out(show_root_,root_);
-        // ---
-       out(mnu_,'<ul>')
-       for(i=0;i<prj.length;i++){ // 'https://github.com/elefteron/'
-         if(prj[i].nam=='') out(mnu_,'<br/>');
-         else  out(mnu_,'<li><a class="subhd" '+'target="'+prj[i].trg+'" '
-               +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
-               +'>'+prj[i].nam+'</a></li>')
-       }
-       out(mnu_,'</ul>')
+        
+        set_root('gitdev');// -> mnu_gen()
     </script>
   <body>
 </html>
