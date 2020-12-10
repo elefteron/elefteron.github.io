@@ -2,8 +2,8 @@
 # elefteron.github.io
 project      : condition
 -----------------------------------------------------
-`icard        : ok`
-`cv           : --`
+``icard        : ok``
+```cv           : --```
 
 `SVC          : --, can't load all`
 `Bible_bg     : --, can't load all`
