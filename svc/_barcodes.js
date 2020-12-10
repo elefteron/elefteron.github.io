@@ -1,4 +1,4 @@
-load_new('scr/_barcodes.js');
+load_new('scr/_barcodes.js'); 
 /* ах, чудна българска земьо, полюшвай цъфтящи жита! */
 bcn_=[{bcnum: 0,bcid:'No-barcode'   ,bcnm:'no barcode'} 
      ,{bcnum:  1,bcid:'Code-11'      ,bcnm:'Code 11'}
