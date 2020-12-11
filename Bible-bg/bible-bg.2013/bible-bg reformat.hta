@@ -52,12 +52,12 @@
     txt2js=false; wr=true; 
     inputfilename ='Bible-(BG)OT-original.txt'; 
     resultfilename='Bible-(BG)OT' 
-    //      15571        |ПСАЛОМ 1| {22.42.01}  ?  
+    //      15571        |РџРЎРђР›РћРњ 1| {22.42.01}  ?  
   } else if(cfg==2){// OT txt to js
     txt2js=true; wr=true; aft=true
     inputfilename ='Bible-(BG)OT.txt'; 
     resultfilename='Bible-(BG)OT' 
-    // Line:12485,19969  |.... ??|   .00.00}  ; ->txt[14][NaN], txt[27][NaN]== -> послеслов,предисловие
+    // Line:12485,19969  |.... ??|   .00.00}  ; ->txt[14][NaN], txt[27][NaN]== -> РїРѕСЃР»РµСЃР»РѕРІ,РїСЂРµРґРёСЃР»РѕРІРёРµ
   } else if(cfg==3){// NT txt to txt
     txt2js=false; wr=true;
     inputfilename ='Bible-(BG)NT.txt'; 
@@ -110,8 +110,8 @@
             break; 
           case  1:  txt2=txt;
                     if(txt.charAt(txt.lenght-1)=='.'){nf=lf;txt2=txt+'|'}
-                    i=txt.indexOf('|ГЛАВА')//+7 
-                    if(i==-1){ i=txt.indexOf('|ПСАЛОМ')//+8;
+                    i=txt.indexOf('|Р“Р›РђР’Рђ')//+7 
+                    if(i==-1){ i=txt.indexOf('|РџРЎРђР›РћРњ')//+8;
                       if(i!=-1)i=i+8
                     }else      i=i+7   
                     if(i!=-1){nf=lf;
@@ -141,22 +141,22 @@
             break;
           case -1://out(ln+' '+cf+txt+ef+eol)
                     txt2=txt; 
-                    i=txt.indexOf('ГЛАВА')
+                    i=txt.indexOf('Р“Р›РђР’Рђ')
                     if(!aft && i==0)  {nf=bf; i=i+5
                       j=txt.indexOf('.'); 
                       c=txt.substr(i,j-i); c=c/1 
-                      txt2='|ГЛАВА '+n2(c)+'|'+txt.substr(j+1,txt.lenght)     // ok                      
+                      txt2='|Р“Р›РђР’Рђ '+n2(c)+'|'+txt.substr(j+1,txt.lenght)     // ok                      
                       if(txt2js) {
                         txt2="'"+txt2+"'"
                         txt2='txt['+b+']['+c+']='+txt2
                       }                      
                     }
-                    i=txt.indexOf('ПСАЛОМ')
+                    i=txt.indexOf('РџРЎРђР›РћРњ')
                     if(!aft && i==0) {nf=mf; i=i+6
                       j=txt.indexOf('.'); 
                       c=txt.substr(i,j-i); c=c/1 
                       if(c>99) cn=n3(c); else cn=n2(c)
-                      txt2='|ПСАЛОМ '+cn+'|'+txt.substr(j+1,txt.lenght)     // ок                      
+                      txt2='|РџРЎРђР›РћРњ '+cn+'|'+txt.substr(j+1,txt.lenght)     // РѕРє                      
                       if(txt2js) {
                         txt2="'"+txt2+"'"
                         txt2='txt['+b+']['+c+']='+txt2
@@ -187,8 +187,8 @@
     eof=true; out('==eof, ln='+ln+ef+eol)
   }
 exit:  
-// txt[1][0]='#[01] От Матея Свето Евангелие#'
-// txt[1][1]='|ГЛАВА 1|'
+// txt[1][0]='#[01] РћС‚ РњР°С‚РµСЏ РЎРІРµС‚Рѕ Р•РІР°РЅРіРµР»РёРµ#'
+// txt[1][1]='|Р“Р›РђР’Рђ 1|'
 </script> 
 </font> 
 </body></html>
