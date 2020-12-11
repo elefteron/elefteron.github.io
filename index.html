@@ -64,13 +64,18 @@
         out(mnu_,null);
         out(mnu_,mnu_gen());
       }
-      function mnu_gen(){ var buf=''
-       buf+='<ul>'
-       for(i=0;i<prj.length;i++){ // 'https://github.com/elefteron/'
-         if(prj[i].nam=='') buf+='<br/>';
-         else buf+='<li><a class="subhd" '+'target="'+prj[i].trg+'" '
-               +'href="'+root_+prj[i].pth+'" '+'title="'+root_+prj[i].pth+'" '
-               +'>'+prj[i].nam+'</a></li>';
+      function mnu_gen(){ var buf='', path
+        buf+='<ul>'
+        for(i=0;i<prj.length;i++){ // 'https://github.com/elefteron/'
+          if(prj[i].nam=='') buf+='<br/>';
+          else { path=root_+prj[i].pth; // add toot before path
+            if(prj[i].pth.indexOf('https://')>=0
+            || prj[i].pth.indexOf('http://')>=0
+            || prj[i].pth.indexOf('file://')>=0
+            ) path=prj[i].pth;
+            buf+='<li><a class="subhd" '+'target="'+prj[i].trg+'" '
+                +'href="'+path+'" '+'title="'+path+'" '+'>'+prj[i].nam+'</a></li>';
+          }
        }
        buf+='</ul>';
        return buf;
