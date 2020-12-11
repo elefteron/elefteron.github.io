@@ -1,6 +1,6 @@
 # elefteron.github.io
 # elefteron.github.io
-project      : condition, err
+project        : condition, err
 -----------------------------------------------------
 `icard`        : ok
 `cv`           : --
