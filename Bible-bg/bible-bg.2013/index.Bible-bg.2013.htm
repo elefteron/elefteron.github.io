@@ -6,7 +6,7 @@
   <link href ="Bible-bg.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
   <link href ="Bible-bg.ico" type="image/x-icon" rel ="icon"          />
   <meta name ="keywords"     content="bible-bg,bible,bg,orthodox">
-  <script src="scr/loader.js"></script>
+  <script src="../lib/loader.js"></script>
   <script> 
   var progID ='Bible-bg'
   var progVer=' v3[2013.05] ' // [2009.08,2010.11,2013.05]
@@ -41,10 +41,11 @@
    var sp=' ';
 // ---
   var //-- paths realtive to project root: F:\elefter.dev\Bible-bg\Bible-bg.2013\
-      scrpath  =   'scr/'
-     ,libpath  =   'scr/'// '../lib/'
+      rootpath =   ''
+     ,scrpath  =   'scr/'
+     ,libpath  =   '../lib/'// '../lib/'
      ,pathpages=''// pathpages+'Bible-BG.show.htm'
-     ,bibpath0 ='../Bible.text/text/'
+     ,bibpath0 ='../Bible.text/'// '../Bible.text/text/'
      ,bibpath1 ='../Bible.text/'     //  OT.js
      ,pathicons='../Bible.icons/'
 // --var --: getdata pathpages bibpath0 scrpath pathicons
@@ -56,6 +57,7 @@
   var files=
   [{path:libpath ,file:'loader'           ,ext:'.js' }
   ,{path:libpath ,file:'fs'               ,ext:'.js' }
+  
   ,{path:scrpath ,file:'colors'           ,ext:'.js' }
   ,{path:scrpath ,file:'utils'            ,ext:'.js' } 
   ,{path:scrpath ,file:'links'            ,ext:'.js' }
@@ -73,25 +75,28 @@
   
   ,{path:scrpath ,file:'bible'            ,ext:'.js' } 
   ,{path:scrpath ,file:"ar2obj"           ,ext:".js" } 
-  ,{path:bibpath1,file:'bible.NT-01.bg'   ,ext:'.js' }         
-  ,{path:bibpath1,file:'bible.NT-02.bg'   ,ext:'.js' }         
-  ,{path:bibpath1,file:'bible.NT-03.bg'   ,ext:'.js' }         
-  ,{path:bibpath1,file:'bible.NT-04.bg'   ,ext:'.js' }   
+  
+  ,{path:bibpath1,file:'bible.NT-01.bg'   ,ext:'.js' } //        
+  ,{path:bibpath1,file:'bible.NT-02.bg'   ,ext:'.js' } //        
+  ,{path:bibpath1,file:'bible.NT-03.bg'   ,ext:'.js' } //        
+  ,{path:bibpath1,file:'bible.NT-04.bg'   ,ext:'.js' } // 
+  
   ,{path:scrpath ,file:'ot-hdr'           ,ext:'.js' } 
   ,{path:scrpath ,file:'nt-hdr'           ,ext:'.js' } 
   
   ,{path:scrpath ,file:"arrdef"           ,ext:".js" } // 0.bible old fmt
   ,{path:bibpath0,file:"NT.bg"            ,ext:".js" } // 0. 
   ,{path:bibpath0,file:"OT.bg"            ,ext:".js" } // 0.
-  
+// F:/elefter.github.io/Bible-bg/Bible.text/OT.bg.js  
+
   ,{path:scrpath ,file:"outfmt"           ,ext:".js" } // 0.   
   ,{path:scrpath ,file:"show"             ,ext:".js" } // 0. 
   ,{path:scrpath ,file:"findtt"           ,ext:".js" } // 0.  
   ,{path:scrpath ,file:"findres"          ,ext:".js" } // 0. 
   ,{path:scrpath ,file:"words"            ,ext:".js" } // 0. 
   
-  ,{path:scrpath ,file:'Bible-bg'         ,ext:'.css'}
-  ,{path:scrpath ,file:'album'            ,ext:'.css'}
+  ,{path:rootpath,file:'Bible-bg'         ,ext:'.css'}
+  ,{path:rootpath,file:'album'            ,ext:'.css'}
   ]
   </script>    
   <script>  _load._do(files)         </script>    
