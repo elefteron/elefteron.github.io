@@ -57,9 +57,9 @@ function Bgo(zNm,b,c,v,op){// go to book first,last,prev,next globals:<->bNo,cNo
   out(log_,'Bgo:old '+zNm+' bcv='+bNo+'.'+cNo+'.'+vNo1+eol)
   if     (zNm==Zavet.nt.name){books=27; chaps=nh[bNo][2]; vers=nh[bNo][2+cNo]}
   else if(zNm==Zavet.ot.name){books=50; chaps=oh[bNo][2]; vers=oh[bNo][2+cNo]}
-  else  {err+=' Невалидно име на завет:'  +zNm+br; zNm='+'}
+  else  {err+=' РќРµРІР°Р»РёРґРЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚:'  +zNm+br; zNm='+'}
   if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo))
-    {err+=' Невалиден номер на книга:'+bNo  +eol;bNo =1}
+    {err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РєРЅРёРіР°:'+bNo  +eol;bNo =1}
   if(err!='') out(log_,err+bg)
 	if      (op=='+'){ bNo++; cNo=1;vNo1=1;if(bNo>books) bNo=books;
 	}else if(op=='-'){ bNo--;     cNo=1;vNo1=1;if(bNo<1)     bNo=1;
@@ -76,9 +76,9 @@ function Cgo(zNm,b,c,v,op){// goto chap first,last,prev,next
   //out(log_,'Cgo:old '+zNm+' bcv='+bNo+'.'+cNo+'.'+vNo1+eol)
   if     (zNm==Zavet.nt.name){books=27; chaps=nh[bNo][2]; vers=nh[bNo][2+cNo];zNo=Zavet.nt.num}
   else if(zNm==Zavet.ot.name){books=50; chaps=oh[bNo][2]; vers=oh[bNo][2+cNo];zNo=Zavet.ot.num}
-  else {err+=' Невалидно име на завет:'+zNm+eol; zNm=Zavet.nt.name}
-  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo)){err+=' Невалиден номер на книга:'+bNo+eol;bNo =1}
-  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo)){err+=' Невалиден номер на глава:'+cNo+eol;cNo =1}
+  else {err+=' РќРµРІР°Р»РёРґРЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚:'+zNm+eol; zNm=Zavet.nt.name}
+  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo)){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РєРЅРёРіР°:'+bNo+eol;bNo =1}
+  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo)){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РіР»Р°РІР°:'+cNo+eol;cNo =1}
   if(err!='') out(log_,err+br)
 	if(zNm==Zavet.nt.name) {chaps=nh[bNo][2]} else if(zNm==Zavet.ot.name) {chaps=oh[bNo][2]}
 	if      (op=='+'){ cNo++;    vNo1=1;if(cNo>chaps) cNo=chaps;//1;
@@ -96,10 +96,10 @@ function Vgo(zNm,b,c,v,op){// first,last,prev,next
   //out(log_,'Vgo:old '+zNm+' bcv='+bNo+'.'+cNo+'.'+vNo1+eol)
   if     (zNm==Zavet.nt.name){books=27; chaps=nh[bNo][2]; vers=nh[bNo][2+cNo]}
   else if(zNm==Zavet.ot.name){books=50; chaps=oh[bNo][2]; vers=oh[bNo][2+cNo]}
-  else {err+=' Невалидно име на завет:'  +zNm+eol; zNm=Zavet.nt.num}
-  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo )){err+=' Невалиден номер на книга:'+bNo  +eol;bNo =1}
-  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo )){err+=' Невалиден номер на глава:'+cNo  +eol;cNo =1}
-  if(vNo1<0 || vNo1>vers  || vNo1==NaN || undef(vNo1)){err+=' Невалиден номер на стих :'+vNo1 +eol;vNo1=1}
+  else {err+=' РќРµРІР°Р»РёРґРЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚:'  +zNm+eol; zNm=Zavet.nt.num}
+  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo )){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РєРЅРёРіР°:'+bNo  +eol;bNo =1}
+  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo )){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РіР»Р°РІР°:'+cNo  +eol;cNo =1}
+  if(vNo1<0 || vNo1>vers  || vNo1==NaN || undef(vNo1)){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° СЃС‚РёС… :'+vNo1 +eol;vNo1=1}
   if(err!='')out(log_,eot+err+eot)
 	if      (op=='F'){ vNo1=1; vNo2=''
 	}else if(op=='L'){ vNo1=1; vNo2=vers;
@@ -113,9 +113,9 @@ function CgoL(zNm,b,c,op){ // first,last,prev,next chapter in list for read
   bNo=b/1; cNo=c/1; vNo1=1; vNo2=''; bcv=''
   if     (zNm==Zavet.nt.name){books=27; chaps=nh[bNo][2]; vers=nh[bNo][2+cNo]}
   else if(zNm==Zavet.ot.name){books=50; chaps=oh[bNo][2]; vers=oh[bNo][2+cNo]}
-  else {err+=' Невалидно име на завет:'  +zNm+eol; zNm=Zavet.nt.num}
-  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo )){err+=' Невалиден номер на книга:'+bNo  +eol;bNo =1}
-  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo )){err+=' Невалиден номер на глава:'+cNo  +eol;cNo =1}
+  else {err+=' РќРµРІР°Р»РёРґРЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚:'  +zNm+eol; zNm=Zavet.nt.num}
+  if(bNo <1 || bNo >books || bNo ==NaN || undef(bNo )){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РєРЅРёРіР°:'+bNo  +eol;bNo =1}
+  if(cNo <1 || cNo >chaps || cNo ==NaN || undef(cNo )){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РіР»Р°РІР°:'+cNo  +eol;cNo =1}
   if(err!='')out(log_,err+br)
   if(dbg>0)  out(log_,'CgoL:old '+  zbcv2str(zNm,bNo,cNo,vNo1)+eol)
   if      (op=='+'){           cNo++;

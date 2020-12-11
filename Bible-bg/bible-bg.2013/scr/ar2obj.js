@@ -1,4 +1,4 @@
-﻿_load._new('scr/ar2obj.js')
+_load._new('scr/ar2obj.js')
 function ar2obj(zNm_){
   var zNm=zNm_, bMin=1, bMax, N=(zNm==Zavet.nt.name), err; 
   var ts='Bible-BG ar2obj(): '+zNm//+' bkFrom:'+bMin+'   bkTo:'+bMax

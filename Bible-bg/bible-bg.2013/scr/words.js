@@ -12,16 +12,16 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
   if(N) {maxbooks=27;bMinName=nh[bMin][0];bMaxName=nh[bMax][0];} 
   else  {maxbooks=50;bMinName=oh[bMin][0];bMaxName=oh[bMax][0];}
   err=''; 
-  if(undef(oh[50][2])) {err+='oh за '+zNm+eol;}
-  if(undef(nh[27][2])) {err+='nh за '+zNm+eol;}
-  if(undef(ot[50][1])) {err+='ot за '+zNm+eol;}
-  if(undef(nt[27][1])) {err+='nt за '+zNm+eol;}
-  if(err!='') {out(txt_,'Грешки:'+eol+err); return ''}
+  if(undef(oh[50][2])) {err+='oh Р·Р° '+zNm+eol;}
+  if(undef(nh[27][2])) {err+='nh Р·Р° '+zNm+eol;}
+  if(undef(ot[50][1])) {err+='ot Р·Р° '+zNm+eol;}
+  if(undef(nt[27][1])) {err+='nt Р·Р° '+zNm+eol;}
+  if(err!='') {out(txt_,'Р“СЂРµС€РєРё:'+eol+err); return ''}
 // ---
 
-// wn[0]=["*","От",290,2,"от"]                  -- old [type,word,cnt,lng,w2]
+// wn[0]=["*","РћС‚",290,2,"РѕС‚"]                  -- old [type,word,cnt,lng,w2]
 //[no,wrd,cnt,[lnk,..],"notes"]
-//[1,"Матея",1,["NT.1.1.1"],""]
+//[1,"РњР°С‚РµСЏ",1,["NT.1.1.1"],""]
   function addword(wrd,bcv2,links) {var n=true, wrd_=wrd.toLowerCase(); 
     for (var i=0; i<=lw; i++) {//ch_=wrd_.charAt(0);
       if(wrd_==w[i][wword].toLowerCase()) { n=false; // w[i][wword].toLowerCase()
@@ -63,16 +63,16 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
     return tbuf
   }// --- 
   
-  var ts='// Bible-BG words Честотен речник за '+zNm+' кн.'+bMin+'('+bMinName+')'; 
+  var ts='// Bible-BG words Р§РµСЃС‚РѕС‚РµРЅ СЂРµС‡РЅРёРє Р·Р° '+zNm+' РєРЅ.'+bMin+'('+bMinName+')'; 
   if(bMax>bMin) ts+='-'+bMax+'('+bMaxName+')';
-  leg='// * легенда : OT/NT=стар/нов завет'+eol
+  leg='// * Р»РµРіРµРЅРґР° : OT/NT=СЃС‚Р°СЂ/РЅРѕРІ Р·Р°РІРµС‚'+eol
      +'//  aw =all words=OT:602308/NT:147185'+eol
      +'// (adw=all dict. words, adc=all dict. chars)'+eol
      +'//  awc=all words chars count ,atc=all token chars ,ac=all chars'+eol
-     +'//  adc/adw=средна дължина на дума ,ac-awc-atc=? знаци'+eol
-     +'//  aw/aVS=среден брой думи в стих  (aBS=all verses  =29129/7954)'+eol
-     +'//  aw/aCH=среден брой думи в глава (aCH=all chapters= 1101/ 260)'+eol
-     +'//  aw/aBK=среден брой думи в книга (aBK=all books   =   50/  27)'+eol
+     +'//  adc/adw=СЃСЂРµРґРЅР° РґСЉР»Р¶РёРЅР° РЅР° РґСѓРјР° ,ac-awc-atc=? Р·РЅР°С†Рё'+eol
+     +'//  aw/aVS=СЃСЂРµРґРµРЅ Р±СЂРѕР№ РґСѓРјРё РІ СЃС‚РёС…  (aBS=all verses  =29129/7954)'+eol
+     +'//  aw/aCH=СЃСЂРµРґРµРЅ Р±СЂРѕР№ РґСѓРјРё РІ РіР»Р°РІР° (aCH=all chapters= 1101/ 260)'+eol
+     +'//  aw/aBK=СЃСЂРµРґРµРЅ Р±СЂРѕР№ РґСѓРјРё РІ РєРЅРёРіР° (aBK=all books   =   50/  27)'+eol
 
   if(win==1){/* ask */
     out(log_,'countwords:'+zNm+' '+bMin+':'+bMax+eol);// cancel -> null
@@ -83,7 +83,7 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
     var n3=window.prompt('  links:',lnks); if(n3!=null) lnks=n3;
     var links=(lnks=='y')
     out(log_,'Tst:'+zNm+' bkFrom:'+bMin+' bkTo:'+bMax+' links:'+lnks+eol);
-    ts='Bible-BG words Честотен речник за '+zNm+' кн.'+bMin; if(bMax>bMin) ts+='-'+bMax;
+    ts='Bible-BG words Р§РµСЃС‚РѕС‚РµРЅ СЂРµС‡РЅРёРє Р·Р° '+zNm+' РєРЅ.'+bMin; if(bMax>bMin) ts+='-'+bMax;
     if(!window.confirm(ts+' : Start/Cancel')) return ''
     ts='// '+ts
   }
@@ -105,7 +105,7 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
       if(N) max_vNo=nh[bNo][2+cNo]; else max_vNo=oh[bNo][2+cNo];
       out(log_,' '+cNo); 
     
-      var bkextra='' // nt[ 1][ 1][ 0]='|ГЛАВА 1| ???????';
+      var bkextra='' // nt[ 1][ 1][ 0]='|Р“Р›РђР’Рђ 1| ???????';
       if(N) bkextra=nt[bNo][cNo][0]; else bkextra=ot[bNo][cNo][0];
       var i=bkextra.lastIndexOf('|')
       var l=bkextra.length
@@ -182,15 +182,15 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
 //if(win==3)clsf()
 }// ---
 // todo: 
-//0+ пълен списък на срещанията
+//0+ РїСЉР»РµРЅ СЃРїРёСЃСЉРє РЅР° СЃСЂРµС‰Р°РЅРёСЏС‚Р°
 //1+ export format: wn=[ [,,,] ,...]
-//   crnt-> wn[keywrd#]=[type,keywrd,wrdcnt,wrdlng,w2] - wn[0]=["*","книга",16,5,""]
+//   crnt-> wn[keywrd#]=[type,keywrd,wrdcnt,wrdlng,w2] - wn[0]=["*","РєРЅРёРіР°",16,5,""]
 //   new!->            ,[keywrd,wrd#,wrdcnt,[link,...],notes] 
 
 //2. sort by keywrd, idispell by keywrd -> note=!
 //3. sort by note, goto bcv, use his note
-// - събиране на двата речника с флаг н/с
-// ? редуциране на речника по словоформи!
-//   добавяне на обяснения към някои думи
-//   търсене по речник ( и словоформи)
+// - СЃСЉР±РёСЂР°РЅРµ РЅР° РґРІР°С‚Р° СЂРµС‡РЅРёРєР° СЃ С„Р»Р°Рі РЅ/СЃ
+// ? СЂРµРґСѓС†РёСЂР°РЅРµ РЅР° СЂРµС‡РЅРёРєР° РїРѕ СЃР»РѕРІРѕС„РѕСЂРјРё!
+//   РґРѕР±Р°РІСЏРЅРµ РЅР° РѕР±СЏСЃРЅРµРЅРёСЏ РєСЉРј РЅСЏРєРѕРё РґСѓРјРё
+//   С‚СЉСЂСЃРµРЅРµ РїРѕ СЂРµС‡РЅРёРє ( Рё СЃР»РѕРІРѕС„РѕСЂРјРё)
 _load._end()

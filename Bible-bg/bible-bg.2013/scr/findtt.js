@@ -28,14 +28,14 @@ function findTT(zNm,tt,th){//inload='findTT'
      }
    }
    //out(log_,'find: end'+eot)
-   if(Vmiss>0)   out(log_,'липсват стихове:'+Vmiss+eol);
+   if(Vmiss>0)   out(log_,'Р»РёРїСЃРІР°С‚ СЃС‚РёС…РѕРІРµ:'+Vmiss+eol);
 // ----------------------------------------------------------------------------- result
-   t='Нов завет'; if(zNm==Zavet.ot.name) t='Стар завет'
+   t='РќРѕРІ Р·Р°РІРµС‚'; if(zNm==Zavet.ot.name) t='РЎС‚Р°СЂ Р·Р°РІРµС‚'
    f_=repl_1quotes(fndstr)
    sopn='<script'; scls='<\/script>'
    
-   hdr='"Bible-BG" намери в '+t+' '+cnt+' стих';if(cnt>1)hdr+='а. ';else hdr+='. ';
-   hdr+=' c фраза: <br>'+f_
+   hdr='"Bible-BG" РЅР°РјРµСЂРё РІ '+t+' '+cnt+' СЃС‚РёС…';if(cnt>1)hdr+='Р°. ';else hdr+='. ';
+   hdr+=' c С„СЂР°Р·Р°: <br>'+f_
     
    b='hdr=\''+hdr+'\';\n'+'var f=[];lf='+lf+';\n'
    for (var i=1; i<=lf; i++){//  zNm,bNo,cNo,vNo     
@@ -45,7 +45,7 @@ function findTT(zNm,tt,th){//inload='findTT'
    }
 
 /* export as array f[] to make smaller output! */ a=[]
-   a= '<html><head><title>Bible-BG † find"'+fndstr+'"</title> \n'
+   a= '<html><head><title>Bible-BG вЂ  find"'+fndstr+'"</title> \n'
      +'<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> \n'
      +sopn+' src="../lib/paths-load.js">'+scls+'\n'
      +sopn+'>'+'dbg=1;var  scr_="scr/";'

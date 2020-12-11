@@ -1,5 +1,5 @@
 _load._new('scr/outfmt.js')
-function outFmt(text){ // форматиране за "Bible-BG" v5  † 
+function outFmt(text){ // С„РѕСЂРјР°С‚РёСЂР°РЅРµ Р·Р° "Bible-BG" v5  Р– 
  if (text==undefined) {return ''}
 //usage: #{b# book title}# |chapter title| [b#.c#.s#] "..." '...' (remark) <voc> =newline * 
   lkey=8; keys=[lkey]; for (i=0; i<=lkey; i++) {keys[i]=['','','','','']};// new Array()
@@ -34,7 +34,7 @@ newbook=0; newchap=1; newverse=2; newline=7; star=8
       case newbook: case newchap:      // 0 #___#   1 |___|          
                      s+=keys[k][2];    i=tostopchar(k,i+1,'-',L); s+='&nbsp;'; 
                                                                   break;
-      case 2: case 3: case 4: case 5: case 6:  // 3 "___"   4 '___'   5 (...) 6 †<...>   
+      case 2: case 3: case 4: case 5: case 6:  // 3 "___"   4 '___'   5 (...) 6 Р–<...>   
                      s+=keys[k][2];    i=tostopchar(k,i+1,'-',L); break;
       case newline:  s+=keys[k][2];                               break; // 7 =  
       case star:     s+=keys[k][2]+ch+keys[k][3];                 break; // 8 *   

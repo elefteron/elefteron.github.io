@@ -14,19 +14,19 @@ function showchap(zNm,bNo_,cNo_,vNo1_,vNo2_,fndstr){ var html=''// showchap('NT'
 //	else document.write(s)
 //}// ---
   function chkshow(zNm,bNo,cNo,vNo,vNo2){ fatal=false; var msg=''; err='';
-     if(!(zNm==Zavet.nt.name || zNm==Zavet.ot.name)){err+='неправилно име на завет: zNm='+zNm+'\n';}
+     if(!(zNm==Zavet.nt.name || zNm==Zavet.ot.name)){err+='РЅРµРїСЂР°РІРёР»РЅРѕ РёРјРµ РЅР° Р·Р°РІРµС‚: zNm='+zNm+'\n';}
      maxb=50; if(zNm==Zavet.nt.name) maxb=27;  
      tttt =zNm+'.'+bNo+'.'+cNo+'.'+vNo ; tttt2=zNm+'.'+bNo+'.'+cNo+'.'+vNo2
-     if(undef(bNo ) || bNo ==NaN || bNo <1 || bNo >maxb){err+=' Невалиден номер на книга:'+tttt+eol; fatal=true;}
-     if(undef(cNo ) || cNo ==NaN || cNo <1 || cNo >151) {err+=' Невалиден номер на глава:'+tttt+eol; fatal=true;}
-     if(undef(vNo ) || vNo ==NaN || vNo <1 || vNo >176) {err+=' Невалиден номер на стих :'+tttt+eol; fatal=true;}
-     if(undef(vNo2) || vNo2==NaN || vNo2<0 || vNo2>176) {err+=' Невалиден номер на стих2:'+tttt+eol; fatal=true;}
+     if(undef(bNo ) || bNo ==NaN || bNo <1 || bNo >maxb){err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РєРЅРёРіР°:'+tttt+eol; fatal=true;}
+     if(undef(cNo ) || cNo ==NaN || cNo <1 || cNo >151) {err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° РіР»Р°РІР°:'+tttt+eol; fatal=true;}
+     if(undef(vNo ) || vNo ==NaN || vNo <1 || vNo >176) {err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° СЃС‚РёС… :'+tttt+eol; fatal=true;}
+     if(undef(vNo2) || vNo2==NaN || vNo2<0 || vNo2>176) {err+=' РќРµРІР°Р»РёРґРµРЅ РЅРѕРјРµСЂ РЅР° СЃС‚РёС…2:'+tttt+eol; fatal=true;}
    // ---
-     msg='неуспешно зареждане на:';
-     if(undef(nh)) {err+='недостъпен е nt-hdr.js\n'; if(zNm==Zavet.nt.name)fatal=true;}
-     if(undef(oh)) {err+='недостъпен е OT-hdr.js\n'; if(zNm==Zavet.ot.name)fatal=true;}
-	   if(undef(nt)) {err+='недостъпен е NT.js\n';     if(zNm==Zavet.nt.name)fatal=true;}
-     if(undef(ot)) {err+='недостъпен е OT.js\n';     if(zNm==Zavet.ot.name)fatal=true;}
+     msg='РЅРµСѓСЃРїРµС€РЅРѕ Р·Р°СЂРµР¶РґР°РЅРµ РЅР°:';
+     if(undef(nh)) {err+='РЅРµРґРѕСЃС‚СЉРїРµРЅ Рµ nt-hdr.js\n'; if(zNm==Zavet.nt.name)fatal=true;}
+     if(undef(oh)) {err+='РЅРµРґРѕСЃС‚СЉРїРµРЅ Рµ OT-hdr.js\n'; if(zNm==Zavet.ot.name)fatal=true;}
+	   if(undef(nt)) {err+='РЅРµРґРѕСЃС‚СЉРїРµРЅ Рµ NT.js\n';     if(zNm==Zavet.nt.name)fatal=true;}
+     if(undef(ot)) {err+='РЅРµРґРѕСЃС‚СЉРїРµРЅ Рµ OT.js\n';     if(zNm==Zavet.ot.name)fatal=true;}
    // ---
        inContext=(parent.idx && parent.txt && parent.fnd)
        if(inContext){// loaded by bible-bg.index.htm
@@ -35,16 +35,16 @@ function showchap(zNm,bNo_,cNo_,vNo1_,vNo2_,fndstr){ var html=''// showchap('NT'
        }else{// loaded by show.htm
          if(zNm==Zavet.nt.name){tt=nt; th=nh;} else {tt=ot; th=oh;}
        } 
-     if(undef(tt) || tt==null || tt=='') {err+=msg+'tt за '+zNm+eol;      fatal=true;}
-     if(undef(th) || th==null || th=='') {err+=msg+'th за '+zNm+eol;      fatal=true;}
-     if(!fatal && (cNo >th[bNo][2])    ) {err+=' Неверен # глава:'+tttt ; fatal=true;}
-     if(!fatal && (vNo >th[bNo][2+cNo])) {err+=' Неверен # стих :'+tttt ; fatal=true;}
-     if(!fatal && (vNo2>th[bNo][2+cNo])) {err+=' Неверен # стих2:'+tttt2; fatal=true;}
+     if(undef(tt) || tt==null || tt=='') {err+=msg+'tt Р·Р° '+zNm+eol;      fatal=true;}
+     if(undef(th) || th==null || th=='') {err+=msg+'th Р·Р° '+zNm+eol;      fatal=true;}
+     if(!fatal && (cNo >th[bNo][2])    ) {err+=' РќРµРІРµСЂРµРЅ # РіР»Р°РІР°:'+tttt ; fatal=true;}
+     if(!fatal && (vNo >th[bNo][2+cNo])) {err+=' РќРµРІРµСЂРµРЅ # СЃС‚РёС… :'+tttt ; fatal=true;}
+     if(!fatal && (vNo2>th[bNo][2+cNo])) {err+=' РќРµРІРµСЂРµРЅ # СЃС‚РёС…2:'+tttt2; fatal=true;}
      if(!fatal){ // 'has no properties'!?
-       if(undef(tt[bNo][cNo][vNo ])) {err+=' Не е зареден:'+tttt ; fatal=true;} 
-       if(undef(tt[bNo][cNo][vNo2])) {err+=' Не е зареден:'+tttt2; fatal=true;} 
+       if(undef(tt[bNo][cNo][vNo ])) {err+=' РќРµ Рµ Р·Р°СЂРµРґРµРЅ:'+tttt ; fatal=true;} 
+       if(undef(tt[bNo][cNo][vNo2])) {err+=' РќРµ Рµ Р·Р°СЂРµРґРµРЅ:'+tttt2; fatal=true;} 
      } 
-     if(err!='' || fatal){out(log_,'<pre>chkshow: Грешки:'+err+'</pre>');}
+     if(err!='' || fatal){out(log_,'<pre>chkshow: Р“СЂРµС€РєРё:'+err+'</pre>');}
     return !fatal
   }// ---------------------------------
    
@@ -96,7 +96,7 @@ function showchap(zNm,bNo_,cNo_,vNo1_,vNo2_,fndstr){ var html=''// showchap('NT'
              +'<td'+t2+par('align',"right")+'>' //  BGCOLOR="black" <- no need
                +'<a'+par('name',bcvfull)
             // +par('href','Bible-BG.show.htm#'+bcvfull)
-               +par('title',bcvstd+'\n^_ добави към библейския списък')
+               +par('title',bcvstd+'\n^_ РґРѕР±Р°РІРё РєСЉРј Р±РёР±Р»РµР№СЃРєРёСЏ СЃРїРёСЃСЉРє')
                +par('onclick',"javascript:add_biblist("+_tbcv+")") 
                +'>'+'<span id="no">'+vNo+'</span>' //  vNo <-+-> bcvstd  ?!
                +'</a>'
@@ -112,7 +112,7 @@ function showchap(zNm,bNo_,cNo_,vNo1_,vNo2_,fndstr){ var html=''// showchap('NT'
    if(fndstr && fndstr!=''){//f_=repl_1quotes(fndstr)
      // bghi='lime',fghi='black'
      count=highlight(fndstr,bghi,fghi); // -1:text empty,0..n:count
-   //if(count>0) out(txt_,'маркирани са '+count+' фрази "'+fndstr+'"\n')
+   //if(count>0) out(txt_,'РјР°СЂРєРёСЂР°РЅРё СЃР° '+count+' С„СЂР°Р·Рё "'+fndstr+'"\n')
    }
    
 // cls();

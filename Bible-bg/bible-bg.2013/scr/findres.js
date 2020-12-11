@@ -5,10 +5,10 @@ _load._new('scr/findres.js')
     cm='R'// call method: Load file show.js | Run javascript:showchap()
     // b='<script>highlight(\''+fndstr+'\',bghi,fghi)<\/script>'// \'-> "..." // '..' ?
     wt="document.write('wait..');"
-    out(txt_,hdr+'<hr>'+showtxt(fndstr)+'<hr>')// \u043E='Ó'
+    out(txt_,hdr+'<hr>'+showtxt(fndstr)+'<hr>')// \u043E='–æ'
 //  if(fndstr && fndstr!=''){// bghi='lime',fghi='black'
 //    count=highlight(fndstr,bghi,fghi); // -1:text empty,0..n:count
-//    if(count>0) outl('Ï‡ÍË‡ÌË Ò‡ '+count+' Ù‡ÁË "'+fndstr+'"\n')
+//    if(count>0) outl('–º–∞—Ä–∫–∏—Ä–∞–Ω–∏ —Å–∞ '+count+' —Ñ—Ä–∞–∑–∏ "'+fndstr+'"\n')
 //  }
 // -----------------------------------------------------------------------------
     function showtxt(fndstr){ var i,j,a,lnk2 
@@ -31,7 +31,7 @@ _load._new('scr/findres.js')
       //     bib_lnk(lnk    ,name  ,evnt,tit   ,cm_,fndstr,spanbgclr) lnk=zNm+bcv ,cmodel='L', spanbgclr='N'
         lnk2=bib_lnk(bcvfull,bcvstd,wt  ,bcvstd,cm ,fndstr,'')
         b+='<tr BGCOLOR="black" valign="top"><td'+t1+'>'
-         +'<a name="'+bcvstd+'"'+' title=" <-‰Ó·‡‚Ë Í˙Ï ·Ë·ÎÂÈÒÍËˇ ÒÔËÒ˙Í"'
+         +'<a name="'+bcvstd+'"'+' title=" <-–¥–æ–±–∞–≤–∏ –∫—ä–º –±–∏–±–ª–µ–π—Å–∫–∏—è —Å–ø–∏—Å—ä–∫"'
          +par('onclick',"javascript:add_biblist("+_tbcv+")")+'>'+i+'</a>:&nbsp;'+lnk2+'</a>'
        //+'<br>'
          +'&nbsp;&nbsp;'
