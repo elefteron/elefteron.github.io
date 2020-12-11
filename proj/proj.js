@@ -36,14 +36,15 @@ $¢£€¥ƒ#%‰&'"º¹²³¼½¾.,:;‘’“”‚„!¡?¿«»‹›+=±÷×
 // run_md5sum32  = 'F:/!prog.run/md5sum/md5sum.exe';       // 32b only, check: -cv MD5SUM.TXT
    run_zip       = bck_slash('C:/Program Files/7-Zip/7z.exe'); 
 } 
-{  root='F:/elefter.dev'; /* source root */ proj=proj || []; var j=proj.length-1;  
+{  root='F:/elefter.github.io'; // 'F:/elefter.dev'; 
+   /* source root */ proj=proj || []; var j=proj.length-1;  
    /** - fld is relative to root, subs are relative to fld, except abs. paths like '>...'
        - scan subs[].files[] <- scanFileList_to_ar(root,subfld) 
    **/
  { n='main'; // subs:[{'#fld':"*",files:[/*scan*/]}, ... ] // ?! -> {.id}.files.js   // ?setup, ?dependencies
    proj[++j]={grp:n ,id:"Charmap"    ,ico:"Ab.ico" ,subs:[{fld:"Charmap" } ] }
-   proj[++j]={grp:n ,id:"SVC-8"      ,ico:"R19G00001.ico" 
-      ,subs:[{fld:"SVC-8" } ,{work:'>C:/$desk/#pers/'},{data:'>C:/$desk/#pers/#data'}] 
+   proj[++j]={grp:n ,id:"SVC"      ,ico:"R19G00001.ico" 
+      ,subs:[{fld:"SVC" } ,{work:'>C:/$desk/#pers/'},{data:'>C:/$desk/#pers/#data'}] 
    }
    proj[++j]={grp:n ,id:"FontOrg"    ,ico:"ico/Ab.ico"    ,subs:[{fld:"fontorg.js"} ,{afs:"fonts-data"}
      ,{lib:"lib"},{scr:"scr"} ] 
@@ -74,12 +75,14 @@ $¢£€¥ƒ#%‰&'"º¹²³¼½¾.,:;‘’“”‚„!¡?¿«»‹›+=±÷×
    proj[++j]={grp:n ,id:"Bible-bg text",ico:"Bible-bg.ico",subs:[{fld:"Bible-bg/Bible-bg.text" } ] }  
    proj[++j]={grp:n ,id:"Bible text" ,ico:"Bible-bg.ico"  ,subs:[{fld:"Bible-bg/Bible.text"    } ] }  
  }
+ { n='icard';  
+   proj[++j]={grp:n ,id:"icard"  ,ico:"icard/ea-k.ico",subs:[{fld:"x14"},{'#icаrd':'icard'},{lib:'lib'}] }
+ }
  { n='x14 widgets';  
    proj[++j]={grp:n ,id:"X14"        ,ico:"ico/d.ico"     ,subs:[{fld:"x14"},{lib :'lib'  } ,{run:'run'}] } // ? "x_widgets"
    proj[++j]={grp:n ,id:"X14-cal"    ,ico:"cal/kal.ico"   ,subs:[{fld:"x14"},{cal :'cal'  } ,{lib:'lib'},{scr:'cal/scr'},{run:'run/run.cal'}] }
    proj[++j]={grp:n ,id:"X14-clk"    ,ico:"clk/clock.ico" ,subs:[{fld:"x14"},{clk :'clk'  } ,{lib:'lib'},{scr:'clk/scr'},{run:'run/run.clk'}] }
    proj[++j]={grp:n ,id:"X14-drv"    ,ico:"drv/d.ico"     ,subs:[{fld:"x14"},{drv :'drv'  } ,{lib:'lib'},{scr:'drv/scr'},{run:'run/run.drv'}] }
-   proj[++j]={grp:n ,id:"X14-icard"  ,ico:"icard/ea-k.ico",subs:[{fld:"x14"},{'#icаrd':'icard'},{lib:'lib'}] }
  }
  { n='file sys'                          
    proj[++j]={grp:n ,id:"dirlist"    ,ico:"foldlist.ico"    ,subs:[{fld:"dirlist"    }] }
