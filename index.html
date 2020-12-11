@@ -72,7 +72,8 @@
             if(prj[i].pth.indexOf('https://')>=0
             || prj[i].pth.indexOf('http://')>=0
             || prj[i].pth.indexOf('file://')>=0
-            ) path=prj[i].pth;
+            ) { path=prj[i].pth; // console.log(prj[i].pth.indexOf('https://')) 
+            }
             buf+='<li><a class="subhd" '+'target="'+prj[i].trg+'" '
                 +'href="'+path+'" '+'title="'+path+'" '+'>'+prj[i].nam+'</a></li>';
           }
