@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
   <META NAME="author" CONTENT="elefter@abv.bg">
   <script> eol='\n'; br='<br/>'; 
-    ua=navigator.userAgent; _iex=(ua.indexOf('Trident')>=0 || ua.indexOf('MSIE')>=0 || )
+    ua=navigator.userAgent; _iex=(ua.indexOf('Trident')>=0 || ua.indexOf('MSIE')>=0);
     
 	modules=[]; mn=-1;  
 	function load_new(module){ modules[++mn]={'name':module,'state':'start'} } // load_new('scr/');...load_end();
@@ -70,8 +70,6 @@
   
   <style src="scr/fo.css"></style>
 
-   <!-- -- > <script src="../lib/root&load.js"      ></script> <!-- -->
-   <!-- -- > <script src="../lib/load.js"           ></script> <!-- -->
    <!-- -- > <script src="../lib/loader.js'"        ></script> <!-- -->
    <!-- -- > <script src="../root.js"            ></script> <!-- -->
    
@@ -134,6 +132,8 @@
     l</span>
 
 <script type="text/javascript">
+  alert(ua)
+
   test=0; /*test details 0,1..4 */ dbg=1;
   hdr_=document.getElementById("hdr"); // hdr(''); // hdr('-hdr-');
   sta_=document.getElementById("sta"); // sta(''); // sta('-sta-');
