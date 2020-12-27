@@ -299,7 +299,7 @@ function obj_list(obj,name_){
     if(p_.style.display!= "none") Hide(id); else Show(id);
   }
 }//--
-  var rootlocx_='e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
+  var rootlocx_=''//e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
 
 function shell_line(id,w,h,c1,c2){// shell_line('log',100,9,'#444','#88f')
   var hr='<hr width="'+w+'" size="'+h+'px" color="'+c1+'"'

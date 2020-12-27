@@ -307,7 +307,7 @@ function obj_list(obj,name_){
   var drive_=roots.drv, rootloc_=roots.drv+roots.dir;
   var rootlocx_='\\elefter.dev\\my-dev+\\' // with \\ for activex    
 */}
-  var rootlocx_='e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
+  var rootlocx_=''//'e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
 /* box=_make_box(
     [{no:0,id:'hdr',t:'row'  ,w:___,h:___,u:'px',bg:'#______',fg:'#______',sh:'btn',st:''}
     ,{no:1,id:'idx',t:'col'  ,w:___,h:___,u:'px',bg:'#______',fg:'#______',sh:'btn',st:''}
