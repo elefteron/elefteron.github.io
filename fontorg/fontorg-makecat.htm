@@ -5,6 +5,9 @@
   <META NAME="author" CONTENT="elefter@abv.bg">
   <script> eol='\n'; br='<br/>'; 
     ua=navigator.userAgent; _iex=(ua.indexOf('Trident')>=0 || ua.indexOf('MSIE')>=0);
+    // ff: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+    // ie: MSIE 7 ... Trident 7
+    // if (!iex) y+=1900;
     
 	modules=[]; mn=-1;  
 	function load_new(module){ modules[++mn]={'name':module,'state':'start'} } // load_new('scr/');...load_end();
