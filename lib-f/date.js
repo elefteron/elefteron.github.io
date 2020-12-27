@@ -1,4 +1,4 @@
-load_new('lib/date.js'); // _load._new('../lib/date.js')
+load_new('../lib/date.js'); // _load._new('../lib/date.js')
 //----------------------------------------
 /*  getTime() - Number of milliseconds since 1/1/1970 @ 12:00 AM
     getSeconds() - Number of seconds (0-59)
