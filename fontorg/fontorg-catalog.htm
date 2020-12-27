@@ -7,7 +7,7 @@
 	modules=[]; mn=-1; 
 	function load_new(module,loadstatus){ modules[++mn]={'name':module,'state':'start'} }
 	function load_end(){modules[mn].state='ok'}
-	function load_st(l){ var i,buf=''
+	function load_lst(l){ var i,buf=''
 	  for (i=0; i<=mn; i++) buf+='  ['+(i+1)+'].{'+modules[i].name+':'+modules[i].state+'}'	
       log(' ... expected loads='+l+' '+buf) //  [#]. {module:state} 
 	}
