@@ -11,11 +11,14 @@
   font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
           }
     </style>
-    <script src="../lib/loader.js"></script> 
-    <script> dir_scr='scr/', dir_lib='../lib/', ext_js='.js', ext_css='.css';
+    <script src="../../lib/loader.js"></script> 
+    <script> 
+      /* --- */
+      dir_scr='scr/', dir_lib='../../lib/', ext_js='.js', ext_css='.css';
       { _load._do([{path:dir_lib,file:'loader',ext:ext_js}
                   ,{path:dir_scr,file:'clock' ,ext:ext_js}]);    
-      }// ---
+      }/* --- */
+      
       { var dbg=1,big=false // --- globals, config:
         var showsec=true, refreshms=1*1000, rsz=false // true | false
            ,fnts=[{sz:28,lh:28,fam:'DigiFace'}
