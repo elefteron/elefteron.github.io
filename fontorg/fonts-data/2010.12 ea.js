@@ -1,4 +1,4 @@
-load_new('2010.12 ea.js')
+load_new('fonts-data/2010.12 ea.js')
 catalog="2010.12 ea"; Win_Mac="W"; 
 Fnt=[// #[Type,Style, PathNo,SetNo,Win,PS,File,Flag,Bad, RWin,RPs,RStWin,RStPs]
 /*0*/ ["M","N",0,0,"TektoMM","TektonMM","ZJRG____.MMM","*",0,0,0,"-","-"]
