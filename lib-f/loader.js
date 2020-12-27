@@ -109,13 +109,13 @@ function _err(msg,url,ln){//  usage: window.onerror = _load_err - _iex?
     var clear=(arguments[1]==null) // begin with null to clear box
     for (var i=1; i<arguments.length; ++i) 
       if(arguments[i]!=null && arguments[i]!='') s+= arguments[i]; // skip empty's
-    if(undef(plc_) || plc_==null || plc_=='')  out_stack+='»'+s // document.write(s)
+    if(undef(plc_) || plc_==null || plc_=='')  out_stack+='Â»'+s // document.write(s)
     else
       try{ 
         if(clear) plc_.innerHTML=''
         plc_.innerHTML+=out_stack+s; 
         out_stack='' 
-      }catch(Exception){ document.write(out_stack+'»»'+s); out_stack=''}
+      }catch(Exception){ document.write(out_stack+'Â»Â»'+s); out_stack=''}
   }//--
 }
 function htm_(h,e){ // htm_([tag,par,data],eol)
