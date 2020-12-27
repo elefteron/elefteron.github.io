@@ -1,4 +1,4 @@
-load_new('fontorg-def.js')
+load_new('scr/fontorg-def.js')
 {catalog='';ln='\n'; br=hteol='<br>'; eol='\r\n'; hsp='&nbsp'; l=hteol+eol;rtfTab='\\tab '; 
 rtfNwln='\\par';// \x0D=13 \x0A=10 lf+cr
 htmNwln=ln+hteol
