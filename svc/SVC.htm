@@ -100,7 +100,7 @@
 	//  msg('... _newH:'+_newH+' _maxH:'+_maxH) 
 		if(_newH>990) _newH=990; 
         window.resizeTo(_minW,_newH);	
-        window.moveTo(130,35); // x:,y:
+    //  window.moveTo(130,35); // x:,y:
 	   
     }// func
     function nv(o,name){ if(o.name==name) return o.value; else return null;}
@@ -354,7 +354,7 @@
 </div> 
 <script> load_end(); </script>
 <script> load_new('svc.htm#script2');
-dbg=true;
+dbg=!true;
 {  dict=[]; bg=0; en=1; tolang=bg; // [0='bg',1='en']
    dict[  0]=['език:'         ,'lang:'     ] 
    dict[  1]=['работен път:'  ,'work path:']
