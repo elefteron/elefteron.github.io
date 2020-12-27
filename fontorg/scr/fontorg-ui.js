@@ -26,7 +26,7 @@ inload='fontorg-ui';
 // border-style:hidden 	The same as "none", except in border conflict resolution for table elements
 // border-style:none/dotted/dashed/solid/double/inherit
 // border-style:groove/ridge/inset/outset <- 3D borders, the effect depends on the border-color value 
-//              âäëúáíàò/íàáðàçäåí/âìúêíàò?/íà÷àëåí?
+//              Ð²Ð´Ð»ÑŠÐ±Ð½Ð°Ñ‚/Ð½Ð°Ð±Ñ€Ð°Ð·Ð´ÐµÐ½/Ð²Ð¼ÑŠÐºÐ½Ð°Ñ‚?/Ð½Ð°Ñ‡Ð°Ð»ÐµÐ½?
 // vertical-align: baseline, sub, super, top, text-top, middle, bottom, text-bottom, length, value%
 // text-align: left,center,right;
 
