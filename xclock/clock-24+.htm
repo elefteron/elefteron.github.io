@@ -12,7 +12,7 @@
           }
     </style>
     <script src="clock.js"></script> 
-    <script src="loader.js"></script> 
+    <script src="../lib/loader.js"></script> 
     <script> 
       { var dbg=1,big=true // --- globals, config:
         var showsec=!true, refreshms=1*1000, rsz=false // true | false
@@ -134,13 +134,13 @@ marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
     var stl='margin:0px;padding:0px;overflow:auto;border:none;'
 	       +' text-align:left; vertical-align:middle;'// border:1px inset;
     var wlog=500; // if(!_iex) whr=w// (w+margin*2+padding*2)
+    lay_=            document.getElementById(layID)
     var box=make_box(
     [{no:wrk,id:wrkID,t:'row' ,w:w,h:h   ,u:'px',bg:'#000',st:stl} // w:200 bg:'#222'
     ,{no:log,id:logID,t:'row' ,w:w,h:200 ,u:'px',bg:'#333',st:stl  
 	   ,sh:shell_line(logID,250,9,'#444','#88f')} // w:500,h:300
     ],layID)
 	
-    lay_=            document.getElementById(layID)
     wrk_=box[wrk].p_=document.getElementById(wrkID);  
     log_=box[log].p_=document.getElementById(logID); 
     var islayok=true  
