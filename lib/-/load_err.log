@@ -1,0 +1,157 @@
+--- hta drv-info
+JS Error=Expected ')' id="scr/colors.js" !?old id or caller
+url=" file:///E:/elefter.dev/my-dev+/drv-info/scr/makeTbl.js" line="20" 
+
+init_activex()->"ActiveX" runned correct.
+JS Error=Object expected id="scr/fs.js"  !?old id
+url=" file:///E:/elefter.dev/my-dev+/drv-info/drv-info.htm" line="100" 
+0 ../lib/loader.js ok 
+1 drv-style-1.css maybe     ! 
+2 ../lib/windows.js ok 
+3 ../lib/date.js ok 
+4 ../lib/math.js ok 
+5 scr/win-size.js ok 
+6 scr/colors.js ok 
+7 scr/makeTbl.js ok 
+8 scr/order.js ok 
+9 scr/fs.js ok 
+
+
+
+--- hta colors
+load(1): _load() js [1]=colors.js (... ) _loadv=3 ; new
+_load(2): _load() js [2]=rgb.js (... ) _loadv=3 ; new
+_load(3): _load() js [3]=hsv-hsl.js (... ) _loadv=3 ; new
+_load(4): _load() js [4]=cmyk.js (... ) _loadv=3 ; new
+_load(5): _load() js [5]=lab.js (... ) _loadv=3 ; new
+:: [1] colors.js; type=text/javascript.loaded 
+:: [2] rgb.js; type=text/javascript.loaded 
+:: [3] hsv-hsl.js; type=text/javascript.loaded 
+:: [5] lab.js; type=text/javascript.loaded 
+0 ../lib/loader.js ok 
+1 colors.js ok 
+2 rgb.js ok 
+3 hsv-hsl.js ok 
+4 cmyk.js new               ! file miss
+5 lab.js ok                 
+---
+
+
+--- fox colors
+_load(1): _load() js [1]=colors.js (... ) _loadv=0 ; maybe
+_load(2): _load() js [2]=rgb.js (... ) _loadv=0 ; maybe
+_load(3): _load() js [3]=hsv-hsl.js (... ) _loadv=0 ; maybe
+_load(4): _load() js [4]=cmyk.js (... ) _loadv=0 ; maybe
+_load(5): _load() js [5]=lab.js (... ) _loadv=0 ; maybe
+
+0	../lib/loader.js	ok	
+1	colors.js	maybe          !
+2	rgb.js	maybe	           !
+3	hsv-hsl.js	maybe        !
+4	cmyk.js	maybe	           !
+5	lab.js	maybe            !
+
+---fox : parent.drv:        keys=["window" ,"document" ,"InstallTrigger" ,"_stat_todo" ,"_stat_miss" ,"_stat_unkn" ,"_stat_new" ,"_stat_end" ,"make_MOL" ,"_load_end" ,"_load_new" ,"_load_list" ,"_load_err" ,"_load" ,"_load3" ,"agentLC" ,"i" ,"j" ,"e_" ,"_loadv" ,"init_activex" ,"_activexON" ,"_file" ,"_file_crnt_nm" ,"_file_crnt_no" ,"br" ,"eol" ,"dbg" ,"tst" ,"Hide" ,"Show" ,"ShowHide" ,"sys" ,"htm_" ,"row_" ,"obj_keys" ,"is" ,"_browsers" ,"_engines" ,"_slp" ,"_slm" ,"_chr" ,"_knq" ,"_opr" ,"_fox" ,"_mon" ,"_net" ,"_kml" ,"_saf" ,"_iex" ,"_os" ,"_engine" ,"_browser" ,"navigator" ,"_agent" ,"a2" ,"clr" ,"par" ,"tb_col" ,"drv2tbl" ,"drv_load" ,"id_" ,"logID" ,"outID" ,"mnuID" ,"layouts_" ,"make_layout" ,"log" ,"out" ,"mnu" ,"obj" ,"objname" ,"getInterface" ,"external" ,"sidebar" ,"console"]
+---fox : parent.frames.drv: keys=["window" ,"document" ,"InstallTrigger" ,"_stat_todo" ,"_stat_miss" ,"_stat_unkn" ,"_stat_new" ,"_stat_end" ,"make_MOL" ,"_load_end" ,"_load_new" ,"_load_list" ,"_load_err" ,"_load" ,"_load3" ,"agentLC" ,"i" ,"j" ,"e_" ,"_loadv" ,"init_activex" ,"_activexON" ,"_file" ,"_file_crnt_nm" ,"_file_crnt_no" ,"br" ,"eol" ,"dbg" ,"tst" ,"Hide" ,"Show" ,"ShowHide" ,"sys" ,"htm_" ,"row_" ,"obj_keys" ,"is" ,"_browsers" ,"_engines" ,"_slp" ,"_slm" ,"_chr" ,"_knq" ,"_opr" ,"_fox" ,"_mon" ,"_net" ,"_kml" ,"_saf" ,"_iex" ,"_os" ,"_engine" ,"_browser" ,"navigator" ,"_agent" ,"a2" ,"clr" ,"par" ,"tb_col" ,"drv2tbl" ,"drv_load" ,"id_" ,"logID" ,"outID" ,"mnuID" ,"layouts_" ,"make_layout" ,"log" ,"out" ,"mnu" ,"obj" ,"objname" ,"getInterface" ,"external" ,"sidebar" ,"console"]
+
+_activexON value node nodeName nodeValue child
+parent.frameElement.parentElement
+parent.frameElement.dataFld outerHTML self innerHTML
+sessionStorage=undefined
+
+    
+    function testAcs(objid,objnm,varid,varnm){
+    //var isdef=(typeof(objid)!='undefined'), undef=!isdef
+    //var isnull=false; if(isdef && objid==null) isnull=true;
+    //var isobj=(typeof(objid)=='object')
+    //if(isdef){// !objid.closed ?
+        var value=''
+        if(objid==null)value='null.';else value=objid.varid
+             log('---'+" '"+objnm+varnm+"' type="+typeof(objid)
+                +' value='+value+br)
+                
+      //if(isobj && !isnull){ var keys=obj_keys(objid);
+      //     log('---'+" '"+objnm+"'       keys=['"+keys.join("' ,'")+"']"+br)
+      //}
+    //} else log('---'+' "'+objnm      +'" type='+typeof(objid)
+    //          +' value="undefined"'+br)
+    }
+// --- 'window.opener._activexON' type=object value=null.
+// --- 'opener._activexON' type=object value=null.
+// --- 'parent._activexON' type=object value=undefined
+    log('==='+_browser+br)
+  if(typeof(window.opener                            )!=='undefined')
+    testAcs(window.opener      ,"window.opener"       ,_activexON,"._activexON")
+  if(typeof(       opener                            )!=='undefined')
+    testAcs(       opener      ,       "opener"       ,_activexON,"._activexON")
+  if(typeof(parent.top                               )!=='undefined')
+    testAcs(parent.top         ,"parent.top"         ,_activexON,"._activexON")
+  if(typeof(       top                               )!=='undefined')
+    testAcs(       top         ,       "top"         ,_activexON,"._activexON")
+  if(typeof(parent                                   )!=='undefined')
+    testAcs(parent             ,"parent"             ,_activexON,"._activexON")
+  if(typeof(parent.drv                               )!=='undefined')
+    testAcs(parent.drv         ,"parent.drv"         ,_activexON,"._activexON")
+  if(typeof(parent.drv.document                      )!=='undefined')
+    testAcs(parent.drv.document,"parent.drv.document",_activexON,"._activexON")
+  if(typeof(parent.document                          )!=='undefined')
+    testAcs(parent.document    ,"parent.document"    ,_activexON,"._activexON")
+  if(typeof(parent.frames[0]                         )!=='undefined')
+    testAcs(parent.frames[0]   ,"parent.frames[0]"   ,_activexON,"._activexON")
+// parent.*: parent, .drv, .frame, .frames, .frames.drv, .document , .frames.document, .window
+//   in fox: n     , +   , d     , n      , +          , d         ,  d              , n
+//   in hta: ?     , -   , -     , +      , u          , +         ,  +              , +  
+// fox: d=Permission denied to access property 'frame'
+//      n=Not allowed to enumerate cross origin objects
+// hta: -=undefined  
+// ReferenceError: drv is not defined
+// fox: parent.frames.drv.InstallTrigger
+
+// log('parent.name:'       +parent.name+br)       // : drv
+// log('parent.window.name:'+parent.window.name+br)// : drv
+// log('parent.frames.name:'+parent.window.name+br)// : drv
+
+// document.getElementById('drv') 
+// msie: object keys=[""]  
+//  fox: is not an object
+// document.getElementById('_activexON') 
+// msie:  object keys=[""] 
+//  fox: is not an object
+===? closed,null,_activexON=
+===msie 
+--- "window.opener"              type=undefined value=undefined/null/closed
+---        "opener"              type=undefined value=undefined/null/closed
+--- 'parent._activexON'          type=object    value=undefined
+--- 'parent'                keys=['status' ,'onresize' ,'onmessage' ,'parent' ,'onhashchange' ,'defaultStatus' ,'name' ,'history' ,'maxConnectionsPerServer' ,'opener' ,'location' ,'screenLeft' ,'document' ,'onbeforeprint' ,'screenTop' ,'clientInformation' ,'onerror' ,'onfocus' ,'event' ,'onload' ,'onblur' ,'window' ,'closed' ,'screen' ,'onscroll' ,'length' ,'frameElement' ,'self' ,'onunload' ,'onafterprint' ,'navigator' ,'frames' ,'sessionStorage' ,'top' ,'clipboardData' ,'external' ,'onhelp' ,'offscreenBuffering' ,'localStorage' ,'onbeforeunload']
+--- "parent.drv"                 type=undefined value=undefined/null/closed
+--- 'parent.document._activexON' type=object    value=undefined
+--- 'parent.document'       keys=['namespaces' ,'lastModified' ,'onstorage' ,'parentNode' ,'onstoragecommit' ,'nodeType' ,'fileCreatedDate' ,'onbeforeeditfocus' ,'bgColor' ,'oncontextmenu' ,'onrowexit' ,'embeds' ,'scripts' ,'onactivate' ,'mimeType' ,'alinkColor' ,'onmousemove' ,'compatible' ,'onselectstart' ,'oncontrolselect' ,'body' ,'protocol' ,'onkeypress' ,'onrowenter' ,'onmousedown' ,'vlinkColor' ,'URL' ,'onreadystatechange' ,'doctype' ,'onbeforedeactivate' ,'applets' ,'fileModifiedDate' ,'onmouseover' ,'dir' ,'media' ,'defaultCharset' ,'firstChild' ,'plugins' ,'onafterupdate' ,'ondragstart' ,'oncellchange' ,'cookie' ,'documentElement' ,'nextSibling' ,'nameProp' ,'referrer' ,'ondatasetcomplete' ,'onmousewheel' ,'onerrorupdate' ,'onselectionchange' ,'lastChild' ,'ondblclick' ,'onkeyup' ,'location' ,'forms' ,'title' ,'onrowsinserted' ,'previousSibling' ,'compatMode' ,'onmouseup' ,'onkeydown' ,'onrowsdelete' ,'documentMode' ,'onfocusout' ,'fgColor' ,'ondatasetchanged' ,'onmouseout' ,'parentWindow' ,'nodeName' ,'onpropertychange' ,'onstop' ,'onhelp' ,'linkColor' ,'onbeforeactivate' ,'images' ,'readyState' ,'frames' ,'all' ,'onbeforeupdate' ,'onclick' ,'childNodes' ,'onfocusin' ,'anchors' ,'selection' ,'fileUpdatedDate' ,'domain' ,'security' ,'fileSize' ,'ownerDocument' ,'ondataavailable' ,'styleSheets' ,'nodeValue' ,'attributes' ,'activeElement' ,'implementation' ,'links' ,'URLUnencoded' ,'ondeactivate']
+--- "parent.frames[0]"           type=undefined value=undefined/null/closed
+===firefox
+--- "window.opener"               type=object value=undefined/null/closed
+---        "opener"               type=object value=undefined/null/closed
+--- 'parent._activexON'           type=object value=undefined
+--- 'parent'                keys=['window' ,'document' ,'InstallTrigger' ,'_stat_todo' ,'_stat_miss' ,'_stat_unkn' ,'_stat_new' ,'_stat_end' ,'make_MOL' ,'_load_end' ,'_load_new' ,'_load_list' ,'_load_err' ,'_load' ,'_load3' ,'agentLC' ,'i' ,'j' ,'e_' ,'_loadv' ,'init_activex' ,'_activexON' ,'_file' ,'_file_crnt_nm' ,'_file_crnt_no' ,'br' ,'eol' ,'dbg' ,'tst' ,'Hide' ,'Show' ,'ShowHide' ,'sys' ,'htm_' ,'row_' ,'obj_keys' ,'is' ,'_browsers' ,'_engines' ,'_slp' ,'_slm' ,'_chr' ,'_knq' ,'_opr' ,'_fox' ,'_mon' ,'_net' ,'_kml' ,'_saf' ,'_iex' ,'_os' ,'_engine' ,'_browser' ,'navigator' ,'_agent' ,'testAcs' ,'a2' ,'clr' ,'par' ,'tb_col' ,'drv2tbl' ,'drv_load' ,'id_' ,'logID' ,'outID' ,'mnuID' ,'layouts_' ,'make_layout' ,'log' ,'out' ,'mnu' ,'getInterface' ,'external' ,'sidebar' ,'console']
+--- "parent.drv"                 type=undefined value=undefined/null/closed
+--- 'parent.document._activexON' type=object value=undefined
+--- 'parent.document'       keys=['location']
+--- "parent.frames[0]"           type=undefined value=undefined/null/closed
+===
+---msie: parent:            keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" 
+,"frameElement" 
+,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" 
+,"sessionStorage" ,"top" ,"clipboardData" 
+,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+---msie :parent.self: keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" ,"frameElement" ,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" ,"sessionStorage" ,"top" ,"clipboardData" ,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+
+---msie :parent.frameElement: keys=["nextSibling" ,"onresizeend" ,"onrowenter" ,"aria-haspopup" ,"childNodes" ,"ondragleave" ,"canHaveHTML" ,"onbeforepaste" ,"ondragover" ,"onbeforecopy" ,"aria-disabled" ,"onpage" ,"recordNumber" ,"previousSibling" ,"nodeName" ,"onbeforeactivate" ,"accessKey" ,"currentStyle" ,"scrollLeft" ,"onbeforeeditfocus" ,"oncontrolselect" ,"aria-hidden" ,"onblur" ,"hideFocus" ,"clientHeight" ,"style" ,"onbeforedeactivate" ,"dir" ,"aria-expanded" ,"onkeydown" ,"nodeType" ,"ondragstart" ,"onscroll" ,"onpropertychange" ,"ondragenter" ,"id" ,"aria-level" ,"onrowsinserted" ,"scopeName" ,"lang" ,"onmouseup" ,"aria-busy" ,"oncontextmenu" ,"language" ,"scrollTop" ,"offsetWidth" ,"onbeforeupdate" ,"onreadystatechange" ,"onmouseenter" ,"filters" ,"onresize" ,"isContentEditable" ,"aria-checked" ,"aria-readonly" ,"oncopy" ,"onselectstart" ,"scrollHeight" ,"onmove" ,"ondragend" ,"onrowexit" ,"lastChild" ,"aria-secret" ,"onactivate" ,"canHaveChildren" ,"onfocus" ,"onfocusin" ,"isMultiLine" ,"onmouseover" ,"offsetTop" ,"oncut" ,"parentNode" ,"tagName" ,"className" ,"onmousemove" ,"title" ,"role" ,"behaviorUrns" ,"onfocusout" ,"onfilterchange" ,"disabled" ,"parentTextEdit" ,"ownerDocument" ,"offsetParent" ,"aria-posinset" ,"ondrop" ,"ondblclick" ,"onrowsdelete" ,"tabIndex" ,"onkeypress" ,"aria-relevant" ,"onlosecapture" ,"innerText" ,"aria-live" ,"parentElement" ,"ondeactivate" ,"aria-labelledby" ,"aria-pressed" ,"children" ,"ondatasetchanged" ,"ondataavailable" ,"aria-invalid" ,"onafterupdate" ,"nodeValue" ,"onmousewheel" ,"onkeyup" ,"readyState" ,"onmovestart" ,"aria-valuenow" ,"aria-selected" ,"onmouseout" ,"aria-owns" ,"aria-valuemax" ,"onmoveend" ,"contentEditable" ,"document" ,"firstChild" ,"sourceIndex" ,"outerText" ,"isTextEdit" ,"isDisabled" ,"oncellchange" ,"runtimeStyle" ,"scrollWidth" ,"aria-valuemin" ,"onlayoutcomplete" ,"onhelp" ,"attributes" ,"offsetHeight" ,"onerrorupdate" ,"onmousedown" ,"clientTop" ,"aria-setsize" ,"clientWidth" ,"onpaste" ,"tagUrn" ,"onmouseleave" ,"onclick" ,"outerHTML" ,"ondrag" ,"aria-controls" ,"onresizestart" ,"aria-flowto" ,"ondatasetcomplete" ,"aria-required" ,"clientLeft" ,"aria-describedby" ,"all" ,"onbeforecut" ,"innerHTML" ,"aria-activedescendant" ,"aria-multiselectable" ,"offsetLeft" ,"frameSpacing" ,"noResize" ,"onload" ,"height" ,"marginHeight" ,"border" ,"longDesc" ,"src" ,"frameBorder" ,"borderColor" ,"dataFormatAs" ,"width" ,"dataSrc" ,"allowTransparency" ,"contentDocument" ,"name" ,"contentWindow" ,"marginWidth" ,"dataFld" ,"scrolling" ,"TARGET"]
+---msie :parent.frameElement.parentElement: keys=["nextSibling" ,"onresizeend" ,"onrowenter" ,"aria-haspopup" ,"childNodes" ,"ondragleave" ,"canHaveHTML" ,"onbeforepaste" ,"ondragover" ,"onbeforecopy" ,"aria-disabled" ,"onpage" ,"recordNumber" ,"previousSibling" ,"nodeName" ,"onbeforeactivate" ,"accessKey" ,"currentStyle" ,"scrollLeft" ,"onbeforeeditfocus" ,"oncontrolselect" ,"aria-hidden" ,"onblur" ,"hideFocus" ,"clientHeight" ,"style" ,"onbeforedeactivate" ,"dir" ,"aria-expanded" ,"onkeydown" ,"nodeType" ,"ondragstart" ,"onscroll" ,"onpropertychange" ,"ondragenter" ,"id" ,"aria-level" ,"onrowsinserted" ,"scopeName" ,"lang" ,"onmouseup" ,"aria-busy" ,"oncontextmenu" ,"language" ,"scrollTop" ,"offsetWidth" ,"onbeforeupdate" ,"onreadystatechange" ,"onmouseenter" ,"filters" ,"onresize" ,"isContentEditable" ,"aria-checked" ,"aria-readonly" ,"oncopy" ,"onselectstart" ,"scrollHeight" ,"onmove" ,"ondragend" ,"onrowexit" ,"lastChild" ,"aria-secret" ,"onactivate" ,"canHaveChildren" ,"onfocus" ,"onfocusin" ,"isMultiLine" ,"onmouseover" ,"offsetTop" ,"oncut" ,"parentNode" ,"tagName" ,"className" ,"onmousemove" ,"title" ,"role" ,"behaviorUrns" ,"onfocusout" ,"onfilterchange" ,"disabled" ,"parentTextEdit" ,"ownerDocument" ,"offsetParent" ,"aria-posinset" ,"ondrop" ,"ondblclick" ,"onrowsdelete" ,"tabIndex" ,"onkeypress" ,"aria-relevant" ,"onlosecapture" ,"innerText" ,"aria-live" ,"parentElement" ,"ondeactivate" ,"aria-labelledby" ,"aria-pressed" ,"children" ,"ondatasetchanged" ,"ondataavailable" ,"aria-invalid" ,"onafterupdate" ,"nodeValue" ,"onmousewheel" ,"onkeyup" ,"readyState" ,"onmovestart" ,"aria-valuenow" ,"aria-selected" ,"onmouseout" ,"aria-owns" ,"aria-valuemax" ,"onmoveend" ,"contentEditable" ,"document" ,"firstChild" ,"sourceIndex" ,"outerText" ,"isTextEdit" ,"isDisabled" ,"oncellchange" ,"runtimeStyle" ,"scrollWidth" ,"aria-valuemin" ,"onlayoutcomplete" ,"onhelp" ,"attributes" ,"offsetHeight" ,"onerrorupdate" ,"onmousedown" ,"clientTop" ,"aria-setsize" ,"clientWidth" ,"onpaste" ,"tagUrn" ,"onmouseleave" ,"onclick" ,"outerHTML" ,"ondrag" ,"aria-controls" ,"onresizestart" ,"aria-flowto" ,"ondatasetcomplete" ,"aria-required" ,"clientLeft" ,"aria-describedby" ,"all" ,"onbeforecut" ,"innerHTML" ,"aria-activedescendant" ,"aria-multiselectable" ,"offsetLeft" ,"frameSpacing" ,"onbeforeprint" ,"name" ,"border" ,"onbeforeunload" ,"onafterprint" ,"borderColor" ,"onunload" ,"cols" ,"frameBorder" ,"onload" ,"rows"]
+---
+
+---msie: parent.frames:     keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" ,"frameElement" ,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" ,"sessionStorage" ,"top" ,"clipboardData" ,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+---msie :parent.document:   keys=["namespaces" ,"lastModified" ,"onstorage" ,"parentNode" ,"onstoragecommit" ,"nodeType" ,"fileCreatedDate" ,"onbeforeeditfocus" ,"bgColor" ,"oncontextmenu" ,"onrowexit" ,"embeds" ,"scripts" ,"onactivate" ,"mimeType" ,"alinkColor" ,"onmousemove" ,"compatible" ,"onselectstart" ,"oncontrolselect" ,"body" ,"protocol" ,"onkeypress" ,"onrowenter" ,"onmousedown" ,"vlinkColor" ,"URL" ,"onreadystatechange" ,"doctype" ,"onbeforedeactivate" ,"applets" ,"fileModifiedDate" ,"onmouseover" ,"dir" ,"media" ,"defaultCharset" ,"firstChild" ,"plugins" ,"onafterupdate" ,"ondragstart" ,"oncellchange" ,"cookie" ,"documentElement" ,"nextSibling" ,"nameProp" ,"referrer" ,"ondatasetcomplete" ,"onmousewheel" ,"onerrorupdate" ,"onselectionchange" ,"lastChild" ,"ondblclick" ,"onkeyup" ,"location" ,"forms" ,"title" ,"onrowsinserted" ,"previousSibling" ,"compatMode" ,"onmouseup" ,"onkeydown" ,"onrowsdelete" ,"documentMode" ,"onfocusout" ,"fgColor" ,"ondatasetchanged" ,"onmouseout" ,"parentWindow" ,"nodeName" ,"onpropertychange" ,"onstop" ,"onhelp" ,"linkColor" ,"onbeforeactivate" ,"images" ,"readyState" ,"frames" ,"all" ,"onbeforeupdate" ,"onclick" ,"childNodes" ,"onfocusin" ,"anchors" ,"selection" ,"fileUpdatedDate" ,"domain" ,"security" ,"fileSize" ,"ownerDocument" ,"ondataavailable" ,"styleSheets" ,"nodeValue" ,"attributes" ,"activeElement" ,"implementation" ,"links" ,"URLUnencoded" ,"ondeactivate"]
+---msie :parent.frames.document: keys=["namespaces" ,"lastModified" ,"onstorage" ,"parentNode" ,"onstoragecommit" ,"nodeType" ,"fileCreatedDate" ,"onbeforeeditfocus" ,"bgColor" ,"oncontextmenu" ,"onrowexit" ,"embeds" ,"scripts" ,"onactivate" ,"mimeType" ,"alinkColor" ,"onmousemove" ,"compatible" ,"onselectstart" ,"oncontrolselect" ,"body" ,"protocol" ,"onkeypress" ,"onrowenter" ,"onmousedown" ,"vlinkColor" ,"URL" ,"onreadystatechange" ,"doctype" ,"onbeforedeactivate" ,"applets" ,"fileModifiedDate" ,"onmouseover" ,"dir" ,"media" ,"defaultCharset" ,"firstChild" ,"plugins" ,"onafterupdate" ,"ondragstart" ,"oncellchange" ,"cookie" ,"documentElement" ,"nextSibling" ,"nameProp" ,"referrer" ,"ondatasetcomplete" ,"onmousewheel" ,"onerrorupdate" ,"onselectionchange" ,"lastChild" ,"ondblclick" ,"onkeyup" ,"location" ,"forms" ,"title" ,"onrowsinserted" ,"previousSibling" ,"compatMode" ,"onmouseup" ,"onkeydown" ,"onrowsdelete" ,"documentMode" ,"onfocusout" ,"fgColor" ,"ondatasetchanged" ,"onmouseout" ,"parentWindow" ,"nodeName" ,"onpropertychange" ,"onstop" ,"onhelp" ,"linkColor" ,"onbeforeactivate" ,"images" ,"readyState" ,"frames" ,"all" ,"onbeforeupdate" ,"onclick" ,"childNodes" ,"onfocusin" ,"anchors" ,"selection" ,"fileUpdatedDate" ,"domain" ,"security" ,"fileSize" ,"ownerDocument" ,"ondataavailable" ,"styleSheets" ,"nodeValue" ,"attributes" ,"activeElement" ,"implementation" ,"links" ,"URLUnencoded" ,"ondeactivate"]
+---msie :parent.window:     keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" ,"frameElement" ,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" ,"sessionStorage" ,"top" ,"clipboardData" ,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+---msie :parent.frames.frames: keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" ,"frameElement" ,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" ,"sessionStorage" ,"top" ,"clipboardData" ,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+---msie :parent.frames.document.frames: keys=["status" ,"onresize" ,"onmessage" ,"parent" ,"onhashchange" ,"defaultStatus" ,"name" ,"history" ,"maxConnectionsPerServer" ,"opener" ,"location" ,"screenLeft" ,"document" ,"onbeforeprint" ,"screenTop" ,"clientInformation" ,"onerror" ,"onfocus" ,"event" ,"onload" ,"onblur" ,"window" ,"closed" ,"screen" ,"onscroll" ,"length" ,"frameElement" ,"self" ,"onunload" ,"onafterprint" ,"navigator" ,"frames" ,"sessionStorage" ,"top" ,"clipboardData" ,"external" ,"onhelp" ,"offscreenBuffering" ,"localStorage" ,"onbeforeunload"]
+---
