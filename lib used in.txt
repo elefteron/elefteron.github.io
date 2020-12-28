@@ -1,0 +1,12 @@
+some files from ../lib/ are used by projects:
+    clock-24+.htm
+    fontorg-makecat.htm
+    index.Bible-bg.2013.htm
+    x-widget.htm - clock, drv-info
+other project dont use ../lib files:
+    CharMap-table2.htm
+    fontorg-catalog.htm
+    icard2-ea+.htm
+    proj.htm
+    SVC.htm
+    x-widget.htm - kalendar
