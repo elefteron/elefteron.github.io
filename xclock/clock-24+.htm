@@ -10,6 +10,10 @@
 			width:150px; height:36;
   font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
           }
+  .centered { /* https://css-tricks.com/examples/CSSCentering/ */
+      position: fixed; top:50%; left:50%;
+      transform: translate(-50%, -50%);
+            }
     </style>
     <script src="clock.js"></script> 
     <script src="../lib/loader.js"></script> 
@@ -123,7 +127,7 @@
 <BODY vLink="cyan" hlink="lime" link="#87CEEB" 
 bgColor="#000000" text="cyan" textsize="3" 
 marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
-<span id="layout.clock"></span>
+<span id="layout.clock" class="centered "></span>
 <script>
   window.onload=clock_show; // body onLoad="clock_show()" 
   /*  *-/ window.onerror=_load._err; /* not show some syntax errors */
