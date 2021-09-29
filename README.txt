@@ -5,9 +5,9 @@ project        : condition, err
 `icard`        : ok
 `cv`           : --
 
-`SVC`          : ok, 
-`Bible_bg`     : ok, 
-`FontOrg`      : ok, 
+`SVC`          : ok
+`Bible_bg`     : 2021-09 find not work 
+`FontOrg`      : ok
 `CharMap`      : ok
 
 `x14_widget`   : ok, x14/drv break iframe
