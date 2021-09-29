@@ -1,4 +1,4 @@
-_load._new('drv-info.js')
+load_new('scr/drv-info.js')
   { // ---global,cfg:
     var rsz=0; 
     var dbg=1;
@@ -173,4 +173,4 @@ _load._new('drv-info.js')
 // for(i=0;i<frames.length;i++){window.open(frames[i].location);}eval();
 // for(i=0;i<frames.length;i++){log('frame='+i+' location='+frames[i].location+eol+br);}
 */  
-_load._end()
+load_end()

@@ -1,4 +1,4 @@
-_load._new('scr/addDrv.js');
+load_new('scr/addDrv.js');
 {// globals:
   var DriveList=[]; var Drives=-1; var drvN=-1;
   var tfu_sum=[0,0,0];
@@ -65,4 +65,4 @@ function addDrv(vol){ // -> DriveList[Drives][col]=[val,bg,fg,aln]
   if (volNam>voll_) voll_=volNam.length;
   if(dbg>1) out(log_,br+'addDrv(): DriveList['+drv+']='+DriveList[drv]+br);
 }// --------------------------------------------------
-_load._end();
+load_end();

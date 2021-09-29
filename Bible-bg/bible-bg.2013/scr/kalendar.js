@@ -37,7 +37,7 @@ function dump_mdays(){ var s='<pre>';
   }
   return s+'</pre>'
 }// --
-function browserID(){
+function browserID(){ var brw='??'
 var brAgent=navigator.userAgent.toLowerCase();
 // ? gecko mozilla
   if(brAgent.indexOf('netscape' )>-1) brw='NS';

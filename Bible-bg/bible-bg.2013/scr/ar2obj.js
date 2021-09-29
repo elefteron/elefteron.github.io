@@ -37,7 +37,7 @@ function ar2obj(zNm_){
 
     buto+=adr+".bktitle='"+bufr+"'"+br
     buto+=adr+".bkname='"+zNm+"."+bNo2bNm(zNm,bNo)+"' //-- formated at " +dt1+br
-    buto+=adr+".bkdescr={src:'',enc:'windows-1251',lang:'bulgarian'}"+br
+    buto+=adr+".bkdescr={src:'',enc:'utf-8',lang:'bulgarian'}"+br
     
     buto+='{'+adr+".bknotes=[[// n,c,v,'(...)#^ (...)'"+br
     buto+="  ],[ 0,0,0,''"+br

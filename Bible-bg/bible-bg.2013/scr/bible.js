@@ -3,7 +3,7 @@ _load._new('scr/bible.js')
 /* ../Bible-bg.text/bible-bg.NT-01.bg.js:
  bible[NT_][1].bktitle='От Матея свето Евангелие'
  bible[NT_][1].bkname='NT.MAT' // NT.MAT== 1.1 
- bible[NT_][1].bkdescr={src:'св.Синод на БПЦ',enc:'windows-1251',lang:'bulgarian'}
+ bible[NT_][1].bkdescr={src:'св.Синод на БПЦ',enc:'utf-8',lang:'bulgarian'}
 {bible[NT_][1].bknotes=[[// ^n,c.v,'' 
   ],[ 1,1,0,'Това място е по превода на 70-те, ...'
   
@@ -40,7 +40,7 @@ var oh_=[''// oh_[bk] kb:1..50 /* --- hdr short names only from OT-hdr.js */
       // !used empty zero records for: [b=0] ,[b].bknotes[n=0] ,[b].bkchapters[c].vs[v=0]
       // ! but OT_=0, NT_=1
 // todo: bible[t][b].bkname='NT.MAT' // NT.MAT== 1.1 
-// todo: bible[t][b].bkdescr={src:'св.Синод на БПЦ',enc:'windows-1251',lang:'bulgarian'}
+// todo: bible[t][b].bkdescr={src:'св.Синод на БПЦ',enc:'utf-8',lang:'bulgarian'}
       for(var b=0; b<=bkRng[OT_].max; b++) 
         bible[OT_][b]={bktitle:''             ,bknotes:[[]/*,[n#,c#,v#,''] */]
                      ,bkchapters:[{chtitle:'',vs:     [[0,'']    /*,[v#,''] */      ]}]};

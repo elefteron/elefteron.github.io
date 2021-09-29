@@ -3,17 +3,18 @@
   <HEAD><title>clock-24+</title>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <style>
-    *     { padding:0; margin:0;  }
-  body    { background-color:#000; color:yellow; 
+  body    { background-color:#111111; color:yellow; 
 			text-align:center; vertical-align: middle;
             font-size:11pt; line-height:11.2pt; font-weight:bold; 
 			width:150px; height:36;
   font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
-          }
-  .centered { /* https://css-tricks.com/examples/CSSCentering/ */
+    }
+  .clk { /* https://css-tricks.com/examples/CSSCentering/  centered */
       position: fixed; top:50%; left:50%;
       transform: translate(-50%, -50%);
-            }
+    }
+  .dat { position: fixed; top:1%; left:50%;
+    }
     </style>
     <script src="clock.js"></script> 
     <script src="../lib/loader.js"></script> 
@@ -26,7 +27,6 @@
                  ,{sz:36,lh:28,fam:"'SF Digital Readout Heavy'"}
                  ,{sz:24,lh:24,fam:'Impact'}      
                  // big 
-            //   ,{sz:490,lh:450,fam:'Agency FB'}      // bold?
                  ,{sz:290,lh:250,fam:'Agency FB'}      // bold?
                  ,{sz:210,lh:200,fam:'Impact'}         //  
             //   ,{sz:210,lh:200,fam:'PoplarStd'}    //  ?
@@ -43,11 +43,11 @@
             //   ,{sz:210,lh:200,fam:'DejaVu Sans Mono'} //        
             //   ,{sz:210,lh:200,fam:'Anastasia'}      //        
                  ]
-		   ,fsel=4 
+		   ,fsel=4 // impact
 // The quick brown fox jumps over the lazy dog.
 // АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ абвгдежзийклмнопрстуфхцчшщъьюя
 // €§«»°©®№ ЁёЫыЭэ 0123456789
-	    if (big) fsel=5
+	    if (big) fsel=5 // Agency FB, 290
         var fnt_={fg:'#468c00',bg:'#111111' // #6495ED #4169E1 #87CEEB      // <- fg:,bg:?
                  ,fam:fnts[fsel].fam, sz:fnts[fsel].sz, lh:fnts[fsel].lh}          // <- 4,4,4         
            ,pic_={h:30,w:14,path:'pics.num/',pref:'w',ext:'.gif'}         // <- 30,14,w
@@ -127,30 +127,36 @@
 <BODY vLink="cyan" hlink="lime" link="#87CEEB" 
 bgColor="#000000" text="cyan" textsize="3" 
 marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
-<span id="layout.clock" class="centered "></span>
+<span id="layout.clock" class="clk">hh:mm</span>
+<span id="layout.date"  class="dat">yyyy.mm.dd</span>
 <script>
   window.onload=clock_show; // body onLoad="clock_show()" 
   /*  *-/ window.onerror=_load._err; /* not show some syntax errors */
   {// ----------------------------------         
     var       lay_=null, layID='layout.clock' 
        ,wrk=0,wrk_=null, wrkID='wrk.clock'
+//     ,dat=0,dat_=null, datID='dat.clock'
        ,log=1,log_=null, logID='log.clock';
-    var stl='margin:0px;padding:0px;overflow:auto;border:none;'
-	       +' text-align:left; vertical-align:middle;'// border:1px inset;
+    var stl='  width: 800px;border: 1px solid #111111;margin:0px; padding:0px; '
+	       +' text-align:center; vertical-align:middle;'
+           // border:1px inset; border:none; overflow:auto; line-height:100%;
     var wlog=500; // if(!_iex) whr=w// (w+margin*2+padding*2)
     lay_=            document.getElementById(layID)
     var box=make_box(
     [{no:wrk,id:wrkID,t:'row' ,w:w,h:h   ,u:'px',bg:'#000',st:stl} // w:200 bg:'#222'
+//  ,{no:dat,id:datID,t:'row' ,w:w,h:h   ,u:'px',bg:'#000',st:stl} // w:200 bg:'#222'
     ,{no:log,id:logID,t:'row' ,w:w,h:200 ,u:'px',bg:'#333',st:stl  
 	   ,sh:shell_line(logID,250,9,'#444','#88f')} // w:500,h:300
     ],layID)
 	
     wrk_=box[wrk].p_=document.getElementById(wrkID);  
+//  dat_=box[dat].p_=document.getElementById(datID);  
     log_=box[log].p_=document.getElementById(logID); 
     var islayok=true  
     if(undef(lay_) || lay_==null){ islayok=false; err+='"lay_" missing'+eol}
     if(undef(log_) || log_==null){ islayok=false; err+='"log_" missing'+eol}
     if(undef(wrk_) || wrk_==null){ islayok=false; err+='"wrk_" missing'+eol}
+//  if(undef(dat_) || dat_==null){ islayok=false; err+='"dat_" missing'+eol}
   }// ---------------------------------- 
   if(!islayok) alert(err); else{
     Hide(logID)
@@ -164,7 +170,8 @@ marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
     if (pos=='') pos='br';
     w=128; if (expbtn =='y') w=w+11;
     hk=0;  if (caption=='y') hk=25
-    h=28+28*(lines-1)+hk; // first line h=28 next lines h=20(depend on font size)
+    h=28*(lines)+hk; // first line h=28 next lines h=20(depend on font size)
+    h=50;
     x=0; y=0; 
     we=300; //  270 |286  err: right expand out of screen on tr|br
     if ((pos=='tr')||(pos='tl')) y=0; 
@@ -199,8 +206,7 @@ marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
     //     +'&nbsp;'+monname[tmm].substring(0,3)+'&nbsp;'+tyy
     //     +'&nbsp;('+(tdow)+')'
            +'&nbsp;('+dayname[tdow-1].substring(0,2)+')'
-    view=''//'&nbsp;'// --- view ---
-    view+=clock_place()                                      // -- #1. 
+    view=''+clock_place()                                      // -- #1. 
 /// if(expbtn=='y') view+=cbtn(btn,expsign(),'expand();')+expdate
 /// if(expbar!='')  view+='<tr '+expstyle+'"><td>'+expbar+'</td></tr>'
     out(wrk_,view)

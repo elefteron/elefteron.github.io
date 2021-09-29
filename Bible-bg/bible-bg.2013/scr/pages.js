@@ -187,7 +187,7 @@ function selgen(zNm,tstname,th,Tform){// selgen(Zavet.nt.name,'Нов' ,nh,'NTop
    // key_mod_str='&nbsp;&nbsp;'; 
    // if(zNo==Zavet.ot.num) key_mod_str+='ctrl-'; else key_mod_str+=' alt-';
    buf='<form '+par('name',Tform)
-   // +par('target','txt_')+par('method','post')//+par('encode','windows-1251')
+   // +par('target','txt_')+par('method','post')//+par('encode','utf-8')
    // +par('action',showfile+'#"OT[2.20.2-17]')/* !replaced by v4 */ 
       +'>'+eol
           +'<table border=0 bordercolor="#a0a0a4" cellpadding="0" cellspacing="0"'//+' width="'+mnu1wid+'"' //  Opera "330"  mz "310"
@@ -364,9 +364,9 @@ function pg_find(){       //~ 'find.htm'       err:?
 // ---
   function check_and_run(){// ->findTT(Zavet.nt.name,nt,nh);
     if(f1exp!=''){f=[]; lf=0;
-      if((Nbk>0) && (find_chk_and_load(Zavet.nt.name,nt,nh)) ) // parent.idx.nt, parent.idx.nh
+      if( (Nbk>0) && (find_chk_and_load(Zavet.nt.name,nt,nh)) ) // parent.idx.nt, parent.idx.nh
   	  findTT(Zavet.nt.name,nt,nh);// parent.idx.nt,parent.idx.nh
-      if((Obk>0) && (find_chk_and_load(Zavet.ot.name,ot,oh)) ) 
+      if( (Оbk>0) && (find_chk_and_load(Zavet.ot.name,ot,oh)) ) 
   	  findTT(Zavet.ot.name,ot,oh);
     }else{out(log_,errNOTODO+eot)}
   }// ---
@@ -1078,7 +1078,7 @@ var html='<FONT face="Tahoma" size="4">'
 +'<br> * продуктът работи с повечето браузъри'
 
 +'<br><span id="bej">'
-+'<br> 2.Оригиналният текст на кирилица (windows-1251) '
++'<br> 2.Оригиналният текст на кирилица (utf-8) '
 +'може да се чете като обикновен текст върху много слаби машини.</span> '
 +'<br> Текстът в два некомпресирани файла: '
 +lnk('NT.js','../Bible-bg.text/text/NT.js')+'=  945Kib '

@@ -1,4 +1,4 @@
-_load._new('scr/makeTbl.js')
+load_new('scr/makeTbl.js')
 // makeTbl->(val,bg,fg,aln)->OrdRowFmt('bdy',order_body)->
 // ->j=order_body[i]->col_(t ,bg[j],fg[j],aln[j])->tbl[tblrows]
 // global: var val=[],bg=[],fg=[],aln=[]; //, sz=[]
@@ -146,4 +146,4 @@ function usr_info(eb){
       ,bg1a ,fg1a,'left') // ,8
 	return row
 }// ---
-_load._end()
+load_end()

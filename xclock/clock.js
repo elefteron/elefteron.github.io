@@ -11,7 +11,7 @@ var clkID ="clock24"
    ,showsc=!true
 }// ---  
 var pics  =[]  // [0..9,b,c]=Image.src; b - blank, c - colon :
-function clock_set(ctyp_,p_,f_,showsc_,rms_){// -- #0 set
+function clock_set(ctyp_,p_,f_,showsc_,rms_){ // -- #0 set
   showsc=showsc_; rms=rms_;
   if(ctyp_=='pic'){ ctyp=ctyp_
     pic=p_

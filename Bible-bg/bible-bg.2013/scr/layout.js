@@ -1,4 +1,4 @@
-_load._new('scr/layout.js') 
+_load._new('scr/layout.js')
 /** borderStyle=['none'  ,'hidden','dotted','dashed','solid','double'   ,'inherit'
                 ,'groove','ridge' ,'inset' ,'outset'] // 3d, 
 // 3d - The effect depends on the border-color value
@@ -34,8 +34,8 @@ _load._new('scr/layout.js')
 // var clkwid =120
    var icoh=300, icow=200
 // --- on 1280/1024 use as 100% except fixed
-      var wcr=12,hcr=12            ,h1=24,hn=120;// fixed 
-      var w1=262,w2=620            ,h2=735, ht=h2-hn-2;
+      var wcr=12,hcr=12            ,h1=24,  hn=0;// hn=120 fixed 
+      var w1=260,w2=650            ,h2=740, ht=h2-hn-2; // w1=262 w2=620 h2=735
       var w=w1+wcr+w2, h=h1+hcr+h2
          ,vw_=920,  vh_=800 , k=1 
          ,vw =null, vh =null;
@@ -61,10 +61,10 @@ _load._new('scr/layout.js')
                                             
       box[_mnu].sz={w:w1 ,h:h1 };  box[_hdr].sz={w:w2,h:h1};
       box[_idx].sz={w:w1 ,h:h2 };  box[_txt].sz={w:w2,h:ht};
-                                   box[_not].sz={w:w2,h:hn};
+                                   box[_not].sz={w:w2,h:hn}; 
       box[_crv].sz={w:wcr,h:hcr};           
       box[_crh].sz={w:wcr,h:hcr};           
-      box[_log].sz={w:box[_frm].sz.w ,h:300}
+      box[_log].sz={w:box[_frm].sz.w ,h:800} 
       for(var i in box) box[i].sz.un='px'
       // verticalAlign:top | text-top | middle
       box[_frm].bg='#707070'; box[_frm].va='top'; box[_frm].bw='2px'; box[_frm].bc='#c0c0c0'; box[_frm].bs='ridge'; 
@@ -91,7 +91,7 @@ _load._new('scr/layout.js')
          var iframe='' //  targeting a link to open div box
          for(var i=_log; i<=_not; i++){// span,div,iframe
            var id=' id="'  +box[i].id+'"' // ,nm=' name="'+box[i].id+'"'
-              ,stl=' style="'+'white-space:nowrap;' // nowrap | normal
+              ,stl=' style="'+'white-space:normal;' // nowrap | normal
 //                +'vertical-align:top;'
                   +'overflow-x:auto;overflow-y:auto;' 
                   +'"' 
@@ -149,16 +149,16 @@ _load._new('scr/layout.js')
           buf+=b2+' backgroundColor:'+box[i].bg   +br
           buf+=b2+' verticalAlign  :'+box[i].va   +br
         }
-        if  (!undef(box[i].sz)){
-        /** ie err: invalid argument, ch35: */
-          if(!undef(box[i].sz.w)) box[i].plc.style.width          =box[i].sz.w+box[i].sz.un
-          if(!undef(box[i].sz.h)) box[i].plc.style.height         =box[i].sz.h+box[i].sz.un
+        if (!undef(box[i].sz.w) && !undef(box[i].sz.h)) {
+        /** ie err: 154,155: invalid argument, ch35: */
+          if(!undef(box[i].sz.w)) box[i].plc.style.width          =box[i].sz.w+box[i].sz.un;
+          if(!undef(box[i].sz.h)) box[i].plc.style.height         =box[i].sz.h+box[i].sz.un;
         }                                    
-        if  (!undef(box[i].bw  )) box[i].plc.style.borderWidth    =box[i].bw // border-width: 1px;
-        if  (!undef(box[i].bs  )) box[i].plc.style.borderStyle    =box[i].bs // border-style: solid
-        if  (!undef(box[i].bc  )) box[i].plc.style.borderColor    =box[i].bc // border-color: black; 
-        if  (!undef(box[i].bg  )) box[i].plc.style.backgroundColor=box[i].bg
-        if  (!undef(box[i].va  )) box[i].plc.style.verticalAlign  =box[i].va
+        if  (!undef(box[i].bw  )) box[i].plc.style.borderWidth    =box[i].bw; // border-width: 1px;
+        if  (!undef(box[i].bs  )) box[i].plc.style.borderStyle    =box[i].bs; // border-style: solid
+        if  (!undef(box[i].bc  )) box[i].plc.style.borderColor    =box[i].bc; // border-color: black; 
+        if  (!undef(box[i].bg  )) box[i].plc.style.backgroundColor=box[i].bg;
+        if  (!undef(box[i].va  )) box[i].plc.style.verticalAlign  =box[i].va;
         buf+=br
       }; 
       if(dbg>1) out(log_,htm_(['code','',buf])+br)

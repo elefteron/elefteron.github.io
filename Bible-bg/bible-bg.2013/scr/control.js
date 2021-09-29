@@ -43,7 +43,7 @@ function bcvNo2val(zNm){      // ..nav bcvNo2val
   return zNm+"b_.value=bNo;"  +zNm+"c_.value=cNo; "
         +zNm+"v1_.value=vNo1;"+zNm+"v2_.value=vNo2;"
         +"var bNm=bNo2bNm('"+zNm+"',bNo);"
-        +zNm+"bcv_.value=bcv2str(zNm,bNo,cNo,vNo1,vNo2);"
+        +zNm+"bcv_.value=bcv2str('"+zNm+"',bNo,cNo,vNo1,vNo2);"
 }// ---
 function bcvgo(zNm,obj,op){// 2.nav bcvgo  -> bcvNo2val
 // obj: {Bgo|Cgo|Vgo}(zNm,b,c,v,op)->bNo,cNo,vNo1,vNo2

@@ -1,4 +1,4 @@
-_load._new("fs-data.js"); 
+load_new("scr/fs-data.js"); 
    var timescan=[2013,4,7,22,50]; // by drvinfo
    var UserName="elefter"; 
    var ComputerName="RESET4"; 
@@ -14,4 +14,4 @@ _load._new("fs-data.js");
          ,'volID':"S20-p1",       'volSER':"D450-6214",fs:"NTFS" ,drvtype:"fixed"}) 
    addDrv({'ord_':4,'drv':"H",free: 5254291456,size:14780792832
          ,'volID':"S20-P2",       'volSER':"8094-B598",fs:"NTFS" ,drvtype:"fixed"}) 
-_load._end() 
+load_end() 

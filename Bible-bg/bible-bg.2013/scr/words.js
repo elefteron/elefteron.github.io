@@ -167,7 +167,7 @@ function countwords(zNm,bMin_,bMax_,win,ofmt){// win=1:ask, ofmt=js|htm
   var hdr=''
   if(ofmt=='htm'){
     hdr='<html><head><title>Bible-BG bookwords<\/title>\n'
-       +'<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">\n'
+       +'<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n'
        +'<style>\n'
        +"*{font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva;}"
        +'a:hover{color:black;background-color:gold;}\n<\/style>\n'

@@ -1,4 +1,4 @@
-_load._new('scr/fs.js');
+load_new('scr/fs.js');
 {// global
     var os=''; var root=""; var ComputerName=""; var UserName="";  
     var timescan=''; 
@@ -30,4 +30,4 @@ var PutDriveListToFile=function(fname,drv){
   buf+='_load_end()'+eol+br
   if(dbg>1) out(log_,buf) // open,write,close?
 }// -------------------------------------------------- 
-_load._end()
+load_end()

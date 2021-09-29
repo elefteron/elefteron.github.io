@@ -1,3 +1,4 @@
+_load._new('scr/web-colors.js')
 var lclr=-1; color=[]//new Array();
 function adclr(n,c){// NAME, RGB_Value
   lclr++; color[lclr]=[]//new Array(2);  
@@ -135,3 +136,4 @@ function showcolors(){ var bg='708090', fg='000000', fg2='ffffff',h='',s,n;
   return(s+'</table>') // </xmp>
 }//-------------------------- initcolors(); showcolors()
 initcolors(); //showcolors(); showallcolors()
+_load._end()

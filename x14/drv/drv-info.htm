@@ -5,19 +5,22 @@
   <meta name="author"             content="mailto:elefter@abv.bg" />  
   <link  href=   "scr/drv-info-1.css" rel="stylesheet" type="text/css" />
   <script src="../../lib/loader.js"></script>
-  <script> var dbg=0,dir_scr='scr/', dir_lib='../../lib/', ext_js='.js', ext_css='.css';
+
+  <script> _iex=false; dbg=0; // console.trace('drvinfo')
+  //   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  var _scr='scr/', _lib='../../lib/'//, ext_js='.js', ext_css='.css';
   { var drvScripts=
-     [//{path:dir_lib,file:'loader'     ,ext:ext_js } 
-       ,{path:dir_lib,file:'fs'         ,ext:ext_js } 
-       ,{path:dir_scr,file:'drv-info'   ,ext:ext_js } 
-       ,{path:dir_lib,file:'windows'    ,ext:ext_js }
-       ,{path:dir_lib,file:'date'       ,ext:ext_js }
-       ,{path:dir_lib,file:'math'       ,ext:ext_js }
-       ,{path:dir_scr,file:'makeTbl'    ,ext:ext_js } // makeTbl(),usr_info(eb) 
-       ,{path:dir_scr,file:'addDrv'     ,ext:ext_js } // addDrv()  -> DriveList[Drives][1..8][]
-       ,{path:dir_scr,file:'fs'         ,ext:ext_js } // GetDriveList() -> addDrv() ->DriveList[]
-       ,{path:dir_scr,file:'fs-data'    ,ext:ext_js } //                -> addDrv() ->DriveList[]                           
-       ,{path:dir_scr,file:'drv-info-1' ,ext:ext_css} 
+     [//{path:_lib,file:'loader'     ,ext:'.js' } 
+       ,{path:_lib,file:'fs'         ,ext:'.js' } 
+       ,{path:_scr,file:'drv-info'   ,ext:'.js' } 
+       ,{path:_lib,file:'windows'    ,ext:'.js' }
+       ,{path:_lib,file:'date'       ,ext:'.js' }
+       ,{path:_lib,file:'math'       ,ext:'.js' }
+       ,{path:_scr,file:'makeTbl'    ,ext:'.js' } // makeTbl(),usr_info(eb) 
+       ,{path:_scr,file:'addDrv'     ,ext:'.js' } // addDrv()  -> DriveList[Drives][1..8][]
+       ,{path:_scr,file:'fs'         ,ext:'.js' } // GetDriveList() -> addDrv() ->DriveList[]
+       ,{path:_scr,file:'fs-data'    ,ext:'.js' } //                -> addDrv() ->DriveList[]                           
+       ,{path:_scr,file:'drv-info'   ,ext:'.css'} 
        ]
     with (drvScripts[9]) {var _fd=path+file+ext} //='fs-data.js';
   }

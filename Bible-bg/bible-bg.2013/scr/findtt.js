@@ -46,7 +46,7 @@ function findTT(zNm,tt,th){//inload='findTT'
 
 /* export as array f[] to make smaller output! */ a=[]
    a= '<html><head><title>Bible-BG † find"'+fndstr+'"</title> \n'
-     +'<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> \n'
+     +'<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> \n'// windows-1251
      +sopn+' src="../lib/paths-load.js">'+scls+'\n'
      +sopn+'>'+'dbg=1;var  scr_="scr/";'
           +'file=[scr_+"Bible-BG.css",scr_+"cfg.js"      ,scr_+"colors.js"   ,scr_+"utils.js"' 
