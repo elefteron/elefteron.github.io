@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head><title>Bible-bg</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="Bible-bg" name="description" />
+  <meta content="mailto:elefter@abv.bg" name="author"      />
+  <link href ="Bible-bg.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <link href ="Bible-bg.ico" type="image/x-icon" rel ="icon"          />
+  <meta name ="keywords"     content="bible-bg,bible,bg,orthodox">
+  <script src="scr/loader.js"></script>
+  <script>
+  var progID ='Bible-bg'
+  var progVer=' v3+[2013.05] ' // [2009.08,2010.11,2013.05]
+//-- bible_bg_web, bible_bg_mail, _ver(st,bg,fg)
+  var bible_bg_web =''
+  //'<a title="Bible-BG.zip '  +progID+progVer
+  //+'" href="http://www.elefter.hit.bg/down/Bible-BG.zip">Bible-BG.zip</a>'
+  var bible_bg_mail='<a title="elefter@abv.bg '+progVer
+    +'" href="mailto:elefter@abv.bg">уеб поща</a>'
+  function _ver(cs_,cb_,cf_){
+    function t_(t1){t=''; if(t1!=undefined && t1!=null) t=t1; return t} // '' or valid string
+  	cs=t_(cs_); cb=t_(cb_); cf=t_(cf_); eb=ef='';
+  	if(cs=='')cs='-1';
+  	if(cb=='')cb='#000000'; {cb='<span '+par('bgcolor',cb)+'>'; eb='</span>'}
+  	if(cf=='')cf='#102030'; {cf='<font '+par('color'  ,cf)+par('size',cs)+'>'; ef='</font>'}
+  	return(cb+cf+progID+progVer+ef+eb)
+  }// ---
+  var dbg=1 // for load
+// ---
+  var model=-1 //  current DOM, find id, change attr
+  if (document.getElementById) model=0; /* mz document.getElementById(id).*1 */
+  else if (document.layers)    model=1; /* ??                document[id].*2 */
+  else if (document.all)       model=2; /* ??            document.all[id].*3 */
+// ---
+   var showagent =false; /* *-/ showagent =true /* */
+   var showjstest=false; /* *-/ showjstest=true /* */
+   var stat      =false; /* *-/ stat      =true /* */ // stat=NT:27.260.7954 OT:50.1101.29129
+// ---
+   var wait=true; // false  true
+   var eol='\n' /* \x0D \x0A cr+lf */
+   var eot=br='<br>'+eol
+   var sp=' ';
+// ---
+  var //-- paths realtive to project root: F:\elefter.dev\Bible-bg\Bible-bg.2013\
+      rootpath =   ''               
+     ,scrpath  =   'scr/'
+     ,libpath  =   'scr/'// '../lib/'
+     ,pathpages=''// pathpages+'Bible-BG.show.htm'
+     ,bibpath  ='../Bible-bg.text/'    
+     ,pathicons='../Bible.icons/'
+// --var --: getdata pathpages bibpath0 scrpath pathicons
+// --used--: idx     idx       load     idx     utils
+   var getdata     ='js'  // outfmt(txt) is slow for big files -> ask to stop script
+// var getdata     ='xml' // mz/ff waiting after end !?  -- very fast, IE/FF/MZ only
+//*var getdata     ='txt' // ie+activeX only - get txt file but also work slowly
+// -----------------------------------------------------------------------------
+  {
+  var files=
+  [{path:libpath ,file:'loader'           ,ext:'.js' }
+  ,{path:libpath ,file:'fs'               ,ext:'.js' }
+  ,{path:scrpath ,file:'colors'           ,ext:'.js' }
+  ,{path:scrpath ,file:'utils'            ,ext:'.js' }
+  ,{path:scrpath ,file:'links'            ,ext:'.js' }
+  ,{path:scrpath ,file:'album-ikoni'      ,ext:'.js' }
+
+  ,{path:scrpath ,file:'clock'            ,ext:'.js' }
+  ,{path:scrpath ,file:'pesah'            ,ext:'.js' } // kal
+  ,{path:scrpath ,file:'kalendar hdr'     ,ext:'.js' } // kal
+  ,{path:scrpath ,file:'kalendar cfg'     ,ext:'.js' } // kal
+  ,{path:scrpath ,file:'kalendar'         ,ext:'.js' } // kal
+
+  ,{path:scrpath ,file:'layout'           ,ext:'.js' }
+  ,{path:scrpath ,file:'pages'            ,ext:'.js' }
+  ,{path:scrpath ,file:'control'          ,ext:'.js' }
+
+  ,{path:scrpath ,file:'bible'            ,ext:'.js' }
+  ,{path:scrpath ,file:"ar2obj"           ,ext:".js" }
+  
+  ,{path:scrpath ,file:'ot-hdr'           ,ext:'.js' }
+  ,{path:scrpath ,file:'nt-hdr'           ,ext:'.js' }
+
+  ,{path:scrpath ,file:"arrdef"           ,ext:".js" } // 0.bible old fmt
+   // -- new testament
+  ,{path:bibpath,file:'bible-bg.NT-01'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-02'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-03'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-04'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-05'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-06'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-07'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-08'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-09'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-10'   ,ext:'.js' }
+  
+  ,{path:bibpath,file:'bible-bg.NT-11'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-12'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-13'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-14'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-15'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-16'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-17'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-18'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-19'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-20'   ,ext:'.js' }
+                            
+  ,{path:bibpath,file:'bible-bg.NT-21'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-22'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-23'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-24'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-25'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-26'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.NT-27'   ,ext:'.js' }
+   // -- old testament                         
+  ,{path:bibpath,file:'bible-bg.OT-01'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-02'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-03'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-04'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-05'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-06'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-07'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-08'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-09'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-10'   ,ext:'.js' }
+                         
+  ,{path:bibpath,file:'bible-bg.OT-11'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-12'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-13'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-14'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-15'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-16'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-17'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-18'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-19'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-20'   ,ext:'.js' }
+                          
+  ,{path:bibpath,file:'bible-bg.OT-21'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-22'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-23'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-24'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-25'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-26'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-27'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-28'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-29'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-30'   ,ext:'.js' }
+                           
+  ,{path:bibpath,file:'bible-bg.OT-31'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-32'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-33'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-34'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-35'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-36'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-37'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-38'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-39'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-40'   ,ext:'.js' }
+                        
+  ,{path:bibpath,file:'bible-bg.OT-41'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-42'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-43'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-44'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-45'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-46'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-47'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-48'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-49'   ,ext:'.js' }
+  ,{path:bibpath,file:'bible-bg.OT-50'   ,ext:'.js' }
+  // --
+  ,{path:scrpath ,file:"outfmt"           ,ext:".js" } // 0.
+  ,{path:scrpath ,file:"show"             ,ext:".js" } // 0.
+  ,{path:scrpath ,file:"findtt"           ,ext:".js" } // 0.
+  ,{path:scrpath ,file:"findres"          ,ext:".js" } // 0.
+  ,{path:scrpath ,file:"words"            ,ext:".js" } // 0.
+
+  ,{path:rootpath ,file:'Bible-bg'         ,ext:'.css'}
+  ,{path:rootpath ,file:'album'            ,ext:'.css'}
+  ]
+  }
+  </script>
+  <script>  _load._do(files)         </script>
+</head>
+<body
+  vLink="cyan" hlink="lime" link="#87CEEB"
+  bgColor="black" text="maroon" textsize="3"
+  marginwidth="5" marginheight="5" leftmargin="5" topmargin="5">
+
+  <span id="box"></span>
+  <span>
+    <hr width="870" size="9" color="#404040" align="center"
+        onClick="ShowHide('log')"
+        onmouseover="this.style.color='#8080f0'"
+        onmouseout ="this.style.color='#404040'"
+    />
+    <span id="log" width="860" height="900" border="1" scrolling="auto" align="left" bgColor="#c0b0a0"
+      style="white-space:normal;vertical-align:top; overflow-x:auto;overflow-y:auto;">
+    </span>
+  </span>
+
+  <script>
+/* *-/ window.onresize = function() { } /* */
+/* *-/ window.onerror=_load_err;        /* */
+    var islayok=true
+    var box_=document.getElementById('box');
+    if(undef(box_) || box_==null){ islayok=false
+      alert('layout "box" missing'); // stop?
+    }
+    var log_=document.getElementById('log');
+    if(undef(log_) || log_==null){ islayok=false
+      alert('layout "log" missing');
+    }
+
+    if(islayok) {
+      if(dbg>0 || _load._has_err()) out(log_,_load._list())
+      layout_make(box_) // -- div's in table | span's without table
+      islayok=layout_cfg(box_)
+    }
+    if(islayok) { Hide('log')
+      if(undef(nh_)) out(log_,'*** nh_[] undef'+br)
+      if(undef(oh_)) out(log_,'*** oh_[] undef'+br)
+      var html_buf={} // make html of pages
+      out(log_,'::: pg_mnu :::'+br)
+      html_buf.pg_mnu        =pg_mnu()
+      out(log_,'::: pg_idx :::'+br)
+      html_buf.pg_idx        =pg_idx()
+      out(log_,'::: pg_hdr :::'+br)
+      html_buf.pg_hdr        =pg_hdr()
+
+//    out(log_,'::: pg_sel_nt :::'+br)
+//    html_buf.pg_sel_nt     =pg_sel_nt()     // selgen('+','Нов' ,nh,'NTopen')
+//    out(log_,'::: pg_sel_ot :::'+br)
+//    html_buf.pg_sel_ot     =pg_sel_ot()     // selgen('-','Стар',oh,'OTopen')
+
+//    out(log_,'::: pg_idx_nt :::'+br)
+//    html_buf.pg_idx_nt     =pg_idx_nt()     // p+'books.htm#+' -- index NT
+//    out(log_,'::: pg_idx_ot :::'+br)
+//    html_buf.pg_idx_ot     =pg_idx_ot()     // p+'books.htm#-' -- index OT
+
+      out(log_,'::: pg_bib_list :::'+br)
+      // -- init-biblist
+      add_biblist(['OT','Пс'  , 1, 1]);// 1: 'Пс'  =22
+      add_biblist(['OT','Сир' , 1, 1]);// 2: 'Сир' =27
+      add_biblist(['NT','Иоан',20,28]);// 3: 'Иоан'= 4
+      add_biblist(['OT','Иер' ,36,29]);// 4: 'Иер' =29
+      add_biblist(['OT','2Пар',36,23]);// 5: '2Пар'=14
+      add_biblist(['OT','3Езд', 9,31]);// 6: '3Езд'=50
+      add_biblist(['OT','3Езд', 9,30]);// 7: '3Езд'=50
+  //  html_buf.pg_bib_list   =pg_bib_list()   // p+'biblist'       +'.htm'
+      // --
+      out(log_,'::: pg_theme_list :::'+br)
+      html_buf.pg_theme_list =pg_theme_list() // p+'themes'        +'.htm'
+      out(log_,'::: pg_find :::'+br)
+      html_buf.pg_find       =pg_find()       // p+'find'   +'.htm'
+      out(log_,'::: pg_welcome :::'+br)
+      html_buf.pg_welcome    =pg_welcome()    // p+'welcome'       +'.htm'
+      out(log_,'::: pg_10GodCom :::'+br)
+      html_buf.pg_10GodCom   =pg_10GodCom()   // p+'OT-10GodCom'   +'.htm'
+      out(log_,'::: pg_FaithSym :::'+br)
+      html_buf.pg_FaithSym   =pg_FaithSym()   // p+'NT-FaithSymbol'+'.htm'
+      out(log_,'::: pg_beatitudes :::'+br)
+      html_buf.pg_beatitudes =pg_beatitudes() // p+'NT-beatitudes' +'.htm'
+      out(log_,'::: pg_prayers :::'+br)
+      html_buf.pg_prayers    =pg_prayers()    // p+'NT-prayers'    +'.htm'
+      out(log_,'::: pg_album_icons :::'+br)
+      html_buf.pg_album_icons=pg_album_icons()// p+'ikons-album'   +'.htm'
+      out(log_,'::: pg_bib_urls :::'+br)
+      html_buf.pg_bib_urls  =pg_bib_urls()    // p+'links'         +'.htm'
+      out(log_,'::: pg_history :::'+br)
+      html_buf.pg_history    =pg_history()    // p+'history'       +'.htm' // !
+      out(log_,'::: pg_holydays :::'+br)
+      html_buf.pg_holydays   =pg_holydays()   // p+'NT-holydays'   +'.htm' // !
+      out(log_,'::: pg_kalendar :::'+br)
+      html_buf.pg_kalendar   =pg_kalendar()   // p+'kalendar-y'    +'.htm'
+      out(log_,'::: pg_web_clr :::'+br)
+      html_buf.pg_web_clr    =pg_web_clr()    // p+'web-clr'       +'.htm'
+      out(log_,'::: pg_about_this :::'+br)
+      html_buf.pg_about_this =pg_about_this() // p+'about'         +'.htm'
+      out(log_,'::: :::'+br)
+      // -- initial fill boxes (mnu_,idx_,hdr_,txt_) with their default pages
+      htmCont('mnu_',html_buf.pg_mnu)
+      htmCont('idx_',html_buf.pg_idx) // out(log_,'idx:'+br+htm_(['xmp','',idx_.innerHTML]))
+    }else{ var msg='*** layout config error ***'
+      out(log_,msg+br); alert(msg)
+    }//--
+// ---0.bible old format load test NT,OT:
+   if(dbg>0) out(log_,br+'load testament:'+br)// .nt-hdr.ot-hdr.arrdef.nt.ot.
+   var s1='nt[27][22][21] exists=',s2='\r\n<br>'
+   if(undef(nt) || undef(nt[27][22][21])) out(log_,s1+'NOT'+s2+br);
+   else out(log_,s1+'yes'+s2);
+   s1='ot[50][16][78] exists='
+   if(undef(ot) || undef(ot[50][16][78])) out(log_,s1+'NOT'+s2+br);
+   else out(log_,s1+'yes'+s2);
+   var err='', msg='неуспешно зареждане на ';
+
+   if(undef(nt) || nt==null || nt=='') err+=msg+'nt';
+   if(undef(ot) || ot==null || ot=='') err+=msg+'ot';
+   if(undef(nh) || nh==null || nh=='') err+=msg+'nh';
+   if(undef(oh) || oh==null || oh=='') err+=msg+'oh';
+   if(err!='') out(log_,'Грешка:'+err+br)
+// ---
+    out(log_,'::: work :::'+br)
+/* calendar table test *-/
+  var buf=''
+  for(var r=1; r<=5; r++){
+    for(var c=1; c<=7; c++){ var d=r+'.'+c
+      buf+=htm_(['span'
+         ,'id="'+d+'"'
+         +' style="border:1px solid maroon;'
+         +' line-height:14pt; font-size:11pt;'
+      // +' padding:0; margin:0; '
+         +'"'
+         +' onmouseover="this.style.border=\'1px solid lime\'"'
+         + ' onmouseout="this.style.border=\'1px solid gold\'"'
+         ,d])
+    }
+    buf+=br
+  }
+  out(txt_,htm_(['span',
+          ' style="border:1px solid cyan;'
+         +' padding:0; margin:0;" '
+         ,buf]))
+/* */
+   dbg=1 // for run
+// htmCont('hdr_',html_buf.pg_hdr); show_ymdhms(); // fill places of id`s='liveymd','livehms'
+   htmCont('txt_',html_buf.pg_welcome)
+// htmCont('txt_',showchap ('NT',3,10,27)) // :old; ,0,''
+// htmCont('txt_',show_verse(NT_,3,10,27)) // :new;
+  </script>
+</body></html>
