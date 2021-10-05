@@ -4,7 +4,7 @@ has 2 parts: utils and loader
 
 {// --- utils begin:
 // "use strict";
-var undef=function(v)        { return (typeof(v)=='undefined') } 
+var undef=function(v) { return (typeof(v)=='undefined') } 
 function isdef(s) {return typeof s!='undefined';}
 var par  =function(name,val) {var ok=(!undef(name) && !undef(val) && !(val=='' || val==null)) 
   if(ok) return (' '+name+'="'+val+'"') 
@@ -39,7 +39,7 @@ function os_br_en_ag(){ // -> _os,_engine,_browser - browser flags
   var _engines =['Trident' ,'Gecko'  ,'Presto','Khtml','AppleWebKit',]; 
   _mob=false;_iex=false;_saf=false;_kml=false;_net=false;_mon=false;_fox=false;_opr=false;_knq=false;_chr=false;_slm=false;_slp=false; 
   _os=''; _engine=''; _browser=''
-  var agent=navigator.userAgent ,a=agent.toLowerCase()
+  var agent=navigator.userAgent ,a=agent.toLowerCase() // .userAgent || .userAgentData 
 
   for(var i=0; i<=_engines.length-1; i++){
     if(a.indexOf(_engines[i])>-1) _engine+=_engines[i]+' ';	 
@@ -310,8 +310,7 @@ function obj_list(obj,name_){
   var drive_=roots.drv, rootloc_=roots.drv+roots.dir;
   var rootlocx_='\\elefter.dev\\my-dev+\\' // with \\ for activex    
 */}
-  var rootlocx_='' // 'F:/elefter.github.io'
-             // 'e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
+  var rootlocx_='' //'e:\\elefter.dev\\my-dev+\\' // with \\ for activex 
 /* box=_make_box(
     [{no:0,id:'hdr',t:'row'  ,w:___,h:___,u:'px',bg:'#______',fg:'#______',sh:'btn',st:''}
     ,{no:1,id:'idx',t:'col'  ,w:___,h:___,u:'px',bg:'#______',fg:'#______',sh:'btn',st:''}
@@ -331,7 +330,6 @@ function shell_line(id,w,h,c1,c2){// shell_line('log',100,9,'#444','#88f')
   return hr
 }
 function valid(x,k) { return (!undef(x) && x!=null && x!=k )}
-// ? valid(x,k) => (!undef(x) && x!=null && x!=k )
 function make_box(layout,to_id){// -> box[]
   var	defstl='margin:0 auto 0 auto;'    // outside box
             +'padding:0 0 0 0;'         // inside
@@ -339,25 +337,24 @@ function make_box(layout,to_id){// -> box[]
           //+'float:left;'
       ,box=[],lay_=document.getElementById(to_id)
       ,fatal=false, log=null
-  if(undef(lay_) || lay_==null || lay_==''){ fatal=true
-    msg='*** fatal: bad/empty id where to make_box(layout,to_id) -> box[]; `to_id`='
-    +to_id+br
+  if(undef(lay_) || lay_==null){ fatal=true
+    msg='*** fatal *** _make_box: missing layout id='+to_id+br
     sys(htm_(['div','id="log"',msg]))
-    return box // []
+    return box
   }
-  for(var i=0; i<=(layout.length-1); i++){ // var no=Number(i)
-    if(!valid(layout[i].id,'')) continue
+  for(var i=0; i<=(layout.length-1); i++){ var no=Number(i)
+    if(undef(layout[i].id) || layout[i].id==null || layout[i].id=='') continue
     var no=Number(i);    if(no<0)                    no=0
     var id=layout[i].id; if(id.indexOf('log')>=0)    log=no
     var t =layout[i].t;  if(!(t=='row' || t=='col')) t  ='row'
     box.push({'no':no,'id':id,'t':t ,p_:null,w:null,h:null,u:'px',sh:'',stat:false,st:'',bg:'',fg:''})
-    // st=margin,padding,border: a b c d;
-    if(valid(layout[i].w ,0 )) box[i].w  =layout[i].w ;  
-    if(valid(layout[i].h ,0 )) box[i].h  =layout[i].h ;  
-    if(valid(layout[i].u ,'')) box[i].u  =layout[i].u ; 
-    if(valid(layout[i].bg,'')) box[i].bg =layout[i].bg; 
-    if(valid(layout[i].fg,'')) box[i].fg =layout[i].fg; 
-    if(valid(layout[i].sh,'')) box[i].sh =layout[i].sh; 
+    
+    if(!undef(layout[i].w ) && layout[i].w !=null && layout[i].w !=0 ) box[i].w  =layout[i].w ;  
+    if(!undef(layout[i].h ) && layout[i].h !=null && layout[i].h !=0 ) box[i].h  =layout[i].h ;  
+    if(!undef(layout[i].u ) && layout[i].u !=null && layout[i].u !='') box[i].u  =layout[i].u ; 
+    if(!undef(layout[i].bg) && layout[i].bg!=null && layout[i].bg!='') box[i].bg =layout[i].bg; 
+    if(!undef(layout[i].fg) && layout[i].fg!=null && layout[i].fg!='') box[i].fg =layout[i].fg; 
+    if(!undef(layout[i].sh) && layout[i].sh!=null && layout[i].sh!='') box[i].sh =layout[i].sh; 
 
     { box[i].st=defstl
       if(box[i].w>0)    box[i].st+='width:' +box[i].w  +box[i].u +';'
@@ -365,7 +362,7 @@ function make_box(layout,to_id){// -> box[]
       if(box[i].h>0)    box[i].st+='height:'+box[i].h  +box[i].u +';'
       if(box[i].bg!='') box[i].st+='background-color:' +box[i].bg+';'
       if(box[i].fg!='') box[i].st+='color:'            +box[i].fg+';'
-      if(valid(layout[i].st,'')) box[i].st+=layout[i].st; 
+      if(!undef(layout[i].st) && layout[i].st!=null && layout[i].st!='') box[i].st+=layout[i].st; 
     }
     {if(box[i].t=='row' && no>0 && !_iex) box[i].sh+='<br>' 
       var tag='span';  if(box[i].t=='row') tag='div';
@@ -377,7 +374,7 @@ function make_box(layout,to_id){// -> box[]
     }
   }
   if(log==null || !box[log].stat){
-    msg='*** warning: make_box() log forced.'+br
+    msg='*** warning *** _make_box: log forced.'+br
     sys(htm_(['div','id="log"',msg]))
     box[log].p_=document.getElementById(box[log].id)
     box[log].stat=(box[log].p_==null)
@@ -386,9 +383,6 @@ function make_box(layout,to_id){// -> box[]
 }
 }// utils end. ----------------------------------------------------------
 
-os_br_en_ag()
-
-{// --- 
 /*'=MOL'  is horizontal mnu_,out_,log_ from top to bottom
   ':M=OL' is vertical mnu on left, horizontal out_,log_ on right
              <tr><td rowspan="2" valign="top">mnu</td><td>out</td></tr>
@@ -461,6 +455,17 @@ make_tbl=function(layout_,ext){// -> html
 var _load=_load || {}; 
 var _loader=function(){  // constructor _loader
 //-- this.a - public, var a - internal
+/** usage in each .js file ---
+  _load._new(filename) 
+  ...
+  _load._end() 
+--- **/
+/** usage in head of page, if prefer to load by _load([]) : ---
+<head>
+<script src="../lib/loader.js"></script>
+<script> _load._do(["styles.css",'work.js']); </script>
+</head>
+--- **/
 /** ----------==loadjs== -> _loadv
  browser      0  1  2  3  => _loadv  activex  engine
  msie         +  -  +  +  => 0,2,3   +        trident
@@ -697,48 +702,8 @@ function _load3    (i,_load_type){
 }// ---
 }//--
 _load=new _loader() // construct _load
-}// loader end. ----------------------------------------------------------
-/**
---- usage variant A:
-at begin of head: 
-  <head>
-    <script src="../lib/loader.js"></script>
-    <script> _load._do(["styles.css",'work.js',...]); </script>
-  </head>
-  
-at end of body: 
-  <body>
-  <script> 
-    if(_load._has_err()) log('load err');
-    log(_load._list);
-  script>
-  <body>
-
---- usage variant B: 
-at begin of head: 
-  <head>
-    <script src="filename.js"></script>
-    ... for each .js
-  </head>
-  
-in each .js
-  add before: _load._new("filename") 
-     
-  add at end: _load._end() 
-  
-at end of body: 
-  <body>
-  <script> 
-    if(_load._has_err()) log('load err');
-    log(_load._list);
-  script>
-  <body>
---- **/
-
-load_new=_load._new;
-load_end=_load._end;
-
-load_new('scr/loader.js') // _load._new
+//----------------------------------------------------------
+_load._new('scr/loader.js')
 /* test: *-/ out(log_,obj_list(_load,'_load')) 
 // [1] _load._has_err     :function(){...}
 // [2] _load._new         :function(_newfile){...}
@@ -747,4 +712,5 @@ load_new('scr/loader.js') // _load._new
 // [5] _load._do          :function(files_new){...}
 // [6] _load._make_layout :function(layout_,ext){...}
 /* */
-load_end(); //_load._end();
+os_br_en_ag()
+_load._end();
