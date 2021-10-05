@@ -1,0 +1,29 @@
+﻿/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow, .cycle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* pager */
+
+.cycle-pager { display: block; }
+
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+
+/* overlay */
+.cycle-overlay { 
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+
+.example-pager { text-align: center; width: 100%; z-index: 500; overflow: hidden; border: 0px solid red; height: 20px }
+.example-pager span { font-size: 50px; width: 16px; display: inline-block; color: #ddd; line-height:15px }
+.example-pager span.cycle-pager-active { color: #263D71; line-height: 15px}
+.example-pager > * { cursor: pointer;}
