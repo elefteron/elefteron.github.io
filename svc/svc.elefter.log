@@ -1,0 +1,13 @@
+{-- jobs:"C:/$desk/$svc.jobs/", at:'2021.11.18 23:27:02.54' made_by:'SVC-init.cmd' --} 
+
+... seria: 6000 ["190413_1","Praktiker Karti 20lv",20, "R19E","",5,1,6000,4]
+... zint-eps-list.csv save: path=C:/$desk/$svc.jobs/ file=eps/190413_1_Code-128_6000.zint-eps-list.csv
+... zint-eps-list.csv saved (barcode:20)
+... ind-pdf-list.csv save: path=C:/$desk/$svc.jobs/ file=pdf/190413_1_Code-128_1500x4.ind-pdf-list.csv
+... ind-pdf-list.csv saved (barcode:20)
+... 'svc-eps-make.cmd' begin 15:27:48 2021.11.21::  user:elefter 
+... "F:\elefter.dev\svc-8\svc-eps-make.cmd" 20 eps C:\$desk\$svc.jobs\eps\190413_1_Code-128_6000.zint-eps-list.csv
+... 'svc-eps-make.cmd' final 15:27:57 dur:0:00:09,52
+... eps repl start: 15:28:3
+... eps repl  stop: 15:28:54, 6000 replaces in 6000 files err:0
+
