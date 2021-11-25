@@ -24,19 +24,22 @@
   * ActiveX: OS environment access, run batch, file system i/o - save/read data as *.csv
    (ActiveXObject(): "Scripting.FileSystemObject","WScript.Network","WScript.Shell")
 
-### 4. Batch actions:
+### 4. Batch actions (from src folder):
   * 'svc-init.bat': produce
-    - file '$svc.usr' in run folder
+    - make 'svc_usr.js' in src folder
     - check & make tree structure (where @ is %homedrive% usually c:)
-      '@\$desk\#svc.jobs\'      for '$svc_%user%.log and '
-      '@\$desk\#svc.jobs\#data' for final .eps and .csv
-      '@\$desk\#svc.jobs\#data\tmp' for .eps produced by Zint
-  * '#eps-make.bat bt bn bf': old but still usable 
-    - run Zint to produce *.eps files from 3 input par`s in '@\$desk\#svc.jobs\#data\tmp'
+      '@\$desk\#svc.jobs\'    - '$svc.%user%.log'
+      '@\$desk\#svc.jobs\eps' - '*.eps-list.csv', -> (Zint) -> '*.eps'-> (refine) -> '*.ps'
+      '@\$desk\#svc.jobs\pdf' - '*.pdf-list.csv', '*.pdf' to place with (Indesign) 
+  * - 'svc-eps-make.bat bt bn bf'run Zint to produce *.eps, 3 input par`s 
 
 ### 5. Todo:
-  * file '$svc.usr' not in run folder but in '@\$desk\#svc.jobs\'
+  * help bg upd
+  * tables with div/span
+  * serias-lib: 'saved seria par' menu as .json, edit, save to file (old '_pers.js')
+  * 
+
+  * file '$svc.usr' not in run folder but in '@\$desk\#svc.jobs\'?
   * english help
-  * 'saved seria parameters' menu as .json, edit, save to file '_pers.js'
   * serias collection: import ,append ,export 
   

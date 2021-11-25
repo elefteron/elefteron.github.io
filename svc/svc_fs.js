@@ -73,10 +73,10 @@ load_new('scr/_fs.js');
     */
 }
 // ---
-  function run_make_eps(){ var bcn=bcn_id(par[p].bcn) 
+  function run_make_eps(){ var mes,bcn=bcn_id(par[p].bcn) 
 	if(bcn==bcn_[0].bcid) bcn=''
 	/* 'svc-eps-make.cmd' barcodetype filetype csvfile */
-    var filename='eps\\'+par[p].order+'_'+bcn+'_'+(ar.length-1)+'.zint-eps-list.csv'
+    var filename='eps\\'+par[p].order+'_'+bcn+'_'+(ar.length-1)+'.eps-list.csv'
 	var run='"'+eps_gen_bat+'"'+' '+par[p].bcn+' eps ' + filename 
   // "F:\!prog.run\barcodes\STB\STB-7\#eps-make.bat" 20 eps 193408_1_Code-128.zint.csv 
   // %zint% --batch --mirror --filetype=eps --cmyk -b %bt% -i %file%
@@ -88,13 +88,14 @@ load_new('scr/_fs.js');
      mes="... 'svc-eps-make.cmd'  stop:"+stop; msg(mes); // log_apnd(mes); 
   } 
   
-  function repl_eps(){ 
-  var br='<br/>'+crlf
-  total_err=0
-  var j=0,k//,run='"'+eps_gray_bat+'" '+par[p].order; msg('eps gray: '+run) 
-  var d1 = new Date(), start=d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds();
-    log_apnd('... eps repl start: '+start)// time
-         msg('... eps repl start: '+start)// time
+  function repl_eps(){ // eps refine
+    var br='<br/>'+crlf
+    total_err=0
+    var j=0,k//,run='"'+eps_gray_bat+'" '+par[p].order; msg('eps gray: '+run) 
+    var d1 = new Date(), start=d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds();
+    var mes=('... eps refine: start '+start)// time
+    log_apnd(mes)
+         msg(mes)
     //    font                   white                         black
     fnd_=["/Helvetica findfont", "0.00 0.00 0.00 setrgbcolor", "1.00 1.00 1.00 setrgbcolor"]
     rep_=["/Arial findfont",     "0 setgray",                  "100 setgray"]
@@ -103,7 +104,7 @@ load_new('scr/_fs.js');
       for(i=1; i<=k-1; i++) {// (srcpath,trgpath,fname,fnd_,rep_)
 		j+=file_repl_str(workpath+'\\eps\\','.eps' ,workpath+'\\eps\\','.ps' ,ar[i],fnd_,rep_) 
 		// log_apnd('... '+ar[i]+':'+j/k+' repl.')
-		if(total_err>10) { var mes='... eps repl: too muck errors! '+total_err;
+		if(total_err>10) { var mes='... eps refine: too much errors(>10)! '+total_err;
 		  log_apnd(mes); 
 		       msg(mes)
 		  break;
@@ -111,8 +112,9 @@ load_new('scr/_fs.js');
 	  } 
 	}
 	var d2 = new Date(), stop=d2.getHours()+':'+d2.getMinutes()+':'+d2.getSeconds();
-    log_apnd('... eps repl  stop: '+stop+', '+j+' replaces in '+(k-1)+' files err:'+total_err)// time
-         msg('... eps repl  stop: '+stop+', '+j+' replaces in '+(k-1)+' files err:'+total_err)// time
+    mes=('... eps refine: stop '+stop+', '+j+' replaces in '+(k-1)+' files err:'+total_err)// time
+    log_apnd(mes)
+         msg(mes)
   }
 // ---
   var total_err=0

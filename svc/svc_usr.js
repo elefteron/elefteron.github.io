@@ -1,10 +1,11 @@
-// --- file:'F:\elefter.dev\svc\svc_usr.js', made_by:'SVC-init.cmd', at:'2021.11.23 19:24:02.90' ---
+// -- src:"F:/elefter.dev/svc/", file:"svc_usr.js", jobs:"C:/$desk/$svc.jobs/" made_by:'SVC-init.cmd', at:2021.11.24  0:24:51.84 -- 
 comp="P55A_W7-64"
   os="win-7"
 user="elefter"
  log="C:/$desk/$svc.jobs/svc.elefter.log"
-zint="F:/elefter.dev/svc/zint-2.10.0/Zint.exe"
+zint="../zint-2.10.0/Zint.exe"
 root="C:/$desk/"
 jobs="C:/$desk/$svc.jobs/"
  eps="C:/$desk/$svc.jobs/eps/"
  pdf="C:/$desk/$svc.jobs/pdf/"
+// -- 

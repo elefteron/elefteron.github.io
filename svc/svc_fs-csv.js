@@ -4,15 +4,15 @@ load_new('scr/_fs-csv.js');
 	if(bcn==bcn_[0].bcid) bcn='' 
 	if(ar.length<=0) return 
 
-    var filename='eps/'+par[p].order+'_'+bcn+'_'+(ar.length-1)+'.zint-eps-list.csv'
+    var filename='eps/'+par[p].order+'_'+bcn+'_'+(ar.length-1)+'.eps-list.csv'
 	// --- open to save
 	if(!undef(ActiveX) && workpath!= null){ 
-	   mes='... zint-eps-list.csv save: path='+workpath+' file='+filename
+	   mes='... eps-list.csv save: path='+workpath+' file='+filename
             msg(mes) 
 	   log_apnd(mes)
 	   try{ f = fso.OpenTextFile(workpath+filename, fsiomode.write, true/*create*/,fsformat.ASCII); 
 	     // msg(' opened')
-       }catch(err){ mes('... zint-eps-list.csv save open "'+filename+'" \n  ::<e>'+err+'</e>');
+       }catch(err){ mes('... eps-list.csv save open "'+filename+'" \n  ::<e>'+err+'</e>');
 	   	  log_apnd(mes)
 	      if(err=='Error: Permission denied') msg('   may be this file is opened from another apl.')
 		  return
@@ -27,16 +27,16 @@ load_new('scr/_fs-csv.js');
 	  for (i=1; i<=ar.length-1; i++) { rec=ar[i]; buf+=rec+'<br/>'
 	     try{ f.WriteLine(rec)}
 		 catch(err){ 
-		     mes=('... zint-eps-list.csv save ['+i,']="'+rec+'"\n   ::<e>'+err+'</e>');
+		     mes=('... eps-list.csv save ['+i,']="'+rec+'"\n   ::<e>'+err+'</e>');
 	              msg(mes)
 	         log_apnd(mes)
 			 return
 		 }
       }
-	  mes='... zint-eps-list.csv saved (barcode:'+par[p].bcn+')'
+	  mes='... eps-list.csv saved (barcode:'+par[p].bcn+')'
       msg(mes)
 	  log_apnd(mes)
-      msg('<div ID="zint.csv" class="info" style="width:950px; height:400px;">'+buf+'</div>')	   
+      msg('<div ID="eps.csv" class="info" style="width:950px; height:400px;">'+buf+'</div>')	   
 	}
 	// --- close
 	if(!undef(f)){ f.close(); } // msg('close csv') --- !? and not err  
@@ -46,15 +46,15 @@ load_new('scr/_fs-csv.js');
 	if(bcn==bcn_[0].bcid) bcn=''
 	if(ar.length<=0) return
 
-	var filename='pdf/'+par[p].order+'_'+bcn+'_'+(ar.length-1)/par[p].k+'x'+par[p].k+'.ind-pdf-list.csv'
+	var filename='pdf/'+par[p].order+'_'+bcn+'_'+(ar.length-1)/par[p].k+'x'+par[p].k+'.pdf-list.csv'
 	// --- open to save
 	if(!undef(ActiveX) && workpath!= null){ 
-	  mes='... ind-pdf-list.csv save: path='+workpath+' file='+filename
+	  mes='... pdf-list.csv save: path='+workpath+' file='+filename
 	       msg(mes) 
 	  log_apnd(mes) 
 	  try{ f = fso.OpenTextFile(workpath+filename, fsiomode.write, true/*create*/,fsformat.ASCII); 
 	    // msg(' opened')
-      }catch(err){ mes('... ind-pdf-list.csv save open "'+filename+'" \n <e>'+err+'</e>');
+      }catch(err){ mes('... pdf-list.csv save open "'+filename+'" \n <e>'+err+'</e>');
                msg(mes)
 	   	  log_apnd(mes)
 	      if(err=='Error: Permission denied') msg('... may be this file is opened from another apl.')
@@ -71,7 +71,7 @@ load_new('scr/_fs-csv.js');
       var buf=csvhdr+'<br>\n'
 	  try{ f.WriteLine(csvhdr)}  
 	  catch(err){ 
-		  mes=('... ind-pdf-list.csv save hdr("'+ar[0]+'")\n  ::<e>'+err+'</e>');
+		  mes=('... pdf-list.csv save hdr("'+ar[0]+'")\n  ::<e>'+err+'</e>');
 	           msg(mes)
 	      log_apnd(mes)
 		  return
@@ -91,17 +91,17 @@ load_new('scr/_fs-csv.js');
 	    buf+=rec+'<br>\n'
         try{ f.WriteLine(rec)}
 	    catch(err){ 
-	  	  mes=('... ind-pdf-list.csv save ['+i,'] k:'+k+'="'+rec+'"\n  ::<e>'+err+'</e>');
+	  	  mes=('... pdf-list.csv save ['+i,'] k:'+k+'="'+rec+'"\n  ::<e>'+err+'</e>');
 	             msg(mes)
 	        log_apnd(mes)
 	  	  return
 	    }
 	  }
     } 
-	mes='... ind-pdf-list.csv saved (barcode:'+par[p].bcn+')'
+	mes='... pdf-list.csv saved (barcode:'+par[p].bcn+')'
     msg(mes)
 	log_apnd(mes)
-	msg('<div ID="ind.csv" class="info" style="width:950px; height:400px;">'+buf+'</div>')
+	msg('<div ID="pdf.csv" class="info" style="width:950px; height:400px;">'+buf+'</div>')
 	// --- close
 	if(!undef(f)){ f.close(); }  // msg('close csv')
   }

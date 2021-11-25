@@ -7,7 +7,7 @@ cd /d %root%
 :: '\\192.168.1.215\User\+Tery\barcodes' CMD does not support UNC paths as current directories. --- 
 :: set zint="F:\!prog.run\zint 2.6.2.portable\App\Zint\Zint.exe"
 :: set zint="u:\+Tery\barcodes\zint 2.6.0.portable\Zint.exe"
-   set zint="F:\elefter.dev\svc-8\zint-2.10.0\Zint.exe"
+   set zint="..\zint-2.10.0\Zint.exe"
 if NOT exist %zint% ( echo zint missing && @pause && @goto :EOF )
    echo zint=%zint%
    

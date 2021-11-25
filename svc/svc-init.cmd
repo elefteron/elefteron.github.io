@@ -22,7 +22,7 @@ if "%os_%"=="" set os_=%POWERSHELL_DISTRIBUTION_CHANNEL%
 if "%os_%"=="" set os_=unidentified
 
 set  user=%USERNAME%
-@echo.=== 'svc-init.cmd' user:%USER% comp:%COMPUTERNAME% os:'%os_%' at %date% %time% ===
+@echo.=== begin 'svc-init.cmd' user:%USER% comp:%COMPUTERNAME% os:'%os_%' at %date% %time% ===
 :: --- cannot start from local net adr (\\unc_name) - not supported msg
 :: --- %homedrive% == %systemdrive% == c:
 if "%user%"=="" ( echo.... miss./undef. username&& goto eof)
@@ -56,35 +56,35 @@ if '%root%'=='%homedrive%' (
    if NOT exist %root%\NUL set msg='... root folder NOT exist and cannot be created: %root%'
 ) 
 if NOT "%msg%"=="" ( echo.%msg% && set err=y && goto eof )
-echo ... ok
+@echo. ok
 
 @echo ... jobs: %jobs%
 set msg=
 if NOT exist %jobs%\NUL md %jobs%
 if NOT exist %jobs%\NUL set msg='... jobs folder NOT exist and cant create: %jobs%'
 if NOT "%msg%"=="" ( echo.%msg% && set err=y )
-if "%msg%"=="" echo ... ok
+if "%msg%"=="" @echo. ok
 
 @echo ... eps: %eps%
 set msg=
 if NOT exist %eps%\NUL md %eps%
 if NOT exist %eps%\NUL set msg='... eps folder NOT exist and cant create: %eps%'
 if NOT "%msg%"=="" ( echo.%msg% && set err=y )
-if "%msg%"=="" echo ... ok
+if "%msg%"=="" @echo. ok
 
 @echo ... pdf: %pdf%
 set msg=
 if NOT exist %pdf%\NUL md %pdf%
 if NOT exist %pdf%\NUL set msg='... pdf folder NOT exist and cant create: %pdf%'
 if NOT "%msg%"=="" ( echo.%msg% && set err=y )
-if "%msg%"=="" echo ... ok
+if "%msg%"=="" @echo. ok
 
 @echo ... log: %log%
 set msg=
 if NOT exist %log%  echo.>%log%
 if NOT exist %log%  set msg='... cannot make log file: %log%'
 if NOT "%msg%"=="" ( echo.%msg% && set err=y )
-if "%msg%"=="" echo ... ok
+if "%msg%"=="" @echo. ok
 
 if NOT "%err%"=="" (
   echo ... stop to correct errors and run again
@@ -93,19 +93,20 @@ if NOT "%err%"=="" (
 set msg=
 set err=
 
-echo.... zint.exe in %CD%
-:: set zint=%CD%\zint-2.6.0\Zint.exe
-:: set zint=%CD%\zint-2.6.3\Zint.exe
-   set zint=%CD%\zint-2.10.0\Zint.exe
+echo.... zint.exe:
+:: set zint=..\zint-2.6.0\Zint.exe
+:: set zint=..\zint-2.6.3\Zint.exe
+   set zint=..\zint-2.10.0\Zint.exe
 set msg=
-if NOT exist %zint% ( set msg='... missing Zint at: %zint%' && echo.%msg:'=% && set err=y )
-if "%msg%"=="" echo ... ok zint:%zint%
+if exist %zint% @echo. ok zint:%zint% && goto usr_
+set msg='... missing Zint at: %zint%' && echo.%msg:'=% && set err=y
 
+:usr_
 :: --- recreate %svcusr% (.js) and dump inside: %user% %root% %jobs% %eps% %pdf% %log% %OS_% %COMPUTERNAME%; 
 :: for folders replace '\' to '/' because of js syntax rules
 :: folder/file name chars that can make problems in batch (.cmd/.bat): %*% !*! (*) ^* cyrillic
-set msg=--- file:'%svcusr%', made_by:'SVC-init.cmd', at:'%date% %start_all%' ---
-   echo.// %msg%>%svcusr%
+set msg=src:"%CD:\=/%/", file:"svc_usr.js", jobs:"%jobs:\=/%/" made_by:'SVC-init.cmd', at:%date% %start_all%
+   echo.// -- %msg% -- > %svcusr%
    echo.comp="%COMPUTERNAME%">>%svcusr%
    echo.  os="%OS_%">>%svcusr%
    echo.user="%user:\=/%">>%svcusr%
@@ -115,13 +116,16 @@ set msg=--- file:'%svcusr%', made_by:'SVC-init.cmd', at:'%date% %start_all%' ---
    echo.jobs="%jobs:\=/%/">>%svcusr%
    echo. eps="%eps:\=/%/">>%svcusr%
    echo. pdf="%pdf:\=/%/">>%svcusr%
-if "%test%"=="y" type %svcusr% | more
-if "%test%"=="y" set /p ask=... ? is ok "%svcusr%"
+   echo.// -- >>%svcusr%
+if "%test%"=="y" ( type %svcusr% | more && set /p ask=... ? is ok "%svcusr%" )
 
 :: --- log
-@echo.... log add: %log%
-@echo.{-- jobs:"%jobs:\=/%/", at:'%date% %start_all%' made_by:'SVC-init.cmd' --}>>%log% 
-@echo.... ok
+@echo.... log: %log%
+@echo. >>%log% 
+set msg=src:"%CD:\=/%/", jobs:"%jobs:\=/%/", file:"svc.%user%.log" made_by:'SVC-init.cmd', at:%date% %start_all%
+@echo.{-- %msg% --}>>%log% 
+@echo. >>%log% 
+@echo. ok
 
 :: --- customise %jobs% folder with icon: make 'desktop.ini' 
 set custdesk=%jobs%\desktop.ini
@@ -135,7 +139,7 @@ echo.[.ShellClassInfo]>%custdesk%
    set e=%errorlevel%
    if NOT %e%==0 echo.... err:%e%
    attrib %custdesk% +s +h
-echo.... ok
+@echo. ok
 if "%test%"=="y" type %custdesk% | more
 if "%test%"=="y" set /p ask=.... end customise desktop.ini
 set custdesk=
@@ -156,7 +160,7 @@ if "%test%"=="y" set /p ask=... ? copy fnt
    if NOT %e%==0 echo.... err:%e%
    if NOT exist %systemroot%\fonts\Anastasia.ttf echo ... try to install it manually 
 if "%test%"=="y" set /p ask=... ? regedit fnt
-) else echo.... exist
+) else echo. exist
 
 :: --- calculate duration
 ::  set start_all=%time%
@@ -164,13 +168,13 @@ if "%test%"=="y" set /p ask=... ? regedit fnt
     call dur.cmd %start_all% %stop_all%
 :: ---
 
-@echo.=== end 'svc-init.cmd' dur:%dur% ===
+@echo.=== final 'svc-init.cmd' dur:%dur% ===
 :: @set /p ask=
 goto :run
 
 :hlp
 @echo.
-@echo. usage: svc/svc-init.cmd
+@echo. usage: svc-init.cmd
 @echo. purpose: no need of install, but need of initial config
 @echo. 
 @echo. 1. check and make folders: $svc-jobs, eps, ind
