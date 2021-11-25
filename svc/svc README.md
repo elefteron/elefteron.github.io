@@ -36,8 +36,10 @@
 ### 5. Todo:
   * help bg upd
   * tables with div/span
-  * serias-lib: 'saved seria par' menu as .json, edit, save to file (old '_pers.js')
-  * 
+  * seria-lib: 'saved seria param' menu as .json, edit, read/save file (old '_pers.js')
+  * ui-groups: seria+kols, barcode[], printjob with seria, (fr-to-step), make seria state
+  * eps2pdf!!!
+  * refine params: grayscale/cmyk/rgb+clr,font ArialMT!!!
 
   * file '$svc.usr' not in run folder but in '@\$desk\#svc.jobs\'?
   * english help

@@ -98,7 +98,7 @@ load_new('scr/_fs.js');
          msg(mes)
     //    font                   white                         black
     fnd_=["/Helvetica findfont", "0.00 0.00 0.00 setrgbcolor", "1.00 1.00 1.00 setrgbcolor"]
-    rep_=["/Arial findfont",     "0 setgray",                  "100 setgray"]
+    rep_=["/ArialMT findfont"  , "0 setgray"                 , "100 setgray"]
     k=null
 	if(!undef(ActiveX)){ k=ar.length; // fsh.run(run)
       for(i=1; i<=k-1; i++) {// (srcpath,trgpath,fname,fnd_,rep_)
