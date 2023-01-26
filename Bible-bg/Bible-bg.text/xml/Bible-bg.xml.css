@@ -1,33 +1,37 @@
-*   {font-family:'Arial Cyr',Verdana,Tahoma,Helvetica,Arial,'Sans Serif';
-     font-style:normal;text-align:left;background-color:#000000;}
+*   {font-family:Verdana, Tahoma, Arial, 'Sans Serif', 'Arial Cyr', Helvetica;
+     font-style:normal;text-align:left; background-color:#1a0d00; color:#ff4cff;
+     font-size:14pt;line-height:16p}
 /* volume:том */
- vl {color:white;display:block; color:gold;
-     font-size:18pt;line-height:18pt;font-weight:bold;}
+ vol {display:block; color:#ff9673;
+     font-size:18pt; line-height:18pt;font-weight:bold;}
 
-     /* book:книга */
- bk {color:white;display:block; color:#77ffaa;   clear: left; padding: 2mm 0pt 0.5em 1em;
-     font-size:16pt;line-height:16pt;font-weight:bold;}
 /* book:книга */
- bn {color:white;display:inline; color:#77ffaa;  
-     font-size:14pt;line-height:14pt;}
+ bk {display:block; color:#77ffaa;   clear: left; padding: 2mm 0pt 0.5em 1em;
+     font-size:15pt;line-height:16pt;font-weight:bold;}
+/* book:книга */
+ bn {display:inline; color:#00b3b2;  
+     font-size:15pt;line-height:16pt;}
      
 /* chapter:глава */
- ch {color:white;display:block; color:lime; clear: left; padding: 2mm; 
-     font-size:16pt;line-height:16pt;font-weight:bold;}
+ ch {display:block; color:#77ffaa; clear: left; padding: 2mm; 
+     font-size:14pt;line-height:16pt;font-weight:bold;}
 /* chapter no:глава номер */
- cn {color:white;display:inline; color:lime;
-     font-size:16pt;line-height:16pt;}
+ cn {display:inline; color:#00b3b2;
+     font-size:14pt;line-height:16pt;}
      
-/* verse:стих */
- v  {color:white;display:block; padding: 2mm; border-left: medium;
-     font-size:12pt;line-height:13pt;}
-     
-/* text:текст */
- t  {color:white;display:block; color:#ffcc99; float:left; 
-     font-size:12pt;line-height:13pt;font-weight:bold;}
+ ct {display:table;  margin:2px; width: 95%; } /* book table */
+ v  {display:table-row;  border-collapse: collapse;} /* row=verse float:left; inline; table-cell */
+
 /* verse number:стих номер */
- n  {color:cyan; display:inline;color:lime; 
-     font-size: 9pt;line-height:13pt;font-weight:normal;}
-/* marker:маркер */
- m  {color:cyan; display:inline;color:gold; 
-     font-size:12pt;line-height:13pt;}
+ n  {display:table-cell; color:#00b3b2; width: 3em;   float:left;
+     font-size: 8pt;line-height:13pt;font-weight:normal;}
+/* text:текст */     
+ t  {display:inline; color:#ffdfbf;     width: 94%;   float:left;  padding: 1px; margin:1px;
+     font-size:12pt;line-height:13pt; font-weight:normal;}         
+/* * marker + comment */
+ m  {color:#000000; background-color:#ccff99; }
+ c  {color:#ccff99; font-style: italic; font-size:10pt; line-height:11pt;}
+
+ t:hover {background-color:#ff9673; color:#000000; }
+ n:hover {background-color:#00b3b2; color:#000000; }
+ c:hover {background-color:#ccff99; color:#000000; }
