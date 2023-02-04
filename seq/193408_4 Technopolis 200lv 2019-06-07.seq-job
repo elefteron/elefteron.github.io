@@ -1,0 +1,2 @@
+ lib.seq+={ "typ":"ord", "bef":"A19H", "aft":"", "frm": 2001,  "to:" 4000, "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 500, "fil":"col", "tot": 2000 }; 
+ lib.job+={ "isu":"200lv", "ord":"193408_4", "clt":"Technopolis", "dat":"2019-06-07" }; 

@@ -1,0 +1,72 @@
+<!-- xml data Island / Embedding an XML Data Island into an HTML Page
+https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms766512(v=vs.85)
+
+https://errorsandanswers.com/embedding-xml-in-html/
+
+https://stackoverflow.com/questions/18748571/workaround-for-xml-data-islands
+https://stackoverflow.com/questions/26774564/how-to-include-a-xml-file-within-another-xml
+https://stackoverflow.com/questions/71067234/populating-an-html-table-from-an-external-xml
+https://stackoverflow.com/questions/18292524/load-xml-file-using-javascript
+https://stackoverflow.com/questions/8249155/load-xml-from-javascript
+
+https://www.w3schools.com/XML/xml_xslt.asp
+https://www.w3schools.com/XML/ajax_applications.asp
+https://www.w3schools.com/xml/xml_examples.asp
+
+https://9to5answer.com/how-to-embed-an-xml-file-in-html
+-->
+      <!-- try external xml --!?>
+        1.<xml src="NT.Math.xml"></xml> 
+        2.<link href="NT.Math.xml" rel="xml"/>
+        3.<link href="NT.Math.xml" type="xml"/>
+        4.<link href="NT.Math.xml" as="xml"/>
+        5.<iframe type="application/xml" src="NT.Math.xml"></iframe>
+        6.<script type="application/xml" src="NT.Math.xml"></script>
+        7.<script type="text/xmldata" src="NT.Math.xml">...</script>
+        8.<script LANGUAGE="XML" src="NT.Math.xml"></script>
+        9.<embed type="text/xmldata" src="NT.Math.xml" > 
+        
+    0.<span datasrc="#NT">
+      <span datafld="n"></span> <span datafld="t"></span><br/>
+   </span>
+   
+  o.<object type="text/html" data="NT.Math.xml"></object>
+  l.<link href="NT.Math.xml" rel="import" />
+  ifrm.<iframe src="NT.Math.xml"></iframe>
+  div.<div w3-include-html="NT.Math.xml"></div>    
+        <!-- -->
+<!-- format:{volume.book.chapter.verse} multiline-text 
+OT: 7954 verses in 27 books
+
+bible-bg.NT.xml Православна Библия на български - Нов Завет (.xml)
+https://elefteron.github.io/Bible-bg/Bible-bg.text/xml/bible-bg.NT.xml
+
+https://github.com/elefteron/elefteron.github.io/blob/main/Bible-bg/Bible-bg.text/xml/bible-bg.NT.xml
+
+bible-bg Православна Библия на български - html/JS форматиране и търсене
+https://elefteron.github.io/Bible-bg/Bible-bg.2013/Bible-bg.2013.index.htm 
+
+https://github.com/elefteron/elefteron.github.io/blob/main/Bible-bg/Bible-bg.2013/Bible-bg.2013.index.htm
+
+todo +: newline at verse #
+todo +: css as table - space between v# and text
+todo ?: table cells order 
+todo !: remove added "..." and set - ...
+todo !: js load xml and show/convert xml to js array and save
+todo ?: index, colapse/expand book/all, select book text to read 
+todo -: notes
+todo -: links
+todo -: cincordance         
+abr: bmfg.org/bmfg-about/bible-books-common-abbreviations/
+
+--> 
+
+  <!--https://www.w3schools.com/howto/howto_html_include.asp -->
+  <div id="NT.@"> 
+     <bk><bn>NT.@</bn>@
+       <!-- <ch>...</ch> -->
+       <xml>
+         @
+       </xml>
+    </bk>
+  </div>

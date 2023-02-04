@@ -1,0 +1,8 @@
+load_new('mouse.2020.js'); var i=lib_seq.length-1; 
+ lib_seq[++i]={ "typ":"ord", "bef":"A20E", "aft":"", "frm": 1,    "to": 2000,  "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 500,  "fil":"col", "tot": 2000 };  lib_job[i]={ "isu":"020lv", "ord":"200030_2", "clt":"Technopolis", "dat":"2020-01-07" }; 
+ lib_seq[++i]={ "typ":"ord", "bef":"A20F", "aft":"", "frm": 1,    "to": 6000,  "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 1500, "fil":"col", "tot": 6000 };  lib_job[i]={ "isu":"050lv", "ord":"200030_3", "clt":"Technopolis", "dat":"2020-01-07" }; 
+ lib_seq[++i]={ "typ":"ord", "bef":"A20G", "aft":"", "frm": 1,    "to": 2000,  "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 500,  "fil":"col", "tot": 2000 };  lib_job[i]={ "isu":"100lv", "ord":"200030_4", "clt":"Technopolis", "dat":"2020-01-07" }; 
+ lib_seq[++i]={ "typ":"ord", "bef":"A20H", "aft":"", "frm": 1,    "to": 2000,  "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 500,  "fil":"col", "tot": 2000 };  lib_job[i]={ "isu":"200lv", "ord":"200030_5", "clt":"Technopolis", "dat":"2020-01-07" }; 
+ lib_seq[++i]={ "typ":"ord", "bef":"№ "  , "aft":"", "frm": 15001,"to": 18000, "dig": 6, "stp": 1, "bcn": 20 /* CODE128 */, "col": 8, "row": 375,  "fil":"col", "tot": 3000 };  lib_job[i]={ "isu":"-"    , "ord":"200255"  , "clt":"MTK sport"  , "dat":"2020-01-15" }; 
+ lib_seq[++i]={ "typ":"ord", "bef":"A20E", "aft":"", "frm": 1,    "to": 2000,  "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 500,  "fil":"col", "tot": 2000 };  lib_job[i]={ "isu":"020lv", "ord":"200030_2", "clt":"Technopolis", "dat":"2020-01-07" }; 
+load_end();

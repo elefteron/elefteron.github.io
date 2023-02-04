@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <title>Seq-Job [9b 2022.06] make ordered values sequences or get unordered, produce barcodes for values by Zint</title>
+  <meta charset="utf-8">
+  <!-- encoding charset="utf-8" 
+      BG: ах, чудна българска земьо, полюшвай цъфтящи жита!
+      EN: the quick brown fox jumps over the lazy dog!
+  -->
+  <link href ="D.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+  <link href ="D.ico" type="image/x-icon" rel ="icon"          />
+  <meta http-equiv="x-ua-compatible" content="ie=9">
+  <!-- -->  
+  <meta name="description" content=".Seq-Job прави подредена редица стойности или чете ненаредена редица от .csv, записва редица в *.csv и прави *.eps баркодове за нея чрез Zint, прави .ps от .eps, прави .pdf от .ps, записва *.pdf имената на баркод файловете или редица в .csv за вмъкване на файлове/стойности в Indesign">
+  <meta name="keywords" content="sequence values & barcodes">
+  <meta name="author"   content="Elefter Arnaudov"> 
+  <meta name="contact"  content="mailto:elefter@abv.bg" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- -->  
+  <script> /* (GNU GPL)  
+       @licstart  The following is the entire license notice for the 
+       JavaScript code in this page.
+
+       Copyright (C) 2014  Loic J. Duros
+
+       The JavaScript code in this page is free software: you can
+       redistribute it and/or modify it under the terms of the GNU
+       General Public License (GNU GPL) as published by the Free Software
+       Foundation, either version 3 of the License, or (at your option)
+       any later version.  The code is distributed WITHOUT ANY WARRANTY;
+       without even the implied warranty of MERCHANTABILITY or FITNESS
+       FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+       As additional permission under GNU GPL version 3 section 7, you
+       may distribute non-source (e.g., minimized or compacted) forms of
+       that code without the copy of the GNU GPL normally required by
+       section 4, provided you include this license notice and a URL
+       through which recipients can access the Corresponding Source.   
+
+
+       @licend  The above is the entire license notice
+       for the JavaScript code in this page.
+       */
+  </script>  
+  <!-- -->
+  <noscript> <pre> <!-- Requires JavaScript -->
+    (EN) Requires enabled JavaScript for full functionality! See how: <a href="https://www.enable-javascript.com/" target="_blank">"JS enable"</a>
+    This WAP (web application page) needs 
+    - HTA (Html application) / browser IE9+ for file i/o
+    
+    (BG) Изисква разрешен JavaScript за пълна функционалност! Виж как: <a href="https://www.enable-javascript.com/" target="_blank">"JS enable"</a>
+    Тази WAP (web application page) изисква 
+    - HTA (Html application) / браузър IE9+ за файлов вх/изх.
+    </pre> 
+  </noscript>
+  <!--  https://stackoverflow.com/questions/7340726/detect-version-of-javascript -->
+    <script type="text/javascript">var jsver = 1.0;</script>
+    <script language="Javascript1.1">  jsver = 1.1;</script>
+    <script language="Javascript1.2">  jsver = 1.2;</script>
+    <script language="Javascript1.3">  jsver = 1.3;</script>
+    <script language="Javascript1.4">  jsver = 1.4;</script>
+    <script language="Javascript1.5">  jsver = 1.5;</script>
+    <script language="Javascript1.6">  jsver = 1.6;</script>
+    <script language="Javascript1.7">  jsver = 1.7;</script>
+    <script language="Javascript1.8">  jsver = 1.8;</script>
+    <script language="Javascript1.9">  jsver = 1.9;</script>
+  <!-- -->
+  <script>  /* usage: {load_new(module); ... load_end();} load_lst(); */
+    modules=[]; mn=-1; 
+    modules_todo=['seq.htm (hdr)','seq.js','seq-fs.js','styles.js'
+	             ,'seq-help2.js' ,'seq-user.js','zint-barcodes.js'     
+                 ,'seq-job-par.js','mouse.2019.js','mouse.2020.js' 
+                 ,'seq.htm (body)'   ] // ,'seq-dark.css' ?
+	function load_new(module){ modules[++mn]={'name':module,'state':'beg..'} } 
+	function load_end(){ modules[mn].state='end' }
+	function load_lst(){ var i,buf='',ok=0;
+    // msg(' ... loads expected['+load_exp.length+']='+load_exp) //  [#]. {module:state} 
+	   buf=box({w:[60,180,60],t:['load-js','module','state']});
+	   for (j=0; j<=modules_todo.length-1; j++){ var fnd=false
+	     for (i=0; i<=mn; i++) { 
+		   if(modules_todo[j]==modules[i].name) {
+		     fnd=true; continue;
+		   }
+		 }
+		 if(!fnd) buf+=box({t:['todo['+(j+1)+']',modules_todo[j],' <e>unknown</e>']})+eol;
+	   } 
+	   var msg='';
+	   for (i=0; i<=mn; i++) {         msg='<e>'+modules[i].state+'</e>';
+	     if(modules[i].state=='end') { msg='<v>ok</v>'; ok++; }
+         buf+=box({t:['['+(i+1)+']',modules[i].name,msg]})+eol;
+       }
+       return buf 
+	}; 
+  load_new('seq.htm (hdr)');
+  </script>  
+  <script>  eol='\n'; br='<br/>'; eoln=br+eol; dbg=true; /* globals */
+	// usage: if(dbg && !_activexON) msg()
+	// if(!_activexON) mes=fs_init(); -> fsh.run()
+	// https://sourceforge.net/projects/zint/files/latest/download -> zint-2.10.0-win32.zip
+	// https://www.zint.org.uk/manual/chapter/4
+
+    /* --- job={} seq={} exam_seq=[] */
+    job={ord:'', isu:'', clt:'', dat:'' }; 
+    seq={typ:'', bef:'', aft:'',   dig:0, frm:0,   to:0,   stp:0, col:0, row:0,fil:'col', tot:0,   bcn:0 ,val:[]};// typ:ord|val
+    exam_seq=[ // tot,row are calculated by chk_seq(); fil:col (default) | row                                                                    
+      {typ:'ord',bef:'A19H',aft:'',dig:5, frm:2001,to:4000,stp:1, col:4, row:0,fil:'col', tot:2000,bcn:20,val:[]}
+     ,{typ:'ord',bef:'' , aft:'' , dig:2, frm:0,   to: 63, stp:1, col:1, row:0,fil:'col', tot:0,   bcn:0, val:[]}
+     ,{typ:'ord',bef:'' , aft:'' , dig:2, frm:2,   to: 65, stp:2, col:8, row:0,fil:'col', tot:0,   bcn:0, val:[]}
+     ,{typ:'ord',bef:'<', aft:'>', dig:2, frm:1,   to: 10, stp:1, col:2, row:0,fil:'col', tot:0,   bcn:0, val:[]}
+     ,{typ:'ord',bef:'<', aft:'>', dig:2, frm:1,   to:  9, stp:1, col:3, row:0,fil:'col', tot:0,   bcn:0, val:[]}
+     ,{typ:'ord',bef:'<', aft:'>', dig:5, frm:1,   to:100, stp:1, col:4, row:0,fil:'col', tot:0,   bcn:20,val:[]}
+    ]
+    // ---
+    lib_job=[]; lib_seq=[]; 
+    // ---
+    dict =[]; d=-1;    bg=1;   en=2; // [key, bg,en, title_bg, title_en] 
+{   dict[++d]=['lang'     ,'език'                   ,'lang','',''] 
+    dict[++d]=['theme'    ,'цвят'                   ,'clr','',''] 
+    dict[++d]=['id'       ,'комп'                   ,'comp','',''] 
+    dict[++d]=['log'      ,'дневник'                ,'log','',''] 
+						  
+    dict[++d]=['workdir'  ,'зад.'                   ,'job','',''] // jobs
+    dict[++d]=['zintdir'  ,'бар.'                   ,'bаr','',''] 
+    dict[++d]=['srcdir'   ,'изт.'                   ,'src','',''] // jobs
+						  
+    dict[++d]=['reload'   ,'презареди'              ,'reload','',''] 
+}    
+{   dict[++d]=['seq-hdr'  ,'РЕД-ЗАД пар.'           ,'SEQ-JOB par.','','']  
+    dict[++d]=['imp-seq'  ,'добави н-РЕД'           ,'*get v-SEQ' ,'','' ] 
+    dict[++d]=['csvimp'   ,'прочети'                ,'read'      ,'','' ] 
+    dict[++d]=['make-seq' ,'прави п-РЕД'            ,'make o-SEQ','','' ] 
+	
+    dict[++d]=['save-par' ,'пиши пар'               ,'*save-par'  ,'','']
+    dict[++d]=['lib-par'  ,'библиотека пар'         ,'lib-par'   ,'',''] 
+    dict[++d]=['exam-par' ,'примери'                ,'exam'  ,'',''] 
+    dict[++d]=['clear-par','изчисти'                ,'clear-par' ,'',''] 
+    
+    dict[++d]=['fill-ord' ,'ред на запълване'       ,'fill ord' ,'',''] 
+    dict[++d]=["seq_typ"  ,"тип редица"             ,"seq type" ,'','']
+    dict[++d]=["seq_bef"  ,"преди"                  ,"before"   ,'','']
+    dict[++d]=["seq_aft"  ,"след"                   ,"after"    ,'','']
+    dict[++d]=["seq_frm"  ,"от число"               ,"from num" ,'','']
+    dict[++d]=["seq_to"   ,"до число"               ,"to num"   ,'','']
+    dict[++d]=["seq_stp"  ,"стъпка"                 ,"step"     ,'','']
+    dict[++d]=["seq_dig"  ,"цифри"                  ,"dig"      ,'','']
+    dict[++d]=["seq_col"  ,"колони"                 ,"cols"     ,'','']
+    dict[++d]=["seq_row"  ,"редове"                 ,"rows"     
+	                      ,'редове=общо/колони'     ,'rows=total/cols'] // <-
+    dict[++d]=["seq_tot"  ,"общо"                   ,"total"    ,'',''] // <-
+    dict[++d]=["seq_bar"  ,"баркод"                 ,"barcode"  ,'','']
+
+    dict[++d]=["job_ord"  ,"зад. №"                 ,"job №"    ,'','']
+    dict[++d]=["job_dat"  ,"дата"                   ,"date",'','']
+    dict[++d]=["job_clt"  ,"клиент"                 ,"client",'','']
+    dict[++d]=["job_isu"  ,"изделие"                ,"issue" ,'','']
+    dict[++d]=["seq_mak"  ,"направено"              ,"maked" ,'','']
+}        
+{   dict[++d]=['val-hdr'  ,'списък стойности [общо]'    ,'values list [tot]'
+						  ,'баркод csv: без загл.'  ,'barcode csv: no header'] //?
+    dict[++d]=['save-val' ,'пиши-csv'               ,'save-csv' ,'',''] 
+    dict[++d]=['show-val' ,'виж'                    ,'show'     ,'',''] 
+									                
+    dict[++d]=['csv2eps'  ,'val>eps'                ,'val>eps' ,'',''] 
+    dict[++d]=['eps2ps'   ,'eps>ps'                 ,'eps>ps' ,'',''] 
+    dict[++d]=['ps2pdf'   ,'ps>pdf'                 ,'*ps>pdf' ,'',''] 
+									                
+    dict[++d]=['clip-val' ,'клип'                   ,'clip'     ,'',''] 
+    dict[++d]=['clear-val','изчисти'                ,'clear'    ,'',''] 
+}        
+{   dict[++d]=['ind-hdr'  ,'таблица стойности [кол*ред]','values table [col*row]'
+						  ,'Indesign (csv, със загл, @, колони)'
+						  ,'Indesign (csv with hdr, @, cols)'] 
+    dict[++d]=['tbl_reord','пренареждане'           ,'reord' ,'',''] 
+    dict[++d]=['save-ind' ,'пиши-csv'               ,'save-csv' ,'',''] 
+    dict[++d]=['show-ind' ,'виж'                    ,'show'     ,'','']
+    dict[++d]=['clip-ind' ,'клип'                   ,'clip'     ,'',''] 
+    dict[++d]=['clear-ind','изчисти'                ,'clear'    ,'',''] 
+}        
+{   dict[++d]=['msg-hdr'  ,'съобщения'              ,'messages','',''] 
+    dict[++d]=['help'     ,'помощ'                  ,'*help'     ,'',''] 
+    dict[++d]=['sysinfo'  ,'сисИнфо'                ,'sysInfo'     ,'',''] 
+    dict[++d]=['sel4clip-msg','избрЗАклип'          ,'sel4clip'    ,'',''] 
+    dict[++d]=['clear-msg','изчисти'                ,'clear'       ,'',''] 
+}	
+{   dict[++d]=["review"   ,'0.Обзор'                ,"0.review"  ]
+    dict[++d]=["process"  ,'1.Процес'               ,"1.process" ]
+    dict[++d]=["seq.gen"  ,'2.Редица'               ,"2.sequence"]
+    dict[++d]=["merge"    ,'3.Сглобяване'           ,"3.assembly"  ]
+    dict[++d]=["tech"     ,'4.Техн. инфо'           ,"4.tech.info" ]
+    dict[++d]=["todo"     ,'5.todo'                 ,"5.todo"      ]
+}
+    // ---
+  </script>  
+  <script>  /* set_clr(th_)   theme or formula */
+    function set_clr(th_){ var theme,thm
+	  if(th_=='dark' || th_=='lite' ){
+         theme='seq-'+th_+'.css'; msg('try:'+theme+eoln)
+         thm=document.getElementById('seq-css'); 
+         if(typeof thm === undefined) msg(theme+' undef!'+eoln)
+         thm.href=theme
+	     msg('set_theme('+th_+'):'+theme+eoln)
+      // theme.disabled = "disabled"; 
+	  }
+      // f_cyan=1/2; f_green=1/3; f_lime=1/4; f_yellow=1/6; f_orange=1/7; f_blue=3/5; f_inv=-1 => 1-hsl[2];
+	  else if(typeof(eval(th_))=='number'){ // gray: .toFixed(4..10)
+	     var formula=Number(eval(th_).toFixed(4)); if(formula<0) formula=-1; // invert
+	     if(dbg) msg('set_HSL('+th_+'):'+formula+eoln)
+	     set_style(formula) 
+	  }
+    }// ---
+	
+    function edit_mode(){
+      javascript:document.body.contentEditable = 'true'; document.designMode='on'; void 0
+    }// ---
+  </script> 
+  <script> load_end(); /* seq.htm (hdr) end */</script>
+  <!-- -->
+  <!-- -->
+  <script src="seq.js"          > /* functions */</script>  
+  <script src="seq-fs.js"       > /* file system by activex */</script>
+  <script src="styles.js"       > /* set_style(formula) */</script>
+  <script src="seq-help2.js"    > /* help bg|en */</script>
+  <script src="seq-user.js"     > /* maked by setup.cmd */ </script> 
+  <script src="zint-barcodes.js"> /* bcn_[96]=[ {bcnum: zint_no 1..145,bcid:zint_id ,bcnm:zint_name},...]  */</script>
+  <script src="seq-job-par.js"  > /* user seq-job lib */</script>
+  <!-- -->
+  <script src="mouse.2019.js"   > /* data */</script>  
+  <script src="mouse.2020.js"   > /* data */</script>  
+  <link rel="stylesheet" type="text/css" id="seq-css" href="seq-dark.css" />
+</head>
+
+<body scrolling="auto" border="0">
+  <span id="seq-ui"> 
+  
+  <hr width="0" size="2px" color="#5b5b5b" align="left" style="margin: 0px 0px 0px 0px;">
+  <fieldset ID='_tit' > 
+    <span style='float:left;  margin: 1px 4px 4px 4px;'> 
+      <span class="id" >Seq-Job </span>
+    </span> 
+    
+    <span dict="lang">lang</span>:
+    <select id="lang" onchange="set_lang(this.value);" style="height:22px;" class="select">
+      <option class="d"value="bul" >bul</option>
+      <option class="d"value="eng" selected="eng">eng</option>
+    </select>
+    <span dict="theme">clr</span>:
+    <select id="theme" onchange="set_clr(this.value);" style="height:22px;" class="select">
+      <option class="d" value="dark" selected="dark">dark</option>  
+      <!-- -- ><option value="lite">lite</option><!-- -->
+	   <!-- option value=0.0 .. 1.0-->
+      <option class="d" value= '0'  > 0</option>
+      <option class="d" value= '0.1'> 0.1</option>
+      <option class="d" value= '0.2'> 0.2</option>
+      <option class="d" value= '0.3'> 0.3</option>
+      <option class="d" value= '0.4'> 0.4</option>
+      <option class="d" value= '0.5'> 0.5</option>
+      <option class="d" value= '0.6'> 0.6</option>
+      <option class="d" value= '0.7'> 0.7</option>
+      <option class="d" value= '0.8'> 0.8</option>
+      <option class="d" value= '0.9'> 0.9</option>
+      <option class="d" value=-1>invert</option>
+    </select>
+    <span dict="id">id</span>:     
+      <font color='gold'><span ID="comp">-</span></font> 
+	 (<font color='gold'><span ID="os">-</span></font>)
+	  <font color='gold'><span ID="user">-</span></font>
+    <button style='float:right;' class="bSys"  onClick="window.location.reload();" title="reload/F5"> 
+        <span dict="reload">reload</span>
+    </button>  
+    <br>
+    <span dict="srcdir">src</span>:
+        <span ID="srcdir"   class="bSys" title="open src dir" onclick="run(src);" >-</span>
+    <span dict="workdir">work</span>: 
+	    <span ID="workdir"  class="bSys" title="open work dir" onclick="run(jobs);" >-</span>
+    <span dict="zintdir">bar</span>:
+        <span ID="zintdir"   class="bSys" title="open zint dir" onclick="run(zintdir);" >-</span>
+	<!-- -- >	
+    title="SEQ. прави редица стойности или ги чете/добавя от .csv, записва редица в *.csv и прави *.eps баркодове за нея чрез Zint, прави *.pdf от .eps, записва *.pdf имената на баркод файловете от редица в .csv за вмъкване на файловете в Indesign" 
+ 
+	title="SEQ. make sequence or read/append them from .csv, save sequence to *.csv and make *.eps barcodes for him by Zint, make *.pdf from *.eps, write *.pdf names of barcode files of seq. in .csv to include files in Indesign" 
+    <span dict="log">log</span>:
+        <span ID="log"       class="bSys" title="view log file" onclick="view(jobs+log);" >-</span>
+	<!-- -->	
+    
+	<!-- -- >	
+    <button style='float:right;' class="bSys" type="submit"
+      title="init"  onClick="run('f:\\$elefter.dev\\seq\\setup.cmd');">init
+    </button>  
+	<!-- -->	
+
+  </fieldset>
+  <hr width="0" size="3px" color="#5b5b5b" align="left" style="margin: 0px 0px 0px 0px;">
+  
+  <fieldset ID='_xpar'> 
+    <span style='float:left;'> 
+	<!-- ⦾ &#10686; ⦿ &#10687;  ◎ &#9678; ● &#9679; ◉ &#9673; 
+	     ⊙ &#8857;   ⊚ &#8858;   ⊝ &#8861; ⊕ &#8853; ⇩ &#8681; 	▲▼►◄ -->
+      <span ID='@par' onclick='togbul("xpar","@par")' 
+        title="show/hide" style="cursor:pointer; color:#d9a300;font-size:14pt;">●</span>
+      
+      <span dict="seq-hdr">Seq & Job par</span>&nbsp;
+          
+      <button class="bBar"  onclick="make_seq_val();" 
+        title="make Ordered sequence from param's" > <span dict="make-seq">make-seq</span>
+      </button> <span ID="seq_mak"><e>◎</e></span>
+      <button class="bBar"  onclick="togID('csvimp');"  
+        title="import/append UNordered sequence values from csv (+/-hdr,break char, cols)"> <span dict="imp-seq">imp-seq</span>
+      </button> 
+    </span>
+	
+	<span style='float:right;'>
+      <button class="bJob"  onClick="save_par(seqinfo());"  
+        title="save par of seq & job " ><span dict="save-par">save-par</span>
+      </button>
+      <button class="bJob" 
+        onclick="togID('seq-lib');" 
+        title="(down)load job&seq library" > <span dict="lib-par">par-lib</span>
+      </button> 
+
+	  <span dict="exam-par" title="example seq & job">exam</span>:
+      <select id="exam-par" style="height:22px;" class="select"
+	    onchange="set_par('usr',exam_seq[this.value]);chk_seq();">
+        <option class="d" value="0" selected="0">0</option>  
+        <option class="d" value='1'  > 1</option>
+        <option class="d" value='2'  > 2</option>
+        <option class="d" value='3'  > 3</option>
+        <option class="d" value='4'  > 4</option>
+        <option class="d" value='5'  > 5</option>
+      </select>
+      
+      <button class="bSys"  onClick="set_par('nul');"  
+        title="clear job" ><span dict="clear-par">clear</span>
+      </button>     
+    </span>
+	
+	<div ID="xpar">
+	  <div ID="csvimp" class="info" >
+        <input ID="csvdir" type="file" onchange="csv_imp=this.value;" 
+		value="C:/$desk/$seq.jobs/eps/*.csv" class="bFil" 
+		style='width:470px;' title="избор на .csv файл" />
+          hdr:<input type="checkbox" ID='has_hdr' value='false' 
+		    onchange="seq.has_hdr=this.value;" 
+			title="има ли заглавен ред (header) във файла" class="e">
+		  col:<input type="text" ID="csv_col"  class="d" value="1" style="width:30px;"  maxlength=3 
+		  onchange="seq.col =this.value;"> 
+          <button onclick="get_csv(csv_imp,seq.has_hdr,seq.col);" class="bFil"  
+		    title="импортиране на файл">
+            <span dict="csvimp">прочети</span>
+          </button>
+	  </div> 
+      <table>
+	    <tr>
+	      <td class="td1"> <span dict="seq_bef">before:</span><br>
+             <input type="text"  ID="seq_bef"    class="d" value="-" style="width:44px;"  maxlength=4  
+              onchange="seq.bef=this.value;chk_seq();"> 
+		  </td>
+          <td class="td1" align="right"><span dict="seq_frm">from:</span><br>
+             <input type="text" ID="seq_frm" class="d" value="-" style="width:75px"  maxlength=10 
+		     onchange="seq.frm =this.value;  chk_seq();"> </td>
+          <td class="td1" align="right"><span dict="seq_stp">step:</span><br>
+             <input type="text" ID="seq_stp"  class="d" value="-" style="width:40px;"  maxlength=4 
+		     onchange="seq.stp=this.value; chk_seq();"> </td>
+          <td class="td1">              <span dict="seq_typ">seq type</span> <br>
+		     <!--  class="select" -- >
+		     <input type="text"  ID="seq_typ"   class="d" style="width:50px;" maxlength=3 value="-">
+			 <!-- -->
+             <select id="seq_typ" style="height:20px;" class="select"
+	           onchange="seq.typ=this.value; chk_seq();">
+               <option class="d" value="ord" selected="0">ord</option>  
+               <option class="d" value='val'>val</option>
+             </select>		  
+			
+		  </td>
+          <td class="td2" align="right"><span dict="seq_col">col:</span><br>
+              <input type="text" ID="seq_col"  class="d" value="-" style="width:50px;"  maxlength=3 
+               onchange="seq.col =this.value; chk_seq();"> </td>
+          <td class="td2" align="right" style="width: 50px;">	  
+	         <span dict="fill-ord" title="fill order col|row">fill ord</span><br>
+             <select id="seq_fil" style="height:20px;" class="select"
+	           onchange="seq.fil=this.value; chk_seq();">
+               <option class="d" value="col" selected="col">col (N-up)</option>  
+               <option class="d" value='row'>*row then col</option>
+             </select>		  
+		  </td>
+          <td class="td4">              <span dict="job_ord">job order:</span><br>
+	          <input type="text" ID="job_ord"  class="d" value="?" style="width:120px;" maxlength=16 
+              onchange="job.ord=this.value;chk_seq();"> </td>
+          <td class="td4">              <span dict="job_dat">date:</span><br>
+              <input type="text" ID="job_dat" class="d" value="-" style="width:80px;" maxlength=20 
+              onchange="job.dat=this.value;chk_seq();"> </td>
+		</tr>
+		<tr>
+          <td class="td1">              <span dict="seq_aft">after:</span><br>
+             <input type="text" ID="seq_aft"    class="d" value="-" style="width:44px;"  maxlength=4 
+              onchange="seq.aft =this.value;chk_seq();"> </td>
+          <td class="td1" align="right"><span dict="seq_to" >to:</span><br>
+              <input            ID="seq_to"   class="d" style="width:75px;"                        
+               onchange="seq.to =this.value; chk_seq();"> </td>
+          <td class="td1" align="right"><span dict="seq_dig">dig:</span><br>
+             <input type="text" ID="seq_dig"    class="d" value="-" style="width:40px;"  maxlength=4 
+              onchange="seq.dig =this.value;chk_seq();"> </td>
+          <td class="td1" align="right"><span dict="seq_tot">total:</span><br>
+             <input type="text"  ID="seq_tot"   class="d" value="-" style="width:50px; background-color:#400000;  maxlength=10;"> </td>
+          <td class="td2" align="right"><span dict="seq_row" title="rows:total/cols">row:</span><br>
+              <input type="text" ID="seq_row"  class="d" value="-" maxlength=3 style="width:50px;"
+               onchange="seq.row=this.value;chk_seq();"> </td>       
+          <td class="td3" align="right"><span dict="seq_bar" >barcode:</span><br>
+		     <span ID="seq_bc_list" >
+			   <!-- --!>
+               <select id="seq_bcn" onchange="seq.bcn=this.value; seq_bcn.value=seq.bcn;" ...>
+                 <option class="d" value="0" title="no barcode">0:No-barcode</option>
+				 ...
+               </select>
+			   <!-- -->
+			 </span>
+          </td>         
+          <td class="td4">              <span dict="job_isu">issue: </span><br> 
+             <input type="text" ID="job_isu"    class="d" value="-" style="width:120px;" maxlength=80 
+              onchange="job.isu=this.value;chk_seq();"> </td>
+          <td class="td4">              <span dict="job_clt">client:</span><br>
+             <input type="text" ID="job_clt"  class="d" value="-" style="width:80px;" maxlength=32 
+              onchange="job.clt=this.value;chk_seq();"> </td>
+        </tr>
+      </table>
+    </div>
+	
+	<div ID="seq-err">-</div>  
+	
+	<div ID="seq-lib" class="info" style="font-size:9pt; height:500px;"></div>  
+	
+  </fieldset>
+ 
+  <fieldset ID='_xval'>
+    <span style='float:left;'>
+      <span ID='@val' onclick='togbul("xval","@val")' 
+        title="show/hide" style="cursor:pointer; color:#d9a300;font-size:14pt;">◎       </span>
+      <span dict="val-hdr">collected values for Zint (csv, no hdr)</span>&nbsp; 
+    
+    <!-- -->
+      <button class="bBar"  
+        onclick="putCSVzint();"  
+        title="save csv for Zint (no hdr, 1 col)" >  <span dict="save-val">save-csv</span>
+      </button>
+	  barcodes:
+      <button class="bBar"  
+        onclick="csv2eps();"  
+        title="barcodes: 1(val2eps)"> <span dict="csv2eps">csv2eps</span>
+      </button> -
+      <button class="bBar"  
+        onclick="eps2ps();"  
+        title="barcodes: 2(eps2ps refine)"> <span dict="eps2ps">eps2ps</span>
+      </button> -
+      <button class="bBar"  
+        onclick="ps2pdf();"  
+        title="barcodes: 3(ps2pdf)"> <span dict="ps2pdf">ps2pdf</span>
+      </button> 
+    </span>
+    <span style='float:right;'>
+      <button class="bMak"  
+        onclick="out(xval_,seq.val.join('\n'));"  
+        title="show values for barcodes " > <span dict="show-val">show-val</span>
+      </button> 
+      <button class="bSys"  
+        onclick="xval_.select(); window.clipboardData.setData('Text', buf_val);" 
+        title="to clip" > <span dict="clip-val">clip</span>
+      </button> 
+	  <button class="bSys"  onClick="xval_.innerHTML=''" 
+        title="clear"><span dict="clear-val">clear</span>
+      </button>
+    </span>
+    <textarea ID="xval" class="info" 
+      style="height:150px; display:none; float:left;">...
+    </textarea> 
+  </fieldset>
+
+  <fieldset ID='_xtbl'> 
+    <span style='float:left;'>
+      <span ID='@ind' onclick='togbul("xind","@ind")' 
+        title="show/hide" style="cursor:pointer; color:#d9a300;font-size:14pt;">◎</span>
+        
+      <span dict="ind-hdr">collected values table for Indesign (csv + hdr)</span>&nbsp; 
+      
+      <span dict="tbl_reord">reorder</span>:
+        <select id="tbl_reord" style="height:20px;"  class="select"
+	      onchange="tbl_reord=this.value; ">
+          <option class="d" value="invert" selected="invert">*invert val</option>  
+          <option class="d" value='transpose'>*transpose col-row</option>
+          <option class="d" value='shetfed 2'>*shetfed 2</option>
+          <option class="d" value='shetfed 4'>*shetfed 4</option>
+          <option class="d" value='shetfed 8'>*shetfed 8</option>
+          <option class="d" value='shetfed 16'>*shetfed 16</option>
+          <option class="d" value='randomize'>*randomize ord</option>
+        </select>		  
+      <!-- turn?, tumble?  -->
+
+      <button class="bTbl"  onclick="putCSVindd();" title="save csv for Indesign (hdr, val by col)"> 
+	    <span dict="save-ind">save-csv</span>
+      </button> 
+	  
+    </span>
+	
+    <span style='float:right;'>
+      <button class="bMak"   onclick="buf_ind=show_ind(); out(xind_,buf_ind);" 
+        title="show values for indesign"> <span dict="show-ind">show-ind</span>
+      </button>
+      <button class="bSys"  onclick="xind_.select(); window.clipboardData.setData('Text', buf_ind);"
+        title="to clip" > <span dict="clip-ind">clip</span>
+      </button>  
+	  <button class="bSys" style='float:right;' onClick="xind_.innerHTML=''" 
+        title="clear"><span dict="clear-ind">clear</span>
+      </button>
+    </span>
+	
+	<textarea ID="xind" class="info" 
+      style="height:150px; display:none; float:left;">...
+	</textarea> 
+  </fieldset>
+  
+  <fieldset ID='_xmsg'> 
+    <span style='float:left;'>
+      <span ID='@msg' onclick='togbul("xmsg","@msg")' 
+        title="show/hide" style="cursor:pointer; color:#d9a300;font-size:14pt;">◎</span>
+      <span dict="msg-hdr">messages</span>&nbsp; 
+    </span>   
+    <span style='float:right;'>
+	  <button class="bMak"  onClick="togID('help');togID('help-toc');" 
+        title="help"> <span dict="help">help</span>
+      </button>
+	  <button class="bSys" onClick="msg(sysinfo()+eoln+seqinfo()+eoln+wininfo()+eoln);" 
+        title="sysinfo"> <span dict="sysinfo">sysinfo</span>
+      </button>
+	  <!-- --!>
+      <button class="bSys"  
+        onclick="xmsg_.select(); window.clipboardData.setData('Text',buf_msg);"
+        title="select for clip"  > <span dict="sel4clip-msg">sel4clip</span>
+      </button> 
+	  <!-- -->
+	  <button  class="bSys" onClick="msg_.innerHTML=''"
+        title="clear"><span dict="clear-msg">clear</span>
+      </button>
+    </span>
+
+	<div ID="xmsg" class="info" 
+      style="height:550px; display:none; float:left; background-color:#333333;">
+      <div ID="init-par"><hr width="650px" size="8px" color="#4d4cff" align="left"
+	             onclick="togID('init');" style="cursor:pointer;">  
+		<span id="init"></span>
+	  </div>  
+	  <div ID="msg"> </div>  
+      <hr width="650" size="2px" color="#5b5b5b" align="left" style="margin: 2px 0px 0px 0px;">
+	  <div ID="help-toc">help: 
+        <a href='#0' class="bMak" onclick="out(help_,null);out(help_,help[0]);" title="review"> <span dict="review" >0.Обзор</span> </a>
+        <a href='#1' class="bMak" onclick="out(help_,null);out(help_,help[1]);" title="process"><span dict="process">1.Процес</span> </a>
+        <a href='#2' class="bMak" onclick="out(help_,null);out(help_,help[2]);" title="seq.gen"><span dict="seq.gen">2.Редица</span>  </a>           
+        <a href='#3' class="bMak" onclick="out(help_,null);out(help_,help[3]);" title="merge">  <span dict="merge"  >3.Сглобяване</span> </a> 
+        <a href='#4' class="bMak" onclick="out(help_,null);out(help_,help[4]);" title="tech">   <span dict="tech"   >4.Техн. инфо</span>  </a> 
+        <a href='#5' class="bMak" onclick="out(help_,null);out(help_,help[5]);" title="todo">   <span dict="todo"   >5.todo</span>  </a> 
+	  </div>  
+	  <div ID="help"> </div>  
+	</div> 
+  </fieldset>
+</span>
+  <!-- -->
+  <script> load_new('seq.htm (body)');
+   { /* -- set windows dom ptr */
+     var  _tit  =setById("_tit"),   xpar_   =setById("xpar")
+        , xind_ =setById("xind"),   xval_   =setById("xval")
+		,  msg_ =setById("msg" ),   init_   =setById("init")
+		,seqerr_=setById("seq-err") 
+		,csvimp_=setById("csvimp"), seqlib_ =setById("seq-lib")
+		,help_  =setById("help"),   help_toc_=setById("help-toc");
+	 xind_.innerHTML='';  xval_.innerHTML=''; msg_.innerHTML=''; // clear
+   }
+   { /* -- set par     dom ptr */
+     seq_frm=setById("seq_frm" ); seq_to  =setById("seq_to"  );
+     seq_stp=setById("seq_stp" ); seq_dig =setById("seq_dig" );
+     seq_tot=setById("seq_tot" ); seq_typ =setById("seq_typ" ); seq_fil =setById("seq_fil" ); 
+	 seq_bc_list=setById("seq_bc_list" ); 
+	 seq_bc_list.innerHTML=bcn_sel('seq_bcn'); // 'seq_bcn' 'seq_bc_list'     
+     seq_col=setById("seq_col" ); seq_row =setById("seq_row" );  
+     seq_bef=setById("seq_bef" ); seq_aft =setById("seq_aft" );
+     job_ord=setById("job_ord" ); job_isu =setById("job_isu" );
+     job_clt=setById("job_clt" ); job_date=setById("job_dat" );
+   }
+   load_end(); // body
+// ---  style="cursor:pointer;"auto pointer progress cell grab help wait text
+   out(init_,'<table>'+load_lst()+'</table>'+eol) // msg('<xmp>'+buf+'</xmp>'+eoln)
+   out(init_,fs_init()+eoln); // ' _activexON:'+_activexON
+   //for(i in dict) msg('dict['+i+']=["'+ dict[i][bg]+'","'+dict[i][en]+'"]\n')
+   if(!_activexON) console.log(dict)
+   
+// --- *.value | *.innerHTML
+   { xos_ =document.getElementById("os" );          xos_.innerHTML=os;
+     xcmp_=document.getElementById("comp");        xcmp_.innerHTML=comp;
+     xusr_=document.getElementById("user");        xusr_.innerHTML=user;
+     xpth_=document.getElementById("workdir");     xpth_.innerHTML=jobs;   
+//   xlog_=document.getElementById("log");         xlog_.innerHTML=log;
+     xzin_=document.getElementById("zintdir");     xzin_.innerHTML=zintdir;   
+     xsrc_=document.getElementById("srcdir");      xsrc_.innerHTML=src;
+   }
+// ---
+   set_lang('eng')
+// ---
+   var br_=browserID()
+   out(init_,' dbg: <v>'+dbg+'</v>'+' Browser: <v>'+br_+'</v>'+' jsver: <v>'+jsver+'</v>'+ eoln)
+   out(init_,'<hr width="650" size="2px" color="#5b5b5b" '
+            +'align="left" style="margin: 2px 0px 0px 0px;">'+ eoln)
+   out(init_,'userAgent: <v>'+navigator.userAgent+'</v>'+ eoln)
+//   if(br.isWindows) out(init_,'Windows: <v>'+br.winVers+'</v>'+ eoln) 
+//   if(br.isWindows) os='Windows '+br.winVers; xos_.innerHTML=os; // win-7 =?= 6.1
+// ---
+   set_par('def'); chk_seq();
+
+   init_.style.display = "none"; // hide
+   help_.style.display = "none";
+   help_toc_.style.display = "none";
+   csvimp_.style.display = "none";
+   seqlib_.style.display = "none";
+// seqerr_.style.display = "none";
+   seqlib_.innerHTML=seqlib();
+   resize_hta() 
+// if(dbg) get_style()
+// if(dbg) msg(eoln+'<xmp>'+seqlib()+'</xmp>'+eoln)
+// vizIDs('i'// show/hide/toggle/info
+   msg('-- ever try to make peace & live, harmony & art, music & science! --'+eoln
+      +'-- never watch indifferently violence & injustice, pain & fear, noise & ignorance! --'+eoln)
+/*
+        <!-- The multiple attribute lets users select multiple files. -->
+	  	<!--  --/>
+          <input type="file" id="file-selector" multiple>
+          <script>
+            const fileSelector = document.getElementById('file-selector');
+            fileSelector.addEventListener('change', (event) => {
+              const fileList = event.target.files;
+              console.log(fileList);
+            });
+          </script>
+	  	<!--  -->
+		
+   <input onClick="this.select();" value="Sample Text" />
+   https://developer.mozilla.org/en-US/docs/Web/API/Clipboard
+   navigator.clipboard.writeText(text) -- developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
+   depr: document.execCommand('copy')
+  
+   ie ok: window.clipboardData.setData('Text', textToPutOnClipboard);
+   
+   <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+   <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'"> on </button>
+   <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">off</button>
+*/
+  if(!_activexON) console.log(lib_job,lib_seq)
+  var buf=''
+//lib_seq[++i]={ "typ":"ord", "bef":"R19E", "aft":"", "frm": 1,  "to": 6000, "dig": 5, "stp": 1, "bcn": 20 /* CODE128 */, "col": 4, "row": 1500, "fil":"col", "tot": 6000 };   lib_job[i]={ "isu":"20lv", "ord":"190413_1", "clt":"Praktiker", "dat":"2019-01-25" }; 
+  for(var i=0; i<lib_job.length; i++){ 
+    buf+='['+i+'] seq:{'
+    with(lib_seq[i]) buf+=[typ,bef,aft,frm,to,dig,stp,bcn,col,row,fil,tot].join(',')+'}'
+    buf+=' job:{'
+    with(lib_job[i]) buf+=[ord,clt,isu,dat].join(',')+'}'+eoln
+  }
+  msg(buf)
+  </script>  
+</body>  
+</html>

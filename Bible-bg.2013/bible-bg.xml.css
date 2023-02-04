@@ -1,0 +1,42 @@
+*   {font-family:Verdana, Tahoma, Arial, 'Sans Serif', 'Arial Cyr', Helvetica;
+     font-style:normal;text-align:left; background-color:#1a0d00; color:#77ffaa;
+     font-size:10pt;line-height:11p}
+/* volume:том */
+ vol {display:block; color:#ff9673;
+     font-size:18pt; line-height:18pt;font-weight:bold;}
+
+/* book:книга */
+ bk {display:block; color:#77ffaa;   clear: left; padding: 2mm 0pt 0.5em 1em;
+     font-size:15pt;line-height:16pt;font-weight:bold;}
+/* book:книга */
+ bn {display:inline; color:#00b3b2;  
+     font-size:13pt;line-height:15pt;}
+     
+/* chapter:глава */
+ ch {display:block; color:#00b3b2; clear: left; padding: 2mm; 
+     font-size:12pt;line-height:13pt;font-weight:bold;font-style:italic;}
+/* chapter no:глава номер */
+ cn {display:inline; color:#00b3b2;
+     font-size:12pt;line-height:13pt;font-style:italic;}
+     
+ ct {display:table;  margin:2px; width: 95%; } /* book table */
+ v  {display:table-row;  border-collapse: collapse;  float:inline;
+     color:#ffdfbf;     width: 94%;    padding: 1px; margin:1px;
+     font-size:12pt;line-height:13pt; font-weight:normal;
+    } /* row=verse float:left; inline; table-cell */
+
+/* verse number:стих номер */
+ n  {display:table-cell; color:#00b3b2; width: 4em;   float:left; padding: 1px; margin:1px;
+     font-size: 8pt; line-height:10pt; font-weight:normal; font-style:italic;}
+/* text:текст */     
+ t  {display:inline; color:#ffdfbf;     width: 90%;   float:left;  padding: 1px; margin:1px;
+     font-size:12pt;line-height:13pt; font-weight:normal; }         
+/* * marker + comment */
+ m  {color:#000000; background-color:#ccff99; }
+ c  {color:#ccff99; font-style: italic; font-size:10pt; line-height:11pt;}
+ link  {color:#00b3b2; font-style: italic; font-size:10pt; line-height:11pt;}
+
+ t:hover {background-color:#313140;  }
+ n:hover {background-color:#00b3b2; color:#000000; }
+ c:hover {background-color:#ccff99; color:#000000; }
+ а:hover {background-color:#ccff99; color:#000000; }

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head><title>Bible-bg.NT xml</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Bible-bg" name="description" />
+    <meta content="mailto:elefter@abv.bg" name="author"      />
+    <link href ="Bible-bg.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
+    <link href ="Bible-bg.ico" type="image/x-icon" rel ="icon"          />
+    <meta name ="keywords"     content="bible-bg,bible,bg,orthodox">
+    
+    <link rel="stylesheet" type="text/css" href="bible-bg.xml.css">
+   
+    <script>
+    eol='\n'; br='<br/>'; eoln=br+eol; dbg=!true; /* globals */
+    // ---    
+    function out(plc_,msg){ if (typeof(msg)===undefined) return;
+      if (plc_===undefined || plc_===null) {
+        try{               document.write('»msg:'+msg+eol+br); 
+        }catch(Exception){ alert('»»msg:'+msg);}
+        return
+      }
+	  
+	  if (msg==null) plc_.innerHTML=''; else plc_.innerHTML+=msg
+	}
+    // ---    
+    function setById(id){ return document.getElementById(id) }    
+    // ---    
+    {   var id='NT', bks=27 , Hdr=[1+bks], chs=0;
+      Hdr[ 0]={en:id     , bg:'НЗ'   , title:'Православна Библия, Нов Завет'               }; // hdr
+      Hdr[ 1]={en:'Math' , bg:'Мат'  , title:"Евангелие на ап.Матей"                       ,ch:28} 
+      Hdr[ 2]={en:'Mark' , bg:'Марк' , title:"Евангелие на ап.Маркo"                       ,ch:16} 
+      Hdr[ 3]={en:'Luka' , bg:'Лука' , title:"Евангелие на ап.Лука"                        ,ch:24} 
+      Hdr[ 4]={en:'Ioan' , bg:'Иоан' , title:"Евангелие на ап.Йоан"                        ,ch:21} 
+      Hdr[ 5]={en:'act'  , bg:'деян' , title:"Деяния на светите Апостоли"                  ,ch:28} 
+      Hdr[ 6]={en:'Yak'  , bg:'Яков' , title:"Съборно послание на ап.Яков"                 ,ch: 5} 
+      Hdr[ 7]={en:'1Pet' , bg:'1Пет' , title:"1 Съборно послание на ап.Петър"              ,ch: 5} 
+    
+      Hdr[ 8]={en:'2Pet' , bg:'2Пет' , title:"2 Съборно послание на ап.Петър"              ,ch: 3} 
+      Hdr[ 9]={en:'1Ioan', bg:'1Иоан', title:"1 Съборно послание на ап.Йоан"               ,ch: 5} 
+      Hdr[10]={en:'2Ioan', bg:'2Иоан', title:"2 Съборно послание на ап.Йоан"               ,ch: 1} 
+      Hdr[11]={en:'3Ioan', bg:'3Иоан', title:"3 Съборно послание на ап.Йоан"               ,ch: 1} 
+      Hdr[12]={en:'Iuda' , bg:'Юда'  , title:"Съборно послание на ап.Юда"                  ,ch: 1} 
+      Hdr[13]={en:'rom'  , bg:'римл' , title:"Послание на ап.Павел към Римляни"            ,ch:16} 
+      Hdr[14]={en:'1cor' , bg:'1кор' , title:"1 Послание на ап.Павел към Коринтяни"        ,ch:16} 
+    
+      Hdr[15]={en:'2cor' , bg:'2кор' , title:"2 Послание на ап.Павел към Коринтяни"        ,ch:13} 
+      Hdr[16]={en:'gala' , bg:'гала' , title:"Послание от ап.Павел към Галатяни"           ,ch: 6} 
+      Hdr[17]={en:'efes' , bg:'ефес' , title:"Послание от ап.Павел към Ефесяни"            ,ch: 6} 
+      Hdr[18]={en:'fil'  , bg:'фил'  , title:"Послание от ап.Павел към Филипяни"           ,ch: 4} 
+      Hdr[19]={en:'colo' , bg:'коло' , title:"Послание от ап.Павел към Колосяни"           ,ch: 4} 
+      Hdr[20]={en:'1sol' , bg:'1сол' , title:"1 Послание на ап.Павел към Солуняни"         ,ch: 5} 
+      Hdr[21]={en:'2sol' , bg:'2сол' , title:"2 Послание на ап.Павел към Солуняни"         ,ch: 3} 
+    
+      Hdr[22]={en:'1Tim' , bg:'1Тим' , title:"1 Послание на ап.Павел към Тимотей"          ,ch: 6} 
+      Hdr[23]={en:'2Tim' , bg:'2Тим' , title:"2 Послание на ап.Павел към Тимотей"          ,ch: 4} 
+      Hdr[24]={en:'Tit'  , bg:'Тит'  , title:"Послание на ап.Павел към Тит"                ,ch: 3} 
+      Hdr[25]={en:'Flm'  , bg:'Флм'  , title:"Послание на ап.Павел към Филимон"            ,ch: 1} 
+      Hdr[26]={en:'heb'  , bg:'евр'  , title:"Послание на ап.Павел към Евреи"              ,ch:13} 
+      Hdr[27]={en:'Rev'  , bg:'Откр' , title:"Откровение на ап.Йоан Богослов (Апокалипсис)",ch:22}
+    }
+    if(dbg){
+      for (var i=1; i<=bks;i++) with(Hdr[i]) { 
+        console.log('['+i+'] ch:'+ch+' en:'+en+' bg:'+bg+' title:'+title); chs+=ch
+      }
+      console.log(id+' chapters total:'+chs) // 260
+    }
+    // ---
+    function togID(id){ // toggle visibility: expand/contract  -- "block"; inline-block / none
+      if(typeof(id)==='undefined'  | id=='')    {if(dbg) console.log('togID(): undef/empty'); return}
+	  var id_=document.getElementById(id);
+      if(typeof(id_)==='undefined' | id_==null) {if(dbg) console.log('togID(): miss '+id); return}
+	  var stl=id_.style.display; 
+      if(dbg) console.log('togID(\''+id+'\') : find')
+      if (stl=="none") { id_.style.display = "block"} else { id_.style.display = "none"}
+    }
+    // --- 
+    function indexMake(){
+      var indexBuf='<table>', n=7
+      for (var i=1; i<=bks; i++) with(Hdr[i]) { var j=i, c=ch; 
+        if(j<=9) j='0'+j; if(c<=9) c='0'+c; 
+        
+        if (i==1 || i==n+1 || i==2*n+1 || i==3*n+1) indexBuf+=eol+'<tr>'
+        indexBuf+='<td style="background-color:#000000">'
+        +' <a href="#'+id+'.'+en+'" title="'+j+': '+title+'" onclick="togID(\'NT.'+en+'\')">'
+        +   bg+'</a>'+' ['+c+' гл.]'
+        +'</td>'+eol; 
+        if (        i==n   || i==2*n   || i==3*n || i==4*n)   indexBuf+='</tr>'
+      }; indexBuf+='</table>'+eol
+      return indexBuf
+    }
+    </script>     
+  </head>
+  
+  <body style="background-color:#333333">
+  <div ><vol><ch>Православна Библия, Нов Завет</ch></div> 
+
+  <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+  <div id="index"></div> <script> out(setById("index"),indexMake()); </script> 
+  <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+
+  <div id='content'>
+    <div id='NT.Math'   ><object type="text/html" data="text.xml/bible-bg.NT-01.Math.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Mark'   ><object type="text/html" data="text.xml/bible-bg.NT-02.Mark.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Luka'   ><object type="text/html" data="text.xml/bible-bg.NT-03.Luka.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Ioan'   ><object type="text/html" data="text.xml/bible-bg.NT-04.Ioan.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.act'    ><object type="text/html" data="text.xml/bible-bg.NT-05.act.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Yak'    ><object type="text/html" data="text.xml/bible-bg.NT-06.Yak.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.1Pet'   ><object type="text/html" data="text.xml/bible-bg.NT-07.1Pet.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+
+    <div id='NT.2Pet'   ><object type="text/html" data="text.xml/bible-bg.NT-08.2Pet.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.1Ioan'  ><object type="text/html" data="text.xml/bible-bg.NT-09.1Ioan.xml" width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.2Ioan'  ><object type="text/html" data="text.xml/bible-bg.NT-10.2Ioan.xml" width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.3Ioan'  ><object type="text/html" data="text.xml/bible-bg.NT-11.3Ioan.xml" width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Iuda'   ><object type="text/html" data="text.xml/bible-bg.NT-12.Iuda.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.rom'    ><object type="text/html" data="text.xml/bible-bg.NT-13.rom.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.1cor'   ><object type="text/html" data="text.xml/bible-bg.NT-14.1cor.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+
+    <div id='NT.2cor'   ><object type="text/html" data="text.xml/bible-bg.NT-15.2cor.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.gala'   ><object type="text/html" data="text.xml/bible-bg.NT-16.gala.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.efes'   ><object type="text/html" data="text.xml/bible-bg.NT-17.efes.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.fil'    ><object type="text/html" data="text.xml/bible-bg.NT-18.fil.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.colo'   ><object type="text/html" data="text.xml/bible-bg.NT-19.colo.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.1sol'   ><object type="text/html" data="text.xml/bible-bg.NT-20.1sol.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.2sol'   ><object type="text/html" data="text.xml/bible-bg.NT-21.2sol.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+
+    <div id='NT.1Tim'   ><object type="text/html" data="text.xml/bible-bg.NT-22.1tim.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.2Tim'   ><object type="text/html" data="text.xml/bible-bg.NT-23.2tim.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Tit'    ><object type="text/html" data="text.xml/bible-bg.NT-24.tit.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Flm'    ><object type="text/html" data="text.xml/bible-bg.NT-25.flm.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.heb'    ><object type="text/html" data="text.xml/bible-bg.NT-26.heb.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='NT.Rev'    ><object type="text/html" data="text.xml/bible-bg.NT-27.Rev.xml"   width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+  </div>
+  <script> for (var i=1; i<=bks; i++) with(Hdr[i]) {togID(id+'.'+en)} </script>
+  </body>
+</html>

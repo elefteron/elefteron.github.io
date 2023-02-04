@@ -1,0 +1,29 @@
+c:\$desk\#svc.jobs\#svc.jobs.mouse\
+
+193408_1 dop1=1pg.indd.csv
+193408_1 dop2=1pg.indd.csv
+193408_1 print=0500pg.indd.csv
+193408_2 print=1000pg.indd.csv
+193408_2 dop=50pg.indd.csv
+193408_3 print=1000pg.indd.csv
+193408_3 dop=10pg.indd.csv
+193408_4 dop=0005pg dop+17.csv
+193408_4 print=0500pg.indd.csv
+
+193408_1 [330x487] dop1=1pg.indd
+193408_1 [330x487] dop2=1pg.indd
+193408_1 [330x487] print=0500pg #gen.indd
+193408_2 [330x487] dop=13pg +50.indd
+193408_2 [330x487] print=1000pg #gen.indd
+193408_3 [330x487] dop=10pg +39.indd
+193408_3 [330x487] print=1000pg #gen.indd
+193408_4 [330x487] dop=0005pg +17.indd
+193408_4 [330x487] print=0500pg #gen.indd
+
+193408 jobid,js
+193408 dirlist.csv
+
+193408_1.eps.zip
+193408_2.eps.zip
+193408_3.eps.zip
+193408_4.eps.zip
