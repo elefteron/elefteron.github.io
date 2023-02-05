@@ -1,6 +1,7 @@
 _load._new('scr/bible.js')
 {// --- bible global,cfg: 
-/* ../Bible-bg.text/bible-bg.NT-01.bg.js:
+/* ../Bible-bg.text/ -> text.js/
+ bible-bg.NT-01.bg.js:
  bible[NT_][1].bktitle='От Матея свето Евангелие'
  bible[NT_][1].bkname='NT.MAT' // NT.MAT== 1.1 
  bible[NT_][1].bkdescr={src:'св.Синод на БПЦ',enc:'utf-8',lang:'bulgarian'}
