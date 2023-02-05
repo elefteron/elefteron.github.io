@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="bible-bg.xml.css">
    
     <script>
-    eol='\n'; br='<br/>'; eoln=br+eol; dbg=!true; /* globals */
+    eol='\n'; br='<br/>'; eoln=br+eol; dbg=true; /* globals */
     // ---    
     function out(plc_,msg){ if (typeof(msg)===undefined) return;
       if (plc_===undefined || plc_===null) {
@@ -83,8 +83,8 @@
       Hdr[49]={en:'@@@@', bg:'3Мак' , title:'3 кн. Макавейска'                , ch:  7 }
       Hdr[50]={en:'@@@@', bg:'3Езд' , title:'3 кн. на Ездра'                  , ch: 16 }
     }
-    if(dbg){
-      for (var i=1; i<=bks;i++) with(otH[i]) { 
+    if(dbg){       
+      for (var i=1; i<=bks;i++) with(Hdr[i]) { 
         console.log('['+i+'] ch:'+ch+' en:'+en+' bg:'+bg+' title:'+title); chs+=ch
       }
       console.log(id+' chapters total:'+chs) // ot=?, nt=260
@@ -106,7 +106,7 @@
         
         if (i==1 || i==n+1 || i==2*n+1 || i==3*n+1 || i==4*n+1) indexBuf+=eol+'<tr>'
         indexBuf+='<td style="background-color:#000000">'
-        +' <a href="#'+id+'.'+en+'" title="'+j+': '+title+'" onclick="togID(\'NT.'+en+'\')">'
+        +' <a href="#'+id+'.'+en+'" title="'+j+': '+title+'" onclick="togID(\''+id+'.'+en+'\')">'
         +   bg+'</a>'+' ['+c+' гл.]'
         +'</td>'+eol; 
         if (        i==n   || i==2*n   || i==3*n || i==4*n || i==5*n)   indexBuf+='</tr>'
@@ -123,159 +123,159 @@
   <div id="index"></div> <script> out(setById("index"),indexMake()); </script> 
   <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
 
-  <div id='content'>
-    <div id='ОT.bit' ><object type="text/html" data="text.xml/bible-bg.ОT-01.bit.xml"  width="700px" height="650px"></object>
+  <div id='content'>                                 
+    <div id='OT.bit' ><object type="text/html" data="text.xml/bible-bg.OT-01.bit.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-02.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-02.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-03.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-03.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-04.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-04.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-05.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-05.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-06.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-06.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-07.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-07.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-08.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-08.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-09.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-09.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-10.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-11.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-12.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-13.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-14.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-15.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-16.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-17.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-18.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-19.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-20.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-10.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
 
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-21.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-11.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-22.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-12.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-23.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-13.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-24.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-14.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-25.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-15.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-26.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-16.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-27.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-17.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-28.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-18.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-29.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-19.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-30.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-31.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-32.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-33.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-34.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-35.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-36.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-37.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-38.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-39.@@@@.xml"  width="700px" height="650px"></object>
-       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
-    </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-40.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-20.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
 
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-41.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-21.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-42.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-22.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-43.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-23.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-44.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-24.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-45.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-25.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-46.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-26.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-47.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-27.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-48.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-28.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-49.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-29.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
-    <div id='ОT.@@@@'><object type="text/html" data="text.xml/bible-bg.ОT-50.@@@@.xml"  width="700px" height="650px"></object>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-30.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-31.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-32.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-33.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-34.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-35.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-36.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-37.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-38.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-39.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-40.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-41.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-42.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-43.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-44.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-45.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-46.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-47.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-48.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-49.@@@@.xml"  width="700px" height="650px"></object>
+       <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
+    </div>
+    <div id='OT.@@@@'><object type="text/html" data="text.xml/bible-bg.OT-50.@@@@.xml"  width="700px" height="650px"></object>
        <hr width="700" size="1px" color="#ffa64c" align="left" style="margin: 0px 0px 0px 0px;">
     </div>
   </div>

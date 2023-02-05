@@ -82,7 +82,7 @@
         
         if (i==1 || i==n+1 || i==2*n+1 || i==3*n+1) indexBuf+=eol+'<tr>'
         indexBuf+='<td style="background-color:#000000">'
-        +' <a href="#'+id+'.'+en+'" title="'+j+': '+title+'" onclick="togID(\'NT.'+en+'\')">'
+        +' <a href="#'+id+'.'+en+'" title="'+j+': '+title+'" onclick="togID(\''+id+'.'+en+'\')">'
         +   bg+'</a>'+' ['+c+' гл.]'
         +'</td>'+eol; 
         if (        i==n   || i==2*n   || i==3*n || i==4*n)   indexBuf+='</tr>'
