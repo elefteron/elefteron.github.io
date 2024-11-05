@@ -1,0 +1,38 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1160" startPos="3315" endPos="3315" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\proj\proj.js" backupFilePath="" originalFileLastModifTimestamp="1893459371" originalFileLastModifTimestampHigh="30829445" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Fold line="4" />
+                <Fold line="8" />
+                <Fold line="13" />
+                <Fold line="21" />
+                <Fold line="35" />
+                <Fold line="62" />
+                <Fold line="74" />
+                <Fold line="86" />
+                <Fold line="97" />
+                <Fold line="111" />
+                <Fold line="124" />
+                <Fold line="138" />
+                <Fold line="150" />
+                <Fold line="161" />
+                <Fold line="175" />
+                <Fold line="191" />
+                <Fold line="209" />
+                <Fold line="222" />
+            </File>
+            <File firstVisibleLine="32" xOffset="0" scrollWidth="1060" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="HTML" encoding="1251" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\drv-info.4.hta" backupFilePath="" originalFileLastModifTimestamp="688851968" originalFileLastModifTimestampHigh="30092767" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1142292480" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Fold line="14" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="720" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\math.js" backupFilePath="" originalFileLastModifTimestamp="708590336" originalFileLastModifTimestampHigh="30092759" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="940" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\order.js" backupFilePath="" originalFileLastModifTimestamp="-947292672" originalFileLastModifTimestampHigh="30092731" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="6881380" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="690" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\time.js" backupFilePath="" originalFileLastModifTimestamp="1975646976" originalFileLastModifTimestampHigh="30092669" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1142292480" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="730" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\window.js" backupFilePath="" originalFileLastModifTimestamp="-266246144" originalFileLastModifTimestampHigh="30092763" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="589439264" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="980" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\activex-ie.js" backupFilePath="" originalFileLastModifTimestamp="1167674624" originalFileLastModifTimestampHigh="30092731" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="21758044" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="670" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\browserid.js" backupFilePath="" originalFileLastModifTimestamp="-2069254912" originalFileLastModifTimestampHigh="30092671" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="541851846" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="940" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\char-size.js" backupFilePath="" originalFileLastModifTimestamp="1153884672" originalFileLastModifTimestampHigh="30092768" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="7" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="830" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JavaScript" encoding="-1" userReadOnly="no" filename="F:\elefter.dev\my-dev+\drv-info.4\colors.js" backupFilePath="" originalFileLastModifTimestamp="-127161856" originalFileLastModifTimestampHigh="30092735" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-1" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

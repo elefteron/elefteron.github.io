@@ -1,5 +1,9 @@
-<html>
-<head>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head> <title>X14 hta</title>
+    <meta charset="utf-8" /> 
+    <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	  
   <HTA:APPLICATION ID="Xhta" applicationName="X14"   icon="../ico/D.ico"
     singleInstance= "no"  showInTaskBar ="yes"  application   ="yes"
     contextMenu   ="yes"  selection     ="yes"
@@ -8,17 +12,17 @@
     windowState="normal"  navigable     ="yes" 	innerBorder   ="no"
     borderStyle="raised"  
   />
-  <title>X14 hta</title> <!-- x-widget.run.hta v.2014-->
+
   <link href ="../ico/D.ico" type="image/x-icon" rel ="SHORTCUT ICON" />
   <link href ="../ico/D.ico" type="image/x-icon" rel ="icon"          />
   <meta http-equiv="x-ua-compatible" content="ie=9">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
   <!--META HTTP-EQUIV="refresh" CONTENT="0; URL=x-widget.htm"-->
 </head>
 <body>
   <!-- PRE ID='prop'></PRE -->
   <script src="x-cfg.js"></script>
-  <SCRIPT> dbg=false //false true
+  <script> dbg=false //false true
     function ClearProp() { prop.innerText= '';	}
     function ShowHTAProp(_HTA)  { prop.innerText=
          "border           = " + _HTA.border          + "\n" +
@@ -77,7 +81,7 @@
 	  if(dbg) alert('try p:'+p)
    // main.innerHTML.src=PROG+"#"+p;                               
    // document.getElementById('main').innerHTML  = PROG+".htm#"+p  //
-   // document.getElementById('main').src ='<iframe src="dirlist.htm"></iframe>'
+   // document.getElementById('main').src ='<iframe title="dirlist" src="dirlist.htm"></iframe>'
       document.location.href = PROG+".htm#"+p;  // replace content 
 	}
 	//ShowHTAProp(Xhta); alert();

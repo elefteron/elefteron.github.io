@@ -150,7 +150,7 @@ outlog_('>>>ea-2010.js');Fnt=[// #[Type,Style, PathNo,SetNo,Win,PS,File,Flag,Bad
 /*148*/,["T","N",8,4,"Tagir DP Normal","TagirDPNormal","Tagir DP Normal.ttf","*",0,0,0,"-","-"]
 /*149*/,["T","N",8,4,"TagirCTT","TagirCTT","TagirCTT.ttf","*",0,0,0,"-","-"]
 /*150*/,["T","N",8,4,"UkrainianBrushScript","UkrainianBrushScript","UkrainianBrushScript.ttf","*",0,0,0,"-","-"]
-/*151*/,["T","N",8,4,"Ænigma Scrawl (BRK)","AEnigmaScrawl(BRK)","Enigma Scrawl (BRK).ttf","*",0,0,0,"-","-"]
+/*151*/,["T","N",8,4,"Ã†nigma Scrawl (BRK)","AEnigmaScrawl(BRK)","Enigma Scrawl (BRK).ttf","*",0,0,0,"-","-"]
 /*152*/,["T","N",12,5,"CyrillicGoth","CyrillicGoth","CyrillicGoth (2).ttf","*",0,0,0,"-","-"]
 /*153*/,["T","N",12,5,"Deutsch Gothic","DeutschGothic","Deutsch Gothic.ttf","*",0,0,0,"-","-"]
 /*154*/,["T","N",12,5,"Dr.Po GothicRu","Dr.PoGothicRu","Dr.Po GothicRu.ttf","*",0,0,0,"-","-"]

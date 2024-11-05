@@ -5,8 +5,8 @@ htmNwln=ln+hteol
 // ------------------------------------------------
   latWin='ABCDEFGHIJKLMNOPQRSTUVWXYZ '
         +'abcdefghijklmnopqrstuvwxyz '
-  dtpch =" ¹§ˆ•°·…-–—†‡‰‘’‚“”„‹›«»¤¬±µ¶ " // small defice?
-  serb  =" ¡¢¥ƒŸ¡¢ŠšŒœ "
+  dtpch =" Â¹Â§Ë†â€¢Â°Â·â€¦-â€“â€”â€ â€¡â€°â€˜â€™â€šâ€œâ€â€â€¹â€ºÂ«Â»Â¤Â¬Â±ÂµÂ¶ " // small defice?
+  serb  =" Â¡Â¢Â¥ÂÆ’ÂÂÅ½Å¾ÂÂÅ¸Â¡Â¢Å Å¡Å’Å“ "
 // \xdd   Character with Latin-1 encoding by 2 hexadecimal digits 
 // \udddd Character with Unicode encoding by 4 hexadecimal digits - utf-16/utf-8 ?
 //? utf-8:\xD1\xA0 == utf-16: \u0460
@@ -25,8 +25,8 @@ htmNwln=ln+hteol
 /**/ 
   acl='\u0300'; // utf8 accent topleft  to downright 
   acr='\u0301'; // utf8 accent topright to downleft
-  acvCap=['À','Å','È','Î','Ó','Ú','Ş','ß'] // cyr vowels to be accented
-  acvSma=['à','å','è','î','ó','ú','ş','ÿ']
+  acvCap=['Ã€','Ã…','Ãˆ','Ã','Ã“','Ãš','Ã','ÃŸ'] // cyr vowels to be accented
+  acvSma=['Ã ','Ã¥','Ã¨','Ã®','Ã³','Ãº','Ã¾','Ã¿']
   var sl=sr='';
   for (i=0; i<acvCap.length; i++) {
     sl+=acvCap[i]+acl+acvSma[i]+acl; 
@@ -34,14 +34,14 @@ htmNwln=ln+hteol
   }
   acv1=sl+' '+sr
 // acv1   bad=ie8,opera, ok=seamonkey,firefox,safari,chrome
-// 'a\u02cbA\u02cb a\u0300A\u0300 a\u02caa\u02ca' Å(\u0400\u0450)
-  acv2='À\u00c0\u00e0 Å\u00c8\u00e8 È\u040d\u045d Î\u00d2\u00f2 Ó\u00dd\u00fd \u0404\u0454 \u0401\u0451 '
+// 'a\u02cbA\u02cb a\u0300A\u0300 a\u02caa\u02ca' Ã…(\u0400\u0450)
+  acv2='Ã€\u00c0\u00e0 Ã…\u00c8\u00e8 Ãˆ\u040d\u045d Ã\u00d2\u00f2 Ã“\u00dd\u00fd \u0404\u0454 \u0401\u0451 '
 // --- 
-  cyrWinCap='ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞß '// also sort order
-  cyrWinSma='àáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ '
+  cyrWinCap='Ã€ÃÃ‚ÃƒÃ„Ã…Ã†Ã‡ÃˆÃ‰ÃŠÃ‹ÃŒÃÃÃÃÃ‘Ã’Ã“Ã”Ã•Ã–Ã—Ã˜Ã™ÃšÃ›ÃœÃÃÃŸ '// also sort order
+  cyrWinSma='Ã Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã·Ã¸Ã¹ÃºÃ»Ã¼Ã½Ã¾Ã¿ '
   cyrWin=cyrWinCap+cyrWinSma
   others=" 0123456789'\";,. `~!@#$%^&-_=+[]{}()<> "
-  badfsch='/\\:'; wrnch='™©®'// bad for hdfs cdfs; 
+  badfsch='/\\:'; wrnch='â„¢Â©Â®'// bad for hdfs cdfs; 
   okchars=latWin+cyrWin+others+wrnch; // mac!?
   cyrMac='\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f'
         +'\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9c\x9e\x9f'

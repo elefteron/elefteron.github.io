@@ -1,0 +1,67 @@
+﻿».load_end(): [2].pfe=drv-info.js .status=ok 
+».load_end(): [3].pfe=../lib/windows.js .status=ok 
+».load_end(): [4].pfe=../lib/date.js .status=ok 
+».load_end(): [5].pfe=../lib/math.js .status=ok 
+».load_end(): [6].pfe=scr/makeTbl.js .status=ok 
+».load_end(): [7].pfe=scr/addDrv.js .status=ok 
+».load_end(): [8].pfe=scr/fs.js .status=ok 
+»>>0,D,16109899776,41940668416,HDS82-p1.rst4,B4CD-076F,NTFS,fixed
+»>>1,E,1022779392,30038265856,HDS82-p2,B4D3-F445,NTFS,fixed
+»>>2,F,6338265088,10345472000,HDS82-P3,9870-2A5D,FAT32,fixed
+»>>3,G,620208128,5239468032,S20-p1,D450-6214,NTFS,fixed
+»>>4,H,5254291456,14780792832,S20-P2,8094-B598,NTFS,fixed
+».load_end(): [9].pfe=fs-data.js .status=ok 
+
+# 	path/ 	file 	.ext 	-status-
+0 	../lib/ 	loader 	.js 	ok
+1 	../lib/ 	fs.ax 	.js 	ok
+2 		drv-info 	.js 	ok
+3 	../lib/ 	windows 	.js 	ok
+4 	../lib/ 	date 	.js 	ok
+5 	../lib/ 	math 	.js 	ok
+6 	scr/ 	makeTbl 	.js 	ok
+7 	scr/ 	addDrv 	.js 	ok
+8 	scr/ 	fs 	.js 	ok
+9 		fs-data 	.js 	ok
+10 		drv-info-1 	.css 	null
+--- ff
+"ActiveX" access: NOT! Invalid work condition: need "ActiveX" access.
+scan:22:50 07-04-2013 drv:5
+D: 16109899776 41940668416 25830768640 HDS82-p1.rst4 B4CD-076F NTFS fixed
+E: 1022779392 30038265856 29015486464 HDS82-p2 B4D3-F445 NTFS fixed
+F: 6338265088 10345472000 4007206912 HDS82-P3 9870-2A5D FAT32 fixed
+G: 620208128 5239468032 4619259904 S20-p1 D450-6214 NTFS fixed
+H: 5254291456 14780792832 9526501376 S20-P2 8094-B598 NTFS fixed 
+--- msie
+_activexON:true DrivesReady() 5 - 5,6
+fs.ax [1] ._activexON "boolean" :true
+fs.ax [2] .ComputerName "string" :RESET4
+fs.ax [3] .UserName "string" :elefter
+fs.ax [4] .OSenv "string" :Windows_NT
+fs.ax [5] .root "object" :D:\WINDOWS
+fs.ax [6] .drv "number" :5
+fs.ax [7] .shownotreadydrv "boolean" :false
+fs.ax [8] .wsh "object" :
+fs.ax [9] .fso "object" :
+fs.ax [10] .WshShell "object" :
+fs.ax [11] .WshNet "object" :
+fs.ax [12] .fget "object" :null
+fs.ax [13] .fput "object" :null
+fs.ax [14] ._activexInit "function" :function () {...}
+fs.ax [15] .openfile_to_get "function" :function(fdir,fname){...}
+fs.ax [16] .openfile_to_put "function" :function(fdir,fname){...}
+fs.ax [17] .GetDriveStatus "function" :function(drv_){...}
+fs.ax [18] .DrivesReady "function" :function(){...}
+fs.ax [19] .GetDriveList "function" :function(){...}
+>>1,D,15282069504,41940668416,HDS82-p1.rst4,B4CD-076F,NTFS,fixed
+>>2,E,1129615360,30038265856,HDS82-p2,B4D3-F445,NTFS,fixed
+>>3,F,2231934976,10345472000,HDS82-P3,9870-2A5D,FAT32,fixed
+>>4,G,620212224,5239468032,ST20-p1,D450-6214,NTFS,fixed
+>>5,H,5254819840,14780792832,ST20-p2,8094-B598,NTFS,fixed
+scan:12:50 07-05-2013 drv:5
+D: 15282069504 41940668416 26658598912 HDS82-p1.rst4 B4CD-076F NTFS fixed 
+E: 1129615360 30038265856 28908650496 HDS82-p2 B4D3-F445 NTFS fixed 
+F: 2231934976 10345472000 8113537024 HDS82-P3 9870-2A5D FAT32 fixed 
+G: 620212224 5239468032 4619255808 ST20-p1 D450-6214 NTFS fixed 
+H: 5254819840 14780792832 9525972992 ST20-p2 8094-B598 NTFS fixed 
+setw(): w=150 h=183 x=1130 y=0 winpos[]=T,R w=150 h=183 wi=792 hi=79 wo=812 ho=79 winpos:T,R

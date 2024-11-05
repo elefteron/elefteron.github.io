@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
-<html>
-  <head>
+<html lang="en">
+  <head> <title>elefteron</title>
     <meta charset="utf-8" /> 
     <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
     
@@ -22,13 +22,18 @@
       body  {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
                  font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
   		         text-align:left;font-style:normal; vertical-align:top;
-                }
-      body      {background-color:#302525; color:#ffeedd;}
+                 margin-right:"5mm"; margin-bottom:"5mm"; 
+                 margin-left:"5mm"; margin-top:"5mm";
+                 background-color:#302525; color:#ffeedd;
+             }
       ul,li     {list-style-type: circle; margin-left:15px; padding: 0;}
       .subhd    {                          color:#d93600;}
       a:visited {                          color:#ff8040; text-decoration:none;}
       a:active  {                          color:#d93600; text-decoration:none;}
       a:link    {                          color:#d93600; text-decoration:none;}
+     a:hovel   {                          color:#00d93b; text-decoration:none;}   
+      table {border:"0" cell-spacing:"5"}
+      td {vertical-align: text-top;}
     </style>
     <script type="text/javascript">
       // <meta http-equiv="refresh" content="0; url=https://github.com/elefteron">
@@ -111,21 +116,22 @@
   </script>
   </head>
   
-  <body marginheight="5mm" marginwidth="5mm" leftmargin="5mm" topmargin="5mm">
-    <title>elefteron</title>
-        elefteron  on
+  <body> elefteron  on
         <select id="sel_root"  onchange="set_root(this.value)" style="height:22px;">
           <option value="gitdev" selected="selected">github</option>
           <option value="locdev" >local</option>
         </select>
         <span id="show_root">...</span>
-    </br>
-    <table border="0" cellspacing="5">
-    <tr><td valign="top">
+    <br>
+    <table>
+    <tr><td>
       <span id="mnu" name="mnu"></span>
     </td><td>
-      <iframe id="work" name="work" height="820px" width="920px" style="background-color:#575148;"
-        scrolling="auto" allowtransparency="false" frameborder="0"  marginwidth="10" marginheight="10" srcdoc="<h1>elefteron.github.io</h1>" src="README.txt"></iframe>
+      <iframe title="work" id="work" name="work" height="820px" width="920px" 
+        style="border:none; background-color:#575148;"
+        srcdoc="
+        <h1>elefteron.github.io</h1>" src="README.txt">
+      </iframe>
     </td></tr>
     </table>
 
@@ -138,5 +144,5 @@
         
         set_root('gitdev');// -> mnu_gen()
     </script>
-  <body>
+  </body>
 </html>

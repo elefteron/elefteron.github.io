@@ -29,7 +29,7 @@ function addDrv(vol){ // -> DriveList[Drives][col]=[val,bg,fg,aln]
     err[7]=isok(volFS ,'volFS' );
     err[8]=isok(drvTyp,'drvTyp');
     for(var i=1; i<=8; i++) if(err[i]!='') err[0]+=err[i]+br; 
-    if(err[0]!='') { out(log_,err[0]); return;};
+    if(err[0]!='') { out(log_,err[0]); return;}
     var usedB=maxB-freeB;
     tfu_sum[0]+=freeB; tfu_sum[1]+=maxB; tfu_sum[2]+=usedB;  
 //  drvtype="CD/DVD/?"; // zip/tape/MO/emulated cd/dvd?

@@ -14,20 +14,20 @@ var PutDriveListToFile=function(fname,drv){
       +'root="'+root+'"; '
       +'os="'+os+'"; '+eol+br
 +"// addDrv({'drvnum':drv,'drvname':d, 'freebytes':free, 'totalbytes':total "+eol+br
-+"//       ,'volname':vol, 'volserhex':serH, 'volfs':fs, 'drvtype':drvtype } )"+eol+br
++"//       ,'volname':vol, 'volserhex':serH, 'volfs':fs, 'drvtype':drvtype } )"+eol+br;
   for(var i=0; i<=drv-1; i++) { 
     buf+='   addDrv({drvnum:'+i
-    buf+=',drvname:"'  +DriveList[i][1][0].charAt(0)+'"' // drvNo    a..z       
-    buf+=',freebytes:' +DriveList[i][2][0]+''  // freeB     tfu[1]         
-    buf+=',totalbytes:'+DriveList[i][3][0]+''  // maxB      tfu[0]         
-    buf+=eol+br+'            '
-    buf+=',volname:"'  +DriveList[i][5][0]+'"' // volNam             
-    buf+=',volserhex:"'+DriveList[i][6][0]+'"' // hex8Vol(volID)     
-    buf+=',volfs:"'    +DriveList[i][7][0]+'"' // '('+volFS+')'      
-    buf+=',drvtype:"'  +DriveList[i][8][0]+'"' // drvTyp             
-    buf+='})'+eol+br
+    +',drvname:"'  +DriveList[i][1][0].charAt(0)+'"' // drvNo    a..z       
+    +',freebytes:' +DriveList[i][2][0]+''  // freeB     tfu[1]         
+    +',totalbytes:'+DriveList[i][3][0]+''  // maxB      tfu[0]         
+    +eol+br+'            '
+    +',volname:"'  +DriveList[i][5][0]+'"' // volNam             
+    +',volserhex:"'+DriveList[i][6][0]+'"' // hex8Vol(volID)     
+    +',volfs:"'    +DriveList[i][7][0]+'"' // '('+volFS+')'      
+    +',drvtype:"'  +DriveList[i][8][0]+'"' // drvTyp             
+    +'})'+eol+br;
   }
-  buf+='_load_end()'+eol+br
-  if(dbg>1) out(log_,buf) // open,write,close?
-}// -------------------------------------------------- 
-load_end()
+  buf+='_load_end()'+eol+br;
+  if(dbg>1) out(log_,buf);// open,write,close?
+}; // -------------------------------------------------- 
+load_end();

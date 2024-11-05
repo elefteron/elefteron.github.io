@@ -1,0 +1,53 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="17">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2400" startPos="184" endPos="184" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\loader.js">
+                <Mark line="331" />
+                <Mark line="418" />
+                <Mark line="506" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1030" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\fs.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1030" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\fs.io.ax.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="940" startPos="112" endPos="69" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\scr\fs.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2030" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\math.js" />
+            <File firstVisibleLine="13" xOffset="0" scrollWidth="1010" startPos="1677" endPos="1681" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\date.js">
+                <Fold line="14" />
+                <Fold line="35" />
+                <Fold line="50" />
+                <Fold line="67" />
+                <Fold line="82" />
+                <Fold line="101" />
+                <Fold line="116" />
+                <Fold line="127" />
+                <Fold line="179" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2030" startPos="1783" endPos="1837" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\lib\windows.js">
+                <Mark line="3" />
+                <Mark line="77" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2030" startPos="135" endPos="139" selMode="0" lang="CSS" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\drv-info-1.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="950" startPos="2039" endPos="2039" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\scr\addDrv.js">
+                <Mark line="39" />
+            </File>
+            <File firstVisibleLine="88" xOffset="0" scrollWidth="980" startPos="5832" endPos="5832" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\scr\makeTbl.js">
+                <Mark line="8" />
+                <Mark line="46" />
+                <Mark line="55" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="5320" startPos="34" endPos="43" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\fs-data.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2030" startPos="5150" endPos="5154" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\drv-info.js">
+                <Mark line="93" />
+                <Mark line="102" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2030" startPos="1795" endPos="1795" selMode="0" lang="HTML" encoding="1251" filename="E:\elefter.dev\my-dev+\drv-info\drv-info.htm">
+                <Mark line="30" />
+            </File>
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1670" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\drv-log\drv-log.data.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\drv-log\drv-log.fmt.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="660" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="E:\elefter.dev\my-dev+\drv-info\drv-log\worklist.txt" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="880" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="1251" filename="E:\elefter.dev\my-dev+\drv-info\drv-log\drv-info-log-.hta" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="900" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="1251" filename="E:\elefter.dev\my-dev+\drv-info\drv-log\drv-info.log.htm" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

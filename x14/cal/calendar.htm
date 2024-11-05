@@ -1,7 +1,10 @@
-<HTML><head><title>kalendar</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head><title>kalendar</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
   <link type="text/css" rel="stylesheet" href="scr/cal-style-1.css"/>
-  <script language="JavaScript">
+  <script>
   load='head'
     colorset=1 // 1:no frames  ,2:frames 
     winset  =3 // 1:crnt month line, 2:year months line, 3:crnt month std, 4:year months std  
@@ -73,10 +76,7 @@
   <script src="scr/calendar-show.js"></script>
 </head>
 
-<body onLoad="calendar_load()" 
-  vLink="cyan" hlink="lime" link="#87CEEB" 
-  bgColor="#000000" text="cyan" textsize="3"
-  marginwidth="0" marginheight="0" leftmargin="0" topmargin="0">
+<body onLoad="calendar_load()" >
 <span name="calendar" id="calendar"></span>
 <script>load+='body'; 
 /** @snippet=out&app **/ eol='\r\n' 

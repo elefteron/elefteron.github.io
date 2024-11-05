@@ -1,0 +1,94 @@
+<html lang="bg">
+<head><title>DrvInfo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+  <meta name="description"        content="Drv-Info win-hta 2010-10..2013-04" />
+  <meta name="author"             content="mailto:elefter@abv.bg" />  
+  <link  href=  "drv-info-1.css" rel="stylesheet" type="text/css" />
+  <script src="../lib/loader.js"></script>
+  <script> var dbg=0
+  { var drvScripts=
+       [{path:'../lib/',file:'loader'     ,ext:'.js' } 
+       ,{path:'../lib/',file:'fs'         ,ext:'.js' } 
+       ,{path:       '',file:'drv-info'   ,ext:'.js' } 
+       ,{path:'../lib/',file:'windows'    ,ext:'.js' }
+       ,{path:'../lib/',file:'date'       ,ext:'.js' }
+       ,{path:'../lib/',file:'math'       ,ext:'.js' }
+       ,{path:   'scr/',file:'makeTbl'    ,ext:'.js' } // makeTbl(),usr_info(eb) 
+       ,{path:   'scr/',file:'addDrv'     ,ext:'.js' } // addDrv()  -> DriveList[Drives][1..8][]
+       ,{path:   'scr/',file:'fs'         ,ext:'.js' } // GetDriveList() -> addDrv() ->DriveList[]
+       ,{path:       '',file:'fs-data'    ,ext:'.js' } //                -> addDrv() ->DriveList[]                           
+       ,{path:       '',file:'drv-info-1' ,ext:'.css'} 
+       ]
+    var _fd='fs-data.js';
+  }
+  _load._do(drvScripts) 
+  </script>
+</head>
+<body BGCOLOR="black" text="white" textsize="3">
+<h3 id="jsFailure" style="color:red;">Javascript failed/must be turned on!</h3>
+<span id="layout.drv-info"></span>
+<script> dbg=0
+  document.getElementById('jsFailure').innerHTML = 'Javascript Failure!';
+  /*  *-/ window.onerror=_load._err; /* not show some syntax errors */
+  { var       lay_=null, layID='layout.drv-info' 
+       ,wrk=0,wrk_=null, wrkID='wrk.drv-info'
+       ,log=1,log_=null, logID='log_', b='<br/>'; if(_iex) b=''
+    var stl='margin:0px;padding:0px;border:none;overflow:auto;'// border:1px orange inset;
+    var w=whr=400,wlog=600; if(!_iex) whr=100
+    var box=make_box(
+    [{no:wrk,id:wrkID,t:'row' ,w: 0         ,u:'px',bg:'#222',st:stl}  
+    ,{no:log,id:logID,t:'row' ,w: wlog,h:300,u:'px',bg:'#333',st:stl   
+     ,sh:shell_line(logID,whr,9,'#444','#88f')+b}
+    ],layID)
+    lay_=            document.getElementById(layID)
+    wrk_=box[wrk].p_=document.getElementById(wrkID);  
+    log_=box[log].p_=document.getElementById(logID); 
+    var islayok=true  
+    if(undef(lay_) || lay_==null){ islayok=false; err+='"lay_" missing'+eol}
+    if(undef(log_) || log_==null){ islayok=false; err+='"log_" missing'+eol}
+    if(undef(wrk_) || wrk_==null){ islayok=false; err+='"wrk_" missing'+eol}
+  }
+  if(!islayok) alert(err); else{
+    Hide(logID)
+  //lay_.setAttribute('style', 'font-size:12px;');
+  //lay_.style.fontSize='12px';  //fontSize
+  //lay_.style.lineHeight='14px';
+  dbg=1
+    if(undef(fs.ax)) alert('miss: fs.ax')
+    if(undef(fs.ax._activexON) || fs.ax._activexON=='' || fs.ax._activexON==null) 
+      fs.ax._activexON=fs.ax._activexInit()
+    if(dbg>0 || _load._has_err()) out(log_,_load._list())
+    if(dbg>0){ fs.ax.test();
+      out(log_,'DrvInfo: _activexON='+fs.ax._activexON +br)
+    }
+//  --- 
+    drv_load() // -> wrk_.innerHTML 
+//  window.onload=drv_load | body onLoad="drv_load()" 
+  } // ---------------------------------- 
+  document.getElementById('jsFailure').style.display = 'none';
+/** **-/
+  var win=[{url:'',id:'test',title:'* test *',x:60,y:60,width:300,height:500                              
+          ,'location':'no' ,resizable:'yes',status:    'yes'// yes | 1, no | 0
+          ,menubar   :'no' ,toolbar:  'no' ,scrollbars:'yes'}] 
+    //-- obj-namelist:
+    var nl='win[0]={', v='',k=0,p=0; 
+    for(var i in win[0]) { k++;p++;
+      if(k>1) {v=' ,';} 
+      if(p>4) {nl+='\n'; p=1}
+      nl+=v+i+':"'+win[0][i]+'"';
+    } 
+    // win[0][i].name -- i
+    nl+='} //-- cnt='+k
+  //out(log_,nl+br)
+/** **/ 
+//--
+/* *-/
+  if ((win_ != null) && (! win_.closed)) win_.window.close() // yes
+  // but use old content on begin if same window not closed 
+  open_win(win[0]) // -> win_
+  if ((win_ != null) && (! win_.closed)) win_.document.write(log_.innerHTML)   // yes
+//win_.innerHTML=     'some body data'  // not work
+/* */
+</script>
+</body>
+</html>

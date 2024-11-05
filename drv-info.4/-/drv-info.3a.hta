@@ -1,0 +1,334 @@
+<HTML><HEAD><TITLE>drv-info.3</TITLE>
+<HTA:APPLICATION ID=drv_info applicationName=drive-info 2007-jul-08
+    border        ="thick"    // none thin dialog thick
+    borderStyle   ="normal"   // normal complex static sunken raised
+    windowState   ="normal"   // minimize maximize normal
+    application   ="yes"      singleInstance="no" // else last overwrite same scr report
+    caption       ="yes"      scroll        ="no" 
+    contextMenu   ="yes"      scrollFlat    ="no" 
+    innerBorder   ="yes"      selection     ="yes"
+    maximizeButton="no"       sysMenu       ="yes"
+    minimizeButton="yes"      showInTaskBar ="yes"
+    navigable     ="yes"      icon          ="d.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style> BODY{background-color:#001400; color:#f0b000;} </style>
+<script>
+//============================ globals, config ===
+   taskbarup=0; taskbarleft=1 // set manually if up or left; how to get?
+   t_=true; f_=false
+   maxx =screen.availWidth; 
+   maxy =screen.availHeight; 
+   taskbarH=screen.height-maxy;
+   taskbarW=screen.width-maxx;
+   scrollbarSz=15
+   if (drv_info.caption=='yes') caption  =1; else caption=0
+   if (drv_info.scroll =='yes') scrollbar=1; else scrollbar=0
+   Drives=1; 
+   // line:1/2-bg grays; col:a/b-fg:yellow/orange
+   bg0 ="#001400"; fg0 ="#f0b000" // out of tbl          
+   bg1a="#202020"; fg1a="#f0f000"  
+   bg1b="#202020"; fg1b="#f0b000"  
+   bg2a="#404040"; fg2a="#f0f000" 
+   bg2b="#404040"; fg2b="#f0b000"
+   bg3 ="#808080"; fg3 ="white"   // tbl header/footer color
+   shownotreadydrv=f_
+   test='test:'; tfu_sum=new Array(3);
+   val=new Array(9); bg=new Array(9); fg=new Array(9); sz=new Array(9); aln =new Array(9);
+   var order=new Array()   // ordered row format
+// --         [0,2,3,4,5,6,7,8,1] // [drv_lnk ,free,max,used ,vol_n,vol_id ,f_sys,drv_type] -- full body
+   order_body=[0,2,3  ,5,6,7  ,1] // -- body
+   order_hdr =[1,2,3  ,5,6,7  ,1] // -- hdr,ftr
+   tblW=order_body.length*25            // cols*pix  9*6
+   vollng=17;
+   chars=2 +3*11 +vollng+9+2 +7+10  // -- chars by columns .. later
+// T: 98.18 4 027.00 3 928.82 [4]-work F02E-77DD T: 
+// 12345678901234567890123456789012345678901234567890
+//          1         2         3         4         5
+// --
+   chW=9.1;  chH=25.5; tsz=2    // tsz=2 in tb_col(bg,fg,sz,tx,al)
+     w1=chars*chW      +tblW  +scrollbar*scrollbarSz   
+     h1=(1+Drives+3)*chH      +scrollbar*scrollbarSz 
+     x1=maxx-w1  +taskbarleft*taskbarW; 
+     y1=0        +taskbarup*taskbarH;
+//=============================================================== 
+// .WScript .WshNetwork .WshController .WshShell .WshEnvironment .WshScriptExec 
+// .WshArguments .WshNamed .WshUnnamed .WshSpecialfolders 
+// .WshRemote .WshRemote Error .WshShortcut .WshURLShortcut
+var fso = new ActiveXObject("Scripting.FileSystemObject");
+var WshShell   = new ActiveXObject("WScript.Shell")
+// --------------------------------------------------
+function ShowDriveStatus(drv_){ var s = ""; 
+  if (fso.DriveExists(drv_)) s="exist"; else s="not exist";
+  return s
+}// --------------------------------------
+function ShowDriveInfo(drvPath,fs){
+  var tfu=new Array(3)
+  tfu=[0,0,0] // total,free,used
+  var drv=fso.GetDrive(fso.GetDriveName(drvPath))
+  
+  var total=drv.TotalSize;   
+  var free =drv.FreeSpace
+//if (fs=='CDFS') { u=total; total=680*1024*1024; free=total-u; }
+// dvd? 
+  var used  =total-free
+  tfu[0]=total; tfu[1]=free; tfu[2]=used;   
+  return tfu
+}// --------------------------------------
+function setw(w,h,x,y){window.resizeTo(w,h); window.moveTo(x,y)}
+// ---------------------------------------
+function out(s){document.write(s)} 
+// --------------------------------------
+function b2mb(b){var mb   // round or fixed .2
+   mb=(b/1024)/1024 
+// mb=Math.round(mb)
+   mb=mb.toFixed(2)  
+   return mb
+}// --------------------------------------
+function getdate2(){// format yyyy-mm-dd 
+  var newdate=new Date();
+  with (newdate) {
+    var y=getYear();  var m=getMonth()+1; var d=getDate();   
+    if(m<=9)m='0'+m; 
+    if(d<=9)d='0'+d; 
+    var ymd=y+'-'+m+'-'+d 
+  }
+//outw(log,' date='+date+' locale date='+newdate.toLocaleString()+ln)
+  return (ymd);
+}// ----------------------------------
+function gettime2(sec){//  format hh:mm:ss
+  var newdate=new Date();
+  with (newdate) {
+    var h=getHours(); var m=getMinutes(); var s=getSeconds();
+    if(h<=9)h='0'+h; 
+    if(m<=9)n='0'+m; 
+    if(s<=9)s='0'+s; 
+    var hms=h+':'+m; if (sec) hms+=':'+s
+  }
+//outw(log,' date='+date+' locale date='+newdate.toLocaleString()+ln)
+  return (hms);
+}// ---------------------------------- 
+function sys(){ var s=''
+@if(@_win32)   s+="win32 "   @end
+@if(@_win16)   s+="win16 "   @end
+@if(@_mac)     s+="mac   "   @end
+@if(@_alpha)   s+="alpha "   @end
+@if(@_x86)     s+="x86   "   @end
+@if(@_mc680x0) s+="mc680x0 " @end
+@if(@_PowerPC) s+="PowerPC " @end
+return s
+}// ----------------------------------
+function hex8Vol(ni){
+  n=ni; maxn=4294967295/*ffff-ffff*/;
+  var nh,nhex,l,m,i,h=['0','0','0','0'   ,'0','0','0','0']
+  if      (n<0)    {n=maxn+n+1} 
+//else if (n>maxn) {}// cut only last 8 hex digits       !?
+  nh=n.toString(16).toUpperCase()
+  l=nh.length; m=8-l
+  for (i=m+1; i<=8; i++) h[i-1]=nh.charAt(i-m-1) // align to right 8 pos
+  nh=''; for (i=1; i<=8; i++) {nh+=h[i-1]}
+  nhex=groupCharsBy(nh,4,1,'-')
+  return nhex 
+}// -------------------------------------------------
+function divisible(n,by_m){ // for count every by_m
+  k=Math.floor(n/by_m) // integer closest to and not greater than arg
+  if (n==k*by_m) {return true} else {return false}
+}// -------------------------------------------------
+function groupCharsBy(n,by_m,after_p,ch){
+  var l=n.length
+  var m=''; var j=0; // s=''   
+  for (i=l; i>=1; i--) {j++;
+    m=n.charAt(i-1)+m
+    if(j<l && j>after_p && divisible(j,by_m)) {m=ch+m;} //  s+=j+' '
+  }
+  return m//   +'(lng:'+l+' by:'+by_m+')'+s
+}// -------------------------------------------------
+function DrivesCount(){var drv=0
+  e = new Enumerator(fso.Drives);
+  for (; !e.atEnd(); e.moveNext()){// existed drives
+    x = e.item(); 
+    if (!shownotreadydrv && !x.IsReady) continue // skip if not ready
+    drv++; 
+  }
+  return drv
+}// ------------------------
+function ShowDriveList(){
+  var e  ,s,t, fs,fs_,drvtype,n,x,vol,ser
+  sp='&nbsp;'; sp2=sp+sp; sp4=sp2+sp2
+  vollng=0 // global
+  var tfu
+  tfu_sum=[0,0,0]
+  e = new Enumerator(fso.Drives);
+  s = ""; drv=0 
+  for (; !e.atEnd(); e.moveNext()){// existed drives
+    x = e.item(); d=x.DriveLetter+':'
+    if (!shownotreadydrv && !x.IsReady) continue // skip if not ready
+    drv++; 
+    if(drv%2==0) {bga=bg2a;bgb=bg2b;fga=fg2a;fgb=fg2b}//line-1:col-a,col=b 
+    else         {bga=bg1a;bgb=bg1b;fga=fg1a;fgb=fg1b}
+    if (x.IsReady){
+      fs=fso.GetDrive(d).FileSystem
+      tfu=ShowDriveInfo(d,fs)
+      tfu_sum[0]+=tfu[0]; tfu_sum[1]+=tfu[1]; tfu_sum[2]+=tfu[2];
+      fs_='('+fs+')'
+      tfu[0]=groupCharsBy(b2mb(tfu[0]).toString(),3,3,sp)
+      tfu[1]=groupCharsBy(b2mb(tfu[1]).toString(),3,3,sp)
+      tfu[2]=groupCharsBy(b2mb(tfu[2]).toString(),3,3,sp)
+      vol=x.VolumeName; 
+      if (x.VolumeName.length>vollng)vollng=x.VolumeName.length
+      ser=hex8Vol(x.SerialNumber)
+    //share=x.ShareName
+    } else{
+      tfu=[0,0,0]; vol=ser=drvtype=fs_=''
+      vol=ShowDriveStatus(d)+';not ready'
+    }
+    switch (x.DriveType){
+    //case 0:  drvtype = "Unknown";   break;//?
+      case 1:  drvtype = "Removable"; break;
+      case 2:  drvtype = "Fixed";     break;
+      case 3:  drvtype = "Network";   break;// mapped
+      case 4:  var fs=fso.GetDrive(fso.GetDriveName(d))
+        var total=0;
+        if (x.IsReady) {total=fs.TotalSize/1024/1024; // mb
+                        free =fs.FreeSpace/1024/1024; // mb
+        }
+        if (total>680 || free>680) drvtype = "DVD"; else drvtype="CD/DVD"; // emulated/r/rw/...?   
+      break;
+      case 5:  drvtype = "RAM Disk";  break;
+      default: drvtype = x.DriveType        //?
+    }
+    // -- DriveList body order:  
+    val[1]=d      ;  bg[1]=bga;  fg[1]=fgb;  sz[1]=tsz;  aln[1]=''      ; // 1 drv_no
+    val[2]=tfu[1] ;  bg[2]=bgb;  fg[2]=fga;  sz[2]=tsz;  aln[2]='right' ; // 2 free
+    val[3]=tfu[0] ;  bg[3]=bgb;  fg[3]=fga;  sz[3]=tsz;  aln[3]='right' ; // 3 max
+    val[4]=tfu[2] ;  bg[4]=bga;  fg[4]=fga;  sz[4]=tsz;  aln[4]='right' ; // 4 used
+    val[5]=vol    ;  bg[5]=bga;  fg[5]=fgb;  sz[5]=tsz;  aln[5]='left'  ; // 5 vol_n
+    val[6]=ser    ;  bg[6]=bgb;  fg[6]=fgb;  sz[6]=tsz;  aln[6]='right' ; // 6 vol_id
+    val[7]=fs_    ;  bg[7]=bgb;  fg[7]=fga;  sz[7]=tsz;  aln[7]=''      ; // 7 f_sys
+    val[8]=drvtype;  bg[8]=bga;  fg[8]=fga;  sz[8]=tsz;  aln[8]='center'; // 8 drv_type
+    n=OrdRowFmt(order_body)                     
+    s+='<tr>'+n+'</tr>'    
+  }
+  return s //  tfu_sum[0..2],vollng, s
+}// --------------------------------------------------             
+function OrdRowFmt(order){// drv_no ,free   ,max    ,used   ,vol_n  ,vol_id ,f_sys  ,drv_type        
+   var s=''
+   d=val[1]; //'<LABEL FOR="get" ACCESSKEY="'+x.DriveLetter+'"></LABEL>' ?
+   val[0]='<a href="'+d+'/" title="open '+d+'/" target="self_">'+d+'</a>' // file:/// 
+   bg[0]=bg[1]; fg[0]=fg[1]; sz[0]=sz[1]; aln[0]=aln[1]; 
+
+   for (var i=0; i<=order.length-1; i++) {j=order[i]; s+=tb_col(bg[j],fg[j],sz[j],val[j],aln[j])}
+   return s
+}// --------------------------------------------------
+function tb_col(bg,fg,sz,tx,al){
+  var a=''; if (al!=null && al!='') a=' align="'+al+'"'
+  return '<td bgcolor="'+bg+'"'+a+'><font size="'+sz+'" color="'+fg+'">'+tx+'</font></td>'
+}// --------------------------------------------------
+</script>
+
+<body vLink="#f0f000" hlink="magenta" link="#f0b000" bgColor="#001400" text="#f0b000" topmargin="2" leftmargin="2">
+<font     face="Arial Cyr,Arial,Verdana,Tahoma,Hebar,Bitstream Vera Sans Mono,Lucida Console" size=3>
+<script language="JavaScript">
+   setw(w1,h1,x1,y1)  
+   // save new to/read old from drive-info.log: all used drives history +/-!
+   eol='\r\n';
+   out('<pre><code><b>') 
+   var WSHShell  = new ActiveXObject ("WScript.Shell");
+   var WSHNetwork= new ActiveXObject ("WScript.Network")
+   fclr='<b><font color="white">'
+   os=WshShell.Environment("System")("OS")// System, User, Volatile, or Process
+// -- DriveList header order
+   if (vollng<17)vollng=17 // max:32
+   zp='';   for (i=(vollng-11);i<vollng; i=i+2) zp+='&nbsp;'// 2chars unbreaked space
+   val[1]=     "no"         ;  bg[1]=bg3;  fg[1]=fg3;  sz[1]=tsz;  aln[1]='';       // 1 drv_no
+   val[2]=     "Free_Mb"    ;  bg[2]=bg3;  fg[2]=fg3;  sz[2]=tsz;  aln[2]='right';  // 2 free
+   val[3]=     "Max_Mb"     ;  bg[3]=bg3;  fg[3]=fg3;  sz[3]=tsz;  aln[3]='right';  // 3 max
+   val[4]=     "Used_Mb"    ;  bg[4]=bg3;  fg[4]=fg3;  sz[4]=tsz;  aln[4]='right';  // 4 used
+   val[5]=  "Volume_Name"+zp;  bg[5]=bg3;  fg[5]=fg3;  sz[5]=tsz;  aln[5]='left' ;  // 5 vol_n
+   val[6]=     "Volume_ID"  ;  bg[6]=bg3;  fg[6]=fg3;  sz[6]=tsz;  aln[6]='left' ;  // 6 vol_id
+   val[7]=     "FileSys"    ;  bg[7]=bg3;  fg[7]=fg3;  sz[7]=tsz;  aln[7]='';       // 7 f_sys
+   val[8]=' '+ "Drv_Type"   ;  bg[8]=bg3;  fg[8]=fg3;  sz[8]=tsz;  aln[8]='center'; // 8 drv_type
+   hdr=OrdRowFmt(order_hdr)
+// --  
+   var Drives=DrivesCount()
+   var DriveList=ShowDriveList()  //returned:   *drv, tfu_sum[0..2], s      
+// -- 
+   maxb =b2mb(tfu_sum[0]).toString()
+   freeb=b2mb(tfu_sum[1]).toString()
+   usedb=b2mb(tfu_sum[2]).toString()
+   zp='&nbsp;';
+   freeb_=groupCharsBy(freeb,3,3,zp)
+    maxb_=groupCharsBy( maxb,3,3,zp)
+   usedb_=groupCharsBy(usedb,3,3,zp)
+// -- DriveList body order 
+   val[1]=Drives; bg[1]=bg3;  fg[1]=fg3;  sz[1]=tsz;  aln[1]='right'; // 1 drv_no   : E:
+   val[2]=freeb_; bg[2]=bg3;  fg[2]=fg3;  sz[2]=tsz;  aln[2]='right'; // 2 free     : 87.77
+   val[3]=maxb_ ; bg[3]=bg3;  fg[3]=fg3;  sz[3]=tsz;  aln[3]='right'; // 3 max      : 4 102.50
+   val[4]=usedb_; bg[4]=bg3;  fg[4]=fg3;  sz[4]=tsz;  aln[4]='right'; // 4 used     : 4 014.73
+   val[5]=' ';    bg[5]=bg3;  fg[5]=fg3;  sz[5]=tsz;  aln[5]='';      // 5 vol_n    : [6]-2-[4]-tedy
+   val[6]=' ';    bg[6]=bg3;  fg[6]=fg3;  sz[6]=tsz;  aln[6]='';      // 6 vol_id   : 1029-CB0D
+   val[7]=' ';    bg[7]=bg3;  fg[7]=fg3;  sz[7]=tsz;  aln[7]='';      // 7 f_sys    : (NTFS)
+   val[8]=' ';    bg[8]=bg3;  fg[8]=fg3;  sz[8]=tsz;  aln[8]='';      // 8 drv_type : Fixed
+   bdy=OrdRowFmt(order_hdr)
+//  -- calculate chars by order_body
+   chars=0; vollng=17
+   for (var i=0; i<=order_body.length-1; i++) {j=order_body[i]
+     if (j==0 | j==1) chars+=2            // 1 drv_no "E:"
+     else if (j==2)   chars+=freeb.length // 2 free    
+     else if (j==3)   chars+= maxb.length // 3 max     
+     else if (j==4)   chars+=usedb.length // 4 used    
+     else if (j==5)   chars+=vollng       // 5 vol_n   
+     else if (j==6)   chars+=9            // 6 vol_id  
+     else if (j==7)   chars+=7            // 7 f_sys   
+     else if (j==8)   chars+=10           // 8 drv_type
+   }
+   chW=8.4;  chH=25.5;
+   w1=chars*chW      +tblW  +scrollbar*scrollbarSz
+   h1=(1+Drives+3)*chH      +scrollbar*scrollbarSz; 
+   x1=maxx-w1  +taskbarleft*taskbarW; 
+   y1=0        +taskbarup*taskbarH;
+   test+=' drives:'+Drives +' ch:'+chars +' v:'+vollng + ' tbl cols:'+order_body.length
+       +' 0:'+ maxb.toString().length  
+       +' 1:'+freeb.toString().length
+       +' 2:'+usedb.toString().length
+//  --   
+   out('<table>'+'<tr>'+hdr+'</tr>'+DriveList+'<tr>'+bdy+'</tr>'+'</table>'  
+      +fclr+ 'OS='+'</font>'+'"'+os+'"'+fclr+' win-root='+'</font>'+'"'+fso.GetSpecialFolder(0)+'"' // 0=WindowsFolder 1=SystemFolder 2=TemporaryFolder
+      +fclr+' comp='+'</font>'+WSHNetwork.ComputerName
+      +eol
+      +fclr+ 'time='+'</font>'+gettime2(f_) 
+      +fclr+' y-m-d='+'</font>'+getdate2() 
+      +fclr+' user='+'</font>'+WSHNetwork.UserName 
+      +eol
+      )
+//out(+fclr+'os/cpu='  +'</font></b>'+sys()+eol+test)
+   setw(w1,h1,x1,y1)/*-- window resize & move -- */
+/* --
+  functions: todo-, ok+ 
++ all src in one file
++ define format order - order_body, order-hdr
+- contract/expand window
+- set window pos
+- disc pic from file: "c:\autorun.inf" line: "icon=Hard Drive.ico"
+- cfg_file  (read) 
+  on btn=drag&set/tl/tr/bl/br: 
+  screen.pos(get, cfg_file(save)
+- save/read log (history)
+  log_file  (read) 
+  drive info(get&update)  
+  log_file  (save updated+upd.date-time)
+  show diff by time
+  
+  
+         var WshShell = WScript.CreateObject("WScript.Shell");
+         strDesktop = WshShell.SpecialFolders("Desktop");
+         var oShellLink = WshShell.OpenShortcut(strDesktop + "\\Shortcut Script.lnk");
+         oShellLink.TargetPath = WScript.ScriptFullName;
+         oShellLink.WindowStyle = 1;
+         oShellLink.Hotkey = "Ctrl+Alt+e";
+         oShellLink.IconLocation = "notepad.exe, 0";
+         oShellLink.Description = "Shortcut Script";
+         oShellLink.WorkingDirectory = strDesktop;
+         oShellLink.Close();
+-- */
+</script>
+</BODY></HTML>

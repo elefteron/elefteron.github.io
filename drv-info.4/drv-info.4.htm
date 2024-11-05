@@ -1,0 +1,174 @@
+<HTML><HEAD><TITLE>drv-info.4</TITLE>
+<HTA:APPLICATION ID=drv_info applicationName=drive-info 2010-jul-27
+    border        ="thick"    // none thin dialog thick
+    borderStyle   ="normal"   // normal complex static sunken raised
+    windowState   ="normal"   // minimize maximize normal
+    application   ="yes"      singleInstance="no" // else last overwrite same scr report
+    caption       ="yes"      scroll        ="yes" // yes no
+    contextMenu   ="yes"      scrollFlat    ="no"
+    innerBorder   ="no"       selection     ="yes"
+    maximizeButton="no"       sysMenu       ="yes"
+    minimizeButton="no"       showInTaskBar ="yes"   
+    navigable     ="yes"      icon          ="d.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+<style> 
+BODY     {background-color:#000000; color:gold;} /* #f0b000 */
+
+a:link   {color:black; background-color:gold;text-decoration:none;}
+a:visited{color:cyan;  background-color:gold;text-decoration:none;} /* 00FFFF 66CCFF */
+a:hover  {color:black; background-color:orange;}
+a:active {color:magenta;}
+
+*        {font-weight:normal; font-size:11pt; line-height:11.2pt;
+          font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';}
+
+BODY     {scrollbar-arrow-color    :#FFFFFF; scrollbar-3dlight-color   :#a0a0a0;
+          scrollbar-highlight-color:#000000; scrollbar-face-color      :#000000;
+          scrollbar-shadow-color   :#a0a0a0; scrollbar-darkshadow-color:#000000;
+          scrollbar-track-color    :#1d1d1d; }
+</style>
+
+<script>    t_=true; f_=false; test=f_; tstr=''; load="load: ";    eol='\r\n';
+   sec=1000/*1sec=1000ms*/; refresh_ms=5*sec;   
+  function out(s){document.write(s)}
+  function par(name,val) { var n=name; if (n=='bg') n='bgcolor'
+    return (' '+n+'="'+val+'"')
+  } 
+</script>
+<script src="browserid.js" ></script>
+<script src="window.js"    >
+    if(browserID()=='IE'){
+      if (drv_info.caption=='yes') caption  =1; else caption=0
+      if (drv_info.scroll =='yes') scrollbar=1; else scrollbar=0
+    } 
+</script>
+<script src="char-size.js"></script>
+<script src="order.js"     ></script>
+<script src="colors.js"    ></script>
+<script src="activex-ie.js"></script>
+<script src="time.js"      ></script>
+<script src="math.js"      ></script>
+<script>load+='hdr '
+  tfu=[0,0,0] // total,free,used
+  tfu_sum=[0,0,0]
+  Drives=0
+function load_fs(){      z='&nbsp;'; z2=z+z // to avoid cell wrap on table resize
+//   -- DriveList header order
+     if (vollng<17)vollng=17 // max:32
+     zp='';   for (i=(vollng-11);i<vollng; i=i+2) zp+=z// 2chars unbreaked space
+     val[1]="no"                 ;  bg[1]=bg3;  fg[1]=fg3;  aln[1]='';       // 1 drv_no
+     val[2]="Free"+z2+"Mb"       ;  bg[2]=bg3;  fg[2]=fg3;  aln[2]='right';  // 2 free
+     val[3]="Max"+z2+"Mb"        ;  bg[3]=bg3;  fg[3]=fg3;  aln[3]='right';  // 3 max
+     val[4]="Used"+z2+"Mb"       ;  bg[4]=bg3;  fg[4]=fg3;  aln[4]='right';  // 4 used
+     val[5]="Volume"+z2+"Name"+zp;  bg[5]=bg3;  fg[5]=fg3;  aln[5]='left' ;  // 5 vol_n
+     val[6]="Volume"+z2+"ID"     ;  bg[6]=bg3;  fg[6]=fg3;  aln[6]='left' ;  // 6 vol_id
+     val[7]="File"+z+"Sys"       ;  bg[7]=bg3;  fg[7]=fg3;  aln[7]='';       // 7 f_sys
+     val[8]=' '+ "Drv_Type"      ;  bg[8]=bg3;  fg[8]=fg3;  aln[8]='center'; // 8 drv_type
+     hdr=OrdRowFmt(order_hdr)
+//  ----------------------------------------
+    Drives=0
+    if(browserID()=='IE'){ 
+      Drives   =DrivesReady()
+      ShowDriveList() // ->addDrv()->DriveList
+    }
+//  --
+    freeb=b2mb(tfu_sum[0]).toString()
+    maxb =b2mb(tfu_sum[1]).toString()
+    usedb=b2mb(tfu_sum[2]).toString()
+    zp='&nbsp;';
+    freeb_=groupCharsBy(freeb,3,3,zp)
+     maxb_=groupCharsBy( maxb,3,3,zp)
+    usedb_=groupCharsBy(usedb,3,3,zp)
+//  -- DriveList body order
+    val[1]=Drives; bg[1]=bg3;  fg[1]=fg3;  aln[1]='right'; // 1 drvn   : E:
+    val[2]=freeb_; bg[2]=bg3;  fg[2]=fg3;  aln[2]='right'; // 2 free   : 87.77
+    val[3]=maxb_ ; bg[3]=bg3;  fg[3]=fg3;  aln[3]='right'; // 3 max    : 4 102.50
+    val[4]=usedb_; bg[4]=bg3;  fg[4]=fg3;  aln[4]='right'; // 4 used   : 4 014.73
+    val[5]=' ';    bg[5]=bg3;  fg[5]=fg3;  aln[5]='';      // 5 voln   : [
+    val[6]=' ';    bg[6]=bg3;  fg[6]=fg3;  aln[6]='';      // 6 voli   : 1029-CB0D
+    val[7]=' ';    bg[7]=bg3;  fg[7]=fg3;  aln[7]='';      // 7 fsys   : (NTFS)
+    val[8]=' ';    bg[8]=bg3;  fg[8]=fg3;  aln[8]='';      // 8 drvt   : Fixed
+    ftr=OrdRowFmt(order_hdr)
+//   -- calculate chars by order_body
+    chars=0; vollng=17
+    for (var i=0; i<=order_body.length-1; i++) {j=order_body[i]
+      if (j==0 | j==1) chars+=2            // 1 drv_no "E:"
+      else if (j==2)   chars+=freeb.length // 2 free
+      else if (j==3)   chars+= maxb.length // 3 max
+      else if (j==4)   chars+=usedb.length // 4 used
+      else if (j==5)   chars+=vollng       // 5 vol_n
+      else if (j==6)   chars+=9            // 6 vol_id
+      else if (j==7)   chars+=7            // 7 f_sys
+      else if (j==8)   chars+=10           // 8 drv_type
+    }
+// ---
+    h1=winh(); w1=winw();
+    setw(w1,h1,'B','R')/*-- window resize & move -- */
+    tstr+=' chars:'+chars  +' chW:'+chW  +' w:'+w1+' tblW:' +tblW +'<br>'
+         +' drvs :'+Drives +' chH:'+chH  +' h:'+h1+'<br>'
+         +' scrbar:'+scrollbar +' scrSz:'+scrollbarSz
+      // +' vol:'  +vollng + ' cols:'+order_body.length
+      // +' max :' + maxb.toString().length
+      // +' free:' +freeb.toString().length
+      // +' used:' +usedb.toString().length
+//  ---
+    tbl='<table border="0" cellspacing="1" cellpading="2"'+par('bg','dimgray')+'>'
+    out(tbl+'<tr>'+hdr+'</tr>'+DriveList+'<tr>'+ftr+'</tr>'+'</table>'+eol)
+    function a2(a,b){return '<a title="'+b+'">'+a+'</a>'}
+    out('<table>'+'<tr>' // <xmp>
+     // tb_col(bg  ,fg ,tx          ,al)
+       +tb_col(bg0 ,fg0,a2(getdate2()  ,'y-m-d'   ),'left')
+       +tb_col(bg0 ,fg0,a2(gettime2(t_),'h:m:s'   ),'left')
+       +tb_col(bg2b,fg0,a2(UserName    ,'user'    ),'left')
+       +tb_col(bg0 ,fg0,a2(ComputerName,'computer'),'left')
+       +tb_col(bg2b,fg0,a2(sys()       ,'OS'      ),'left')
+       +tb_col(bg0 ,fg0,a2(root        ,'root'    ),'left')
+       +'</tr><tr>'
+    // +tb_col(bg3 ,fg3,'y-m-d'     ,'left')
+    // +tb_col(bg3 ,fg3,'h:m:s'     ,'left')
+    // +tb_col(bg3 ,fg3,'user'      ,'left')
+    // +tb_col(bg3 ,fg3,'computer'  ,'left')
+    // +tb_col(bg3 ,fg3,'OS'        ,'left')
+    // +tb_col(bg3 ,fg3,'root'      ,'left')
+    // // 0=WindowsFolder 1=SystemFolder 2=TemporaryFolder
+    // +'</tr>'
+       +'</table>'+eol)
+}// ----------------------------------
+</script>
+
+<body 
+ marginwidth="0" marginheight="0" leftmargin="1" topmargin="1">
+<script language="JavaScript">load+='body '
+// <font size=2 color="white">
+// ----------------------------------- init
+   window.resizeTo(500,100); window.moveTo(200,200)
+// out(' ... wait to get system drives & file info ... ')
+   if(browserID()!='IE'){ // IE
+     out(')o_o(   Sorry!   This version work condition not valid! '+eol
+     +'Must be: windows_95+/Mac-OS_9+, "Internet Explorer" with "activeX" an html application (.hta)'+eol)
+   } else{ //load_fs() // <body onload="setTimeout('reload()',refresh_ms);"
+   }
+//  ----------------------------------------
+   load_fs()
+//document.body.onload=setTimeout('load_fs()',refresh_ms);
+/* --
+  functions: todo-, ok+
++ all src in one file
++ define format order - order_body, order-hdr
+- contract/expand window
++ set window pos
+- disc pic from file: "c:\autorun.inf" line: "icon=Hard Drive.ico"
+- cfg_file  (read/write?)
+- on btn=drag&set/tl/tr/bl/br:
+- screen.pos(get, cfg_file(save)
+- save/read log (history)
+- log_file  (read)
+- drive info(get&update)
+- log_file  (save updated+upd.date-time)
+- show diff by time
+-- */
+  load+=';'; 
+  if(test) out(load+'<br>'+tstr)
+</script>
+</BODY></HTML>

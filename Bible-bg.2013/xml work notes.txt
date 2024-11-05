@@ -38,12 +38,12 @@ https://9to5answer.com/how-to-embed-an-xml-file-in-html
 <!-- format:{volume.book.chapter.verse} multiline-text 
 OT: 7954 verses in 27 books
 
-bible-bg.NT.xml Ïðàâîñëàâíà Áèáëèÿ íà áúëãàðñêè - Íîâ Çàâåò (.xml)
+bible-bg.NT.xml ÐŸÑ€Ð°Ð²Ð¾ÑÐ»Ð°Ð²Ð½Ð° Ð‘Ð¸Ð±Ð»Ð¸Ñ Ð½Ð° Ð±ÑŠÐ»Ð³Ð°Ñ€ÑÐºÐ¸ - ÐÐ¾Ð² Ð—Ð°Ð²ÐµÑ‚ (.xml)
 https://elefteron.github.io/Bible-bg/Bible-bg.text/xml/bible-bg.NT.xml
 
 https://github.com/elefteron/elefteron.github.io/blob/main/Bible-bg/Bible-bg.text/xml/bible-bg.NT.xml
 
-bible-bg Ïðàâîñëàâíà Áèáëèÿ íà áúëãàðñêè - html/JS ôîðìàòèðàíå è òúðñåíå
+bible-bg ÐŸÑ€Ð°Ð²Ð¾ÑÐ»Ð°Ð²Ð½Ð° Ð‘Ð¸Ð±Ð»Ð¸Ñ Ð½Ð° Ð±ÑŠÐ»Ð³Ð°Ñ€ÑÐºÐ¸ - html/JS Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ð¸Ñ€Ð°Ð½Ðµ Ð¸ Ñ‚ÑŠÑ€ÑÐµÐ½Ðµ
 https://elefteron.github.io/Bible-bg/Bible-bg.2013/Bible-bg.2013.index.htm 
 
 https://github.com/elefteron/elefteron.github.io/blob/main/Bible-bg/Bible-bg.2013/Bible-bg.2013.index.htm

@@ -1,14 +1,20 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<HTML>
-  <HEAD><title>clock-24+</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head><title>clock-24+</title>
+    <meta charset="utf-8" /> 
+    <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <style>
   body    { background-color:#111111; color:yellow; 
 			text-align:center; vertical-align: middle;
             font-size:11pt; line-height:11.2pt; font-weight:bold; 
 			width:150px; height:36;
   font-family:Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
+  margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;  
     }
+  a:visited {                          color:#ff8040; text-decoration:none;}
+  a:active  {                          color:#d93600; text-decoration:none;}
+  a:link    {                          color:#d93600; text-decoration:none;}     
+  a:hovel   {                          color:#00d93b; text-decoration:none;}     
   .clk { /* https://css-tricks.com/examples/CSSCentering/  centered */
       position: fixed; top:50%; left:50%;
       transform: translate(-50%, -50%);
@@ -45,8 +51,8 @@
                  ]
 		   ,fsel=4 // impact
 // The quick brown fox jumps over the lazy dog.
-// АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ абвгдежзийклмнопрстуфхцчшщъьюя
-// €§«»°©®№ ЁёЫыЭэ 0123456789
+// РђР‘Р’Р“Р”Р•Р–Р—РР™РљР›РњРќРћРџР РЎРўРЈР¤РҐР¦Р§РЁР©РЄР¬Р®РЇ Р°Р±РІРіРґРµР¶Р·РёР№РєР»РјРЅРѕРїСЂСЃС‚СѓС„С…С†С‡С€С‰СЉСЊСЋСЏ
+// в‚¬В§В«В»В°В©В®в„– РЃС‘Р«С‹Р­СЌ 0123456789
 	    if (big) fsel=5 // Agency FB, 290
         var fnt_={fg:'#468c00',bg:'#111111' // #6495ED #4169E1 #87CEEB      // <- fg:,bg:?
                  ,fam:fnts[fsel].fam, sz:fnts[fsel].sz, lh:fnts[fsel].lh}          // <- 4,4,4         
@@ -66,9 +72,9 @@
            +' font-weight:' +bfnt+'; border-width:'    +bbrdw  +';"'
         //--
         var monname=new Array(12), dayname=new Array(7);
-            monname=['януари','февруари','март','април','май','юни','юли'
-                    ,'август','септември','октомври','ноември','декември']
-        var dayname=['понеделник','вторник','сряда','четвъртък','петък','събота','неделя']
+            monname=['СЏРЅСѓР°СЂРё','С„РµРІСЂСѓР°СЂРё','РјР°СЂС‚','Р°РїСЂРёР»','РјР°Р№','СЋРЅРё','СЋР»Рё'
+                    ,'Р°РІРіСѓСЃС‚','СЃРµРїС‚РµРјРІСЂРё','РѕРєС‚РѕРјРІСЂРё','РЅРѕРµРјРІСЂРё','РґРµРєРµРјРІСЂРё']
+        var dayname=['РїРѕРЅРµРґРµР»РЅРёРє','РІС‚РѕСЂРЅРёРє','СЃСЂСЏРґР°','С‡РµС‚РІСЉСЂС‚СЉРє','РїРµС‚СЉРє','СЃСЉР±РѕС‚Р°','РЅРµРґРµР»СЏ']
       }//--
       function cbtn (b,t,e){ 
         return ('<input ' +b+' type=button'+' value="'+t
@@ -123,10 +129,8 @@
         tyy=tyy+1900 // current (in IE 2005, in MZ/FF 105 or -1795 !?)
       }
     </script>
-  </HEAD>
-<BODY vLink="cyan" hlink="lime" link="#87CEEB" 
-bgColor="#000000" text="cyan" textsize="3" 
-marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
+  </head>
+<body >
 <span id="layout.clock" class="clk">hh:mm</span>
 <span id="layout.date"  class="dat">yyyy.mm.dd</span>
 <script>
@@ -213,5 +217,5 @@ marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
   //('<font face="digital" size="3" color="'+clock_color+'"><b>'+'test'+'</b></font>'+ln)
   }
 </script>
-</BODY>
-</HTML>
+</body>
+</html>

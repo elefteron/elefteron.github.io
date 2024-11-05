@@ -1,7 +1,8 @@
-<html>
-<head>
-  <title>X-mnu</title> 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head> <title>X-mnu</title>
+    <meta charset="utf-8" /> 
+    <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
   <style>
     *     { padding:0; margin:0;  }
   body    { background-color:#000; color:yellow; text-ALIGN:left;
@@ -9,6 +10,22 @@
 			width:150px; 
   font-family:Courier,Tahoma,Verdana,Arial,Helvetica,'Segoe UI','Sans Serif','Arial Cyr';
           }
+  body{margin-left: 2px; margin-right: 1px; margin-top: 2px; margin-bottom: 2px;
+               padding: 0; width: 100%; height: 100%; z-index: 10; overflow: scroll
+              }
+      body  {font-family:Verdana,Tahoma,'Arial Cyr',Arial,Helvetica,'MS Sans Serif','Sans Serif',Geneva,Hebar;
+                 font-size:10pt; line-height:11pt; text-decoration:none; /* underline */
+  		         text-align:left;font-style:normal; vertical-align:top;
+                 margin-right:"5mm"; margin-bottom:"5mm"; 
+                 margin-left:"5mm"; margin-top:"5mm";
+                 background-color:#302525; color:#ffeedd;
+             }
+
+      a:visited {                          color:#ff8040; text-decoration:none;}
+      a:active  {                          color:#d93600; text-decoration:none;}
+      a:link    {                          color:#d93600; text-decoration:none;}
+      a:hovel   {                          color:#00d93b; text-decoration:none;}    
+    
   </style>  
   <script>var acsii_art=[""
     ,"              ,''.               "
@@ -59,15 +76,12 @@
   </script>
 
 </head>
-<BODY  
- vLink="cyan" hlink="lime" link="#87CEEB" 
- bgColor="#000000" text="cyan" textsize="3" 
- marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" >
+<body >
  	 <button onclick="alert(xcfg.descr);" title="info"  >?</button>
  	 <button onclick="cfg();"             title="config">#</button>
  	 <button onclick="self.close()"       title="close" >x</button>
      <br><span id="me" style="font-size:3pt; line-height:normal;"></span>
   <script src="x-cfg.js"></script>
   <script>document.getElementById("me").innerHTML='<pre>'+acsii_art.join("\r")+'</pre>'</script>
-</BODY>
+</body>
 </html>

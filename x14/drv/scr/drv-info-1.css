@@ -1,7 +1,7 @@
 /*globals*/
  html
 ,body     { background-color:#202020; color:yellow; 
-            font-size: 100.01%; text-ALIGN:left; white-space:wrap; 
+            text-ALIGN:left; white-space:wrap; 
             font-size: 14px; line-height:15px; font-weight:normal;
             padding:0; margin:0; 
           }

@@ -175,7 +175,7 @@ PS=Stylo-Bold,TYPE=TT,STYL=BOLD,WNAM=Stylo,,Bold,WFIL=Stylo Bold.ttf
 PS=TagirDPNormal,TYPE=TT,WNAM=Tagir DP Normal,WFIL=Tagir DP Normal.ttf
 PS=TagirCTT,TYPE=TT,WNAM=TagirCTT,,Normal,WFIL=TagirCTT.ttf
 PS=UkrainianBrushScript,TYPE=TT,WNAM=UkrainianBrushScript,WFIL=UkrainianBrushScript.ttf
-PS=AEnigmaScrawl(BRK),TYPE=TT,WNAM=Жnigma Scrawl (BRK),WFIL=Enigma Scrawl (BRK).ttf
+PS=AEnigmaScrawl(BRK),TYPE=TT,WNAM=Ænigma Scrawl (BRK),WFIL=Enigma Scrawl (BRK).ttf
 %!EndSet 
 
 %!BeginSet decor-gothic
